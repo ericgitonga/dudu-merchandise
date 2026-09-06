@@ -18,7 +18,9 @@ def test_index_loads_with_nav_links():
         nav = page.locator(".site-header nav")
         assert nav.get_by_role("link", name="Prints", exact=True).is_visible()
         assert nav.get_by_role("link", name="Apparel", exact=True).is_visible()
-        assert nav.get_by_role("link", name="Coasters", exact=True).is_visible()
+        # Coasters is deliberately not linked yet (issue #14) — its route stays reachable
+        # directly, covered by test_coasters_page_is_a_placeholder below.
+        assert nav.get_by_role("link", name="Coasters", exact=True).count() == 0
 
 
 def test_health_endpoint():

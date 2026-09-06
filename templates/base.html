@@ -13,7 +13,7 @@
       <nav>
         <a href="{{ url_for('prints') }}">Prints</a>
         <a href="{{ url_for('apparel') }}">Apparel</a>
-        <a href="{{ url_for('coasters') }}">Coasters</a>
+        <!-- Coasters route stays wired up (issue #14); not linked from the nav yet. -->
         <a class="cart-link" href="{{ url_for('cart_page') }}">
           Cart <span class="cart-badge" id="cart-badge">{{ cart_count }}</span>
         </a>
