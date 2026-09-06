@@ -1,0 +1,45 @@
+name: E2E
+
+# Gates a PR on the golden-path E2E suite (e2e/) running against a real Flask dev server on the
+# runner, before it can merge to main.
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install -r requirements.txt
+
+      - name: Install Playwright (Python)
+        run: |
+          pip install playwright
+          playwright install --with-deps chromium
+
+      - name: Start server
+        # Output redirected to a file: GitHub Actions stops capturing a backgrounded (`&`)
+        # process's output once the step that launched it exits. "Print server log" below cats
+        # this file so it's visible regardless of outcome.
+        run: |
+          python app.py > /tmp/server.log 2>&1 &
+          for i in $(seq 1 30); do
+            curl -sf http://localhost:5000/_health > /dev/null && exit 0
+            sleep 1
+          done
+          echo "Server did not become ready in time" >&2
+          exit 1
+
+      - name: Run E2E suite
+        run: python e2e/run.py
+
+      - name: Print server log
+        if: always()
+        run: cat /tmp/server.log
