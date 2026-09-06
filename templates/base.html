@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <title>{% block title %}Dudu Merchandise{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="{{ url_for('index') }}">Dudu Merchandise</a>
+      <nav>
+        <a href="{{ url_for('prints') }}">Prints</a>
+        <a href="{{ url_for('apparel') }}">Apparel</a>
+        <!-- Coasters route stays wired up (issue #14); not linked from the nav yet. -->
+        <a class="cart-link" href="{{ url_for('cart_page') }}">
+          Cart <span class="cart-badge" id="cart-badge">{{ cart_count }}</span>
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+      <p>Photography &amp; merchandise by Eric Gitonga Mbaya — Dudus of Kenya.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/cart-common.js') }}"></script>
+    {% block scripts %}{% endblock %}
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+  </body>
+</html>

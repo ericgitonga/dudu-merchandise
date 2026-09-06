@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block title %}Apparel — Dudu Merchandise{% endblock %}
+{% block content %}
+<h1>Apparel</h1>
+<p>Pick a photo, a size, and a shirt colour — the preview shows your design on the chest.</p>
+
+<div class="shop-layout">
+  <div class="catalogue-grid" aria-label="Choose a photo">
+    {% for img in catalogue %}
+    <button type="button" class="catalogue-thumb" data-id="{{ img.id }}" data-thumb="{{ img.thumb }}" data-full="{{ img.full }}">
+      <img src="{{ img.thumb }}" alt="Catalogue photo {{ img.id }}" loading="lazy" />
+    </button>
+    {% endfor %}
+  </div>
+
+  <div class="controls-panel">
+    <div class="shirt-scene">
+      <svg id="shirt-svg" viewBox="0 0 1000 1150" xmlns="http://www.w3.org/2000/svg">
+        <polygon id="shirt-body"
+          points="400,162 265,143 82,232 97,368 265,390 240,1050 760,1050 735,390 903,368 918,232 735,143 600,162"
+          fill="#000000" />
+        <ellipse cx="500" cy="162" rx="108" ry="62" fill="#e4e4e4" />
+        <image id="shirt-design" href="" x="0" y="0" width="0" height="0" />
+      </svg>
+    </div>
+
+    <fieldset class="option-group">
+      <legend>Size</legend>
+      <div class="option-row">
+        {% for age, price in prices.items() %}
+        <label>
+          <input type="radio" name="age_group" value="{{ age }}" {% if loop.first %}checked{% endif %} />
+          {{ age | title }} — KES {{ "{:,}".format(price) }}
+        </label>
+        {% endfor %}
+      </div>
+    </fieldset>
+
+    <fieldset class="option-group">
+      <legend>Shirt colour</legend>
+      <div class="option-row">
+        {% for name, hex in shirt_colours.items() %}
+        <button type="button" class="shirt-swatch {% if loop.first %}selected{% endif %}"
+          style="background: {{ hex }};" data-hex="{{ hex }}" data-name="{{ name }}"
+          title="{{ name }}" aria-label="{{ name }}"></button>
+        {% endfor %}
+      </div>
+      <input type="hidden" id="selected-shirt-colour" value="{{ (shirt_colours.keys() | list)[0] }}" />
+    </fieldset>
+
+    <p class="price-line" id="selected-price">—</p>
+
+    <button type="button" class="primary" id="add-to-cart-apparel" disabled>Add to cart</button>
+    <p class="add-status" id="add-to-cart-status"></p>
+  </div>
+</div>
+
+{% endblock %}
+{% block scripts %}
+<script id="apparel-prices-data" type="application/json">{{ prices | tojson }}</script>
+<script src="{{ url_for('static', filename='js/catalogue-picker.js') }}"></script>
+<script src="{{ url_for('static', filename='js/apparel-mockup.js') }}"></script>
+{% endblock %}

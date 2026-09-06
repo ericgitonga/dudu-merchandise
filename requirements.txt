@@ -1,1 +1,4 @@
 flask
+flask-wtf
+flask-limiter
+resend

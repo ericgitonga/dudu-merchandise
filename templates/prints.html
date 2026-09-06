@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Prints — Dudu Merchandise{% endblock %}
+{% block content %}
+<h1>Prints</h1>
+<p>Pick a photo, then a size — the preview shows it framed on a wall so you can judge the
+scale before ordering.</p>
+
+<div class="shop-layout">
+  <div class="catalogue-grid" aria-label="Choose a photo">
+    {% for img in catalogue %}
+    <button type="button" class="catalogue-thumb" data-id="{{ img.id }}" data-thumb="{{ img.thumb }}" data-full="{{ img.full }}">
+      <img src="{{ img.thumb }}" alt="Catalogue photo {{ img.id }}" loading="lazy" />
+    </button>
+    {% endfor %}
+  </div>
+
+  <div class="controls-panel">
+    <div class="room-scene" id="room-scene">
+      <div class="room-furniture"></div>
+      <div class="framed-print" id="framed-print">
+        <img id="framed-print-img" src="" alt="Selected photo, framed" />
+      </div>
+    </div>
+
+    <fieldset class="option-group">
+      <legend>Size</legend>
+      <div class="option-row">
+        {% for size, spec in sizes.items() %}
+        <label>
+          <input type="radio" name="size" value="{{ size }}" {% if loop.first %}checked{% endif %} />
+          {{ size }} — KES {{ "{:,}".format(spec.price) }}
+        </label>
+        {% endfor %}
+      </div>
+    </fieldset>
+
+    <p class="price-line" id="selected-price">—</p>
+
+    <button type="button" class="primary" id="add-to-cart-print" disabled>Add to cart</button>
+    <p class="add-status" id="add-to-cart-status"></p>
+  </div>
+</div>
+
+{% endblock %}
+{% block scripts %}
+<script id="print-sizes-data" type="application/json">{{ sizes | tojson }}</script>
+<script src="{{ url_for('static', filename='js/catalogue-picker.js') }}"></script>
+<script src="{{ url_for('static', filename='js/prints-mockup.js') }}"></script>
+{% endblock %}
