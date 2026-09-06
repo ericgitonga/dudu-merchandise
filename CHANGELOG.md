@@ -6,6 +6,15 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.2.2] - 2026-09-06
+
+### Changed
+
+- Full name attribution ("Eric Gitonga Mbaya") in the footer, README, and homepage copy —
+  M-Pesa payee name stays "Eric Mbaya" — and a new homepage hero title/sub-title (closes #15)
+
+tag: `v0.2.2`
+
 ## [0.2.1] - 2026-09-06
 
 ### Changed
