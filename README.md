@@ -1,6 +1,6 @@
 # dudu-merchandise
 
-Merchandise storefront for Eric Mbaya's insect macro photography — Prints and Apparel today,
+Merchandise storefront for Eric Gitonga Mbaya's insect macro photography — Prints and Apparel today,
 Coasters coming later. Clients pick a photo from a fixed catalogue (no upload flow), see a live
 preview — a living-room wall mockup for Prints, a t-shirt mockup for Apparel — and add it to a
 cart. Checkout is a modal on the cart page: it shows the M-Pesa payment details and, on
