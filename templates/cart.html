@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block title %}Cart — Dudu Merchandise{% endblock %}
+{% block content %}
+<h1>Your cart</h1>
+
+{% if not cart %}
+<p class="cart-empty">Your cart is empty. Shop <a href="{{ url_for('prints') }}">Prints</a> or <a href="{{ url_for('apparel') }}">Apparel</a>.</p>
+{% else %}
+<ul class="cart-items">
+  {% for item in cart %}
+  {% set photo = catalogue_by_id.get(item.photo_id) %}
+  <li class="cart-item">
+    {% if photo %}<img src="{{ photo.thumb }}" alt="" />{% endif %}
+    <div class="cart-item-info">
+      {% if item.type == "print" %}
+        <strong>Print</strong> — {{ item.size }} — photo #{{ item.photo_id }}
+      {% else %}
+        <strong>Apparel (T-shirt)</strong> — {{ item.age_group | title }} — {{ item.shirt_colour }} — photo #{{ item.photo_id }}
+      {% endif %}
+    </div>
+    <span class="cart-item-price">KES {{ "{:,}".format(item.price) }}</span>
+    <button type="button" class="cart-remove" data-index="{{ loop.index0 }}">Remove</button>
+  </li>
+  {% endfor %}
+</ul>
+
+<p class="cart-total">Total: KES {{ "{:,}".format(total) }}</p>
+
+<button type="button" class="primary" id="open-checkout">Checkout</button>
+
+<div class="modal-overlay" id="checkout-modal" hidden>
+  <div class="modal-box">
+    <button type="button" class="modal-close" id="close-checkout" aria-label="Close">&times;</button>
+    <h2>Checkout</h2>
+
+    <dl class="payment-details">
+      <dt>Payment</dt>
+      <dd>Send KES {{ "{:,}".format(total) }} via M-Pesa to <strong>{{ mpesa_number }}</strong> ({{ mpesa_name }}).</dd>
+      <dt>Turnaround</dt>
+      <dd>{{ turnaround }}</dd>
+      <dt>Shipping</dt>
+      <dd>{{ shipping_note }}</dd>
+    </dl>
+
+    <p class="checkout-error" id="checkout-error" hidden></p>
+
+    <form id="checkout-form">
+      <div class="form-field">
+        <label for="co-name">Name</label>
+        <input type="text" id="co-name" name="name" required />
+      </div>
+      <div class="form-field">
+        <label for="co-contact">Phone or email</label>
+        <input type="text" id="co-contact" name="contact" required />
+      </div>
+      <div class="form-field">
+        <label for="co-location">Delivery location</label>
+        <input type="text" id="co-location" name="location" required />
+      </div>
+      <div class="form-field">
+        <label for="co-notes">Notes (optional)</label>
+        <textarea id="co-notes" name="notes" rows="3"></textarea>
+      </div>
+      <button type="submit" class="primary" id="checkout-submit">Submit order</button>
+    </form>
+
+    <div class="checkout-success" id="checkout-success" hidden>
+      <p>Thank you! Your order has been sent — we'll be in touch to confirm delivery details
+        and shipping cost.</p>
+      <a href="{{ url_for('index') }}">Back to shop</a>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/checkout.js') }}"></script>
+{% endblock %}

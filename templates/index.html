@@ -1,14 +1,26 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{{ project_name }}</title>
-  </head>
-  <body>
-    <h1>{{ project_name }}</h1>
-    <p>Scaffolded and ready to build on.</p>
-    <script defer src="/_vercel/insights/script.js"></script>
-    <script defer src="/_vercel/speed-insights/script.js"></script>
-  </body>
-</html>
+{% extends "base.html" %}
+{% block title %}Dudu Merchandise{% endblock %}
+{% block content %}
+<section class="hero">
+  <h1>Bring Kenya's insects home</h1>
+  <p>
+    Museum-quality prints and apparel made from Eric Mbaya's insect macro photography.
+    Pick a photo, see it on your wall or your shirt, and order.
+  </p>
+</section>
+
+<section class="item-picker" aria-label="Choose what to shop">
+  <a class="item-card" href="{{ url_for('prints') }}">
+    <h2>Prints</h2>
+    <p>A4 to A0, framed for your wall. See it sized against your room before you order.</p>
+  </a>
+  <a class="item-card" href="{{ url_for('apparel') }}">
+    <h2>Apparel</h2>
+    <p>T-shirts for adults and children, in 14 colours, with your chosen photo on the chest.</p>
+  </a>
+  <a class="item-card item-card--soon" href="{{ url_for('coasters') }}">
+    <h2>Coasters</h2>
+    <p>Coming soon.</p>
+  </a>
+</section>
+{% endblock %}
