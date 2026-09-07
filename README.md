@@ -36,6 +36,14 @@ can pick from — there is no upload flow. To add more, resize into both directo
 entry to `manifest.json`; see `extras/projects/dudu-merchandise/assets/catalogue/` (outside this
 repo) for the verified full-resolution originals these were generated from.
 
+## Prints wall mockup
+
+`static/images/mockup/room.jpg` is the real room photo the chosen print is positioned onto in
+`templates/prints.html` / `static/js/prints-mockup.js` — a plain rectangle placement against a
+moulded wall panel, no perspective correction needed since the photo is shot dead-on frontal.
+Sizing uses an authored scale constant (`ROOM_WIDTH_CM` in `prints-mockup.js`), not a measured
+one — see that file's comments, and issue #17/#20 for how the geometry was derived.
+
 ## Tests
 
 ```bash

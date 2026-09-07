@@ -15,11 +15,8 @@ scale before ordering.</p>
   </div>
 
   <div class="controls-panel">
-    <div class="room-scene" id="room-scene">
-      <div class="room-furniture"></div>
-      <div class="framed-print" id="framed-print">
-        <img id="framed-print-img" src="" alt="Selected photo, framed" />
-      </div>
+    <div class="room-scene" id="room-scene" style="background-image: url('{{ url_for('static', filename='images/mockup/room.jpg') }}')">
+      <img class="wall-print" id="wall-print" src="" alt="Selected photo, on the wall" />
     </div>
 
     <fieldset class="option-group">

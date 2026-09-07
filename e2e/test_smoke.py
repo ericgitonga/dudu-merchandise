@@ -102,7 +102,7 @@ def test_prints_mockup_renders_and_enables_add_to_cart():
         page.goto("/prints")
         page.wait_for_selector("#add-to-cart-print:not([disabled])", timeout=5000)
         assert page.locator("#selected-price").inner_text() != "—"
-        assert page.locator("#framed-print-img").get_attribute("src")
+        assert page.locator("#wall-print").get_attribute("src")
 
 
 def test_apparel_mockup_renders_and_enables_add_to_cart():
