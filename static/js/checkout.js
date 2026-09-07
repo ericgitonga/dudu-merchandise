@@ -42,6 +42,7 @@
     submitBtn.disabled = true;
 
     const payload = {
+      mpesa_code: form.mpesa_code.value.trim(),
       name: form.name.value.trim(),
       contact: form.contact.value.trim(),
       location: form.location.value.trim(),

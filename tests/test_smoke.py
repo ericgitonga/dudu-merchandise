@@ -44,16 +44,23 @@ def test_cart_total_sums_item_prices():
 
 def test_order_email_includes_total_and_payment_instructions():
     cart = [appmod.build_print_item({"photo_id": "001", "size": "A2"})]
-    customer = {"name": "Jane Doe", "contact": "+254700000000", "location": "Nairobi", "notes": ""}
+    customer = {
+        "name": "Jane Doe", "contact": "+254700000000", "location": "Nairobi", "notes": "",
+        "mpesa_code": "QGH7XXXXXX",
+    }
     email = appmod.build_order_email(cart, customer)
     assert "Jane Doe" in email["subject"]
     assert f"KES {appmod.PRINT_SIZES['A2']['price']:,}" in email["text"]
     assert appmod.MPESA_NUMBER in email["text"]
     assert appmod.TURNAROUND_TEXT in email["text"]
+    assert "QGH7XXXXXX" in email["text"]
 
 
 def test_send_order_email_skips_without_api_key(monkeypatch):
     monkeypatch.delenv("RESEND_API_KEY", raising=False)
     cart = [appmod.build_print_item({"photo_id": "001", "size": "A4"})]
-    customer = {"name": "Jane Doe", "contact": "jane@example.com", "location": "Nairobi", "notes": ""}
+    customer = {
+        "name": "Jane Doe", "contact": "jane@example.com", "location": "Nairobi", "notes": "",
+        "mpesa_code": "QGH7XXXXXX",
+    }
     assert appmod.send_order_email(cart, customer) == "skipped"

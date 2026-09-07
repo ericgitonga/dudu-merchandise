@@ -77,7 +77,10 @@ def test_cart_add_and_checkout_flow():
         checkout_resp = page.request.post(
             f"{BASE_URL}/api/checkout/submit",
             headers={"X-CSRFToken": token, "Content-Type": "application/json"},
-            data='{"name": "Test Buyer", "contact": "test@example.com", "location": "Nairobi"}',
+            data=(
+                '{"name": "Test Buyer", "contact": "test@example.com", "location": "Nairobi", '
+                '"mpesa_code": "QGH7XXXXXX"}'
+            ),
         )
         assert checkout_resp.status == 200
         body = checkout_resp.json()
@@ -130,6 +133,36 @@ def test_checkout_modal_opens_and_is_clickable():
         assert page.locator("#checkout-modal").is_hidden()
 
 
+def test_checkout_rejects_missing_or_malformed_mpesa_code():
+    with browser_page() as page:
+        page.goto("/prints")
+        token = _csrf_token(page)
+        page.request.post(
+            f"{BASE_URL}/cart/add",
+            headers={"X-CSRFToken": token},
+            form={"type": "print", "photo_id": "001", "size": "A4"},
+        )
+
+        missing_resp = page.request.post(
+            f"{BASE_URL}/api/checkout/submit",
+            headers={"X-CSRFToken": token, "Content-Type": "application/json"},
+            data='{"name": "Test Buyer", "contact": "test@example.com", "location": "Nairobi"}',
+        )
+        assert missing_resp.status == 400
+        assert missing_resp.json()["ok"] is False
+
+        malformed_resp = page.request.post(
+            f"{BASE_URL}/api/checkout/submit",
+            headers={"X-CSRFToken": token, "Content-Type": "application/json"},
+            data=(
+                '{"name": "Test Buyer", "contact": "test@example.com", "location": "Nairobi", '
+                '"mpesa_code": "??"}'
+            ),
+        )
+        assert malformed_resp.status == 400
+        assert malformed_resp.json()["ok"] is False
+
+
 def test_checkout_rejects_empty_cart():
     with browser_page() as page:
         page.goto("/")
@@ -153,6 +186,7 @@ TESTS = [
     test_apparel_mockup_renders_and_enables_add_to_cart,
     test_checkout_modal_opens_and_is_clickable,
     test_cart_add_and_checkout_flow,
+    test_checkout_rejects_missing_or_malformed_mpesa_code,
     test_checkout_rejects_empty_cart,
 ]
 

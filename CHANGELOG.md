@@ -6,6 +6,16 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.3.0] - 2026-09-07
+
+### Added
+
+- Checkout now requires the client's M-Pesa confirmation code, validated server-side and
+  included in the order email — previously the modal only displayed payment instructions with
+  no capture of proof of payment (closes #21)
+
+tag: `v0.3.0`
+
 ## [0.2.3] - 2026-09-07
 
 ### Changed
