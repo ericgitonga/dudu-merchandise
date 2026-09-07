@@ -69,10 +69,18 @@
     printImg.src = selected.full;
   }
 
+  function currentQty() {
+    return parseInt(qtyInput.value, 10) || 1;
+  }
+
   function updateOrderControls() {
     const size = currentSize();
     if (!size) return;
-    priceEl.textContent = `KES ${SIZES_MM[size].price.toLocaleString()}`;
+    const unit = SIZES_MM[size].price;
+    const qty = currentQty();
+    priceEl.textContent = qty > 1
+      ? `KES ${unit.toLocaleString()} each — KES ${(unit * qty).toLocaleString()} total`
+      : `KES ${unit.toLocaleString()}`;
     addBtn.disabled = !selected.id;
   }
 
@@ -99,17 +107,22 @@
   });
 
   sizeInputs.forEach((input) => input.addEventListener("change", updateOrderControls));
+  qtyInput.addEventListener("input", updateOrderControls);
+  qtyInput.addEventListener("change", updateOrderControls);
 
   addBtn.addEventListener("click", async () => {
     if (!selected.id) return;
     const size = currentSize();
-    const qty = parseInt(qtyInput.value, 10) || 1;
+    const qty = currentQty();
     addBtn.disabled = true;
     const data = await addToCart({ type: "print", photo_id: selected.id, size, qty });
     addBtn.disabled = false;
     statusEl.textContent = data.ok
       ? (qty === 1 ? "Added to cart." : `Added ${qty} to cart.`)
       : (data.error || "Couldn't add that to the cart — please try again.");
-    if (data.ok) qtyInput.value = 1;
+    if (data.ok) {
+      qtyInput.value = 1;
+      updateOrderControls();
+    }
   });
 })();

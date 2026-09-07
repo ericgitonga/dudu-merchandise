@@ -27,8 +27,16 @@
     return checked ? checked.value : "adult";
   }
 
+  function currentQty() {
+    return parseInt(qtyInput.value, 10) || 1;
+  }
+
   function updatePrice() {
-    priceEl.textContent = `KES ${PRICES[currentAgeGroup()].toLocaleString()}`;
+    const unit = PRICES[currentAgeGroup()];
+    const qty = currentQty();
+    priceEl.textContent = qty > 1
+      ? `KES ${unit.toLocaleString()} each — KES ${(unit * qty).toLocaleString()} total`
+      : `KES ${unit.toLocaleString()}`;
   }
 
   grid.addEventListener("photo-selected", (event) => {
@@ -66,11 +74,13 @@
   });
 
   ageInputs.forEach((input) => input.addEventListener("change", updatePrice));
+  qtyInput.addEventListener("input", updatePrice);
+  qtyInput.addEventListener("change", updatePrice);
   updatePrice();
 
   addBtn.addEventListener("click", async () => {
     if (!selected.id) return;
-    const qty = parseInt(qtyInput.value, 10) || 1;
+    const qty = currentQty();
     addBtn.disabled = true;
     const data = await addToCart({
       type: "apparel",
@@ -83,6 +93,9 @@
     statusEl.textContent = data.ok
       ? (qty === 1 ? "Added to cart." : `Added ${qty} to cart.`)
       : (data.error || "Couldn't add that to the cart — please try again.");
-    if (data.ok) qtyInput.value = 1;
+    if (data.ok) {
+      qtyInput.value = 1;
+      updatePrice();
+    }
   });
 })();

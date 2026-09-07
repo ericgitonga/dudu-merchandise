@@ -42,7 +42,10 @@ document.querySelectorAll(".qty-stepper").forEach((stepper) => {
     btn.addEventListener("click", () => {
       const step = parseInt(btn.dataset.step, 10) || 0;
       input.value = (parseInt(input.value, 10) || min) + step;
-      clamp();
+      // Setting .value directly fires neither "input" nor "change" — dispatch "change"
+      // ourselves so both this module's own clamp() and any page-specific listener (e.g. the
+      // price line reacting to quantity, issue #34) run exactly like a real user edit would.
+      input.dispatchEvent(new Event("change"));
     });
   });
   input.addEventListener("change", clamp);

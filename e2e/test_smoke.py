@@ -142,6 +142,49 @@ def test_prints_quantity_adds_one_merged_line_and_cart_steppers_adjust_it():
         assert "Your cart is empty" in page.content()
 
 
+def test_prints_price_line_updates_with_quantity():
+    """Regression guard for issue #34: the price line only ever reacted to the size radios, not
+    the quantity stepper, so picking qty 2 of a KES 70,000 print still showed "KES 70,000" with
+    no hint that's the per-unit price, not the KES 140,000 total about to be added."""
+    with browser_page() as page:
+        page.goto("/prints")
+        page.wait_for_selector("#add-to-cart-print:not([disabled])", timeout=20000)
+
+        sizes = json.loads(page.locator("#print-sizes-data").inner_text())
+        checked_size = page.locator('input[name="size"]:checked').get_attribute("value")
+        unit_price = sizes[checked_size]["price"]
+
+        assert page.locator("#selected-price").inner_text() == f"KES {unit_price:,}"
+
+        page.click('.qty-stepper .qty-btn[data-step="1"]')
+        expect(page.locator("#selected-price")).to_have_text(
+            f"KES {unit_price:,} each — KES {unit_price * 2:,} total"
+        )
+
+        page.click("#add-to-cart-print")
+        expect(page.locator("#cart-badge")).to_have_text("2")
+        # Quantity (and the price line with it) resets after a successful add.
+        assert page.locator("#selected-price").inner_text() == f"KES {unit_price:,}"
+
+
+def test_apparel_price_line_updates_with_quantity():
+    """Same fix as test_prints_price_line_updates_with_quantity, for issue #34."""
+    with browser_page() as page:
+        page.goto("/apparel")
+        page.wait_for_selector("#add-to-cart-apparel:not([disabled])", timeout=20000)
+
+        prices = json.loads(page.locator("#apparel-prices-data").inner_text())
+        checked_age = page.locator('input[name="age_group"]:checked').get_attribute("value")
+        unit_price = prices[checked_age]
+
+        assert page.locator("#selected-price").inner_text() == f"KES {unit_price:,}"
+
+        page.click('.qty-stepper .qty-btn[data-step="1"]')
+        expect(page.locator("#selected-price")).to_have_text(
+            f"KES {unit_price:,} each — KES {unit_price * 2:,} total"
+        )
+
+
 def test_prints_mockup_renders_and_enables_add_to_cart():
     """Regression guard: a strict CSP once silently broke the inline data-injection script,
     leaving PRINT_SIZES undefined and the add-to-cart button permanently disabled with no
@@ -266,6 +309,8 @@ TESTS = [
     test_checkout_rejects_missing_or_malformed_mpesa_code,
     test_checkout_rejects_empty_cart,
     test_prints_quantity_adds_one_merged_line_and_cart_steppers_adjust_it,
+    test_prints_price_line_updates_with_quantity,
+    test_apparel_price_line_updates_with_quantity,
 ]
 
 if __name__ == "__main__":
