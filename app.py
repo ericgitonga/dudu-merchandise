@@ -247,6 +247,25 @@ def strip_control_chars(s):
     return CONTROL_CHARS_RE.sub("", s)
 
 
+FORMULA_TRIGGER_CHARS = ("=", "+", "-", "@")
+
+
+def neutralize_formula_injection(s):
+    """Prefix with a single quote if the value starts with a character (=, +, -, @) that
+    triggers formula interpretation in Excel/Google Sheets/LibreOffice — this app has no CSV/
+    spreadsheet export today, so there's no code path that opens this directly, but the order
+    email exists to be read and acted on by a human, who may reasonably copy order details into
+    a spreadsheet for bookkeeping. The leading single quote is the standard OWASP-recommended
+    mitigation — forces the cell to be read as literal text — and costs nothing to apply now."""
+    if s and s[0] in FORMULA_TRIGGER_CHARS:
+        return "'" + s
+    return s
+
+
+def sanitize_customer_field(s):
+    return neutralize_formula_injection(strip_control_chars(s))
+
+
 # ── M-Pesa replay guard (issue #48) ─────────────────────────────────────────
 # The M-Pesa code is entirely self-reported — there is no Safaricom Daraja API integration to
 # verify a code is real (that's the eventual real fix, a bigger project of its own). This is the
@@ -528,10 +547,10 @@ def checkout_submit():
         }), 400
 
     customer = {
-        "name": strip_control_chars(name)[:200],
-        "contact": strip_control_chars(contact)[:200],
-        "location": strip_control_chars(location)[:400],
-        "notes": strip_control_chars(notes)[:1000],
+        "name": sanitize_customer_field(name)[:200],
+        "contact": sanitize_customer_field(contact)[:200],
+        "location": sanitize_customer_field(location)[:400],
+        "notes": sanitize_customer_field(notes)[:1000],
         "mpesa_code": mpesa_code[:20],
     }
     email_status = send_order_email(cart, customer)
