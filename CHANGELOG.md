@@ -6,6 +6,20 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.7.1] - 2026-09-07
+
+### Security
+
+- Real rate-limit enforcement for cart/checkout write endpoints, via a Vercel Firewall custom
+  rule rather than `flask-limiter`'s in-memory storage (which doesn't share counters across
+  Vercel's serverless instances) — 20 requests/60s per IP, combined across `POST
+  /api/checkout/submit`, `/cart/add`, `/cart/qty/*`, and `/cart/remove/*` (one shared budget,
+  since the Hobby plan allows only one `rate_limit`-action rule). Verified directly against
+  production: request 21 in a burst returns `429`, access resumes after the window passes.
+  Platform config, not tracked in this repo — see README's "Rate limiting" section (closes #49)
+
+tag: `v0.7.1`
+
 ## [0.7.0] - 2026-09-07
 
 ### Added

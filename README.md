@@ -53,6 +53,20 @@ cart logic — `e2e/` intentionally never has `RESEND_API_KEY` configured (it as
 is the *correct* behaviour without one), so it can never catch a real environment
 misconfiguration the way this can.
 
+## Rate limiting
+
+`flask-limiter`'s per-route limits in `app.py` use in-memory storage, which is unreliable on
+Vercel's serverless runtime — separate request invocations can land on different, independent
+instances with no shared counter between them (issue #49). The **actual** enforcement is a
+Vercel Firewall custom rule ("Rate limit cart/checkout writes"), configured via the `vercel
+firewall` CLI (not tracked in this repo — it's platform config, not code): 20 requests/60s per
+IP, combined across `POST /api/checkout/submit`, `/cart/add`, `/cart/qty/*`, and `/cart/remove/*`
+— one shared budget across all four rather than a separate one each, since the Hobby plan allows
+only a single `rate_limit`-action rule. Verified directly against production: the 21st request
+in a burst returns `429`, and access resumes once the 60s window passes. `flask-limiter`'s
+app-level decorators stay in place regardless — they're still real protection for local
+dev/direct-to-origin traffic, just not the production enforcement mechanism.
+
 ## M-Pesa replay guard
 
 The M-Pesa confirmation code entered at checkout is entirely self-reported — there's no
