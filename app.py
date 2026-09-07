@@ -346,4 +346,10 @@ def health():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+    # threaded=True: the dev server otherwise handles one request at a time, serialising every
+    # asset a page needs (HTML/CSS/JS/images) — fine when a page needed few requests, but the
+    # Prints wall mockup now also loads room.jpg alongside the catalogue photo, which was
+    # enough to blow e2e's wait budgets under this server's default single-threaded behaviour.
+    # Vercel's actual production deployment is unaffected either way (one request per
+    # serverless invocation, no shared server process to serialise through).
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)), threaded=True)

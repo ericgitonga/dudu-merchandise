@@ -16,11 +16,12 @@
   const statusEl = document.getElementById("add-to-cart-status");
 
   // The moulded wall panel above the sofa in room.jpg, as % of the image's own dimensions
-  // (1559x1009) — see issue #17's spike for how these were read off the photo.
+  // (read off the original 1559x1009 source — percentages, so this held when the shipped
+  // file was later downsized to 1100x712 for load time) — see issue #17's spike.
   const PANEL = { x0: 13.79, x1: 82.1, y0: 1.98, y1: 51.04 };
   const PANEL_CX = (PANEL.x0 + PANEL.x1) / 2;
   const PANEL_CY = (PANEL.y0 + PANEL.y1) / 2;
-  const ROOM_ASPECT = 1559 / 1009;
+  const ROOM_ASPECT = 1100 / 712;
 
   // Real-world scale is an authored/tuned constant, not a measured one — same status the old
   // illustrated wall's PX_PER_CM had, just applied to a photo instead of a flat gradient.

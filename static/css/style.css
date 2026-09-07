@@ -177,7 +177,7 @@ button.primary:hover:not(:disabled) { filter: brightness(1.05); }
 .room-scene {
   position: relative;
   width: 100%;
-  aspect-ratio: 1559 / 1009;
+  aspect-ratio: 1100 / 712;
   border-radius: 0.5rem;
   overflow: hidden;
   background-size: cover;

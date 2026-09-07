@@ -100,7 +100,10 @@ def test_prints_mockup_renders_and_enables_add_to_cart():
     returns 200."""
     with browser_page() as page:
         page.goto("/prints")
-        page.wait_for_selector("#add-to-cart-print:not([disabled])", timeout=5000)
+        # Longer timeout than other waits in this suite: this page also loads the wall-mockup
+        # background photo, which competes for network/CPU with the catalogue photo probe this
+        # is actually waiting on, and was seen to occasionally miss a tight 5s budget in CI.
+        page.wait_for_selector("#add-to-cart-print:not([disabled])", timeout=10000)
         assert page.locator("#selected-price").inner_text() != "—"
         assert page.locator("#wall-print").get_attribute("src")
 
