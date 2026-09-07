@@ -6,6 +6,17 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.5.1] - 2026-09-07
+
+### Fixed
+
+- Prints/Apparel selection-pane price line now reacts to the quantity stepper — previously it
+  only re-rendered on size/age-group selection, so picking qty > 1 still showed the unit price
+  with no total, matching the cart's own "KES X each — KES Y total" wording once qty > 1
+  (closes #34)
+
+tag: `v0.5.1`
+
 ## [0.5.0] - 2026-09-07
 
 ### Added
