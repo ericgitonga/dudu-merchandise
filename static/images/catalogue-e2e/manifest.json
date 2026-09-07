@@ -1,0 +1,39 @@
+{
+  "images": [
+    {
+      "id": "001",
+      "thumb": "/static/images/catalogue-e2e/thumbs/001.jpg",
+      "full": "/static/images/catalogue-e2e/full/001.jpg",
+      "width": 1400,
+      "height": 938
+    },
+    {
+      "id": "004",
+      "thumb": "/static/images/catalogue-e2e/thumbs/004.jpg",
+      "full": "/static/images/catalogue-e2e/full/004.jpg",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "id": "005",
+      "thumb": "/static/images/catalogue-e2e/thumbs/005.jpg",
+      "full": "/static/images/catalogue-e2e/full/005.jpg",
+      "width": 1400,
+      "height": 1032
+    },
+    {
+      "id": "007",
+      "thumb": "/static/images/catalogue-e2e/thumbs/007.jpg",
+      "full": "/static/images/catalogue-e2e/full/007.jpg",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "id": "008",
+      "thumb": "/static/images/catalogue-e2e/thumbs/008.jpg",
+      "full": "/static/images/catalogue-e2e/full/008.jpg",
+      "width": 1400,
+      "height": 934
+    }
+  ]
+}

@@ -5,6 +5,7 @@ import re
 
 from playwright.sync_api import expect
 
+import _common
 from _common import BASE_URL, browser_page
 
 
@@ -316,6 +317,9 @@ TESTS = [
 ]
 
 if __name__ == "__main__":
-    for t in TESTS:
-        t()
-        print(f"PASS {t.__name__}")
+    try:
+        for t in TESTS:
+            t()
+            print(f"PASS {t.__name__}")
+    finally:
+        _common.shutdown()

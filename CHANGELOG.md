@@ -6,6 +6,24 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.5.4] - 2026-09-07
+
+### Fixed
+
+- e2e suite hammered the dev server: 16 tests each launched a brand-new Chromium process (real
+  CPU overhead competing with the single Flask process for cycles) and re-fetched the full
+  ~117-photo catalogue from a cold browser context every time — confirmed via a CI run logging
+  1046 thumbnail requests and repeated timeouts on unrelated tests despite #38 already removing
+  the button-enable gate's network dependency entirely. Now: one shared Chromium process for the
+  whole suite (`e2e/_common.py`, isolated `browser.new_context()` per test — no cookie/storage
+  bleed), plus a 5-photo fixture catalogue (`static/images/catalogue-e2e/`, real copies of ids
+  001/004/005/007/008) used by CI and documented for local runs, instead of the real catalogue.
+  Cut one local run's thumbnail requests from 1046 to 65 (closes #44)
+- `app.py` gains `CATALOGUE_MANIFEST_PATH` (optional env override, resolved against `BASE_DIR`)
+  so e2e can point at the fixture catalogue without touching production's default
+
+tag: `v0.5.4`
+
 ## [0.5.3] - 2026-09-07
 
 ### Fixed
