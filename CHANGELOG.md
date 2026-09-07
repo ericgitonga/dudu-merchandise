@@ -6,6 +6,17 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.8.2] - 2026-09-07
+
+### Security
+
+- `/cart/remove/<index>` now has an explicit `60 per minute` rate limit, matching its
+  cart-mutation siblings (`/cart/add`, `/cart/qty/<index>`) — previously it only inherited the
+  looser app-wide default (200/day, 50/hour). Verified directly: request 61 in a burst returns
+  429 (closes #51)
+
+tag: `v0.8.2`
+
 ## [0.8.1] - 2026-09-07
 
 ### Security

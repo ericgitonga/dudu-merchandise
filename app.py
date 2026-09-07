@@ -443,6 +443,7 @@ def cart_add():
 
 
 @app.route("/cart/remove/<int:index>", methods=["POST"])
+@limiter.limit("60 per minute")
 def cart_remove(index):
     cart = session.get("cart", [])
     if 0 <= index < len(cart):
