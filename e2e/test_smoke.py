@@ -226,7 +226,13 @@ def test_prints_mockup_size_fixed_at_a2_regardless_of_selected_size():
 def test_apparel_mockup_renders_and_enables_add_to_cart():
     with browser_page() as page:
         page.goto("/apparel")
-        page.wait_for_selector("#add-to-cart-apparel:not([disabled])", timeout=5000)
+        # Same generous budget as the Prints mockup test, for the same reason (issue #36): a
+        # 5000ms timeout here occasionally blew under CI's runner variance even after #30 removed
+        # the actual network dependency (both mockup scripts read aspect ratio off the
+        # already-loaded thumbnail rather than re-fetching the full-resolution image) — the
+        # catalogue grid's own thumbnails still have to load somewhere, and 5s wasn't a
+        # meaningful measurement of that, just an unwidened leftover from before #30.
+        page.wait_for_selector("#add-to-cart-apparel:not([disabled])", timeout=20000)
         assert page.locator("#selected-price").inner_text() != "—"
         assert page.locator("#shirt-design").get_attribute("href")
 
