@@ -6,6 +6,13 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.8.5] - 2026-09-07
+
+### Maintenance
+
+- Merged 4 Dependabot dependency updates: `actions/setup-python` 5→7, `actions/checkout` 4→7,
+  `pillow` 10.4.0→12.3.0 (dev-script only), `resend` 2.32.2→2.43.0 (#62-#65)
+
 ## [0.8.4] - 2026-09-07
 
 ### Security
