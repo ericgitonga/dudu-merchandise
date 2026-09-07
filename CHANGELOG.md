@@ -6,6 +6,19 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.8.3] - 2026-09-07
+
+### Security
+
+- Dependencies fully pinned to their currently-installed, tested versions in
+  `requirements.txt`/`requirements-dev.txt` (were entirely unpinned — every fresh `pip install`
+  silently grabbed whatever was latest at that moment) — a reproducibility/supply-chain gap, not
+  a currently-known vulnerability
+- Added `.github/dependabot.yml` (pip + github-actions ecosystems, weekly) so future version
+  bumps are proposed as reviewable PRs instead of happening silently (closes #52)
+
+tag: `v0.8.3`
+
 ## [0.8.2] - 2026-09-07
 
 ### Security
