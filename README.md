@@ -106,7 +106,7 @@ see that file's comments, and issues #17/#20/#25 for how the geometry was derive
 pytest                             # unit tests — pricing, cart-item validation, order email
 
 # e2e suite — run against a server started with a small 5-photo fixture catalogue instead of the
-# real one (issue #44), so the suite isn't re-fetching the full ~117-photo catalogue on every
+# real one (issue #44), so the suite isn't re-fetching the full ~217-photo catalogue on every
 # test's page load:
 CATALOGUE_MANIFEST_PATH=static/images/catalogue-e2e/manifest.json python app.py  # one terminal
 conda run -n ds python e2e/run.py                                               # another
