@@ -6,6 +6,18 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.4.3] - 2026-09-07
+
+### Fixed
+
+- Flaky `test_prints_mockup_renders_and_enables_add_to_cart` e2e test — the Prints and Apparel
+  mockup scripts were gating the add-to-cart button on a redundant full-resolution image fetch
+  just to read its dimensions, which competed with the wall-mockup background photo and every
+  catalogue thumbnail for the dev server's attention and occasionally blew CI's wait budget; both
+  now read aspect ratio off the already-loaded thumbnail instead (closes #30)
+
+tag: `v0.4.3`
+
 ## [0.4.2] - 2026-09-07
 
 ### Changed

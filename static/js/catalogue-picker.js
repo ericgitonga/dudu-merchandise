@@ -1,6 +1,9 @@
 /* Catalogue photo grid: click a thumbnail to select it. Dispatches a "photo-selected"
-   CustomEvent on the grid element with {id, thumb, full} so page-specific mockup scripts
-   (prints-mockup.js, apparel-mockup.js) can react without this file knowing about them. */
+   CustomEvent on the grid element with {id, thumb, full, thumbImg} so page-specific mockup
+   scripts (prints-mockup.js, apparel-mockup.js) can react without this file knowing about them.
+   thumbImg is the clicked button's own <img> element, already on screen — mockup scripts read
+   its dimensions for aspect-ratio math instead of fetching the full-resolution image a second
+   time just to probe its size. */
 
 document.querySelectorAll(".catalogue-grid").forEach((grid) => {
   grid.addEventListener("click", (event) => {
@@ -16,6 +19,7 @@ document.querySelectorAll(".catalogue-grid").forEach((grid) => {
           id: button.dataset.id,
           thumb: button.dataset.thumb,
           full: button.dataset.full,
+          thumbImg: button.querySelector("img"),
         },
       })
     );

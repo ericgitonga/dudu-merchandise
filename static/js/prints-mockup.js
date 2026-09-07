@@ -76,14 +76,25 @@
   }
 
   grid.addEventListener("photo-selected", (event) => {
-    const { id, full } = event.detail;
-    const probe = new Image();
-    probe.onload = () => {
-      selected = { id, full, aspect: probe.naturalWidth / probe.naturalHeight };
+    const { id, full, thumbImg } = event.detail;
+
+    function useThumb() {
+      selected = { id, full, aspect: thumbImg.naturalWidth / thumbImg.naturalHeight };
       renderMockup();
       updateOrderControls();
-    };
-    probe.src = full;
+    }
+
+    // The thumbnail shares the full photo's aspect ratio and is already on screen — read its
+    // dimensions instead of fetching the full-resolution image a second time just to probe its
+    // size. Only wait on its own load if the auto-selected-first-photo path beat the thumbnail
+    // to it (issue #30: the redundant full-image fetch competed with the room mockup photo and
+    // every other thumbnail for the dev server's attention, occasionally blowing e2e's wait
+    // budget in CI).
+    if (thumbImg.complete && thumbImg.naturalWidth > 0) {
+      useThumb();
+    } else {
+      thumbImg.addEventListener("load", useThumb, { once: true });
+    }
   });
 
   sizeInputs.forEach((input) => input.addEventListener("change", updateOrderControls));

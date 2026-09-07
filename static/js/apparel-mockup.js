@@ -31,19 +31,26 @@
   }
 
   grid.addEventListener("photo-selected", (event) => {
-    const { id, full } = event.detail;
-    const probe = new Image();
-    probe.onload = () => {
+    const { id, full, thumbImg } = event.detail;
+
+    function useThumb() {
       selected = { id, full };
-      const h = CHEST_W * (probe.naturalHeight / probe.naturalWidth);
+      const h = CHEST_W * (thumbImg.naturalHeight / thumbImg.naturalWidth);
       designImg.setAttribute("href", full);
       designImg.setAttribute("x", CHEST_X);
       designImg.setAttribute("y", CHEST_Y);
       designImg.setAttribute("width", CHEST_W);
       designImg.setAttribute("height", h);
       addBtn.disabled = false;
-    };
-    probe.src = full;
+    }
+
+    // Same fix as prints-mockup.js (issue #30): read the aspect ratio off the already-loaded
+    // thumbnail instead of fetching the full-resolution image a second time just to probe it.
+    if (thumbImg.complete && thumbImg.naturalWidth > 0) {
+      useThumb();
+    } else {
+      thumbImg.addEventListener("load", useThumb, { once: true });
+    }
   });
 
   swatches.forEach((swatch) => {
