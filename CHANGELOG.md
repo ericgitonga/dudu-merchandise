@@ -6,6 +6,17 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.6.1] - 2026-09-07
+
+### Security
+
+- `SECRET_KEY` now fails fast at startup if unset with `VERCEL_ENV=production`, instead of
+  silently falling back to a hardcoded, publicly-known value — the exact pattern that let #40's
+  incident (SECRET_KEY unset in production for hours) go undetected. Local dev is unaffected
+  (closes #47)
+
+tag: `v0.6.1`
+
 ## [0.6.0] - 2026-09-07
 
 ### Added

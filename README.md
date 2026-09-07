@@ -22,7 +22,7 @@ restart the process after editing anything in `templates/`.
 
 | Variable | Required | Purpose |
 |---|---|---|
-| `SECRET_KEY` | Production only | Signs the session cookie (cart contents) and CSRF tokens. A dev-only default is used locally. |
+| `SECRET_KEY` | Production only | Signs the session cookie (cart contents) and CSRF tokens. A dev-only default is used locally; the app refuses to start if it's missing and `VERCEL_ENV=production` (issue #47) rather than silently falling back to that default. |
 | `RESEND_API_KEY` | For order emails | Without it, order submission still succeeds but email delivery is skipped (logged, not sent) — see `send_order_email` in `app.py`. |
 | `FROM_EMAIL` | No | Sender address for order emails. Defaults to Resend's `onboarding@resend.dev` sandbox address, which shows the raw address as the sender name. Set a display name instead — e.g. `Dudu Merch <onboarding@resend.dev>` — to brand it (Resend's sandbox address accepts a custom display name; a verified custom domain would additionally allow a fully custom `from` address). |
 
