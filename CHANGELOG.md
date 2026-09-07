@@ -6,6 +6,16 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.5.2] - 2026-09-07
+
+### Fixed
+
+- Flaky `test_apparel_mockup_renders_and_enables_add_to_cart` e2e test — widened its 5000ms
+  wait budget to 20000ms, matching the Prints mockup test's budget (#30) — this test was never
+  updated when #30 removed the actual network dependency from both mockup scripts (closes #36)
+
+tag: `v0.5.2`
+
 ## [0.5.1] - 2026-09-07
 
 ### Fixed
