@@ -27,7 +27,15 @@ from flask_limiter.util import get_remote_address
 from flask_wtf.csrf import CSRFProtect, generate_csrf
 
 BASE_DIR = Path(__file__).parent
-CATALOGUE_MANIFEST = BASE_DIR / "static" / "images" / "catalogue" / "manifest.json"
+# CATALOGUE_MANIFEST_PATH lets e2e point at a small fixture catalogue (issue #44) instead of the
+# real ~117-photo one, so the test suite isn't hammering the dev server with the full set on
+# every page load — never set in production, where this always resolves to the real manifest.
+# A relative override is resolved against BASE_DIR, not the process's current working directory.
+_manifest_override = os.environ.get("CATALOGUE_MANIFEST_PATH")
+CATALOGUE_MANIFEST = (
+    (BASE_DIR / _manifest_override) if _manifest_override
+    else (BASE_DIR / "static" / "images" / "catalogue" / "manifest.json")
+)
 
 app = Flask(__name__)
 APP_VERSION = (BASE_DIR / "VERSION").read_text().strip()

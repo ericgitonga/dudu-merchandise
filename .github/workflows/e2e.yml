@@ -28,6 +28,12 @@ jobs:
         # Output redirected to a file: GitHub Actions stops capturing a backgrounded (`&`)
         # process's output once the step that launched it exits. "Print server log" below cats
         # this file so it's visible regardless of outcome.
+        #
+        # CATALOGUE_MANIFEST_PATH points at the 5-photo e2e fixture catalogue instead of the
+        # real ~117-photo one (issue #44) — every test's page load was re-fetching the full
+        # catalogue from a cold browser context, which was itself a real source of CI flakiness.
+        env:
+          CATALOGUE_MANIFEST_PATH: static/images/catalogue-e2e/manifest.json
         run: |
           python app.py > /tmp/server.log 2>&1 &
           for i in $(seq 1 30); do

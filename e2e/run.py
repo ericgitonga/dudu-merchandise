@@ -15,6 +15,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 
+import _common  # noqa: E402 — after the sys.path insert above
+
 SKIP_MODULES = {m for m in os.environ.get("E2E_SKIP_MODULES", "").split(",") if m}
 
 
@@ -38,16 +40,19 @@ def main() -> int:
         return 1
 
     failures = []
-    for t in tests:
-        label = f"{t.__module__}.{t.__name__}"
-        try:
-            t()
-        except Exception:
-            print(f"FAIL {label}")
-            traceback.print_exc()
-            failures.append(label)
-        else:
-            print(f"PASS {label}")
+    try:
+        for t in tests:
+            label = f"{t.__module__}.{t.__name__}"
+            try:
+                t()
+            except Exception:
+                print(f"FAIL {label}")
+                traceback.print_exc()
+                failures.append(label)
+            else:
+                print(f"PASS {label}")
+    finally:
+        _common.shutdown()
 
     print(f"\n{len(tests) - len(failures)}/{len(tests)} passed.")
     if failures:
