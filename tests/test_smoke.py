@@ -6,6 +6,17 @@ import pytest
 import app as appmod
 
 
+def test_catalogue_validation_rejects_entries_missing_dimensions():
+    with pytest.raises(RuntimeError):
+        appmod._validate_catalogue([{"id": "999", "thumb": "x", "full": "y"}])
+    with pytest.raises(RuntimeError):
+        appmod._validate_catalogue([{"id": "999", "thumb": "x", "full": "y", "width": 100}])
+
+
+def test_catalogue_validation_accepts_complete_entries():
+    appmod._validate_catalogue([{"id": "999", "thumb": "x", "full": "y", "width": 100, "height": 50}])
+
+
 def test_print_price_matches_catalogue():
     item = appmod.build_print_item({"photo_id": "001", "size": "a3"})
     assert item["price"] == appmod.PRINT_SIZES["A3"]["price"]

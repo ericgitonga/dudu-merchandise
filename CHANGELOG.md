@@ -6,6 +6,20 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.5.3] - 2026-09-07
+
+### Fixed
+
+- Eliminated the Prints/Apparel mockup's remaining network dependency for the add-to-cart
+  enable gate — `manifest.json` now carries each catalogue photo's width/height (added via new
+  `scripts/add_catalogue_dimensions.py`, run once over the existing 117 photos), so aspect ratio
+  comes straight from JSON with no image load involved at all. Supersedes the timeout-only
+  mitigations in #30/#36 — this removes the flake's actual root cause rather than budgeting
+  around it. `app.py` now fails fast at startup if any catalogue entry is missing dimensions
+  (closes #38)
+
+tag: `v0.5.3`
+
 ## [0.5.2] - 2026-09-07
 
 ### Fixed

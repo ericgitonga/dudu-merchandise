@@ -45,9 +45,23 @@ limiter = Limiter(get_remote_address, app=app, default_limits=["200 per day", "5
 
 # ── Catalogue ────────────────────────────────────────────────────────────────
 
+def _validate_catalogue(images):
+    """Every entry needs width/height (issue #38) — the Prints/Apparel mockup scripts read
+    aspect ratio straight from these, with no runtime image load to fall back on, so a missing
+    pair would silently ship a permanently-disabled add-to-cart button for that photo."""
+    missing = [img["id"] for img in images if not img.get("width") or not img.get("height")]
+    if missing:
+        raise RuntimeError(
+            f"Catalogue entries missing width/height: {missing} — run "
+            "scripts/add_catalogue_dimensions.py before starting the app."
+        )
+
+
 def _load_catalogue():
     data = json.loads(CATALOGUE_MANIFEST.read_text())
-    return data["images"]
+    images = data["images"]
+    _validate_catalogue(images)
+    return images
 
 
 CATALOGUE = _load_catalogue()

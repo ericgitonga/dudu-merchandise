@@ -113,7 +113,7 @@ def test_prints_quantity_adds_one_merged_line_and_cart_steppers_adjust_it():
     that line's quantity and total in place, removing it once decremented to zero."""
     with browser_page() as page:
         page.goto("/prints")
-        page.wait_for_selector("#add-to-cart-print:not([disabled])", timeout=20000)
+        page.wait_for_selector("#add-to-cart-print:not([disabled])", timeout=5000)
 
         sizes = json.loads(page.locator("#print-sizes-data").inner_text())
         checked_size = page.locator('input[name="size"]:checked').get_attribute("value")
@@ -148,7 +148,7 @@ def test_prints_price_line_updates_with_quantity():
     no hint that's the per-unit price, not the KES 140,000 total about to be added."""
     with browser_page() as page:
         page.goto("/prints")
-        page.wait_for_selector("#add-to-cart-print:not([disabled])", timeout=20000)
+        page.wait_for_selector("#add-to-cart-print:not([disabled])", timeout=5000)
 
         sizes = json.loads(page.locator("#print-sizes-data").inner_text())
         checked_size = page.locator('input[name="size"]:checked').get_attribute("value")
@@ -171,7 +171,7 @@ def test_apparel_price_line_updates_with_quantity():
     """Same fix as test_prints_price_line_updates_with_quantity, for issue #34."""
     with browser_page() as page:
         page.goto("/apparel")
-        page.wait_for_selector("#add-to-cart-apparel:not([disabled])", timeout=20000)
+        page.wait_for_selector("#add-to-cart-apparel:not([disabled])", timeout=5000)
 
         prices = json.loads(page.locator("#apparel-prices-data").inner_text())
         checked_age = page.locator('input[name="age_group"]:checked').get_attribute("value")
@@ -192,13 +192,12 @@ def test_prints_mockup_renders_and_enables_add_to_cart():
     returns 200."""
     with browser_page() as page:
         page.goto("/prints")
-        # Longer timeout than other waits in this suite, kept as a generous ceiling: the button
-        # used to also wait on a redundant full-resolution image fetch (issue #30), which
-        # competed with the wall-mockup background photo for the dev server's attention and
-        # occasionally blew a 20s budget in CI. Fixed by reading aspect ratio off the
-        # already-loaded thumbnail instead — this wait is no longer on that network path, but
-        # the generous budget costs nothing and guards against future regressions.
-        page.wait_for_selector("#add-to-cart-print:not([disabled])", timeout=20000)
+        # The button used to wait on a live image load to compute aspect ratio (first a
+        # redundant full-resolution fetch, issue #30; then the already-visible thumbnail's own
+        # load, which still wasn't enough under CI contention, issue #36) — both replaced by
+        # #38's fix of baking width/height into manifest.json, so there's no network/image-load
+        # dependency left at all. This wait is now just headroom for page load/JS execution.
+        page.wait_for_selector("#add-to-cart-print:not([disabled])", timeout=5000)
         assert page.locator("#selected-price").inner_text() != "—"
         assert page.locator("#wall-print").get_attribute("src")
 
@@ -210,7 +209,7 @@ def test_prints_mockup_size_fixed_at_a2_regardless_of_selected_size():
     when a different size is picked."""
     with browser_page() as page:
         page.goto("/prints")
-        page.wait_for_selector("#add-to-cart-print:not([disabled])", timeout=20000)
+        page.wait_for_selector("#add-to-cart-print:not([disabled])", timeout=5000)
         width_before = page.locator("#wall-print").evaluate("el => el.style.width")
         height_before = page.locator("#wall-print").evaluate("el => el.style.height")
         price_before = page.locator("#selected-price").inner_text()
@@ -226,13 +225,10 @@ def test_prints_mockup_size_fixed_at_a2_regardless_of_selected_size():
 def test_apparel_mockup_renders_and_enables_add_to_cart():
     with browser_page() as page:
         page.goto("/apparel")
-        # Same generous budget as the Prints mockup test, for the same reason (issue #36): a
-        # 5000ms timeout here occasionally blew under CI's runner variance even after #30 removed
-        # the actual network dependency (both mockup scripts read aspect ratio off the
-        # already-loaded thumbnail rather than re-fetching the full-resolution image) — the
-        # catalogue grid's own thumbnails still have to load somewhere, and 5s wasn't a
-        # meaningful measurement of that, just an unwidened leftover from before #30.
-        page.wait_for_selector("#add-to-cart-apparel:not([disabled])", timeout=20000)
+        # Same fix as the Prints mockup test (issue #38): aspect ratio now comes from
+        # manifest.json, not a live image load, so this wait is just headroom for page
+        # load/JS execution, not a network dependency (see #30/#36 for the history here).
+        page.wait_for_selector("#add-to-cart-apparel:not([disabled])", timeout=5000)
         assert page.locator("#selected-price").inner_text() != "—"
         assert page.locator("#shirt-design").get_attribute("href")
 

@@ -84,26 +84,13 @@
     addBtn.disabled = !selected.id;
   }
 
+  // width/height come from manifest.json (issue #38) — no image load to wait on, so the button
+  // enables the instant a photo is picked, including the auto-selected first photo on page load.
   grid.addEventListener("photo-selected", (event) => {
-    const { id, full, thumbImg } = event.detail;
-
-    function useThumb() {
-      selected = { id, full, aspect: thumbImg.naturalWidth / thumbImg.naturalHeight };
-      renderMockup();
-      updateOrderControls();
-    }
-
-    // The thumbnail shares the full photo's aspect ratio and is already on screen — read its
-    // dimensions instead of fetching the full-resolution image a second time just to probe its
-    // size. Only wait on its own load if the auto-selected-first-photo path beat the thumbnail
-    // to it (issue #30: the redundant full-image fetch competed with the room mockup photo and
-    // every other thumbnail for the dev server's attention, occasionally blowing e2e's wait
-    // budget in CI).
-    if (thumbImg.complete && thumbImg.naturalWidth > 0) {
-      useThumb();
-    } else {
-      thumbImg.addEventListener("load", useThumb, { once: true });
-    }
+    const { id, full, width, height } = event.detail;
+    selected = { id, full, aspect: width / height };
+    renderMockup();
+    updateOrderControls();
   });
 
   sizeInputs.forEach((input) => input.addEventListener("change", updateOrderControls));
