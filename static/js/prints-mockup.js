@@ -2,10 +2,16 @@
    room.jpg — frameless, positioned against the moulded wall panel already visible in that
    photo. Geometry and technique validated in issue #17's spike, ported in #20.
 
-   Orientation (portrait vs landscape) is chosen per photo to match its own aspect ratio,
-   the same test already used below for paper-size orientation — a photo is never
-   force-cropped into the wrong shape. object-fit: cover on the <img> then does the actual
-   centred crop once width/height are set to the target box. */
+   The mockup always renders at A2, regardless of which size is selected for ordering — sizing
+   the box to match every ISO size in turn made the larger/smaller ends look disproportionate
+   against this one room photo (A0 in particular read as roughly couch-sized, which it isn't;
+   see issue #25). A2 is the one that reads right, so it's the fixed reference render; the size
+   picker only ever changes price and what's ordered, never the preview's own dimensions.
+
+   Orientation (portrait vs landscape) is still chosen per photo to match its own aspect ratio —
+   the same test already used below for paper-size orientation — so a photo is never
+   force-cropped into the wrong shape. object-fit: cover then does the actual centred crop once
+   width/height are set to the target box. */
 
 (function () {
   const printImg = document.getElementById("wall-print");
@@ -24,9 +30,10 @@
   const ROOM_ASPECT = 1100 / 712;
 
   // Real-world scale is an authored/tuned constant, not a measured one — same status the old
-  // illustrated wall's PX_PER_CM had, just applied to a photo instead of a flat gradient.
-  // Assumes the visible wall spans about 3m corner to corner.
+  // illustrated wall's PX_PER_CM always had. Assumes the visible wall spans about 3m corner
+  // to corner. Only matters for the one fixed A2 render now, not for comparing sizes.
   const ROOM_WIDTH_CM = 300;
+  const MOCKUP_SIZE = "A2";
 
   const SIZES_MM = JSON.parse(document.getElementById("print-sizes-data").textContent);
 
@@ -37,11 +44,10 @@
     return checked ? checked.value : null;
   }
 
-  function render() {
-    const size = currentSize();
-    if (!size || !selected.full) return;
+  function renderMockup() {
+    if (!selected.full) return;
 
-    const spec = SIZES_MM[size];
+    const spec = SIZES_MM[MOCKUP_SIZE];
     const shortCm = spec.w_mm / 10;
     const longCm = spec.h_mm / 10;
     // Orient the print (portrait vs landscape) to whichever is closer to the photo's own
@@ -52,28 +58,21 @@
     const wCm = usePortrait ? shortCm : longCm;
     const hCm = usePortrait ? longCm : shortCm;
 
-    let widthPct = (wCm / ROOM_WIDTH_CM) * 100;
-    let heightPct = ((hCm / ROOM_WIDTH_CM) * ROOM_ASPECT) * 100;
-
-    // Safety clamp: at this room's scale, a large portrait print reaches the panel's height
-    // limit well before landscape does (see #17/#20) — shrink proportionally rather than let
-    // it spill past the photo itself. All current catalogue photos are comfortably under this
-    // even at the largest size; only a future large portrait photo would ever hit it.
-    const MAX_PCT = 94;
-    if (widthPct > MAX_PCT || heightPct > MAX_PCT) {
-      const scaleDown = Math.min(MAX_PCT / widthPct, MAX_PCT / heightPct);
-      widthPct *= scaleDown;
-      heightPct *= scaleDown;
-    }
+    const widthPct = (wCm / ROOM_WIDTH_CM) * 100;
+    const heightPct = (hCm / ROOM_WIDTH_CM) * ROOM_ASPECT * 100;
 
     printImg.style.width = `${widthPct}%`;
     printImg.style.height = `${heightPct}%`;
     printImg.style.left = `${PANEL_CX - widthPct / 2}%`;
     printImg.style.top = `${PANEL_CY - heightPct / 2}%`;
     printImg.src = selected.full;
+  }
 
-    priceEl.textContent = `KES ${spec.price.toLocaleString()}`;
-    addBtn.disabled = false;
+  function updateOrderControls() {
+    const size = currentSize();
+    if (!size) return;
+    priceEl.textContent = `KES ${SIZES_MM[size].price.toLocaleString()}`;
+    addBtn.disabled = !selected.id;
   }
 
   grid.addEventListener("photo-selected", (event) => {
@@ -81,12 +80,13 @@
     const probe = new Image();
     probe.onload = () => {
       selected = { id, full, aspect: probe.naturalWidth / probe.naturalHeight };
-      render();
+      renderMockup();
+      updateOrderControls();
     };
     probe.src = full;
   });
 
-  sizeInputs.forEach((input) => input.addEventListener("change", render));
+  sizeInputs.forEach((input) => input.addEventListener("change", updateOrderControls));
 
   addBtn.addEventListener("click", async () => {
     if (!selected.id) return;
