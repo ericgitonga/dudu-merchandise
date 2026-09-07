@@ -25,6 +25,17 @@ def test_index_loads_with_nav_links():
         assert nav.get_by_role("link", name="Coasters", exact=True).count() == 0
 
 
+def test_no_page_links_to_hidden_apparel():
+    """Regression guard: the nav and home-page links were hidden for issue #18, but a stray
+    link survived on the empty-cart message and on the Coasters placeholder page (issue #26) —
+    caught only by manual inspection after both had shipped. Sweep every real page for any
+    link pointing at /apparel, not just the nav."""
+    with browser_page() as page:
+        for path in ["/", "/prints", "/coasters", "/cart"]:
+            page.goto(path)
+            assert page.locator('a[href="/apparel"]').count() == 0, f"{path} still links to /apparel"
+
+
 def test_health_endpoint():
     with browser_page() as page:
         resp = page.request.get(f"{BASE_URL}/_health")
@@ -101,9 +112,11 @@ def test_prints_mockup_renders_and_enables_add_to_cart():
     with browser_page() as page:
         page.goto("/prints")
         # Longer timeout than other waits in this suite: this page also loads the wall-mockup
-        # background photo, which competes for network/CPU with the catalogue photo probe this
-        # is actually waiting on, and was seen to occasionally miss a tight 5s budget in CI.
-        page.wait_for_selector("#add-to-cart-print:not([disabled])", timeout=10000)
+        # background photo, competing for network/CPU with the catalogue photo probe this is
+        # actually waiting on. Seen missing budgets as high as 10s in CI (not locally) even
+        # after threaded=True on the dev server — GitHub Actions runner variance, not a real
+        # slowdown; 20s is a deliberately generous ceiling rather than a meaningful measurement.
+        page.wait_for_selector("#add-to-cart-print:not([disabled])", timeout=20000)
         assert page.locator("#selected-price").inner_text() != "—"
         assert page.locator("#wall-print").get_attribute("src")
 
@@ -115,7 +128,7 @@ def test_prints_mockup_size_fixed_at_a2_regardless_of_selected_size():
     when a different size is picked."""
     with browser_page() as page:
         page.goto("/prints")
-        page.wait_for_selector("#add-to-cart-print:not([disabled])", timeout=10000)
+        page.wait_for_selector("#add-to-cart-print:not([disabled])", timeout=20000)
         width_before = page.locator("#wall-print").evaluate("el => el.style.width")
         height_before = page.locator("#wall-print").evaluate("el => el.style.height")
         price_before = page.locator("#selected-price").inner_text()
@@ -201,6 +214,7 @@ def test_checkout_rejects_empty_cart():
 
 TESTS = [
     test_index_loads_with_nav_links,
+    test_no_page_links_to_hidden_apparel,
     test_health_endpoint,
     test_prints_page_lists_catalogue_and_sizes,
     test_apparel_page_lists_catalogue_and_colours,
