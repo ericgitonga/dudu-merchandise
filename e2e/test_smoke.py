@@ -25,6 +25,17 @@ def test_index_loads_with_nav_links():
         assert nav.get_by_role("link", name="Coasters", exact=True).count() == 0
 
 
+def test_no_page_links_to_hidden_apparel():
+    """Regression guard: the nav and home-page links were hidden for issue #18, but a stray
+    link survived on the empty-cart message and on the Coasters placeholder page (issue #26) —
+    caught only by manual inspection after both had shipped. Sweep every real page for any
+    link pointing at /apparel, not just the nav."""
+    with browser_page() as page:
+        for path in ["/", "/prints", "/coasters", "/cart"]:
+            page.goto(path)
+            assert page.locator('a[href="/apparel"]').count() == 0, f"{path} still links to /apparel"
+
+
 def test_health_endpoint():
     with browser_page() as page:
         resp = page.request.get(f"{BASE_URL}/_health")
@@ -201,6 +212,7 @@ def test_checkout_rejects_empty_cart():
 
 TESTS = [
     test_index_loads_with_nav_links,
+    test_no_page_links_to_hidden_apparel,
     test_health_endpoint,
     test_prints_page_lists_catalogue_and_sizes,
     test_apparel_page_lists_catalogue_and_colours,

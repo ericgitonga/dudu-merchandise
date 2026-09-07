@@ -4,7 +4,7 @@
 <h1>Your cart</h1>
 
 {% if not cart %}
-<p class="cart-empty">Your cart is empty. Shop <a href="{{ url_for('prints') }}">Prints</a> or <a href="{{ url_for('apparel') }}">Apparel</a>.</p>
+<p class="cart-empty">Your cart is empty. Shop <a href="{{ url_for('prints') }}">Prints</a>.</p>
 {% else %}
 <ul class="cart-items">
   {% for item in cart %}

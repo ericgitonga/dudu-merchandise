@@ -6,6 +6,15 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.4.1] - 2026-09-07
+
+### Fixed
+
+- Two stray links to the hidden Apparel page — the cart's empty-cart message and the Coasters
+  placeholder page — missed when Apparel was hidden in #18 (closes #26)
+
+tag: `v0.4.1`
+
 ## [0.4.0] - 2026-09-07
 
 ### Added
