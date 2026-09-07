@@ -18,9 +18,10 @@ online payment gateway.
 import json
 import os
 import re
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
 
+import vercel_blob
 from flask import Flask, jsonify, render_template, request, session
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
@@ -210,6 +211,66 @@ def cart_item_count(cart):
 
 CONTACT_RE = re.compile(r"^\S{2,120}$")
 MPESA_CODE_RE = re.compile(r"^[A-Z0-9]{6,15}$")
+
+
+# ── M-Pesa replay guard (issue #48) ─────────────────────────────────────────
+# The M-Pesa code is entirely self-reported — there is no Safaricom Daraja API integration to
+# verify a code is real (that's the eventual real fix, a bigger project of its own). This is the
+# cheap interim mitigation: track which codes have already been used and reject a repeat, so the
+# same real payment can't be claimed as proof for multiple orders.
+#
+# Storage: Vercel Blob, one small immutable blob per code (pathname derived from the code
+# itself), rather than one shared mutable JSON object. Deliberate: overwriting a single shared
+# blob hits Vercel Blob's CDN cache floor for *reads* (observed directly — served
+# `cache-control: public, max-age=60` with `x-vercel-cache: HIT` regardless of the
+# cacheControlMaxAge requested on write, so a read shortly after a write can return a stale
+# pre-write snapshot for up to a minute). A brand-new pathname doesn't have this problem — a
+# `list()` existence-check for a pathname that was *just created* returns correctly and
+# immediately (verified directly), since it's a fresh object rather than a cached-then-updated
+# one. `allowOverwrite: false` also turns creation into an atomic compare-and-swap: if a
+# concurrent request already claimed this exact code between our existence check and our write,
+# the write itself fails, closing the race window almost entirely rather than just narrowing it.
+#
+# The store must be *public* access — Vercel Blob's private-access mode currently rejects writes
+# made with a deployed app's own BLOB_READ_WRITE_TOKEN (only an authenticated `vercel` CLI
+# session can write to a private store as of this writing). The data itself is low-sensitivity
+# (an opaque already-used code as the pathname, no names/amounts/contact info in the content),
+# and no pathname is linked from anywhere public.
+#
+# Fails open (logs a warning, allows the order through) if Blob isn't configured or the check
+# itself errors — this guard reduces fraud, it isn't infrastructure the whole checkout flow
+# should depend on being up.
+MPESA_CODES_BLOB_PREFIX = "used-mpesa-codes/"
+
+
+def _mpesa_code_blob_pathname(code):
+    """Pure, split out from the Blob I/O so it's directly unit-testable."""
+    return f"{MPESA_CODES_BLOB_PREFIX}{code}.json"
+
+
+def check_and_record_mpesa_code(code):
+    """Returns True if `code` was already used in a previous order (reject this checkout), False
+    if it's newly recorded as used (or the guard couldn't run at all)."""
+    if not os.environ.get("BLOB_READ_WRITE_TOKEN"):
+        app.logger.warning("BLOB_READ_WRITE_TOKEN not set — M-Pesa replay guard skipped")
+        return False
+    pathname = _mpesa_code_blob_pathname(code)
+    try:
+        existing = vercel_blob.list({"prefix": pathname, "limit": 1})
+        if existing.get("blobs"):
+            return True
+        vercel_blob.put(
+            pathname, json.dumps({"used_at": datetime.utcnow().isoformat()}).encode(),
+            {"allowOverwrite": "false"},
+        )
+        return False
+    except vercel_blob.errors.BlobRequestError:
+        # A concurrent request claimed this exact code between our existence check and our
+        # write (allowOverwrite=false made that write fail) — that's a replay too.
+        return True
+    except Exception:
+        app.logger.warning("M-Pesa replay guard check/record failed", exc_info=True)
+        return False
 
 
 def _describe_item(item):
@@ -422,6 +483,11 @@ def checkout_submit():
         return jsonify({"ok": False, "error": "Please enter a valid phone number or email."}), 400
     if not MPESA_CODE_RE.match(mpesa_code):
         return jsonify({"ok": False, "error": "Please enter a valid M-Pesa confirmation code."}), 400
+    if check_and_record_mpesa_code(mpesa_code):
+        return jsonify({
+            "ok": False,
+            "error": "This M-Pesa code has already been used for a previous order.",
+        }), 400
 
     customer = {
         "name": name[:200], "contact": contact[:200], "location": location[:400],

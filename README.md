@@ -25,6 +25,7 @@ restart the process after editing anything in `templates/`.
 | `SECRET_KEY` | Production only | Signs the session cookie (cart contents) and CSRF tokens. A dev-only default is used locally; the app refuses to start if it's missing and `VERCEL_ENV=production` (issue #47) rather than silently falling back to that default. |
 | `RESEND_API_KEY` | For order emails | Without it, order submission still succeeds but email delivery is skipped (logged, not sent) — see `send_order_email` in `app.py`. |
 | `FROM_EMAIL` | No | Sender address for order emails. Defaults to Resend's `onboarding@resend.dev` sandbox address, which shows the raw address as the sender name. Set a display name instead — e.g. `Dudu Merch <onboarding@resend.dev>` — to brand it (Resend's sandbox address accepts a custom display name; a verified custom domain would additionally allow a fully custom `from` address). |
+| `BLOB_READ_WRITE_TOKEN` | For M-Pesa replay protection | Auto-provisioned by Vercel Blob once a store is linked to the project (`vercel blob create-store <name> --access public --yes`). Without it, checkout still succeeds but the replay guard silently no-ops (logged, not blocking) — see "M-Pesa replay guard" below. |
 
 Order emails always go to `gitonga@gmail.com` (a constant in `app.py`, not configurable via env).
 
@@ -51,6 +52,24 @@ Run this after any deploy that touches `RESEND_API_KEY`/`SECRET_KEY`/`FROM_EMAIL
 cart logic — `e2e/` intentionally never has `RESEND_API_KEY` configured (it asserts `"skipped"`
 is the *correct* behaviour without one), so it can never catch a real environment
 misconfiguration the way this can.
+
+## M-Pesa replay guard
+
+The M-Pesa confirmation code entered at checkout is entirely self-reported — there's no
+Safaricom Daraja API integration to verify it's real. `check_and_record_mpesa_code` in `app.py`
+is a cheap interim mitigation: it rejects a checkout that reuses a code already recorded as used,
+so the same real payment can't be claimed as proof for multiple orders. It does **not** verify a
+code is authentic, only that it hasn't been claimed before — see issue #48 for the real fix
+(Daraja API integration) this is standing in for.
+
+Storage is Vercel Blob — one small immutable blob per code (`used-mpesa-codes/<code>.json`,
+public-access store) rather than one shared mutable object, because overwriting a single blob
+hits Vercel Blob's CDN read-cache floor and can serve a stale pre-write snapshot for up to a
+minute; a freshly-created pathname doesn't have that problem, and `allowOverwrite: false` makes
+creation an atomic compare-and-swap (a concurrent duplicate write fails outright rather than
+racing silently). Fails open — logs a warning, lets the order through — if
+`BLOB_READ_WRITE_TOKEN` isn't configured or the check itself errors; this guard reduces fraud,
+it isn't infrastructure checkout should depend on being up.
 
 ## Catalogue images
 

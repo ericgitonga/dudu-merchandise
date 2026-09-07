@@ -6,6 +6,21 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.7.0] - 2026-09-07
+
+### Added
+
+- M-Pesa replay guard (`check_and_record_mpesa_code`, `app.py`) — checkout now rejects an M-Pesa
+  confirmation code already used in a previous order, instead of accepting the same real payment
+  as proof for unlimited orders. Storage is Vercel Blob: one small immutable blob per code
+  (`used-mpesa-codes/<code>.json`, public-access store), `allowOverwrite: false` making creation
+  an atomic compare-and-swap. Doesn't verify a code is authentic — only that it hasn't been
+  claimed before — see issue #48 for the real fix (Daraja API integration) this stands in for.
+  Fails open (order still succeeds, warning logged) if `BLOB_READ_WRITE_TOKEN` isn't configured
+  or the check errors (closes #48)
+
+tag: `v0.7.0`
+
 ## [0.6.1] - 2026-09-07
 
 ### Security

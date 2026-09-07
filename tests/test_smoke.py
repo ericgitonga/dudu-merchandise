@@ -132,3 +132,13 @@ def test_send_order_email_skips_without_api_key(monkeypatch):
         "mpesa_code": "QGH7XXXXXX",
     }
     assert appmod.send_order_email(cart, customer) == "skipped"
+
+
+def test_mpesa_code_blob_pathname_is_derived_from_the_code():
+    assert appmod._mpesa_code_blob_pathname("QGH7ABC123") == "used-mpesa-codes/QGH7ABC123.json"
+    assert appmod._mpesa_code_blob_pathname("QGH7XYZ999") != appmod._mpesa_code_blob_pathname("QGH7ABC123")
+
+
+def test_check_and_record_mpesa_code_skips_without_blob_token(monkeypatch):
+    monkeypatch.delenv("BLOB_READ_WRITE_TOKEN", raising=False)
+    assert appmod.check_and_record_mpesa_code("QGH7XXXXXX") is False

@@ -2,3 +2,4 @@ flask
 flask-wtf
 flask-limiter
 resend
+vercel_blob
