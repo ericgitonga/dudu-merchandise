@@ -6,6 +6,18 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.8.1] - 2026-09-07
+
+### Security
+
+- Checkout now revalidates every cart item's price against the current pricing tables
+  (`revalidate_cart_prices`, `app.py`) rather than trusting whatever price was set at add
+  time — defense-in-depth against a forged session cookie (compounds with #47's `SECRET_KEY`
+  finding). An item whose stored size/age_group no longer resolves to a valid price is dropped
+  from the cart rather than crashing checkout (closes #50)
+
+tag: `v0.8.1`
+
 ## [0.8.0] - 2026-09-07
 
 ### Added

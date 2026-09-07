@@ -199,6 +199,30 @@ def _item_key(item):
     return ("apparel", item["photo_id"], item["age_group"], item["shirt_colour"])
 
 
+def _current_price(item):
+    """The current pricing-table value for an item's stored size/age_group, or None if it no
+    longer resolves to one (issue #50) — never trust the price (or the size/age_group it's
+    keyed on) stored in the session cookie."""
+    if item["type"] == "print":
+        return PRINT_SIZES.get(item.get("size"), {}).get("price")
+    return APPAREL_PRICES.get(item.get("age_group"))
+
+
+def revalidate_cart_prices(cart):
+    """Overwrite every item's price with its current pricing-table value in place, dropping any
+    item whose stored size/age_group no longer resolves to one. Called at checkout — the point
+    of truth — rather than trusting whatever price was set at add time, in case the session
+    cookie was ever tampered with (compounds with #47's SECRET_KEY finding)."""
+    valid = []
+    for item in cart:
+        price = _current_price(item)
+        if price is None:
+            continue
+        item["price"] = price
+        valid.append(item)
+    cart[:] = valid
+
+
 def cart_total(cart):
     return sum(item["price"] * item.get("qty", 1) for item in cart)
 
@@ -464,6 +488,9 @@ def cart_qty(index):
 @limiter.limit("10 per minute")
 def checkout_submit():
     cart = session.get("cart", [])
+    if not cart:
+        return jsonify({"ok": False, "error": "Your cart is empty."}), 400
+    revalidate_cart_prices(cart)
     if not cart:
         return jsonify({"ok": False, "error": "Your cart is empty."}), 400
 
