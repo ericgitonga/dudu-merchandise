@@ -143,6 +143,25 @@ def test_order_email_includes_total_and_payment_instructions():
     assert "QGH7XXXXXX" in email["text"]
 
 
+def test_strip_control_chars_removes_newlines_and_null_bytes():
+    assert appmod.strip_control_chars("Jane\r\nBcc: attacker@evil.com") == "JaneBcc: attacker@evil.com"
+    assert appmod.strip_control_chars("Nairobi\x00\x1b") == "Nairobi"
+    assert appmod.strip_control_chars("ordinary text, no control chars") == "ordinary text, no control chars"
+
+
+def test_neutralize_formula_injection_prefixes_a_leading_quote():
+    assert appmod.neutralize_formula_injection("=cmd|'/c calc'!A1") == "'=cmd|'/c calc'!A1"
+    assert appmod.neutralize_formula_injection("+254712345678") == "'+254712345678"
+    assert appmod.neutralize_formula_injection("-1+1") == "'-1+1"
+    assert appmod.neutralize_formula_injection("@SUM(A1)") == "'@SUM(A1)"
+    assert appmod.neutralize_formula_injection("Jane Doe") == "Jane Doe"
+    assert appmod.neutralize_formula_injection("") == ""
+
+
+def test_sanitize_customer_field_strips_and_neutralizes_together():
+    assert appmod.sanitize_customer_field("=cmd\r\n") == "'=cmd"
+
+
 def test_send_order_email_skips_without_api_key(monkeypatch):
     monkeypatch.delenv("RESEND_API_KEY", raising=False)
     cart = [appmod.build_print_item({"photo_id": "001", "size": "A4"})]
