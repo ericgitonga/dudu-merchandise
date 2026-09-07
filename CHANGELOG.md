@@ -6,6 +6,19 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.8.0] - 2026-09-07
+
+### Added
+
+- 100 new catalogue photos from the "Black and White" and "Predator and Prey" collections, ids
+  `277`-`376`. Checked both source folders against the existing catalogue first — perceptual-hash
+  matching to find candidates, then an actual side-by-side visual comparison of every candidate,
+  since filenames aren't unique identifiers across the wider photo library — 16 photos (12 from
+  "Black and White", 4 from "Predator and Prey") turned out to already be in the catalogue under
+  different ids and were excluded (closes #57)
+
+tag: `v0.8.0`
+
 ## [0.7.1] - 2026-09-07
 
 ### Security
