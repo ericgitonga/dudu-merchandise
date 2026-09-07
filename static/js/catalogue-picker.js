@@ -1,9 +1,9 @@
 /* Catalogue photo grid: click a thumbnail to select it. Dispatches a "photo-selected"
-   CustomEvent on the grid element with {id, thumb, full, thumbImg} so page-specific mockup
+   CustomEvent on the grid element with {id, thumb, full, width, height} so page-specific mockup
    scripts (prints-mockup.js, apparel-mockup.js) can react without this file knowing about them.
-   thumbImg is the clicked button's own <img> element, already on screen — mockup scripts read
-   its dimensions for aspect-ratio math instead of fetching the full-resolution image a second
-   time just to probe its size. */
+   width/height come from manifest.json (baked in by scripts/add_catalogue_dimensions.py, issue
+   #38) rather than any live image element — mockup scripts get the aspect ratio instantly, with
+   no network/image-load dependency at all. */
 
 document.querySelectorAll(".catalogue-grid").forEach((grid) => {
   grid.addEventListener("click", (event) => {
@@ -19,7 +19,8 @@ document.querySelectorAll(".catalogue-grid").forEach((grid) => {
           id: button.dataset.id,
           thumb: button.dataset.thumb,
           full: button.dataset.full,
-          thumbImg: button.querySelector("img"),
+          width: Number(button.dataset.width),
+          height: Number(button.dataset.height),
         },
       })
     );

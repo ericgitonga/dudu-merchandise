@@ -1,2 +1,3 @@
 -r requirements.txt
 pytest
+pillow  # scripts/add_catalogue_dimensions.py only — never imported by app.py itself

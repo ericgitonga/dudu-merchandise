@@ -32,9 +32,19 @@ Order emails always go to `gitonga@gmail.com` (a constant in `app.py`, not confi
 
 `static/images/catalogue/` (`thumbs/` for the picker grid, `full/` for the live mockup preview,
 plus `manifest.json` listing every available photo id) is the *only* source of photos clients
-can pick from — there is no upload flow. To add more, resize into both directories and add an
-entry to `manifest.json`; see `extras/projects/dudu-merchandise/assets/catalogue/` (outside this
-repo) for the verified full-resolution originals these were generated from.
+can pick from — there is no upload flow. To add more: resize into both directories, add an entry
+to `manifest.json` (`id`/`thumb`/`full` — `width`/`height` can be omitted), then run
+
+```bash
+conda run -n ds python scripts/add_catalogue_dimensions.py
+```
+
+to fill in `width`/`height` (read from the full-resolution image) for any entry missing them —
+already-populated entries are left alone, so it's safe to run any time. The Prints/Apparel
+mockup scripts read aspect ratio from these fields with no runtime image load involved (issue
+#38); a photo without them will never enable its add-to-cart button. See
+`extras/projects/dudu-merchandise/assets/catalogue/` (outside this repo) for the verified
+full-resolution originals these were generated from.
 
 ## Prints wall mockup
 
