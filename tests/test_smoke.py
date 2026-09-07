@@ -6,6 +6,22 @@ import pytest
 import app as appmod
 
 
+def test_resolve_secret_key_uses_provided_value():
+    assert appmod._resolve_secret_key({"SECRET_KEY": "abc123"}) == "abc123"
+    assert appmod._resolve_secret_key({"SECRET_KEY": "abc123", "VERCEL_ENV": "production"}) == "abc123"
+
+
+def test_resolve_secret_key_fails_fast_in_production_without_one():
+    with pytest.raises(RuntimeError):
+        appmod._resolve_secret_key({"VERCEL_ENV": "production"})
+
+
+def test_resolve_secret_key_falls_back_locally_without_one():
+    assert appmod._resolve_secret_key({}) == "dev-only-insecure-key"
+    assert appmod._resolve_secret_key({"VERCEL_ENV": "preview"}) == "dev-only-insecure-key"
+    assert appmod._resolve_secret_key({"VERCEL_ENV": "development"}) == "dev-only-insecure-key"
+
+
 def test_catalogue_validation_rejects_entries_missing_dimensions():
     with pytest.raises(RuntimeError):
         appmod._validate_catalogue([{"id": "999", "thumb": "x", "full": "y"}])

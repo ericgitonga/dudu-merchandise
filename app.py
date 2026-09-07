@@ -41,9 +41,24 @@ app = Flask(__name__)
 APP_VERSION = (BASE_DIR / "VERSION").read_text().strip()
 
 # ── Secret key ───────────────────────────────────────────────────────────────
-# Cookie-session cart contents (and CSRF tokens) are only as trustworthy as this key. On
-# Vercel it's a project environment variable; locally, an ad-hoc dev key is fine.
-app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "dev-only-insecure-key")
+
+def _resolve_secret_key(env):
+    """Cookie-session cart contents (and CSRF tokens) are only as trustworthy as this key.
+    Fails fast in production rather than silently falling back to a hardcoded, publicly-known
+    value (issue #47) — that fallback is exactly what let #40's incident (SECRET_KEY unset in
+    production for hours) go undetected until a customer noticed a missing order email, instead
+    of the app simply refusing to start. VERCEL_ENV is set automatically by Vercel's platform
+    (production/preview/development) — no new configuration needed to tell "a real deployment"
+    apart from "a laptop running `python app.py`"."""
+    secret_key = env.get("SECRET_KEY")
+    if secret_key:
+        return secret_key
+    if env.get("VERCEL_ENV") == "production":
+        raise RuntimeError("SECRET_KEY must be set in production.")
+    return "dev-only-insecure-key"  # local dev only
+
+
+app.config["SECRET_KEY"] = _resolve_secret_key(os.environ)
 app.config["SESSION_COOKIE_HTTPONLY"] = True
 app.config["SESSION_COOKIE_SAMESITE"] = "Lax"
 
