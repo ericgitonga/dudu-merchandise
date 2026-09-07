@@ -148,6 +148,7 @@ def cart_total(cart):
 # ── Order email (Resend) ────────────────────────────────────────────────────
 
 CONTACT_RE = re.compile(r"^\S{2,120}$")
+MPESA_CODE_RE = re.compile(r"^[A-Z0-9]{6,15}$")
 
 
 def _describe_item(item):
@@ -174,6 +175,7 @@ def build_order_email(cart, customer):
     lines.append(f"Total: KES {cart_total(cart):,}")
     lines.append("")
     lines.append(f"Payment: M-Pesa to {MPESA_NUMBER} ({MPESA_NAME})")
+    lines.append(f"M-Pesa confirmation code (client-reported, not verified): {customer['mpesa_code']}")
     lines.append(f"Turnaround: {TURNAROUND_TEXT}")
     lines.append(SHIPPING_NOTE)
 
@@ -309,13 +311,22 @@ def checkout_submit():
     contact = (data.get("contact") or "").strip()
     location = (data.get("location") or "").strip()
     notes = (data.get("notes") or "").strip()
+    mpesa_code = (data.get("mpesa_code") or "").strip().upper()
 
-    if not name or not contact or not location:
-        return jsonify({"ok": False, "error": "Name, contact, and delivery location are required."}), 400
+    if not name or not contact or not location or not mpesa_code:
+        return jsonify({
+            "ok": False,
+            "error": "Name, contact, delivery location, and M-Pesa confirmation code are required.",
+        }), 400
     if not CONTACT_RE.match(contact):
         return jsonify({"ok": False, "error": "Please enter a valid phone number or email."}), 400
+    if not MPESA_CODE_RE.match(mpesa_code):
+        return jsonify({"ok": False, "error": "Please enter a valid M-Pesa confirmation code."}), 400
 
-    customer = {"name": name[:200], "contact": contact[:200], "location": location[:400], "notes": notes[:1000]}
+    customer = {
+        "name": name[:200], "contact": contact[:200], "location": location[:400],
+        "notes": notes[:1000], "mpesa_code": mpesa_code[:20],
+    }
     email_status = send_order_email(cart, customer)
 
     session["cart"] = []
