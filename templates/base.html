@@ -12,7 +12,7 @@
       <a class="brand" href="{{ url_for('index') }}">Dudu Merchandise</a>
       <nav>
         <a href="{{ url_for('prints') }}">Prints</a>
-        <a href="{{ url_for('apparel') }}">Apparel</a>
+        <!-- Apparel route stays wired up (issue #18); not linked from the nav yet. -->
         <!-- Coasters route stays wired up (issue #14); not linked from the nav yet. -->
         <a class="cart-link" href="{{ url_for('cart_page') }}">
           Cart <span class="cart-badge" id="cart-badge">{{ cart_count }}</span>

@@ -6,6 +6,16 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.2.3] - 2026-09-07
+
+### Changed
+
+- Apparel hidden from the nav and home page — the `/apparel` route, template, and e2e coverage
+  stay in place, only the visible links are removed — while its approach gets more thought
+  (closes #18)
+
+tag: `v0.2.3`
+
 ## [0.2.2] - 2026-09-06
 
 ### Changed

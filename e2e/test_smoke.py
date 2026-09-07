@@ -17,7 +17,9 @@ def test_index_loads_with_nav_links():
         assert resp.status == 200
         nav = page.locator(".site-header nav")
         assert nav.get_by_role("link", name="Prints", exact=True).is_visible()
-        assert nav.get_by_role("link", name="Apparel", exact=True).is_visible()
+        # Apparel is deliberately not linked yet (issue #18) — its route stays reachable
+        # directly, covered by test_apparel_page_lists_catalogue_and_colours below.
+        assert nav.get_by_role("link", name="Apparel", exact=True).count() == 0
         # Coasters is deliberately not linked yet (issue #14) — its route stays reachable
         # directly, covered by test_coasters_page_is_a_placeholder below.
         assert nav.get_by_role("link", name="Coasters", exact=True).count() == 0

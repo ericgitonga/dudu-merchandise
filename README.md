@@ -1,10 +1,10 @@
 # dudu-merchandise
 
-Merchandise storefront for Eric Gitonga Mbaya's insect macro photography — Prints and Apparel today,
-Coasters coming later. Clients pick a photo from a fixed catalogue (no upload flow), see a live
-preview — a living-room wall mockup for Prints, a t-shirt mockup for Apparel — and add it to a
-cart. Checkout is a modal on the cart page: it shows the M-Pesa payment details and, on
-submission, emails the order to the site owner via [Resend](https://resend.com).
+Merchandise storefront for Eric Gitonga Mbaya's insect macro photography — Prints today, Apparel
+and Coasters coming later. Clients pick a photo from a fixed catalogue (no upload flow), see a
+live preview — a living-room wall mockup for Prints — and add it to a cart. Checkout is a modal
+on the cart page: it shows the M-Pesa payment details and, on submission, emails the order to the
+site owner via [Resend](https://resend.com).
 
 ## Local setup
 
