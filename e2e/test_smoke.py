@@ -111,11 +111,12 @@ def test_prints_mockup_renders_and_enables_add_to_cart():
     returns 200."""
     with browser_page() as page:
         page.goto("/prints")
-        # Longer timeout than other waits in this suite: this page also loads the wall-mockup
-        # background photo, competing for network/CPU with the catalogue photo probe this is
-        # actually waiting on. Seen missing budgets as high as 10s in CI (not locally) even
-        # after threaded=True on the dev server — GitHub Actions runner variance, not a real
-        # slowdown; 20s is a deliberately generous ceiling rather than a meaningful measurement.
+        # Longer timeout than other waits in this suite, kept as a generous ceiling: the button
+        # used to also wait on a redundant full-resolution image fetch (issue #30), which
+        # competed with the wall-mockup background photo for the dev server's attention and
+        # occasionally blew a 20s budget in CI. Fixed by reading aspect ratio off the
+        # already-loaded thumbnail instead — this wait is no longer on that network path, but
+        # the generous budget costs nothing and guards against future regressions.
         page.wait_for_selector("#add-to-cart-print:not([disabled])", timeout=20000)
         assert page.locator("#selected-price").inner_text() != "—"
         assert page.locator("#wall-print").get_attribute("src")
