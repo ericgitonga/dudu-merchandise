@@ -186,7 +186,7 @@ button.primary:hover:not(:disabled) { filter: brightness(1.05); }
 }
 
 /* Frameless: the print sits straight on the wall — a thin edge line and a soft, tight
-   contact shadow stand in for the print's own paper edge, no frame/mat. */
+   contact shadow stand in for the aluminium panel's own edge, no frame/mat. */
 .wall-print {
   position: absolute;
   display: block;
