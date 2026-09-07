@@ -6,6 +6,25 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.8.4] - 2026-09-07
+
+### Security
+
+- Customer-submitted checkout fields (`name`, `contact`, `location`, `notes`) now have control
+  characters (`\r`, `\n`, `\0`, etc.) stripped (`strip_control_chars`, `app.py`) before reaching
+  the order-confirmation email's subject/body — previously only stripped/length-truncated, so an
+  unstripped newline in e.g. `notes` could garble the email's readability. Resend's HTTP API
+  (JSON over HTTPS, not raw SMTP) likely insulates against classic header injection already, but
+  that's Resend's implementation detail, not this app's own control (closes #53)
+- Same fields also get a leading single-quote prefix (`neutralize_formula_injection`, `app.py`)
+  if they start with a character (`=`, `+`, `-`, `@`) that triggers formula interpretation in
+  Excel/Google Sheets/LibreOffice — this app has no CSV/spreadsheet export today, but the order
+  email exists to be read and acted on by a human who may reasonably copy order details into a
+  spreadsheet for bookkeeping; the standard OWASP-recommended mitigation costs nothing to apply
+  now
+
+tag: `v0.8.4`
+
 ## [0.8.3] - 2026-09-07
 
 ### Security
