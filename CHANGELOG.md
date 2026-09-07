@@ -6,6 +6,16 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.4.2] - 2026-09-07
+
+### Changed
+
+- Prints copy rewritten to name the actual print process/material — dye-sublimation onto an
+  aluminium panel — and lead with benefit-led, gift-oriented language instead of "framed for
+  your wall", which conflicted with the frameless wall mockup (closes #28)
+
+tag: `v0.4.2`
+
 ## [0.4.1] - 2026-09-07
 
 ### Fixed
