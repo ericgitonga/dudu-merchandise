@@ -235,6 +235,35 @@ def cart_item_count(cart):
 
 CONTACT_RE = re.compile(r"^\S{2,120}$")
 MPESA_CODE_RE = re.compile(r"^[A-Z0-9]{6,15}$")
+CONTROL_CHARS_RE = re.compile(r"[\x00-\x1f\x7f]")
+
+
+def strip_control_chars(s):
+    """Strip control characters — newlines, carriage returns, null bytes, etc. (issue #53) —
+    before a customer-submitted field reaches the order email's subject/body. Resend's HTTP API
+    (JSON over HTTPS, not raw SMTP) likely insulates against classic header injection, but
+    that's Resend's implementation detail, not this app's own control, and an unstripped
+    newline in e.g. `notes` already garbles the email's readability today regardless."""
+    return CONTROL_CHARS_RE.sub("", s)
+
+
+FORMULA_TRIGGER_CHARS = ("=", "+", "-", "@")
+
+
+def neutralize_formula_injection(s):
+    """Prefix with a single quote if the value starts with a character (=, +, -, @) that
+    triggers formula interpretation in Excel/Google Sheets/LibreOffice — this app has no CSV/
+    spreadsheet export today, so there's no code path that opens this directly, but the order
+    email exists to be read and acted on by a human, who may reasonably copy order details into
+    a spreadsheet for bookkeeping. The leading single quote is the standard OWASP-recommended
+    mitigation — forces the cell to be read as literal text — and costs nothing to apply now."""
+    if s and s[0] in FORMULA_TRIGGER_CHARS:
+        return "'" + s
+    return s
+
+
+def sanitize_customer_field(s):
+    return neutralize_formula_injection(strip_control_chars(s))
 
 
 # ── M-Pesa replay guard (issue #48) ─────────────────────────────────────────
@@ -518,8 +547,11 @@ def checkout_submit():
         }), 400
 
     customer = {
-        "name": name[:200], "contact": contact[:200], "location": location[:400],
-        "notes": notes[:1000], "mpesa_code": mpesa_code[:20],
+        "name": sanitize_customer_field(name)[:200],
+        "contact": sanitize_customer_field(contact)[:200],
+        "location": sanitize_customer_field(location)[:400],
+        "notes": sanitize_customer_field(notes)[:1000],
+        "mpesa_code": mpesa_code[:20],
     }
     email_status = send_order_email(cart, customer)
 
