@@ -6,6 +6,23 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.5.0] - 2026-09-07
+
+### Added
+
+- Quantity picker (−/input/+, capped at 20 per line) on the Prints and Apparel selection panes —
+  "Add to cart" adds that many, merging into an existing matching line rather than creating a
+  duplicate row (closes #32)
+- +/- buttons on each cart line to adjust its quantity in place; decrementing to 0 removes the
+  line, same as the existing Remove button (closes #32)
+
+### Changed
+
+- The nav cart badge now shows the total quantity across all lines, not the number of lines
+- Order-confirmation emails list each line's quantity and line total, not just its unit price
+
+tag: `v0.5.0`
+
 ## [0.4.3] - 2026-09-07
 
 ### Fixed

@@ -158,6 +158,31 @@ main { max-width: 1100px; margin: 0 auto; padding: 1.5rem; }
 
 .price-line { font-size: 1.4rem; font-weight: 700; margin: 1rem 0; }
 
+.qty-stepper { display: inline-flex; align-items: center; gap: 0.5rem; }
+.qty-btn {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 0.4rem;
+  background: none;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.qty-btn:hover { filter: brightness(1.05); }
+.qty-input {
+  width: 3rem;
+  text-align: center;
+  padding: 0.4rem 0.2rem;
+  border: 1px solid var(--border);
+  border-radius: 0.4rem;
+  font-size: 1rem;
+}
+/* Hide native spinner arrows — the qty-btn pair replaces them. */
+.qty-input::-webkit-outer-spin-button,
+.qty-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.qty-input[type="number"] { -moz-appearance: textfield; appearance: textfield; }
+
 button.primary {
   background: var(--accent);
   color: #fff;
@@ -216,6 +241,8 @@ button.primary:hover:not(:disabled) { filter: brightness(1.05); }
 }
 .cart-item img { width: 64px; height: 64px; object-fit: cover; border-radius: 0.35rem; }
 .cart-item-info { flex: 1; }
+.cart-item-qty { display: inline-flex; align-items: center; gap: 0.5rem; }
+.cart-qty-value { min-width: 1.5rem; text-align: center; font-weight: 600; }
 .cart-item-price { font-weight: 600; }
 .cart-remove {
   background: none;

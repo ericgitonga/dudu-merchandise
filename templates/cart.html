@@ -18,7 +18,12 @@
         <strong>Apparel (T-shirt)</strong> — {{ item.age_group | title }} — {{ item.shirt_colour }} — photo #{{ item.photo_id }}
       {% endif %}
     </div>
-    <span class="cart-item-price">KES {{ "{:,}".format(item.price) }}</span>
+    <div class="cart-item-qty">
+      <button type="button" class="qty-btn cart-qty-btn" data-index="{{ loop.index0 }}" data-delta="-1" aria-label="Decrease quantity">&minus;</button>
+      <span class="cart-qty-value" id="cart-qty-{{ loop.index0 }}">{{ item.get('qty', 1) }}</span>
+      <button type="button" class="qty-btn cart-qty-btn" data-index="{{ loop.index0 }}" data-delta="1" aria-label="Increase quantity">+</button>
+    </div>
+    <span class="cart-item-price">KES {{ "{:,}".format(item.price) }} each — KES {{ "{:,}".format(item.price * item.get('qty', 1)) }} total</span>
     <button type="button" class="cart-remove" data-index="{{ loop.index0 }}">Remove</button>
   </li>
   {% endfor %}

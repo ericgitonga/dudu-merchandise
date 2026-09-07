@@ -12,6 +12,7 @@
   const priceEl = document.getElementById("selected-price");
   const addBtn = document.getElementById("add-to-cart-apparel");
   const statusEl = document.getElementById("add-to-cart-status");
+  const qtyInput = document.getElementById("selected-qty");
 
   const CHEST_W = 375;
   const CHEST_Y = 280;
@@ -69,16 +70,19 @@
 
   addBtn.addEventListener("click", async () => {
     if (!selected.id) return;
+    const qty = parseInt(qtyInput.value, 10) || 1;
     addBtn.disabled = true;
     const data = await addToCart({
       type: "apparel",
       photo_id: selected.id,
       age_group: currentAgeGroup(),
       shirt_colour: colourInput.value,
+      qty,
     });
     addBtn.disabled = false;
     statusEl.textContent = data.ok
-      ? "Added to cart."
+      ? (qty === 1 ? "Added to cart." : `Added ${qty} to cart.`)
       : (data.error || "Couldn't add that to the cart — please try again.");
+    if (data.ok) qtyInput.value = 1;
   });
 })();

@@ -20,6 +20,7 @@
   const priceEl = document.getElementById("selected-price");
   const addBtn = document.getElementById("add-to-cart-print");
   const statusEl = document.getElementById("add-to-cart-status");
+  const qtyInput = document.getElementById("selected-qty");
 
   // The moulded wall panel above the sofa in room.jpg, as % of the image's own dimensions
   // (read off the original 1559x1009 source — percentages, so this held when the shipped
@@ -102,11 +103,13 @@
   addBtn.addEventListener("click", async () => {
     if (!selected.id) return;
     const size = currentSize();
+    const qty = parseInt(qtyInput.value, 10) || 1;
     addBtn.disabled = true;
-    const data = await addToCart({ type: "print", photo_id: selected.id, size });
+    const data = await addToCart({ type: "print", photo_id: selected.id, size, qty });
     addBtn.disabled = false;
     statusEl.textContent = data.ok
-      ? "Added to cart."
+      ? (qty === 1 ? "Added to cart." : `Added ${qty} to cart.`)
       : (data.error || "Couldn't add that to the cart — please try again.");
+    if (data.ok) qtyInput.value = 1;
   });
 })();

@@ -71,6 +71,9 @@ APPAREL_PRICES = {
     "child": 2_800,
 }
 
+# Per-line cap — generous for a genuine bulk order, small enough to keep a single line sane.
+MAX_ITEM_QTY = 20
+
 # Same 14-swatch palette as merch-mockup, so a shirt colour picked here reads the same way it
 # would over there.
 SHIRT_COLOURS = {
@@ -111,6 +114,14 @@ def _require_photo(form):
     return photo_id
 
 
+def _parse_qty(form):
+    try:
+        qty = int(form.get("qty", 1))
+    except (TypeError, ValueError):
+        qty = 1
+    return max(1, min(qty, MAX_ITEM_QTY))
+
+
 def build_print_item(form):
     photo_id = _require_photo(form)
     size = (form.get("size") or "").strip().upper()
@@ -121,6 +132,7 @@ def build_print_item(form):
         "photo_id": photo_id,
         "size": size,
         "price": PRINT_SIZES[size]["price"],
+        "qty": _parse_qty(form),
     }
 
 
@@ -138,11 +150,23 @@ def build_apparel_item(form):
         "age_group": age_group,
         "shirt_colour": shirt_colour,
         "price": APPAREL_PRICES[age_group],
+        "qty": _parse_qty(form),
     }
 
 
+def _item_key(item):
+    """Identity used to merge a new /cart/add into an existing line rather than duplicating it."""
+    if item["type"] == "print":
+        return ("print", item["photo_id"], item["size"])
+    return ("apparel", item["photo_id"], item["age_group"], item["shirt_colour"])
+
+
 def cart_total(cart):
-    return sum(item["price"] for item in cart)
+    return sum(item["price"] * item.get("qty", 1) for item in cart)
+
+
+def cart_item_count(cart):
+    return sum(item.get("qty", 1) for item in cart)
 
 
 # ── Order email (Resend) ────────────────────────────────────────────────────
@@ -154,12 +178,12 @@ MPESA_CODE_RE = re.compile(r"^[A-Z0-9]{6,15}$")
 def _describe_item(item):
     photo = CATALOGUE_BY_ID.get(item["photo_id"])
     label = f"photo #{item['photo_id']}" if photo else f"photo #{item['photo_id']} (unknown)"
+    qty = item.get("qty", 1)
     if item["type"] == "print":
-        return f"Print — {label} — {item['size']} — KES {item['price']:,}"
-    return (
-        f"Apparel (T-shirt) — {label} — {item['age_group'].title()} — "
-        f"{item['shirt_colour']} — KES {item['price']:,}"
-    )
+        base = f"Print — {label} — {item['size']}"
+    else:
+        base = f"Apparel (T-shirt) — {label} — {item['age_group'].title()} — {item['shirt_colour']}"
+    return f"{base} — Qty {qty} — KES {item['price']:,} each — KES {item['price'] * qty:,} total"
 
 
 def build_order_email(cart, customer):
@@ -228,7 +252,7 @@ def _security_headers(resp):
 def _inject_globals():
     return {
         "app_version": APP_VERSION,
-        "cart_count": len(session.get("cart", [])),
+        "cart_count": cart_item_count(session.get("cart", [])),
         "csrf_token": generate_csrf,
     }
 
@@ -243,7 +267,7 @@ def index():
 @app.route("/prints")
 def prints():
     return render_template(
-        "prints.html", catalogue=CATALOGUE, sizes=PRINT_SIZES,
+        "prints.html", catalogue=CATALOGUE, sizes=PRINT_SIZES, max_qty=MAX_ITEM_QTY,
     )
 
 
@@ -251,7 +275,7 @@ def prints():
 def apparel():
     return render_template(
         "apparel.html", catalogue=CATALOGUE, prices=APPAREL_PRICES,
-        shirt_colours=SHIRT_COLOURS,
+        shirt_colours=SHIRT_COLOURS, max_qty=MAX_ITEM_QTY,
     )
 
 
@@ -285,9 +309,15 @@ def cart_add():
         return jsonify({"ok": False, "error": str(exc)}), 400
 
     cart = session.get("cart", [])
-    cart.append(item)
+    key = _item_key(item)
+    for existing in cart:
+        if _item_key(existing) == key:
+            existing["qty"] = min(existing.get("qty", 1) + item["qty"], MAX_ITEM_QTY)
+            break
+    else:
+        cart.append(item)
     session["cart"] = cart
-    return jsonify({"ok": True, "cart_count": len(cart)})
+    return jsonify({"ok": True, "cart_count": cart_item_count(cart)})
 
 
 @app.route("/cart/remove/<int:index>", methods=["POST"])
@@ -296,7 +326,40 @@ def cart_remove(index):
     if 0 <= index < len(cart):
         cart.pop(index)
         session["cart"] = cart
-    return jsonify({"ok": True, "cart_count": len(cart)})
+    return jsonify({"ok": True, "cart_count": cart_item_count(cart)})
+
+
+@app.route("/cart/qty/<int:index>", methods=["POST"])
+@limiter.limit("60 per minute")
+def cart_qty(index):
+    cart = session.get("cart", [])
+    if not (0 <= index < len(cart)):
+        return jsonify({"ok": False, "error": "Item not found."}), 404
+
+    data = request.get_json(silent=True) or {}
+    try:
+        delta = int(data.get("delta", 0))
+    except (TypeError, ValueError):
+        return jsonify({"ok": False, "error": "Invalid quantity change."}), 400
+    if delta == 0:
+        return jsonify({"ok": False, "error": "No quantity change given."}), 400
+
+    new_qty = cart[index].get("qty", 1) + delta
+    if new_qty <= 0:
+        cart.pop(index)
+        new_qty = 0
+    else:
+        cart[index]["qty"] = min(new_qty, MAX_ITEM_QTY)
+        new_qty = cart[index]["qty"]
+    session["cart"] = cart
+
+    return jsonify({
+        "ok": True,
+        "removed": new_qty == 0,
+        "qty": new_qty,
+        "cart_count": cart_item_count(cart),
+        "total": cart_total(cart),
+    })
 
 
 @app.route("/api/checkout/submit", methods=["POST"])

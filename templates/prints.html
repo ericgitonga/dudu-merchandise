@@ -33,6 +33,15 @@ printed larger or smaller.</p>
       </div>
     </fieldset>
 
+    <fieldset class="option-group">
+      <legend>Quantity</legend>
+      <div class="qty-stepper">
+        <button type="button" class="qty-btn" data-step="-1" aria-label="Decrease quantity">&minus;</button>
+        <input type="number" class="qty-input" id="selected-qty" value="1" min="1" max="{{ max_qty }}" inputmode="numeric" />
+        <button type="button" class="qty-btn" data-step="1" aria-label="Increase quantity">+</button>
+      </div>
+    </fieldset>
+
     <p class="price-line" id="selected-price">—</p>
 
     <button type="button" class="primary" id="add-to-cart-print" disabled>Add to cart</button>
