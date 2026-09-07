@@ -6,6 +6,24 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.6.0] - 2026-09-07
+
+### Added
+
+- `scripts/smoke_test_production.py` — places one clearly-marked test order through the real API
+  and asserts `email_status` comes back `"sent"`, so a live misconfiguration (a required env var
+  never actually set in Vercel) can be caught deliberately rather than only by a customer report
+  (issue #40). `e2e/` intentionally never has `RESEND_API_KEY` configured and so can never catch
+  this class of gap
+- README documents `FROM_EMAIL`'s recommended display-name value (`Dudu Merch
+  <onboarding@resend.dev>`) and that Vercel env var changes need a fresh deploy to take effect
+- SKILL.md's launch checklist now requires `vercel env ls production` + a smoke-test run for any
+  change touching `RESEND_API_KEY`/`SECRET_KEY`/`FROM_EMAIL`, checkout, or cart logic
+
+(closes #41)
+
+tag: `v0.6.0`
+
 ## [0.5.5] - 2026-09-07
 
 ### Changed

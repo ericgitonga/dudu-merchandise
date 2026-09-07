@@ -24,9 +24,33 @@ restart the process after editing anything in `templates/`.
 |---|---|---|
 | `SECRET_KEY` | Production only | Signs the session cookie (cart contents) and CSRF tokens. A dev-only default is used locally. |
 | `RESEND_API_KEY` | For order emails | Without it, order submission still succeeds but email delivery is skipped (logged, not sent) — see `send_order_email` in `app.py`. |
-| `FROM_EMAIL` | No | Sender address for order emails. Defaults to Resend's `onboarding@resend.dev` sandbox address. |
+| `FROM_EMAIL` | No | Sender address for order emails. Defaults to Resend's `onboarding@resend.dev` sandbox address, which shows the raw address as the sender name. Set a display name instead — e.g. `Dudu Merch <onboarding@resend.dev>` — to brand it (Resend's sandbox address accepts a custom display name; a verified custom domain would additionally allow a fully custom `from` address). |
 
 Order emails always go to `gitonga@gmail.com` (a constant in `app.py`, not configurable via env).
+
+**Setting/changing any of these in Vercel requires a fresh deploy to take effect** — a Python
+serverless function's already-warm instances don't pick up an added or changed environment
+variable on their own; `vercel env add` alone doesn't affect what's currently live. After
+changing one, redeploy (`vercel --prod` for production) and run
+`scripts/smoke_test_production.py` against it to confirm the change actually took (issue #40:
+`RESEND_API_KEY`/`SECRET_KEY` sat unset in production for hours, caught only when a real
+customer's order email never arrived — see "Production smoke test" below).
+
+## Production smoke test
+
+`scripts/smoke_test_production.py` places one clearly-marked test order through the real API
+(`/cart/add` + `/api/checkout/submit` — no hidden/backdoor route) and asserts the response's
+`email_status` comes back `"sent"`:
+
+```bash
+conda run -n ds python scripts/smoke_test_production.py                              # production
+conda run -n ds python scripts/smoke_test_production.py --base-url https://<preview>  # a PR preview
+```
+
+Run this after any deploy that touches `RESEND_API_KEY`/`SECRET_KEY`/`FROM_EMAIL`, checkout, or
+cart logic — `e2e/` intentionally never has `RESEND_API_KEY` configured (it asserts `"skipped"`
+is the *correct* behaviour without one), so it can never catch a real environment
+misconfiguration the way this can.
 
 ## Catalogue images
 
