@@ -1,6 +1,9 @@
 """Golden-path smoke checks across the storefront's real pages and flows."""
 
+import json
 import re
+
+from playwright.sync_api import expect
 
 from _common import BASE_URL, browser_page
 
@@ -101,6 +104,41 @@ def test_cart_add_and_checkout_flow():
 
         # Cart is cleared after a successful checkout submission.
         page.goto("/cart")
+        assert "Your cart is empty" in page.content()
+
+
+def test_prints_quantity_adds_one_merged_line_and_cart_steppers_adjust_it():
+    """Regression guard for issue #32: picking a quantity >1 in the Prints selection pane adds
+    that many as a single cart line (not duplicate lines), and the cart's own +/- buttons adjust
+    that line's quantity and total in place, removing it once decremented to zero."""
+    with browser_page() as page:
+        page.goto("/prints")
+        page.wait_for_selector("#add-to-cart-print:not([disabled])", timeout=20000)
+
+        sizes = json.loads(page.locator("#print-sizes-data").inner_text())
+        checked_size = page.locator('input[name="size"]:checked').get_attribute("value")
+        unit_price = sizes[checked_size]["price"]
+
+        page.click('.qty-stepper .qty-btn[data-step="1"]')
+        page.click('.qty-stepper .qty-btn[data-step="1"]')
+        assert page.locator("#selected-qty").input_value() == "3"
+
+        page.click("#add-to-cart-print")
+        # wait_for_function isn't usable here: this app's own CSP forbids 'unsafe-eval',
+        # same class of restriction test_prints_mockup_renders_and_enables_add_to_cart guards
+        # against for the inline data-injection script. expect() polls without eval.
+        expect(page.locator("#cart-badge")).to_have_text("3")
+        # Quantity resets so the next pick doesn't inherit the last one.
+        assert page.locator("#selected-qty").input_value() == "1"
+
+        page.goto("/cart")
+        assert page.locator(".cart-item").count() == 1, "qty>1 should merge into one line, not duplicate rows"
+        assert page.locator(".cart-qty-value").inner_text() == "3"
+        assert f"{unit_price * 3:,}" in page.content()
+
+        for _ in range(3):
+            with page.expect_navigation():
+                page.click(".cart-qty-btn[data-delta='-1']")
         assert "Your cart is empty" in page.content()
 
 
@@ -227,6 +265,7 @@ TESTS = [
     test_cart_add_and_checkout_flow,
     test_checkout_rejects_missing_or_malformed_mpesa_code,
     test_checkout_rejects_empty_cart,
+    test_prints_quantity_adds_one_merged_line_and_cart_steppers_adjust_it,
 ]
 
 if __name__ == "__main__":

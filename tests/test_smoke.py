@@ -10,6 +10,18 @@ def test_print_price_matches_catalogue():
     item = appmod.build_print_item({"photo_id": "001", "size": "a3"})
     assert item["price"] == appmod.PRINT_SIZES["A3"]["price"]
     assert item["size"] == "A3"
+    assert item["qty"] == 1
+
+
+def test_print_item_qty_is_parsed_and_clamped():
+    assert appmod.build_print_item({"photo_id": "001", "size": "A4", "qty": "3"})["qty"] == 3
+    assert appmod.build_print_item({"photo_id": "001", "size": "A4", "qty": "0"})["qty"] == 1
+    assert appmod.build_print_item({"photo_id": "001", "size": "A4", "qty": "-5"})["qty"] == 1
+    assert appmod.build_print_item({"photo_id": "001", "size": "A4", "qty": "not-a-number"})["qty"] == 1
+    assert (
+        appmod.build_print_item({"photo_id": "001", "size": "A4", "qty": str(appmod.MAX_ITEM_QTY + 50)})["qty"]
+        == appmod.MAX_ITEM_QTY
+    )
 
 
 def test_print_item_rejects_unknown_size():
@@ -40,6 +52,35 @@ def test_cart_total_sums_item_prices():
         appmod.build_apparel_item({"photo_id": "004", "age_group": "child", "shirt_colour": "Black"}),
     ]
     assert appmod.cart_total(cart) == appmod.PRINT_SIZES["A4"]["price"] + appmod.APPAREL_PRICES["child"]
+
+
+def test_cart_total_accounts_for_quantity():
+    cart = [appmod.build_print_item({"photo_id": "001", "size": "A4", "qty": "3"})]
+    assert appmod.cart_total(cart) == appmod.PRINT_SIZES["A4"]["price"] * 3
+
+
+def test_cart_item_count_sums_quantities_not_lines():
+    cart = [
+        appmod.build_print_item({"photo_id": "001", "size": "A4", "qty": "3"}),
+        appmod.build_apparel_item({"photo_id": "004", "age_group": "child", "shirt_colour": "Black", "qty": "2"}),
+    ]
+    assert appmod.cart_item_count(cart) == 5
+
+
+def test_item_key_matches_same_print_selection_not_different_sizes():
+    a4_one = appmod.build_print_item({"photo_id": "001", "size": "A4"})
+    a4_two = appmod.build_print_item({"photo_id": "001", "size": "A4", "qty": "2"})
+    a3 = appmod.build_print_item({"photo_id": "001", "size": "A3"})
+    assert appmod._item_key(a4_one) == appmod._item_key(a4_two)
+    assert appmod._item_key(a4_one) != appmod._item_key(a3)
+
+
+def test_item_key_matches_same_apparel_selection_not_different_colours():
+    black = appmod.build_apparel_item({"photo_id": "001", "age_group": "adult", "shirt_colour": "Black"})
+    black_again = appmod.build_apparel_item({"photo_id": "001", "age_group": "adult", "shirt_colour": "Black"})
+    white = appmod.build_apparel_item({"photo_id": "001", "age_group": "adult", "shirt_colour": "White"})
+    assert appmod._item_key(black) == appmod._item_key(black_again)
+    assert appmod._item_key(black) != appmod._item_key(white)
 
 
 def test_order_email_includes_total_and_payment_instructions():

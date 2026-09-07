@@ -13,6 +13,17 @@
     });
   });
 
+  document.querySelectorAll(".cart-qty-btn").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      btn.disabled = true;
+      const { ok } = await postJSON(`/cart/qty/${btn.dataset.index}`, {
+        delta: parseInt(btn.dataset.delta, 10),
+      });
+      if (ok) window.location.reload();
+      else btn.disabled = false;
+    });
+  });
+
   const openBtn = document.getElementById("open-checkout");
   const modal = document.getElementById("checkout-modal");
   const closeBtn = document.getElementById("close-checkout");
