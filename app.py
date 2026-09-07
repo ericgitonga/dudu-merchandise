@@ -235,6 +235,16 @@ def cart_item_count(cart):
 
 CONTACT_RE = re.compile(r"^\S{2,120}$")
 MPESA_CODE_RE = re.compile(r"^[A-Z0-9]{6,15}$")
+CONTROL_CHARS_RE = re.compile(r"[\x00-\x1f\x7f]")
+
+
+def strip_control_chars(s):
+    """Strip control characters — newlines, carriage returns, null bytes, etc. (issue #53) —
+    before a customer-submitted field reaches the order email's subject/body. Resend's HTTP API
+    (JSON over HTTPS, not raw SMTP) likely insulates against classic header injection, but
+    that's Resend's implementation detail, not this app's own control, and an unstripped
+    newline in e.g. `notes` already garbles the email's readability today regardless."""
+    return CONTROL_CHARS_RE.sub("", s)
 
 
 # ── M-Pesa replay guard (issue #48) ─────────────────────────────────────────
@@ -518,8 +528,11 @@ def checkout_submit():
         }), 400
 
     customer = {
-        "name": name[:200], "contact": contact[:200], "location": location[:400],
-        "notes": notes[:1000], "mpesa_code": mpesa_code[:20],
+        "name": strip_control_chars(name)[:200],
+        "contact": strip_control_chars(contact)[:200],
+        "location": strip_control_chars(location)[:400],
+        "notes": strip_control_chars(notes)[:1000],
+        "mpesa_code": mpesa_code[:20],
     }
     email_status = send_order_email(cart, customer)
 
