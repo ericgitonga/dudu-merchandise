@@ -86,6 +86,25 @@ def test_cart_total_accounts_for_quantity():
     assert appmod.cart_total(cart) == appmod.PRINT_SIZES["A4"]["price"] * 3
 
 
+def test_revalidate_cart_prices_corrects_a_tampered_price():
+    item = appmod.build_print_item({"photo_id": "001", "size": "A4"})
+    item["price"] = 1  # simulates a forged session cookie (issue #47) setting an arbitrary price
+    cart = [item]
+    appmod.revalidate_cart_prices(cart)
+    assert cart[0]["price"] == appmod.PRINT_SIZES["A4"]["price"]
+
+
+def test_revalidate_cart_prices_drops_items_with_invalid_size_or_age_group():
+    valid_item = appmod.build_print_item({"photo_id": "001", "size": "A4"})
+    tampered_size = appmod.build_print_item({"photo_id": "004", "size": "A3"})
+    tampered_size["size"] = "NOT-A-REAL-SIZE"
+    tampered_age = appmod.build_apparel_item({"photo_id": "005", "age_group": "adult", "shirt_colour": "Black"})
+    tampered_age["age_group"] = "not-a-real-age-group"
+    cart = [valid_item, tampered_size, tampered_age]
+    appmod.revalidate_cart_prices(cart)
+    assert cart == [valid_item]
+
+
 def test_cart_item_count_sums_quantities_not_lines():
     cart = [
         appmod.build_print_item({"photo_id": "001", "size": "A4", "qty": "3"}),
