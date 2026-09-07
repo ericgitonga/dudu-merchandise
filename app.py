@@ -116,7 +116,7 @@ SHIRT_COLOURS = {
 }
 
 TURNAROUND_TEXT = "2 weeks from date of order"
-MPESA_NUMBER = "+254 725 561 459"
+MPESA_NUMBER = "+254725561459"
 MPESA_NAME = "Eric Mbaya"
 SHIPPING_NOTE = "Shipping is extra, priced by delivery location — confirmed with you before dispatch."
 

@@ -6,6 +6,16 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.5.5] - 2026-09-07
+
+### Changed
+
+- M-Pesa number now displays as one unbroken unit (`+254725561459`) instead of clustered with
+  spaces (`+254 725 561 459`), in both the checkout modal and the order-confirmation email
+  (closes #42)
+
+tag: `v0.5.5`
+
 ## [0.5.4] - 2026-09-07
 
 ### Fixed
