@@ -100,9 +100,32 @@ def test_prints_mockup_renders_and_enables_add_to_cart():
     returns 200."""
     with browser_page() as page:
         page.goto("/prints")
-        page.wait_for_selector("#add-to-cart-print:not([disabled])", timeout=5000)
+        # Longer timeout than other waits in this suite: this page also loads the wall-mockup
+        # background photo, which competes for network/CPU with the catalogue photo probe this
+        # is actually waiting on, and was seen to occasionally miss a tight 5s budget in CI.
+        page.wait_for_selector("#add-to-cart-print:not([disabled])", timeout=10000)
         assert page.locator("#selected-price").inner_text() != "—"
-        assert page.locator("#framed-print-img").get_attribute("src")
+        assert page.locator("#wall-print").get_attribute("src")
+
+
+def test_prints_mockup_size_fixed_at_a2_regardless_of_selected_size():
+    """Regression guard for issue #25: rendering the mockup at the actually-selected size once
+    looked disproportionate at the extremes (A0 read as roughly couch-sized against room.jpg,
+    which it isn't). The mockup should always render at A2 dimensions; only price should change
+    when a different size is picked."""
+    with browser_page() as page:
+        page.goto("/prints")
+        page.wait_for_selector("#add-to-cart-print:not([disabled])", timeout=10000)
+        width_before = page.locator("#wall-print").evaluate("el => el.style.width")
+        height_before = page.locator("#wall-print").evaluate("el => el.style.height")
+        price_before = page.locator("#selected-price").inner_text()
+
+        page.click("input[name='size'][value='A0']")
+        page.wait_for_timeout(200)
+
+        assert page.locator("#wall-print").evaluate("el => el.style.width") == width_before
+        assert page.locator("#wall-print").evaluate("el => el.style.height") == height_before
+        assert page.locator("#selected-price").inner_text() != price_before
 
 
 def test_apparel_mockup_renders_and_enables_add_to_cart():
@@ -183,6 +206,7 @@ TESTS = [
     test_apparel_page_lists_catalogue_and_colours,
     test_coasters_page_is_a_placeholder,
     test_prints_mockup_renders_and_enables_add_to_cart,
+    test_prints_mockup_size_fixed_at_a2_regardless_of_selected_size,
     test_apparel_mockup_renders_and_enables_add_to_cart,
     test_checkout_modal_opens_and_is_clickable,
     test_cart_add_and_checkout_flow,

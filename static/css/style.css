@@ -5,8 +5,6 @@
   --accent: #b5651d;
   --card-bg: #ffffff;
   --border: #e4ddd2;
-  --mockup-wall: #d9d2c4;
-  --mockup-floor: #8a7458;
 }
 
 * { box-sizing: border-box; }
@@ -174,45 +172,28 @@ button.primary:hover:not(:disabled) { filter: brightness(1.05); }
 
 .add-status { margin-top: 0.6rem; color: var(--muted); font-size: 0.9rem; }
 
-/* Living-room wall mockup */
+/* Living-room wall mockup: a real room photo (room.jpg) with the chosen print positioned
+   directly on the wall — see issue #17's spike and #20 for how the geometry was derived. */
 .room-scene {
   position: relative;
   width: 100%;
-  aspect-ratio: 7 / 5;
+  aspect-ratio: 1100 / 712;
   border-radius: 0.5rem;
   overflow: hidden;
-  background: linear-gradient(to bottom, var(--mockup-wall) 0%, var(--mockup-wall) 78%, var(--mockup-floor) 78%);
+  background-size: cover;
+  background-position: center;
   margin-bottom: 1rem;
 }
 
-.room-baseboard {
+/* Frameless: the print sits straight on the wall — a thin edge line and a soft, tight
+   contact shadow stand in for the print's own paper edge, no frame/mat. */
+.wall-print {
   position: absolute;
-  left: 0; right: 0;
-  bottom: 22%;
-  height: 4px;
-  background: rgba(0,0,0,0.15);
+  display: block;
+  object-fit: cover;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), 0 6px 16px rgba(0, 0, 0, 0.2);
 }
-
-.room-furniture {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  width: 46%;
-  height: 16%;
-  background: #4a3b2c;
-  border-radius: 4px 4px 0 0;
-}
-
-.framed-print {
-  position: absolute;
-  left: 50%;
-  top: 42%;
-  background: #fff;
-  padding: 10px;
-  box-shadow: 0 12px 24px rgba(0,0,0,0.25);
-}
-.framed-print img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 /* Apparel shirt mockup */
 .shirt-scene {

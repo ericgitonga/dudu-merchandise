@@ -6,6 +6,24 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.4.0] - 2026-09-07
+
+### Added
+
+- Photo #276 added to the catalogue (closes #23)
+
+### Changed
+
+- Prints wall mockup replaced with a real, frameless, photo-real living-room wall (was a
+  CSS-drawn illustrated wall) — the chosen photo's own aspect ratio now picks portrait vs.
+  landscape orientation, instead of always force-cropping into portrait (closes #20)
+- Wall mockup now always renders at A2 dimensions regardless of the size selected for
+  ordering — rendering at the actual selected size looked disproportionate at the extremes
+  (A0 read as roughly couch-sized against the room photo, which it isn't); the size picker
+  only ever changes price and what's ordered now (closes #25)
+
+tag: `v0.4.0`
+
 ## [0.3.0] - 2026-09-07
 
 ### Added

@@ -579,6 +579,11 @@
       "id": "275",
       "thumb": "/static/images/catalogue/thumbs/275.jpg",
       "full": "/static/images/catalogue/full/275.jpg"
+    },
+    {
+      "id": "276",
+      "thumb": "/static/images/catalogue/thumbs/276.jpg",
+      "full": "/static/images/catalogue/full/276.jpg"
     }
   ]
 }
