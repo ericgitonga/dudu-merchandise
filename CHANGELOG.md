@@ -6,6 +6,32 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.11.6] - 2026-09-08
+
+### Fixed
+
+- The catalogue picker's auto-selected first photo could intermittently leave the Prints/Apparel
+  add-to-cart button permanently disabled — `catalogue-picker.js` triggered it via
+  `setTimeout(fn, 0)` so later `<script>` tags (the mockup scripts) had time to attach their
+  `"photo-selected"` listener first, but headless Chromium's background-tab timer throttling
+  (routine when many pages get created/closed in one shared browser process, as the e2e harness
+  does, issue #44) could delay or entirely skip that callback. Traced live with Playwright
+  tracing: DOM snapshot at timeout showed no thumbnail ever got `.selected` and the button stayed
+  `disabled` — not merely slow, the callback never ran at all. Reproduced a clean 8/45 (~18%)
+  failure rate against a real server with no other confound; moving the auto-select trigger into
+  each mockup script itself (`prints-mockup.js`/`apparel-mockup.js`, called synchronously right
+  after attaching their own listener — no timer involved at all) brought that to 0/45 across two
+  independent verification runs (closes #90)
+
+### Maintenance
+
+- `e2e/_common.py`'s shared Chromium instance now launches with
+  `--disable-background-timer-throttling`/`--disable-backgrounding-occluded-windows`/
+  `--disable-renderer-backgrounding` as defense-in-depth against the same class of issue for any
+  future page-level JS timer, even though the actual bug above is fixed at the source
+
+tag: `v0.11.6`
+
 ## [0.11.5] - 2026-09-08
 
 ### Removed

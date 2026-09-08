@@ -43,7 +43,17 @@ def _get_browser():
     global _playwright, _browser
     if _browser is None:
         _playwright = sync_playwright().start()
-        _browser = _playwright.chromium.launch()
+        # Headless Chromium throttles setTimeout/setInterval on a backgrounded/occluded page —
+        # a real risk here since many contexts get created and closed in sequence within one
+        # shared browser process (issue #44). These flags disable that throttling; the actual
+        # setTimeout-based race this harness tripped over (issue #90) is fixed at the source in
+        # catalogue-picker.js, but this is cheap, standard defense-in-depth for any other JS
+        # timer a future page might add.
+        _browser = _playwright.chromium.launch(args=[
+            "--disable-background-timer-throttling",
+            "--disable-backgrounding-occluded-windows",
+            "--disable-renderer-backgrounding",
+        ])
     return _browser
 
 
