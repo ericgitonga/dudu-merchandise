@@ -95,24 +95,33 @@ number starting at `001` and restarting per category (issue #82). Prefix table:
 
 | Category | Prefix | | Category | Prefix |
 |---|---|---|---|---|
-| Ants | `a` | | Moths | `mo` |
-| Bees | `be` | | Neuroptera | `n` |
-| Beetles | `bt` | | Orthoptera | `or` |
-| Butterflies | `bu` | | Other | `ot` |
-| Caterpillars | `c` | | Scorpions | `sc` |
-| Damselflies | `da` | | Spiders | `s` |
+| Ants | `a` | | Neuroptera | `n` |
+| Bees | `be` | | Orthoptera | `or` |
+| Beetles | `bt` | | Other | `ot` |
+| Butterflies | `bu` | | Scorpions | `sc` |
+| Caterpillars | `c` | | Spiders | `s` |
+| Damselflies | `da` | | Stick Insects | `st` |
 | Dragonflies | `dr` | | True Bugs | `t` |
 | Flies | `f` | | Wasps | `w` |
-| Mantises | `ma` | | | |
+| Mantises | `ma` | | Moths | `mo` |
 
-To add more: resize source photos into both directories, named `<prefix>-NNN.jpg` where `NNN`
-is the next unused number for that category (e.g. the 5th True Bugs photo is `t-005.jpg`) —
-`scripts/onboard_catalogue_photos.py` automates this (`full` capped at 1400px on the long side,
-`thumb` at 420px, both left alone if the source is already smaller — never upscaled) and adds
-the manifest entry with `width`/`height` filled in directly, so no separate dimensions pass is
-needed for photos added this way. `category` must be one of `CATALOGUE_CATEGORIES` in `app.py`
-(the taxonomic groups the sidebar in `prints.html`/`apparel.html` navigates by, issue #72) —
-`_validate_catalogue` fails loudly at startup on a missing or unrecognised value. If adding a
+To add more: rename the source photo(s) in the matching category subfolder under
+`extras/projects/dudu-merchandise/assets/catalogue/` (outside this repo, see below) to
+`<prefix>-NNN.jpg`, where `NNN` is the next unused number for that category (e.g. the 5th True
+Bugs photo is `t-005.jpg`), then run
+
+```bash
+conda run -n ds python scripts/onboard_catalogue_photos.py
+```
+
+which scans every category folder there for any `<prefix>-NNN`-named photo not yet in
+`manifest.json` and onboards all of them at once: resizes into `thumbs/`+`full/` (`full` capped
+at 1400px on the long side, `thumb` at 420px, both left alone if the source is already smaller —
+never upscaled) and adds the manifest entry with `width`/`height` filled in directly, so no
+separate dimensions pass is needed for photos added this way. A new category needs its prefix
+added to the script's `PREFIX_TO_CATEGORY` first, and to `CATALOGUE_CATEGORIES` in `app.py` (the
+taxonomic groups the sidebar in `prints.html`/`apparel.html` navigates by, issue #72) —
+`_validate_catalogue` fails loudly at startup on a missing or unrecognised category. If adding a
 manifest entry by hand instead (`id`/`thumb`/`full`/`category`, `width`/`height` can be omitted),
 run
 
@@ -136,10 +145,10 @@ section is currently in view as the client scrolls manually — kept separate fr
 `extras/projects/dudu-merchandise/assets/catalogue/` (outside this repo) holds the verified
 full-resolution originals these were generated from, organised into one subfolder per
 `CATALOGUE_CATEGORIES` value (`Flies/`, `Spiders/`, `Beetles/`, etc.) — the source of truth for
-category, added by the client dropping a new photo straight into the folder for what it is.
-Adding a batch is then: drop the new photo(s) into the right category subfolder there, resize
-into `static/images/catalogue/{thumbs,full}/`, and add each manifest entry with `category` set
-to that subfolder's name.
+category, added by the client dropping a new photo straight into the folder for what it is, then
+renaming it to the next unused `<prefix>-NNN` for that category once ready to go live (see
+"Catalogue images" above) — a folder can also hold not-yet-curated photos under any other
+filename, which `scripts/onboard_catalogue_photos.py` ignores.
 
 ## Prints wall mockup
 
