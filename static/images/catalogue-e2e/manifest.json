@@ -5,35 +5,40 @@
       "thumb": "/static/images/catalogue-e2e/thumbs/001.jpg",
       "full": "/static/images/catalogue-e2e/full/001.jpg",
       "width": 1400,
-      "height": 938
+      "height": 938,
+      "category": "Neuroptera"
     },
     {
       "id": "004",
       "thumb": "/static/images/catalogue-e2e/thumbs/004.jpg",
       "full": "/static/images/catalogue-e2e/full/004.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Spiders"
     },
     {
       "id": "005",
       "thumb": "/static/images/catalogue-e2e/thumbs/005.jpg",
       "full": "/static/images/catalogue-e2e/full/005.jpg",
       "width": 1400,
-      "height": 1032
+      "height": 1032,
+      "category": "Orthoptera"
     },
     {
       "id": "007",
       "thumb": "/static/images/catalogue-e2e/thumbs/007.jpg",
       "full": "/static/images/catalogue-e2e/full/007.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Beetles"
     },
     {
       "id": "008",
       "thumb": "/static/images/catalogue-e2e/thumbs/008.jpg",
       "full": "/static/images/catalogue-e2e/full/008.jpg",
       "width": 1400,
-      "height": 934
+      "height": 934,
+      "category": "Other"
     }
   ]
 }

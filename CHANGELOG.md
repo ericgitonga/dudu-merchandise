@@ -6,6 +6,23 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.10.0] - 2026-09-08
+
+### Added
+
+- Every catalogue entry now carries a `category` (Flies, Spiders, Beetles, Bees, Moths,
+  Butterflies, Ants, Damselflies, Dragonflies, Mantises, Wasps, True Bugs, Neuroptera,
+  Orthoptera, Caterpillars, Other), assigned by visual review of all photos and validated at
+  startup against a new `CATALOGUE_CATEGORIES` set — groundwork for the catalogue sidebar (#72,
+  #74)
+
+### Fixed
+
+- Removed catalogue photo `350`, a duplicate of `316` found during the classification review
+  (closes #73)
+
+tag: `v0.10.0`
+
 ## [0.9.1] - 2026-09-08
 
 ### Changed

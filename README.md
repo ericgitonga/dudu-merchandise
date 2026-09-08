@@ -90,7 +90,10 @@ it isn't infrastructure checkout should depend on being up.
 `static/images/catalogue/` (`thumbs/` for the picker grid, `full/` for the live mockup preview,
 plus `manifest.json` listing every available photo id) is the *only* source of photos clients
 can pick from — there is no upload flow. To add more: resize into both directories, add an entry
-to `manifest.json` (`id`/`thumb`/`full` — `width`/`height` can be omitted), then run
+to `manifest.json` (`id`/`thumb`/`full`/`category` — `width`/`height` can be omitted). `category`
+must be one of `CATALOGUE_CATEGORIES` in `app.py` (the taxonomic groups the sidebar in
+`prints.html`/`apparel.html` navigates by, issue #72) — `_validate_catalogue` fails loudly at
+startup on a missing or unrecognised value. Then run
 
 ```bash
 conda run -n ds python scripts/add_catalogue_dimensions.py
@@ -99,9 +102,15 @@ conda run -n ds python scripts/add_catalogue_dimensions.py
 to fill in `width`/`height` (read from the full-resolution image) for any entry missing them —
 already-populated entries are left alone, so it's safe to run any time. The Prints/Apparel
 mockup scripts read aspect ratio from these fields with no runtime image load involved (issue
-#38); a photo without them will never enable its add-to-cart button. See
-`extras/projects/dudu-merchandise/assets/catalogue/` (outside this repo) for the verified
-full-resolution originals these were generated from.
+#38); a photo without them will never enable its add-to-cart button.
+
+`extras/projects/dudu-merchandise/assets/catalogue/` (outside this repo) holds the verified
+full-resolution originals these were generated from, organised into one subfolder per
+`CATALOGUE_CATEGORIES` value (`Flies/`, `Spiders/`, `Beetles/`, etc.) — the source of truth for
+category, added by the client dropping a new photo straight into the folder for what it is.
+Adding a batch is then: drop the new photo(s) into the right category subfolder there, resize
+into `static/images/catalogue/{thumbs,full}/`, and add each manifest entry with `category` set
+to that subfolder's name.
 
 ## Prints wall mockup
 
@@ -120,7 +129,7 @@ see that file's comments, and issues #17/#20/#25 for how the geometry was derive
 pytest                             # unit tests — pricing, cart-item validation, order email
 
 # e2e suite — run against a server started with a small 5-photo fixture catalogue instead of the
-# real one (issue #44), so the suite isn't re-fetching the full ~219-photo catalogue on every
+# real one (issue #44), so the suite isn't re-fetching the full 218-photo catalogue on every
 # test's page load:
 CATALOGUE_MANIFEST_PATH=static/images/catalogue-e2e/manifest.json python app.py  # one terminal
 conda run -n ds python e2e/run.py                                               # another

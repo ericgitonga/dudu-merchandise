@@ -5,1533 +5,1744 @@
       "thumb": "/static/images/catalogue/thumbs/001.jpg",
       "full": "/static/images/catalogue/full/001.jpg",
       "width": 1400,
-      "height": 938
+      "height": 938,
+      "category": "Neuroptera"
     },
     {
       "id": "004",
       "thumb": "/static/images/catalogue/thumbs/004.jpg",
       "full": "/static/images/catalogue/full/004.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Spiders"
     },
     {
       "id": "005",
       "thumb": "/static/images/catalogue/thumbs/005.jpg",
       "full": "/static/images/catalogue/full/005.jpg",
       "width": 1400,
-      "height": 1032
+      "height": 1032,
+      "category": "Orthoptera"
     },
     {
       "id": "007",
       "thumb": "/static/images/catalogue/thumbs/007.jpg",
       "full": "/static/images/catalogue/full/007.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Beetles"
     },
     {
       "id": "008",
       "thumb": "/static/images/catalogue/thumbs/008.jpg",
       "full": "/static/images/catalogue/full/008.jpg",
       "width": 1400,
-      "height": 934
+      "height": 934,
+      "category": "Other"
     },
     {
       "id": "009",
       "thumb": "/static/images/catalogue/thumbs/009.jpg",
       "full": "/static/images/catalogue/full/009.jpg",
       "width": 1400,
-      "height": 896
+      "height": 896,
+      "category": "Butterflies"
     },
     {
       "id": "010",
       "thumb": "/static/images/catalogue/thumbs/010.jpg",
       "full": "/static/images/catalogue/full/010.jpg",
       "width": 1400,
-      "height": 929
+      "height": 929,
+      "category": "Moths"
     },
     {
       "id": "011",
       "thumb": "/static/images/catalogue/thumbs/011.jpg",
       "full": "/static/images/catalogue/full/011.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "012",
       "thumb": "/static/images/catalogue/thumbs/012.jpg",
       "full": "/static/images/catalogue/full/012.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Spiders"
     },
     {
       "id": "015",
       "thumb": "/static/images/catalogue/thumbs/015.jpg",
       "full": "/static/images/catalogue/full/015.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "016",
       "thumb": "/static/images/catalogue/thumbs/016.jpg",
       "full": "/static/images/catalogue/full/016.jpg",
       "width": 1400,
-      "height": 934
+      "height": 934,
+      "category": "Spiders"
     },
     {
       "id": "017",
       "thumb": "/static/images/catalogue/thumbs/017.jpg",
       "full": "/static/images/catalogue/full/017.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Spiders"
     },
     {
       "id": "018",
       "thumb": "/static/images/catalogue/thumbs/018.jpg",
       "full": "/static/images/catalogue/full/018.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Moths"
     },
     {
       "id": "019",
       "thumb": "/static/images/catalogue/thumbs/019.jpg",
       "full": "/static/images/catalogue/full/019.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Beetles"
     },
     {
       "id": "020",
       "thumb": "/static/images/catalogue/thumbs/020.jpg",
       "full": "/static/images/catalogue/full/020.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Other"
     },
     {
       "id": "021",
       "thumb": "/static/images/catalogue/thumbs/021.jpg",
       "full": "/static/images/catalogue/full/021.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "022",
       "thumb": "/static/images/catalogue/thumbs/022.jpg",
       "full": "/static/images/catalogue/full/022.jpg",
       "width": 1400,
-      "height": 934
+      "height": 934,
+      "category": "Dragonflies"
     },
     {
       "id": "024",
       "thumb": "/static/images/catalogue/thumbs/024.jpg",
       "full": "/static/images/catalogue/full/024.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Damselflies"
     },
     {
       "id": "025",
       "thumb": "/static/images/catalogue/thumbs/025.jpg",
       "full": "/static/images/catalogue/full/025.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Damselflies"
     },
     {
       "id": "026",
       "thumb": "/static/images/catalogue/thumbs/026.jpg",
       "full": "/static/images/catalogue/full/026.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Mantises"
     },
     {
       "id": "028",
       "thumb": "/static/images/catalogue/thumbs/028.jpg",
       "full": "/static/images/catalogue/full/028.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Ants"
     },
     {
       "id": "030",
       "thumb": "/static/images/catalogue/thumbs/030.jpg",
       "full": "/static/images/catalogue/full/030.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "031",
       "thumb": "/static/images/catalogue/thumbs/031.jpg",
       "full": "/static/images/catalogue/full/031.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "032",
       "thumb": "/static/images/catalogue/thumbs/032.jpg",
       "full": "/static/images/catalogue/full/032.jpg",
       "width": 1400,
-      "height": 934
+      "height": 934,
+      "category": "Butterflies"
     },
     {
       "id": "033",
       "thumb": "/static/images/catalogue/thumbs/033.jpg",
       "full": "/static/images/catalogue/full/033.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Beetles"
     },
     {
       "id": "034",
       "thumb": "/static/images/catalogue/thumbs/034.jpg",
       "full": "/static/images/catalogue/full/034.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "037",
       "thumb": "/static/images/catalogue/thumbs/037.jpg",
       "full": "/static/images/catalogue/full/037.jpg",
       "width": 1300,
-      "height": 867
+      "height": 867,
+      "category": "Bees"
     },
     {
       "id": "038",
       "thumb": "/static/images/catalogue/thumbs/038.jpg",
       "full": "/static/images/catalogue/full/038.jpg",
       "width": 1300,
-      "height": 867
+      "height": 867,
+      "category": "Flies"
     },
     {
       "id": "039",
       "thumb": "/static/images/catalogue/thumbs/039.jpg",
       "full": "/static/images/catalogue/full/039.jpg",
       "width": 1300,
-      "height": 867
+      "height": 867,
+      "category": "Flies"
     },
     {
       "id": "040",
       "thumb": "/static/images/catalogue/thumbs/040.jpg",
       "full": "/static/images/catalogue/full/040.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Ants"
     },
     {
       "id": "042",
       "thumb": "/static/images/catalogue/thumbs/042.jpg",
       "full": "/static/images/catalogue/full/042.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Bees"
     },
     {
       "id": "043",
       "thumb": "/static/images/catalogue/thumbs/043.jpg",
       "full": "/static/images/catalogue/full/043.jpg",
       "width": 1300,
-      "height": 867
+      "height": 867,
+      "category": "Bees"
     },
     {
       "id": "045",
       "thumb": "/static/images/catalogue/thumbs/045.jpg",
       "full": "/static/images/catalogue/full/045.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Dragonflies"
     },
     {
       "id": "050",
       "thumb": "/static/images/catalogue/thumbs/050.jpg",
       "full": "/static/images/catalogue/full/050.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "052",
       "thumb": "/static/images/catalogue/thumbs/052.jpg",
       "full": "/static/images/catalogue/full/052.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "055",
       "thumb": "/static/images/catalogue/thumbs/055.jpg",
       "full": "/static/images/catalogue/full/055.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Ants"
     },
     {
       "id": "056",
       "thumb": "/static/images/catalogue/thumbs/056.jpg",
       "full": "/static/images/catalogue/full/056.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Mantises"
     },
     {
       "id": "057",
       "thumb": "/static/images/catalogue/thumbs/057.jpg",
       "full": "/static/images/catalogue/full/057.jpg",
       "width": 1400,
-      "height": 934
+      "height": 934,
+      "category": "Damselflies"
     },
     {
       "id": "065",
       "thumb": "/static/images/catalogue/thumbs/065.jpg",
       "full": "/static/images/catalogue/full/065.jpg",
       "width": 1300,
-      "height": 867
+      "height": 867,
+      "category": "Bees"
     },
     {
       "id": "067",
       "thumb": "/static/images/catalogue/thumbs/067.jpg",
       "full": "/static/images/catalogue/full/067.jpg",
       "width": 1200,
-      "height": 800
+      "height": 800,
+      "category": "Flies"
     },
     {
       "id": "068",
       "thumb": "/static/images/catalogue/thumbs/068.jpg",
       "full": "/static/images/catalogue/full/068.jpg",
       "width": 1300,
-      "height": 867
+      "height": 867,
+      "category": "Flies"
     },
     {
       "id": "070",
       "thumb": "/static/images/catalogue/thumbs/070.jpg",
       "full": "/static/images/catalogue/full/070.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Dragonflies"
     },
     {
       "id": "071",
       "thumb": "/static/images/catalogue/thumbs/071.jpg",
       "full": "/static/images/catalogue/full/071.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Beetles"
     },
     {
       "id": "073",
       "thumb": "/static/images/catalogue/thumbs/073.jpg",
       "full": "/static/images/catalogue/full/073.jpg",
       "width": 1400,
-      "height": 934
+      "height": 934,
+      "category": "Damselflies"
     },
     {
       "id": "074",
       "thumb": "/static/images/catalogue/thumbs/074.jpg",
       "full": "/static/images/catalogue/full/074.jpg",
       "width": 1300,
-      "height": 866
+      "height": 866,
+      "category": "Flies"
     },
     {
       "id": "078",
       "thumb": "/static/images/catalogue/thumbs/078.jpg",
       "full": "/static/images/catalogue/full/078.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Beetles"
     },
     {
       "id": "079",
       "thumb": "/static/images/catalogue/thumbs/079.jpg",
       "full": "/static/images/catalogue/full/079.jpg",
       "width": 1300,
-      "height": 867
+      "height": 867,
+      "category": "Flies"
     },
     {
       "id": "080",
       "thumb": "/static/images/catalogue/thumbs/080.jpg",
       "full": "/static/images/catalogue/full/080.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Butterflies"
     },
     {
       "id": "081",
       "thumb": "/static/images/catalogue/thumbs/081.jpg",
       "full": "/static/images/catalogue/full/081.jpg",
       "width": 1300,
-      "height": 867
+      "height": 867,
+      "category": "Flies"
     },
     {
       "id": "082",
       "thumb": "/static/images/catalogue/thumbs/082.jpg",
       "full": "/static/images/catalogue/full/082.jpg",
       "width": 1300,
-      "height": 867
+      "height": 867,
+      "category": "Flies"
     },
     {
       "id": "085",
       "thumb": "/static/images/catalogue/thumbs/085.jpg",
       "full": "/static/images/catalogue/full/085.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Moths"
     },
     {
       "id": "086",
       "thumb": "/static/images/catalogue/thumbs/086.jpg",
       "full": "/static/images/catalogue/full/086.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Spiders"
     },
     {
       "id": "088",
       "thumb": "/static/images/catalogue/thumbs/088.jpg",
       "full": "/static/images/catalogue/full/088.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Moths"
     },
     {
       "id": "091",
       "thumb": "/static/images/catalogue/thumbs/091.jpg",
       "full": "/static/images/catalogue/full/091.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Moths"
     },
     {
       "id": "092",
       "thumb": "/static/images/catalogue/thumbs/092.jpg",
       "full": "/static/images/catalogue/full/092.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Other"
     },
     {
       "id": "095",
       "thumb": "/static/images/catalogue/thumbs/095.jpg",
       "full": "/static/images/catalogue/full/095.jpg",
       "width": 1300,
-      "height": 867
+      "height": 867,
+      "category": "Bees"
     },
     {
       "id": "097",
       "thumb": "/static/images/catalogue/thumbs/097.jpg",
       "full": "/static/images/catalogue/full/097.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Bees"
     },
     {
       "id": "098",
       "thumb": "/static/images/catalogue/thumbs/098.jpg",
       "full": "/static/images/catalogue/full/098.jpg",
       "width": 1400,
-      "height": 934
+      "height": 934,
+      "category": "Dragonflies"
     },
     {
       "id": "100",
       "thumb": "/static/images/catalogue/thumbs/100.jpg",
       "full": "/static/images/catalogue/full/100.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "101",
       "thumb": "/static/images/catalogue/thumbs/101.jpg",
       "full": "/static/images/catalogue/full/101.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Spiders"
     },
     {
       "id": "102",
       "thumb": "/static/images/catalogue/thumbs/102.jpg",
       "full": "/static/images/catalogue/full/102.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Neuroptera"
     },
     {
       "id": "105",
       "thumb": "/static/images/catalogue/thumbs/105.jpg",
       "full": "/static/images/catalogue/full/105.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Beetles"
     },
     {
       "id": "106",
       "thumb": "/static/images/catalogue/thumbs/106.jpg",
       "full": "/static/images/catalogue/full/106.jpg",
       "width": 1300,
-      "height": 867
+      "height": 867,
+      "category": "Flies"
     },
     {
       "id": "107",
       "thumb": "/static/images/catalogue/thumbs/107.jpg",
       "full": "/static/images/catalogue/full/107.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Beetles"
     },
     {
       "id": "108",
       "thumb": "/static/images/catalogue/thumbs/108.jpg",
       "full": "/static/images/catalogue/full/108.jpg",
       "width": 1300,
-      "height": 867
+      "height": 867,
+      "category": "Flies"
     },
     {
       "id": "110",
       "thumb": "/static/images/catalogue/thumbs/110.jpg",
       "full": "/static/images/catalogue/full/110.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Wasps"
     },
     {
       "id": "111",
       "thumb": "/static/images/catalogue/thumbs/111.jpg",
       "full": "/static/images/catalogue/full/111.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Butterflies"
     },
     {
       "id": "113",
       "thumb": "/static/images/catalogue/thumbs/113.jpg",
       "full": "/static/images/catalogue/full/113.jpg",
       "width": 1400,
-      "height": 932
+      "height": 932,
+      "category": "Spiders"
     },
     {
       "id": "114",
       "thumb": "/static/images/catalogue/thumbs/114.jpg",
       "full": "/static/images/catalogue/full/114.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Beetles"
     },
     {
       "id": "115",
       "thumb": "/static/images/catalogue/thumbs/115.jpg",
       "full": "/static/images/catalogue/full/115.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Bees"
     },
     {
       "id": "119",
       "thumb": "/static/images/catalogue/thumbs/119.jpg",
       "full": "/static/images/catalogue/full/119.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Spiders"
     },
     {
       "id": "120",
       "thumb": "/static/images/catalogue/thumbs/120.jpg",
       "full": "/static/images/catalogue/full/120.jpg",
       "width": 1300,
-      "height": 866
+      "height": 866,
+      "category": "Flies"
     },
     {
       "id": "124",
       "thumb": "/static/images/catalogue/thumbs/124.jpg",
       "full": "/static/images/catalogue/full/124.jpg",
       "width": 1300,
-      "height": 867
+      "height": 867,
+      "category": "Flies"
     },
     {
       "id": "126",
       "thumb": "/static/images/catalogue/thumbs/126.jpg",
       "full": "/static/images/catalogue/full/126.jpg",
       "width": 1300,
-      "height": 867
+      "height": 867,
+      "category": "Flies"
     },
     {
       "id": "127",
       "thumb": "/static/images/catalogue/thumbs/127.jpg",
       "full": "/static/images/catalogue/full/127.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Spiders"
     },
     {
       "id": "129",
       "thumb": "/static/images/catalogue/thumbs/129.jpg",
       "full": "/static/images/catalogue/full/129.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Beetles"
     },
     {
       "id": "130",
       "thumb": "/static/images/catalogue/thumbs/130.jpg",
       "full": "/static/images/catalogue/full/130.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "145",
       "thumb": "/static/images/catalogue/thumbs/145.jpg",
       "full": "/static/images/catalogue/full/145.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Butterflies"
     },
     {
       "id": "146",
       "thumb": "/static/images/catalogue/thumbs/146.jpg",
       "full": "/static/images/catalogue/full/146.jpg",
       "width": 1300,
-      "height": 867
+      "height": 867,
+      "category": "Flies"
     },
     {
       "id": "148",
       "thumb": "/static/images/catalogue/thumbs/148.jpg",
       "full": "/static/images/catalogue/full/148.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Spiders"
     },
     {
       "id": "151",
       "thumb": "/static/images/catalogue/thumbs/151.jpg",
       "full": "/static/images/catalogue/full/151.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Mantises"
     },
     {
       "id": "152",
       "thumb": "/static/images/catalogue/thumbs/152.jpg",
       "full": "/static/images/catalogue/full/152.jpg",
       "width": 1400,
-      "height": 934
+      "height": 934,
+      "category": "Spiders"
     },
     {
       "id": "153",
       "thumb": "/static/images/catalogue/thumbs/153.jpg",
       "full": "/static/images/catalogue/full/153.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Dragonflies"
     },
     {
       "id": "158",
       "thumb": "/static/images/catalogue/thumbs/158.jpg",
       "full": "/static/images/catalogue/full/158.jpg",
       "width": 1300,
-      "height": 867
+      "height": 867,
+      "category": "Flies"
     },
     {
       "id": "161",
       "thumb": "/static/images/catalogue/thumbs/161.jpg",
       "full": "/static/images/catalogue/full/161.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Damselflies"
     },
     {
       "id": "169",
       "thumb": "/static/images/catalogue/thumbs/169.jpg",
       "full": "/static/images/catalogue/full/169.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "True Bugs"
     },
     {
       "id": "176",
       "thumb": "/static/images/catalogue/thumbs/176.jpg",
       "full": "/static/images/catalogue/full/176.jpg",
       "width": 1300,
-      "height": 867
+      "height": 867,
+      "category": "Bees"
     },
     {
       "id": "178",
       "thumb": "/static/images/catalogue/thumbs/178.jpg",
       "full": "/static/images/catalogue/full/178.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Moths"
     },
     {
       "id": "180",
       "thumb": "/static/images/catalogue/thumbs/180.jpg",
       "full": "/static/images/catalogue/full/180.jpg",
       "width": 1400,
-      "height": 903
+      "height": 903,
+      "category": "Flies"
     },
     {
       "id": "182",
       "thumb": "/static/images/catalogue/thumbs/182.jpg",
       "full": "/static/images/catalogue/full/182.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Wasps"
     },
     {
       "id": "191",
       "thumb": "/static/images/catalogue/thumbs/191.jpg",
       "full": "/static/images/catalogue/full/191.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Damselflies"
     },
     {
       "id": "197",
       "thumb": "/static/images/catalogue/thumbs/197.jpg",
       "full": "/static/images/catalogue/full/197.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "True Bugs"
     },
     {
       "id": "198",
       "thumb": "/static/images/catalogue/thumbs/198.jpg",
       "full": "/static/images/catalogue/full/198.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "True Bugs"
     },
     {
       "id": "199",
       "thumb": "/static/images/catalogue/thumbs/199.jpg",
       "full": "/static/images/catalogue/full/199.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Butterflies"
     },
     {
       "id": "200",
       "thumb": "/static/images/catalogue/thumbs/200.jpg",
       "full": "/static/images/catalogue/full/200.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Butterflies"
     },
     {
       "id": "201",
       "thumb": "/static/images/catalogue/thumbs/201.jpg",
       "full": "/static/images/catalogue/full/201.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Butterflies"
     },
     {
       "id": "208",
       "thumb": "/static/images/catalogue/thumbs/208.jpg",
       "full": "/static/images/catalogue/full/208.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Mantises"
     },
     {
       "id": "210",
       "thumb": "/static/images/catalogue/thumbs/210.jpg",
       "full": "/static/images/catalogue/full/210.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Bees"
     },
     {
       "id": "218",
       "thumb": "/static/images/catalogue/thumbs/218.jpg",
       "full": "/static/images/catalogue/full/218.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "True Bugs"
     },
     {
       "id": "221",
       "thumb": "/static/images/catalogue/thumbs/221.jpg",
       "full": "/static/images/catalogue/full/221.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "222",
       "thumb": "/static/images/catalogue/thumbs/222.jpg",
       "full": "/static/images/catalogue/full/222.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Mantises"
     },
     {
       "id": "237",
       "thumb": "/static/images/catalogue/thumbs/237.jpg",
       "full": "/static/images/catalogue/full/237.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Damselflies"
     },
     {
       "id": "239",
       "thumb": "/static/images/catalogue/thumbs/239.jpg",
       "full": "/static/images/catalogue/full/239.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Dragonflies"
     },
     {
       "id": "242",
       "thumb": "/static/images/catalogue/thumbs/242.jpg",
       "full": "/static/images/catalogue/full/242.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "244",
       "thumb": "/static/images/catalogue/thumbs/244.jpg",
       "full": "/static/images/catalogue/full/244.jpg",
       "width": 1300,
-      "height": 867
+      "height": 867,
+      "category": "Bees"
     },
     {
       "id": "248",
       "thumb": "/static/images/catalogue/thumbs/248.jpg",
       "full": "/static/images/catalogue/full/248.jpg",
       "width": 1400,
-      "height": 934
+      "height": 934,
+      "category": "Spiders"
     },
     {
       "id": "252",
       "thumb": "/static/images/catalogue/thumbs/252.jpg",
       "full": "/static/images/catalogue/full/252.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Wasps"
     },
     {
       "id": "253",
       "thumb": "/static/images/catalogue/thumbs/253.jpg",
       "full": "/static/images/catalogue/full/253.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Butterflies"
     },
     {
       "id": "254",
       "thumb": "/static/images/catalogue/thumbs/254.jpg",
       "full": "/static/images/catalogue/full/254.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Moths"
     },
     {
       "id": "256",
       "thumb": "/static/images/catalogue/thumbs/256.jpg",
       "full": "/static/images/catalogue/full/256.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Damselflies"
     },
     {
       "id": "260",
       "thumb": "/static/images/catalogue/thumbs/260.jpg",
       "full": "/static/images/catalogue/full/260.jpg",
       "width": 1300,
-      "height": 867
+      "height": 867,
+      "category": "Bees"
     },
     {
       "id": "261",
       "thumb": "/static/images/catalogue/thumbs/261.jpg",
       "full": "/static/images/catalogue/full/261.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "267",
       "thumb": "/static/images/catalogue/thumbs/267.jpg",
       "full": "/static/images/catalogue/full/267.jpg",
       "width": 1400,
-      "height": 934
+      "height": 934,
+      "category": "Bees"
     },
     {
       "id": "268",
       "thumb": "/static/images/catalogue/thumbs/268.jpg",
       "full": "/static/images/catalogue/full/268.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Spiders"
     },
     {
       "id": "270",
       "thumb": "/static/images/catalogue/thumbs/270.jpg",
       "full": "/static/images/catalogue/full/270.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "275",
       "thumb": "/static/images/catalogue/thumbs/275.jpg",
       "full": "/static/images/catalogue/full/275.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Dragonflies"
     },
     {
       "id": "276",
       "thumb": "/static/images/catalogue/thumbs/276.jpg",
       "full": "/static/images/catalogue/full/276.jpg",
       "width": 1400,
-      "height": 2100
+      "height": 2100,
+      "category": "Mantises"
     },
     {
       "id": "277",
       "thumb": "/static/images/catalogue/thumbs/277.jpg",
       "full": "/static/images/catalogue/full/277.jpg",
       "width": 1400,
-      "height": 938
+      "height": 938,
+      "category": "Orthoptera"
     },
     {
       "id": "278",
       "thumb": "/static/images/catalogue/thumbs/278.jpg",
       "full": "/static/images/catalogue/full/278.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "279",
       "thumb": "/static/images/catalogue/thumbs/279.jpg",
       "full": "/static/images/catalogue/full/279.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Spiders"
     },
     {
       "id": "280",
       "thumb": "/static/images/catalogue/thumbs/280.jpg",
       "full": "/static/images/catalogue/full/280.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "281",
       "thumb": "/static/images/catalogue/thumbs/281.jpg",
       "full": "/static/images/catalogue/full/281.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "282",
       "thumb": "/static/images/catalogue/thumbs/282.jpg",
       "full": "/static/images/catalogue/full/282.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Spiders"
     },
     {
       "id": "283",
       "thumb": "/static/images/catalogue/thumbs/283.jpg",
       "full": "/static/images/catalogue/full/283.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Spiders"
     },
     {
       "id": "284",
       "thumb": "/static/images/catalogue/thumbs/284.jpg",
       "full": "/static/images/catalogue/full/284.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Moths"
     },
     {
       "id": "285",
       "thumb": "/static/images/catalogue/thumbs/285.jpg",
       "full": "/static/images/catalogue/full/285.jpg",
       "width": 1300,
-      "height": 867
+      "height": 867,
+      "category": "Flies"
     },
     {
       "id": "286",
       "thumb": "/static/images/catalogue/thumbs/286.jpg",
       "full": "/static/images/catalogue/full/286.jpg",
       "width": 1300,
-      "height": 867
+      "height": 867,
+      "category": "Flies"
     },
     {
       "id": "287",
       "thumb": "/static/images/catalogue/thumbs/287.jpg",
       "full": "/static/images/catalogue/full/287.jpg",
       "width": 1300,
-      "height": 867
+      "height": 867,
+      "category": "Flies"
     },
     {
       "id": "288",
       "thumb": "/static/images/catalogue/thumbs/288.jpg",
       "full": "/static/images/catalogue/full/288.jpg",
       "width": 1300,
-      "height": 867
+      "height": 867,
+      "category": "Flies"
     },
     {
       "id": "289",
       "thumb": "/static/images/catalogue/thumbs/289.jpg",
       "full": "/static/images/catalogue/full/289.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "290",
       "thumb": "/static/images/catalogue/thumbs/290.jpg",
       "full": "/static/images/catalogue/full/290.jpg",
       "width": 1300,
-      "height": 867
+      "height": 867,
+      "category": "Flies"
     },
     {
       "id": "291",
       "thumb": "/static/images/catalogue/thumbs/291.jpg",
       "full": "/static/images/catalogue/full/291.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Moths"
     },
     {
       "id": "292",
       "thumb": "/static/images/catalogue/thumbs/292.jpg",
       "full": "/static/images/catalogue/full/292.jpg",
       "width": 1300,
-      "height": 867
+      "height": 867,
+      "category": "Flies"
     },
     {
       "id": "293",
       "thumb": "/static/images/catalogue/thumbs/293.jpg",
       "full": "/static/images/catalogue/full/293.jpg",
       "width": 1400,
-      "height": 935
+      "height": 935,
+      "category": "Orthoptera"
     },
     {
       "id": "294",
       "thumb": "/static/images/catalogue/thumbs/294.jpg",
       "full": "/static/images/catalogue/full/294.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Butterflies"
     },
     {
       "id": "295",
       "thumb": "/static/images/catalogue/thumbs/295.jpg",
       "full": "/static/images/catalogue/full/295.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "296",
       "thumb": "/static/images/catalogue/thumbs/296.jpg",
       "full": "/static/images/catalogue/full/296.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Beetles"
     },
     {
       "id": "297",
       "thumb": "/static/images/catalogue/thumbs/297.jpg",
       "full": "/static/images/catalogue/full/297.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Bees"
     },
     {
       "id": "298",
       "thumb": "/static/images/catalogue/thumbs/298.jpg",
       "full": "/static/images/catalogue/full/298.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "299",
       "thumb": "/static/images/catalogue/thumbs/299.jpg",
       "full": "/static/images/catalogue/full/299.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Spiders"
     },
     {
       "id": "300",
       "thumb": "/static/images/catalogue/thumbs/300.jpg",
       "full": "/static/images/catalogue/full/300.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Spiders"
     },
     {
       "id": "301",
       "thumb": "/static/images/catalogue/thumbs/301.jpg",
       "full": "/static/images/catalogue/full/301.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "302",
       "thumb": "/static/images/catalogue/thumbs/302.jpg",
       "full": "/static/images/catalogue/full/302.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "303",
       "thumb": "/static/images/catalogue/thumbs/303.jpg",
       "full": "/static/images/catalogue/full/303.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Wasps"
     },
     {
       "id": "304",
       "thumb": "/static/images/catalogue/thumbs/304.jpg",
       "full": "/static/images/catalogue/full/304.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Butterflies"
     },
     {
       "id": "305",
       "thumb": "/static/images/catalogue/thumbs/305.jpg",
       "full": "/static/images/catalogue/full/305.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Spiders"
     },
     {
       "id": "306",
       "thumb": "/static/images/catalogue/thumbs/306.jpg",
       "full": "/static/images/catalogue/full/306.jpg",
       "width": 1400,
-      "height": 935
+      "height": 935,
+      "category": "Spiders"
     },
     {
       "id": "307",
       "thumb": "/static/images/catalogue/thumbs/307.jpg",
       "full": "/static/images/catalogue/full/307.jpg",
       "width": 1400,
-      "height": 935
+      "height": 935,
+      "category": "Spiders"
     },
     {
       "id": "308",
       "thumb": "/static/images/catalogue/thumbs/308.jpg",
       "full": "/static/images/catalogue/full/308.jpg",
       "width": 1400,
-      "height": 935
+      "height": 935,
+      "category": "Spiders"
     },
     {
       "id": "309",
       "thumb": "/static/images/catalogue/thumbs/309.jpg",
       "full": "/static/images/catalogue/full/309.jpg",
       "width": 1400,
-      "height": 935
+      "height": 935,
+      "category": "Beetles"
     },
     {
       "id": "310",
       "thumb": "/static/images/catalogue/thumbs/310.jpg",
       "full": "/static/images/catalogue/full/310.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Beetles"
     },
     {
       "id": "311",
       "thumb": "/static/images/catalogue/thumbs/311.jpg",
       "full": "/static/images/catalogue/full/311.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "312",
       "thumb": "/static/images/catalogue/thumbs/312.jpg",
       "full": "/static/images/catalogue/full/312.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Ants"
     },
     {
       "id": "313",
       "thumb": "/static/images/catalogue/thumbs/313.jpg",
       "full": "/static/images/catalogue/full/313.jpg",
       "width": 1400,
-      "height": 935
+      "height": 935,
+      "category": "Other"
     },
     {
       "id": "314",
       "thumb": "/static/images/catalogue/thumbs/314.jpg",
       "full": "/static/images/catalogue/full/314.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Beetles"
     },
     {
       "id": "315",
       "thumb": "/static/images/catalogue/thumbs/315.jpg",
       "full": "/static/images/catalogue/full/315.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "316",
       "thumb": "/static/images/catalogue/thumbs/316.jpg",
       "full": "/static/images/catalogue/full/316.jpg",
       "width": 1400,
-      "height": 1077
+      "height": 1077,
+      "category": "Beetles"
     },
     {
       "id": "317",
       "thumb": "/static/images/catalogue/thumbs/317.jpg",
       "full": "/static/images/catalogue/full/317.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "318",
       "thumb": "/static/images/catalogue/thumbs/318.jpg",
       "full": "/static/images/catalogue/full/318.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Caterpillars"
     },
     {
       "id": "319",
       "thumb": "/static/images/catalogue/thumbs/319.jpg",
       "full": "/static/images/catalogue/full/319.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "320",
       "thumb": "/static/images/catalogue/thumbs/320.jpg",
       "full": "/static/images/catalogue/full/320.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Spiders"
     },
     {
       "id": "321",
       "thumb": "/static/images/catalogue/thumbs/321.jpg",
       "full": "/static/images/catalogue/full/321.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "322",
       "thumb": "/static/images/catalogue/thumbs/322.jpg",
       "full": "/static/images/catalogue/full/322.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "323",
       "thumb": "/static/images/catalogue/thumbs/323.jpg",
       "full": "/static/images/catalogue/full/323.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "324",
       "thumb": "/static/images/catalogue/thumbs/324.jpg",
       "full": "/static/images/catalogue/full/324.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "325",
       "thumb": "/static/images/catalogue/thumbs/325.jpg",
       "full": "/static/images/catalogue/full/325.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Other"
     },
     {
       "id": "326",
       "thumb": "/static/images/catalogue/thumbs/326.jpg",
       "full": "/static/images/catalogue/full/326.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Moths"
     },
     {
       "id": "327",
       "thumb": "/static/images/catalogue/thumbs/327.jpg",
       "full": "/static/images/catalogue/full/327.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Spiders"
     },
     {
       "id": "328",
       "thumb": "/static/images/catalogue/thumbs/328.jpg",
       "full": "/static/images/catalogue/full/328.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Spiders"
     },
     {
       "id": "329",
       "thumb": "/static/images/catalogue/thumbs/329.jpg",
       "full": "/static/images/catalogue/full/329.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Ants"
     },
     {
       "id": "330",
       "thumb": "/static/images/catalogue/thumbs/330.jpg",
       "full": "/static/images/catalogue/full/330.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Beetles"
     },
     {
       "id": "331",
       "thumb": "/static/images/catalogue/thumbs/331.jpg",
       "full": "/static/images/catalogue/full/331.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Moths"
     },
     {
       "id": "332",
       "thumb": "/static/images/catalogue/thumbs/332.jpg",
       "full": "/static/images/catalogue/full/332.jpg",
       "width": 1400,
-      "height": 935
+      "height": 935,
+      "category": "Other"
     },
     {
       "id": "333",
       "thumb": "/static/images/catalogue/thumbs/333.jpg",
       "full": "/static/images/catalogue/full/333.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Ants"
     },
     {
       "id": "334",
       "thumb": "/static/images/catalogue/thumbs/334.jpg",
       "full": "/static/images/catalogue/full/334.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Beetles"
     },
     {
       "id": "335",
       "thumb": "/static/images/catalogue/thumbs/335.jpg",
       "full": "/static/images/catalogue/full/335.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Beetles"
     },
     {
       "id": "336",
       "thumb": "/static/images/catalogue/thumbs/336.jpg",
       "full": "/static/images/catalogue/full/336.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Moths"
     },
     {
       "id": "337",
       "thumb": "/static/images/catalogue/thumbs/337.jpg",
       "full": "/static/images/catalogue/full/337.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Spiders"
     },
     {
       "id": "338",
       "thumb": "/static/images/catalogue/thumbs/338.jpg",
       "full": "/static/images/catalogue/full/338.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Spiders"
     },
     {
       "id": "339",
       "thumb": "/static/images/catalogue/thumbs/339.jpg",
       "full": "/static/images/catalogue/full/339.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Moths"
     },
     {
       "id": "340",
       "thumb": "/static/images/catalogue/thumbs/340.jpg",
       "full": "/static/images/catalogue/full/340.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "341",
       "thumb": "/static/images/catalogue/thumbs/341.jpg",
       "full": "/static/images/catalogue/full/341.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Spiders"
     },
     {
       "id": "342",
       "thumb": "/static/images/catalogue/thumbs/342.jpg",
       "full": "/static/images/catalogue/full/342.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Spiders"
     },
     {
       "id": "343",
       "thumb": "/static/images/catalogue/thumbs/343.jpg",
       "full": "/static/images/catalogue/full/343.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Butterflies"
     },
     {
       "id": "344",
       "thumb": "/static/images/catalogue/thumbs/344.jpg",
       "full": "/static/images/catalogue/full/344.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Ants"
     },
     {
       "id": "345",
       "thumb": "/static/images/catalogue/thumbs/345.jpg",
       "full": "/static/images/catalogue/full/345.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "346",
       "thumb": "/static/images/catalogue/thumbs/346.jpg",
       "full": "/static/images/catalogue/full/346.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Other"
     },
     {
       "id": "347",
       "thumb": "/static/images/catalogue/thumbs/347.jpg",
       "full": "/static/images/catalogue/full/347.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Moths"
     },
     {
       "id": "348",
       "thumb": "/static/images/catalogue/thumbs/348.jpg",
       "full": "/static/images/catalogue/full/348.jpg",
       "width": 1300,
-      "height": 867
+      "height": 867,
+      "category": "Bees"
     },
     {
       "id": "349",
       "thumb": "/static/images/catalogue/thumbs/349.jpg",
       "full": "/static/images/catalogue/full/349.jpg",
       "width": 1400,
-      "height": 933
-    },
-    {
-      "id": "350",
-      "thumb": "/static/images/catalogue/thumbs/350.jpg",
-      "full": "/static/images/catalogue/full/350.jpg",
-      "width": 1400,
-      "height": 1076
+      "height": 933,
+      "category": "Moths"
     },
     {
       "id": "351",
       "thumb": "/static/images/catalogue/thumbs/351.jpg",
       "full": "/static/images/catalogue/full/351.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "352",
       "thumb": "/static/images/catalogue/thumbs/352.jpg",
       "full": "/static/images/catalogue/full/352.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Caterpillars"
     },
     {
       "id": "353",
       "thumb": "/static/images/catalogue/thumbs/353.jpg",
       "full": "/static/images/catalogue/full/353.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Butterflies"
     },
     {
       "id": "354",
       "thumb": "/static/images/catalogue/thumbs/354.jpg",
       "full": "/static/images/catalogue/full/354.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Beetles"
     },
     {
       "id": "355",
       "thumb": "/static/images/catalogue/thumbs/355.jpg",
       "full": "/static/images/catalogue/full/355.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "356",
       "thumb": "/static/images/catalogue/thumbs/356.jpg",
       "full": "/static/images/catalogue/full/356.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Other"
     },
     {
       "id": "357",
       "thumb": "/static/images/catalogue/thumbs/357.jpg",
       "full": "/static/images/catalogue/full/357.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Beetles"
     },
     {
       "id": "358",
       "thumb": "/static/images/catalogue/thumbs/358.jpg",
       "full": "/static/images/catalogue/full/358.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "359",
       "thumb": "/static/images/catalogue/thumbs/359.jpg",
       "full": "/static/images/catalogue/full/359.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Spiders"
     },
     {
       "id": "360",
       "thumb": "/static/images/catalogue/thumbs/360.jpg",
       "full": "/static/images/catalogue/full/360.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Neuroptera"
     },
     {
       "id": "361",
       "thumb": "/static/images/catalogue/thumbs/361.jpg",
       "full": "/static/images/catalogue/full/361.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Ants"
     },
     {
       "id": "362",
       "thumb": "/static/images/catalogue/thumbs/362.jpg",
       "full": "/static/images/catalogue/full/362.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "363",
       "thumb": "/static/images/catalogue/thumbs/363.jpg",
       "full": "/static/images/catalogue/full/363.jpg",
       "width": 1300,
-      "height": 867
+      "height": 867,
+      "category": "Ants"
     },
     {
       "id": "364",
       "thumb": "/static/images/catalogue/thumbs/364.jpg",
       "full": "/static/images/catalogue/full/364.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "365",
       "thumb": "/static/images/catalogue/thumbs/365.jpg",
       "full": "/static/images/catalogue/full/365.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "366",
       "thumb": "/static/images/catalogue/thumbs/366.jpg",
       "full": "/static/images/catalogue/full/366.jpg",
       "width": 1300,
-      "height": 867
+      "height": 867,
+      "category": "Flies"
     },
     {
       "id": "367",
       "thumb": "/static/images/catalogue/thumbs/367.jpg",
       "full": "/static/images/catalogue/full/367.jpg",
       "width": 1300,
-      "height": 866
+      "height": 866,
+      "category": "Flies"
     },
     {
       "id": "368",
       "thumb": "/static/images/catalogue/thumbs/368.jpg",
       "full": "/static/images/catalogue/full/368.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Wasps"
     },
     {
       "id": "369",
       "thumb": "/static/images/catalogue/thumbs/369.jpg",
       "full": "/static/images/catalogue/full/369.jpg",
       "width": 1400,
-      "height": 935
+      "height": 935,
+      "category": "Other"
     },
     {
       "id": "370",
       "thumb": "/static/images/catalogue/thumbs/370.jpg",
       "full": "/static/images/catalogue/full/370.jpg",
       "width": 1300,
-      "height": 867
+      "height": 867,
+      "category": "Spiders"
     },
     {
       "id": "371",
       "thumb": "/static/images/catalogue/thumbs/371.jpg",
       "full": "/static/images/catalogue/full/371.jpg",
       "width": 1200,
-      "height": 800
+      "height": 800,
+      "category": "Spiders"
     },
     {
       "id": "372",
       "thumb": "/static/images/catalogue/thumbs/372.jpg",
       "full": "/static/images/catalogue/full/372.jpg",
       "width": 1300,
-      "height": 867
+      "height": 867,
+      "category": "Flies"
     },
     {
       "id": "373",
       "thumb": "/static/images/catalogue/thumbs/373.jpg",
       "full": "/static/images/catalogue/full/373.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Spiders"
     },
     {
       "id": "374",
       "thumb": "/static/images/catalogue/thumbs/374.jpg",
       "full": "/static/images/catalogue/full/374.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Ants"
     },
     {
       "id": "375",
       "thumb": "/static/images/catalogue/thumbs/375.jpg",
       "full": "/static/images/catalogue/full/375.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Flies"
     },
     {
       "id": "376",
       "thumb": "/static/images/catalogue/thumbs/376.jpg",
       "full": "/static/images/catalogue/full/376.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Spiders"
     },
     {
       "id": "377",
       "thumb": "/static/images/catalogue/thumbs/377.jpg",
       "full": "/static/images/catalogue/full/377.jpg",
       "width": 1400,
-      "height": 933
+      "height": 933,
+      "category": "Bees"
     },
     {
       "id": "378",
       "thumb": "/static/images/catalogue/thumbs/378.jpg",
       "full": "/static/images/catalogue/full/378.jpg",
       "width": 933,
-      "height": 1400
+      "height": 1400,
+      "category": "Bees"
     }
   ]
 }
