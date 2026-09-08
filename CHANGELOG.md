@@ -16,7 +16,20 @@ behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
   scrolling the same way; chosen over a tabs/dropdown filter via an interactive mockup
   (closes #74)
 
+### Changed
+
+- "Other" (the catch-all for anything that isn't a real taxonomic group) always sorts last in
+  the sidebar now, regardless of its count, rather than ranking alongside genuine categories
+
 tag: `v0.11.0`
+
+## [0.10.1] - 2026-09-08
+
+### Fixed
+
+- Catalogue photo `040` was miscategorised as Ants — it's a bee (closes #78)
+
+tag: `v0.10.1`
 
 ## [0.10.0] - 2026-09-08
 
