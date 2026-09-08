@@ -75,7 +75,7 @@ limiter = Limiter(get_remote_address, app=app, default_limits=["200 per day", "5
 CATALOGUE_CATEGORIES = {
     "Flies", "Spiders", "Beetles", "Bees", "Moths", "Butterflies", "Ants",
     "Damselflies", "Dragonflies", "Mantises", "Wasps", "True Bugs",
-    "Neuroptera", "Orthoptera", "Caterpillars", "Other",
+    "Neuroptera", "Orthoptera", "Caterpillars", "Scorpions", "Other",
 }
 
 
