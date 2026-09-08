@@ -449,12 +449,12 @@
       "category": "Bees"
     },
     {
-      "id": "be-007",
-      "thumb": "/static/images/catalogue/thumbs/be-007.jpg",
-      "full": "/static/images/catalogue/full/be-007.jpg",
+      "id": "f-064",
+      "thumb": "/static/images/catalogue/thumbs/f-064.jpg",
+      "full": "/static/images/catalogue/full/f-064.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Bees"
+      "category": "Flies"
     },
     {
       "id": "dr-004",
@@ -553,9 +553,9 @@
       "category": "Beetles"
     },
     {
-      "id": "be-008",
-      "thumb": "/static/images/catalogue/thumbs/be-008.jpg",
-      "full": "/static/images/catalogue/full/be-008.jpg",
+      "id": "be-007",
+      "thumb": "/static/images/catalogue/thumbs/be-007.jpg",
+      "full": "/static/images/catalogue/full/be-007.jpg",
       "width": 1400,
       "height": 933,
       "category": "Bees"
@@ -689,9 +689,9 @@
       "category": "True Bugs"
     },
     {
-      "id": "be-009",
-      "thumb": "/static/images/catalogue/thumbs/be-009.jpg",
-      "full": "/static/images/catalogue/full/be-009.jpg",
+      "id": "be-008",
+      "thumb": "/static/images/catalogue/thumbs/be-008.jpg",
+      "full": "/static/images/catalogue/full/be-008.jpg",
       "width": 1300,
       "height": 867,
       "category": "Bees"
@@ -777,9 +777,9 @@
       "category": "Mantises"
     },
     {
-      "id": "be-010",
-      "thumb": "/static/images/catalogue/thumbs/be-010.jpg",
-      "full": "/static/images/catalogue/full/be-010.jpg",
+      "id": "be-009",
+      "thumb": "/static/images/catalogue/thumbs/be-009.jpg",
+      "full": "/static/images/catalogue/full/be-009.jpg",
       "width": 1400,
       "height": 933,
       "category": "Bees"
@@ -833,9 +833,9 @@
       "category": "Flies"
     },
     {
-      "id": "be-011",
-      "thumb": "/static/images/catalogue/thumbs/be-011.jpg",
-      "full": "/static/images/catalogue/full/be-011.jpg",
+      "id": "be-010",
+      "thumb": "/static/images/catalogue/thumbs/be-010.jpg",
+      "full": "/static/images/catalogue/full/be-010.jpg",
       "width": 1300,
       "height": 867,
       "category": "Bees"
@@ -881,9 +881,9 @@
       "category": "Damselflies"
     },
     {
-      "id": "be-012",
-      "thumb": "/static/images/catalogue/thumbs/be-012.jpg",
-      "full": "/static/images/catalogue/full/be-012.jpg",
+      "id": "be-011",
+      "thumb": "/static/images/catalogue/thumbs/be-011.jpg",
+      "full": "/static/images/catalogue/full/be-011.jpg",
       "width": 1300,
       "height": 867,
       "category": "Bees"
@@ -897,9 +897,9 @@
       "category": "Flies"
     },
     {
-      "id": "be-013",
-      "thumb": "/static/images/catalogue/thumbs/be-013.jpg",
-      "full": "/static/images/catalogue/full/be-013.jpg",
+      "id": "be-012",
+      "thumb": "/static/images/catalogue/thumbs/be-012.jpg",
+      "full": "/static/images/catalogue/full/be-012.jpg",
       "width": 1400,
       "height": 934,
       "category": "Bees"
@@ -1097,9 +1097,9 @@
       "category": "Beetles"
     },
     {
-      "id": "be-014",
-      "thumb": "/static/images/catalogue/thumbs/be-014.jpg",
-      "full": "/static/images/catalogue/full/be-014.jpg",
+      "id": "be-013",
+      "thumb": "/static/images/catalogue/thumbs/be-013.jpg",
+      "full": "/static/images/catalogue/full/be-013.jpg",
       "width": 1400,
       "height": 933,
       "category": "Bees"
@@ -1505,9 +1505,9 @@
       "category": "Moths"
     },
     {
-      "id": "be-015",
-      "thumb": "/static/images/catalogue/thumbs/be-015.jpg",
-      "full": "/static/images/catalogue/full/be-015.jpg",
+      "id": "be-014",
+      "thumb": "/static/images/catalogue/thumbs/be-014.jpg",
+      "full": "/static/images/catalogue/full/be-014.jpg",
       "width": 1300,
       "height": 867,
       "category": "Bees"
@@ -1625,6 +1625,14 @@
       "category": "Ants"
     },
     {
+      "id": "ot-010",
+      "thumb": "/static/images/catalogue/thumbs/ot-010.jpg",
+      "full": "/static/images/catalogue/full/ot-010.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Other"
+    },
+    {
       "id": "f-059",
       "thumb": "/static/images/catalogue/thumbs/f-059.jpg",
       "full": "/static/images/catalogue/full/f-059.jpg",
@@ -1636,22 +1644,14 @@
       "id": "f-060",
       "thumb": "/static/images/catalogue/thumbs/f-060.jpg",
       "full": "/static/images/catalogue/full/f-060.jpg",
-      "width": 1400,
-      "height": 933,
+      "width": 1300,
+      "height": 867,
       "category": "Flies"
     },
     {
       "id": "f-061",
       "thumb": "/static/images/catalogue/thumbs/f-061.jpg",
       "full": "/static/images/catalogue/full/f-061.jpg",
-      "width": 1300,
-      "height": 867,
-      "category": "Flies"
-    },
-    {
-      "id": "f-062",
-      "thumb": "/static/images/catalogue/thumbs/f-062.jpg",
-      "full": "/static/images/catalogue/full/f-062.jpg",
       "width": 1300,
       "height": 866,
       "category": "Flies"
@@ -1689,9 +1689,9 @@
       "category": "Spiders"
     },
     {
-      "id": "f-063",
-      "thumb": "/static/images/catalogue/thumbs/f-063.jpg",
-      "full": "/static/images/catalogue/full/f-063.jpg",
+      "id": "f-062",
+      "thumb": "/static/images/catalogue/thumbs/f-062.jpg",
+      "full": "/static/images/catalogue/full/f-062.jpg",
       "width": 1300,
       "height": 867,
       "category": "Flies"
@@ -1713,9 +1713,9 @@
       "category": "Ants"
     },
     {
-      "id": "f-064",
-      "thumb": "/static/images/catalogue/thumbs/f-064.jpg",
-      "full": "/static/images/catalogue/full/f-064.jpg",
+      "id": "f-063",
+      "thumb": "/static/images/catalogue/thumbs/f-063.jpg",
+      "full": "/static/images/catalogue/full/f-063.jpg",
       "width": 1400,
       "height": 933,
       "category": "Flies"
@@ -1729,17 +1729,17 @@
       "category": "Spiders"
     },
     {
-      "id": "be-016",
-      "thumb": "/static/images/catalogue/thumbs/be-016.jpg",
-      "full": "/static/images/catalogue/full/be-016.jpg",
+      "id": "be-015",
+      "thumb": "/static/images/catalogue/thumbs/be-015.jpg",
+      "full": "/static/images/catalogue/full/be-015.jpg",
       "width": 1400,
       "height": 933,
       "category": "Bees"
     },
     {
-      "id": "be-017",
-      "thumb": "/static/images/catalogue/thumbs/be-017.jpg",
-      "full": "/static/images/catalogue/full/be-017.jpg",
+      "id": "be-016",
+      "thumb": "/static/images/catalogue/thumbs/be-016.jpg",
+      "full": "/static/images/catalogue/full/be-016.jpg",
       "width": 933,
       "height": 1400,
       "category": "Bees"
