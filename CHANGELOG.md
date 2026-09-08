@@ -6,6 +6,18 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.11.2] - 2026-09-08
+
+### Changed
+
+- Renumbered every catalogue photo from a global numeric id (e.g. `169.jpg`) to a per-category,
+  letter-prefixed id (e.g. `t-001.jpg` for True Bugs) — filenames in `thumbs/` and `full/` and
+  every `manifest.json` entry updated to match, ordered by each photo's previous numeric id
+  within its category. Documented the new `<prefix>-NNN` convention in README so future additions
+  continue the sequence (closes #82)
+
+tag: `v0.11.2`
+
 ## [0.11.1] - 2026-09-08
 
 ### Maintenance
