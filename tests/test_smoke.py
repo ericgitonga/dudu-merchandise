@@ -5,6 +5,11 @@ import pytest
 
 import app as appmod
 
+# Real catalogue ids — these tests only care that an id exists in the catalogue, not which photo
+# it is, so pick three distinct real ones rather than hardcoding a filename that can be renamed
+# (issue #82 renumbered every catalogue photo, which is what broke this the first time).
+PHOTO_ID, PHOTO_ID_2, PHOTO_ID_3 = sorted(appmod.CATALOGUE_IDS)[:3]
+
 
 def test_resolve_secret_key_uses_provided_value():
     assert appmod._resolve_secret_key({"SECRET_KEY": "abc123"}) == "abc123"
@@ -98,26 +103,26 @@ def test_group_catalogue_by_category_slug_matches_category_slug():
 
 
 def test_print_price_matches_catalogue():
-    item = appmod.build_print_item({"photo_id": "001", "size": "a3"})
+    item = appmod.build_print_item({"photo_id": PHOTO_ID, "size": "a3"})
     assert item["price"] == appmod.PRINT_SIZES["A3"]["price"]
     assert item["size"] == "A3"
     assert item["qty"] == 1
 
 
 def test_print_item_qty_is_parsed_and_clamped():
-    assert appmod.build_print_item({"photo_id": "001", "size": "A4", "qty": "3"})["qty"] == 3
-    assert appmod.build_print_item({"photo_id": "001", "size": "A4", "qty": "0"})["qty"] == 1
-    assert appmod.build_print_item({"photo_id": "001", "size": "A4", "qty": "-5"})["qty"] == 1
-    assert appmod.build_print_item({"photo_id": "001", "size": "A4", "qty": "not-a-number"})["qty"] == 1
+    assert appmod.build_print_item({"photo_id": PHOTO_ID, "size": "A4", "qty": "3"})["qty"] == 3
+    assert appmod.build_print_item({"photo_id": PHOTO_ID, "size": "A4", "qty": "0"})["qty"] == 1
+    assert appmod.build_print_item({"photo_id": PHOTO_ID, "size": "A4", "qty": "-5"})["qty"] == 1
+    assert appmod.build_print_item({"photo_id": PHOTO_ID, "size": "A4", "qty": "not-a-number"})["qty"] == 1
     assert (
-        appmod.build_print_item({"photo_id": "001", "size": "A4", "qty": str(appmod.MAX_ITEM_QTY + 50)})["qty"]
+        appmod.build_print_item({"photo_id": PHOTO_ID, "size": "A4", "qty": str(appmod.MAX_ITEM_QTY + 50)})["qty"]
         == appmod.MAX_ITEM_QTY
     )
 
 
 def test_print_item_rejects_unknown_size():
     with pytest.raises(appmod.CartItemError):
-        appmod.build_print_item({"photo_id": "001", "size": "A6"})
+        appmod.build_print_item({"photo_id": PHOTO_ID, "size": "A6"})
 
 
 def test_print_item_rejects_unknown_photo():
@@ -126,32 +131,32 @@ def test_print_item_rejects_unknown_photo():
 
 
 def test_apparel_price_matches_age_group():
-    adult = appmod.build_apparel_item({"photo_id": "001", "age_group": "adult", "shirt_colour": "Black"})
-    child = appmod.build_apparel_item({"photo_id": "001", "age_group": "child", "shirt_colour": "Black"})
+    adult = appmod.build_apparel_item({"photo_id": PHOTO_ID, "age_group": "adult", "shirt_colour": "Black"})
+    child = appmod.build_apparel_item({"photo_id": PHOTO_ID, "age_group": "child", "shirt_colour": "Black"})
     assert adult["price"] == appmod.APPAREL_PRICES["adult"]
     assert child["price"] == appmod.APPAREL_PRICES["child"]
 
 
 def test_apparel_item_falls_back_to_a_known_colour():
-    item = appmod.build_apparel_item({"photo_id": "001", "age_group": "adult", "shirt_colour": "Not A Real Colour"})
+    item = appmod.build_apparel_item({"photo_id": PHOTO_ID, "age_group": "adult", "shirt_colour": "Not A Real Colour"})
     assert item["shirt_colour"] in appmod.SHIRT_COLOURS
 
 
 def test_cart_total_sums_item_prices():
     cart = [
-        appmod.build_print_item({"photo_id": "001", "size": "A4"}),
-        appmod.build_apparel_item({"photo_id": "004", "age_group": "child", "shirt_colour": "Black"}),
+        appmod.build_print_item({"photo_id": PHOTO_ID, "size": "A4"}),
+        appmod.build_apparel_item({"photo_id": PHOTO_ID_2, "age_group": "child", "shirt_colour": "Black"}),
     ]
     assert appmod.cart_total(cart) == appmod.PRINT_SIZES["A4"]["price"] + appmod.APPAREL_PRICES["child"]
 
 
 def test_cart_total_accounts_for_quantity():
-    cart = [appmod.build_print_item({"photo_id": "001", "size": "A4", "qty": "3"})]
+    cart = [appmod.build_print_item({"photo_id": PHOTO_ID, "size": "A4", "qty": "3"})]
     assert appmod.cart_total(cart) == appmod.PRINT_SIZES["A4"]["price"] * 3
 
 
 def test_revalidate_cart_prices_corrects_a_tampered_price():
-    item = appmod.build_print_item({"photo_id": "001", "size": "A4"})
+    item = appmod.build_print_item({"photo_id": PHOTO_ID, "size": "A4"})
     item["price"] = 1  # simulates a forged session cookie (issue #47) setting an arbitrary price
     cart = [item]
     appmod.revalidate_cart_prices(cart)
@@ -159,10 +164,10 @@ def test_revalidate_cart_prices_corrects_a_tampered_price():
 
 
 def test_revalidate_cart_prices_drops_items_with_invalid_size_or_age_group():
-    valid_item = appmod.build_print_item({"photo_id": "001", "size": "A4"})
-    tampered_size = appmod.build_print_item({"photo_id": "004", "size": "A3"})
+    valid_item = appmod.build_print_item({"photo_id": PHOTO_ID, "size": "A4"})
+    tampered_size = appmod.build_print_item({"photo_id": PHOTO_ID_2, "size": "A3"})
     tampered_size["size"] = "NOT-A-REAL-SIZE"
-    tampered_age = appmod.build_apparel_item({"photo_id": "005", "age_group": "adult", "shirt_colour": "Black"})
+    tampered_age = appmod.build_apparel_item({"photo_id": PHOTO_ID_3, "age_group": "adult", "shirt_colour": "Black"})
     tampered_age["age_group"] = "not-a-real-age-group"
     cart = [valid_item, tampered_size, tampered_age]
     appmod.revalidate_cart_prices(cart)
@@ -171,30 +176,30 @@ def test_revalidate_cart_prices_drops_items_with_invalid_size_or_age_group():
 
 def test_cart_item_count_sums_quantities_not_lines():
     cart = [
-        appmod.build_print_item({"photo_id": "001", "size": "A4", "qty": "3"}),
-        appmod.build_apparel_item({"photo_id": "004", "age_group": "child", "shirt_colour": "Black", "qty": "2"}),
+        appmod.build_print_item({"photo_id": PHOTO_ID, "size": "A4", "qty": "3"}),
+        appmod.build_apparel_item({"photo_id": PHOTO_ID_2, "age_group": "child", "shirt_colour": "Black", "qty": "2"}),
     ]
     assert appmod.cart_item_count(cart) == 5
 
 
 def test_item_key_matches_same_print_selection_not_different_sizes():
-    a4_one = appmod.build_print_item({"photo_id": "001", "size": "A4"})
-    a4_two = appmod.build_print_item({"photo_id": "001", "size": "A4", "qty": "2"})
-    a3 = appmod.build_print_item({"photo_id": "001", "size": "A3"})
+    a4_one = appmod.build_print_item({"photo_id": PHOTO_ID, "size": "A4"})
+    a4_two = appmod.build_print_item({"photo_id": PHOTO_ID, "size": "A4", "qty": "2"})
+    a3 = appmod.build_print_item({"photo_id": PHOTO_ID, "size": "A3"})
     assert appmod._item_key(a4_one) == appmod._item_key(a4_two)
     assert appmod._item_key(a4_one) != appmod._item_key(a3)
 
 
 def test_item_key_matches_same_apparel_selection_not_different_colours():
-    black = appmod.build_apparel_item({"photo_id": "001", "age_group": "adult", "shirt_colour": "Black"})
-    black_again = appmod.build_apparel_item({"photo_id": "001", "age_group": "adult", "shirt_colour": "Black"})
-    white = appmod.build_apparel_item({"photo_id": "001", "age_group": "adult", "shirt_colour": "White"})
+    black = appmod.build_apparel_item({"photo_id": PHOTO_ID, "age_group": "adult", "shirt_colour": "Black"})
+    black_again = appmod.build_apparel_item({"photo_id": PHOTO_ID, "age_group": "adult", "shirt_colour": "Black"})
+    white = appmod.build_apparel_item({"photo_id": PHOTO_ID, "age_group": "adult", "shirt_colour": "White"})
     assert appmod._item_key(black) == appmod._item_key(black_again)
     assert appmod._item_key(black) != appmod._item_key(white)
 
 
 def test_order_email_includes_total_and_payment_instructions():
-    cart = [appmod.build_print_item({"photo_id": "001", "size": "A2"})]
+    cart = [appmod.build_print_item({"photo_id": PHOTO_ID, "size": "A2"})]
     customer = {
         "name": "Jane Doe", "contact": "+254700000000", "location": "Nairobi", "notes": "",
         "mpesa_code": "QGH7XXXXXX",
@@ -228,7 +233,7 @@ def test_sanitize_customer_field_strips_and_neutralizes_together():
 
 def test_send_order_email_skips_without_api_key(monkeypatch):
     monkeypatch.delenv("RESEND_API_KEY", raising=False)
-    cart = [appmod.build_print_item({"photo_id": "001", "size": "A4"})]
+    cart = [appmod.build_print_item({"photo_id": PHOTO_ID, "size": "A4"})]
     customer = {
         "name": "Jane Doe", "contact": "jane@example.com", "location": "Nairobi", "notes": "",
         "mpesa_code": "QGH7XXXXXX",

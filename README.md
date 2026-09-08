@@ -89,7 +89,23 @@ it isn't infrastructure checkout should depend on being up.
 
 `static/images/catalogue/` (`thumbs/` for the picker grid, `full/` for the live mockup preview,
 plus `manifest.json` listing every available photo id) is the *only* source of photos clients
-can pick from — there is no upload flow. To add more: resize into both directories, add an entry
+can pick from — there is no upload flow. Every photo's id (and matching filename in both
+`thumbs/` and `full/`) follows `<prefix>-NNN` — a short per-category prefix, then a 3-digit
+number starting at `001` and restarting per category (issue #82). Prefix table:
+
+| Category | Prefix | | Category | Prefix |
+|---|---|---|---|---|
+| Ants | `a` | | Moths | `mo` |
+| Bees | `be` | | Neuroptera | `n` |
+| Beetles | `bt` | | Orthoptera | `or` |
+| Butterflies | `bu` | | Other | `ot` |
+| Caterpillars | `c` | | Spiders | `s` |
+| Damselflies | `da` | | True Bugs | `t` |
+| Dragonflies | `dr` | | Wasps | `w` |
+| Flies | `f` | | Mantises | `ma` |
+
+To add more: resize into both directories, named `<prefix>-NNN.jpg` where `NNN` is the next
+unused number for that category (e.g. the 5th True Bugs photo is `t-005.jpg`), then add an entry
 to `manifest.json` (`id`/`thumb`/`full`/`category` — `width`/`height` can be omitted). `category`
 must be one of `CATALOGUE_CATEGORIES` in `app.py` (the taxonomic groups the sidebar in
 `prints.html`/`apparel.html` navigates by, issue #72) — `_validate_catalogue` fails loudly at
