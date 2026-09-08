@@ -6,6 +6,14 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.10.1] - 2026-09-08
+
+### Fixed
+
+- Catalogue photo `040` was miscategorised as Ants — it's a bee (closes #78)
+
+tag: `v0.10.1`
+
 ## [0.10.0] - 2026-09-08
 
 ### Added
