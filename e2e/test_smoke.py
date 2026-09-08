@@ -6,7 +6,7 @@ import re
 from playwright.sync_api import expect
 
 import _common
-from _common import BASE_URL, browser_page
+from _common import BASE_URL, MOCKUP_ENABLE_TIMEOUT_MS, browser_page
 
 
 def _csrf_token(page):
@@ -140,7 +140,7 @@ def test_prints_quantity_adds_one_merged_line_and_cart_steppers_adjust_it():
     that line's quantity and total in place, removing it once decremented to zero."""
     with browser_page() as page:
         page.goto("/prints")
-        page.wait_for_selector("#add-to-cart-print:not([disabled])", timeout=5000)
+        page.wait_for_selector("#add-to-cart-print:not([disabled])", timeout=MOCKUP_ENABLE_TIMEOUT_MS)
 
         sizes = json.loads(page.locator("#print-sizes-data").inner_text())
         checked_size = page.locator('input[name="size"]:checked').get_attribute("value")
@@ -175,7 +175,7 @@ def test_prints_price_line_updates_with_quantity():
     no hint that's the per-unit price, not the KES 140,000 total about to be added."""
     with browser_page() as page:
         page.goto("/prints")
-        page.wait_for_selector("#add-to-cart-print:not([disabled])", timeout=5000)
+        page.wait_for_selector("#add-to-cart-print:not([disabled])", timeout=MOCKUP_ENABLE_TIMEOUT_MS)
 
         sizes = json.loads(page.locator("#print-sizes-data").inner_text())
         checked_size = page.locator('input[name="size"]:checked').get_attribute("value")
@@ -198,7 +198,7 @@ def test_apparel_price_line_updates_with_quantity():
     """Same fix as test_prints_price_line_updates_with_quantity, for issue #34."""
     with browser_page() as page:
         page.goto("/apparel")
-        page.wait_for_selector("#add-to-cart-apparel:not([disabled])", timeout=5000)
+        page.wait_for_selector("#add-to-cart-apparel:not([disabled])", timeout=MOCKUP_ENABLE_TIMEOUT_MS)
 
         prices = json.loads(page.locator("#apparel-prices-data").inner_text())
         checked_age = page.locator('input[name="age_group"]:checked').get_attribute("value")
@@ -224,7 +224,7 @@ def test_prints_mockup_renders_and_enables_add_to_cart():
         # load, which still wasn't enough under CI contention, issue #36) — both replaced by
         # #38's fix of baking width/height into manifest.json, so there's no network/image-load
         # dependency left at all. This wait is now just headroom for page load/JS execution.
-        page.wait_for_selector("#add-to-cart-print:not([disabled])", timeout=5000)
+        page.wait_for_selector("#add-to-cart-print:not([disabled])", timeout=MOCKUP_ENABLE_TIMEOUT_MS)
         assert page.locator("#selected-price").inner_text() != "—"
         assert page.locator("#wall-print").get_attribute("src")
 
@@ -236,7 +236,7 @@ def test_prints_mockup_size_fixed_at_a2_regardless_of_selected_size():
     when a different size is picked."""
     with browser_page() as page:
         page.goto("/prints")
-        page.wait_for_selector("#add-to-cart-print:not([disabled])", timeout=5000)
+        page.wait_for_selector("#add-to-cart-print:not([disabled])", timeout=MOCKUP_ENABLE_TIMEOUT_MS)
         width_before = page.locator("#wall-print").evaluate("el => el.style.width")
         height_before = page.locator("#wall-print").evaluate("el => el.style.height")
         price_before = page.locator("#selected-price").inner_text()
@@ -255,7 +255,7 @@ def test_apparel_mockup_renders_and_enables_add_to_cart():
         # Same fix as the Prints mockup test (issue #38): aspect ratio now comes from
         # manifest.json, not a live image load, so this wait is just headroom for page
         # load/JS execution, not a network dependency (see #30/#36 for the history here).
-        page.wait_for_selector("#add-to-cart-apparel:not([disabled])", timeout=5000)
+        page.wait_for_selector("#add-to-cart-apparel:not([disabled])", timeout=MOCKUP_ENABLE_TIMEOUT_MS)
         assert page.locator("#selected-price").inner_text() != "—"
         assert page.locator("#shirt-design").get_attribute("href")
 

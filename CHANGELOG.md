@@ -6,6 +6,19 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.11.1] - 2026-09-08
+
+### Maintenance
+
+- Raised the e2e suite's mockup-enable wait from a hardcoded 5000ms to a shared
+  `MOCKUP_ENABLE_TIMEOUT_MS` (15000ms, `e2e/_common.py`) — the wait has nothing to do with
+  image loading or network (it reacts to a synchronous DOM update), but a CI runner under
+  shared-tenant load can occasionally starve the page's own JS execution past 5s. Flaked 3
+  times across 2 unrelated PRs in the same short window, always clean on immediate re-run
+  (closes #77)
+
+tag: `v0.11.1`
+
 ## [0.11.0] - 2026-09-08
 
 ### Added
