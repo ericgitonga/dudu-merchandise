@@ -22,10 +22,9 @@ def test_index_loads_with_nav_links():
         nav = page.locator(".site-header nav")
         assert nav.get_by_role("link", name="Prints", exact=True).is_visible()
         # Apparel is deliberately not linked yet (issue #18) — its route stays reachable
-        # directly, covered by test_apparel_page_lists_catalogue_and_colours below.
+        # directly, but its functional tests are removed for now (issue #88, restore via #89).
         assert nav.get_by_role("link", name="Apparel", exact=True).count() == 0
-        # Coasters is deliberately not linked yet (issue #14) — its route stays reachable
-        # directly, covered by test_coasters_page_is_a_placeholder below.
+        # Coasters is deliberately not linked yet (issue #14) — same treatment as Apparel above.
         assert nav.get_by_role("link", name="Coasters", exact=True).count() == 0
 
 
@@ -55,15 +54,6 @@ def test_prints_page_lists_catalogue_and_sizes():
         assert page.locator('input[name="size"]').count() == 5  # A4..A0
 
 
-def test_apparel_page_lists_catalogue_and_colours():
-    with browser_page() as page:
-        resp = page.goto("/apparel")
-        assert resp.status == 200
-        assert page.locator(".catalogue-thumb").count() > 0
-        assert page.locator(".shirt-swatch").count() == 14
-        assert page.locator('input[name="age_group"]').count() == 2
-
-
 def test_catalogue_sidebar_jumps_to_category_section():
     """Regression guard for issue #74: clicking a sidebar category button highlights it (and
     only it) and points at a real, matching section heading in the grid. Picks the last category
@@ -88,13 +78,6 @@ def test_catalogue_sidebar_jumps_to_category_section():
         expect(last_button).to_have_class(re.compile(r"(^|\s)is-active(\s|$)"))
         active = page.locator(".cat-sidebar button.is-active")
         assert active.count() == 1, "only the clicked category should be active"
-
-
-def test_coasters_page_is_a_placeholder():
-    with browser_page() as page:
-        resp = page.goto("/coasters")
-        assert resp.status == 200
-        assert "coming soon" in page.content().lower()
 
 
 def test_cart_add_and_checkout_flow():
@@ -194,24 +177,6 @@ def test_prints_price_line_updates_with_quantity():
         assert page.locator("#selected-price").inner_text() == f"KES {unit_price:,}"
 
 
-def test_apparel_price_line_updates_with_quantity():
-    """Same fix as test_prints_price_line_updates_with_quantity, for issue #34."""
-    with browser_page() as page:
-        page.goto("/apparel")
-        page.wait_for_selector("#add-to-cart-apparel:not([disabled])", timeout=MOCKUP_ENABLE_TIMEOUT_MS)
-
-        prices = json.loads(page.locator("#apparel-prices-data").inner_text())
-        checked_age = page.locator('input[name="age_group"]:checked').get_attribute("value")
-        unit_price = prices[checked_age]
-
-        assert page.locator("#selected-price").inner_text() == f"KES {unit_price:,}"
-
-        page.click('.qty-stepper .qty-btn[data-step="1"]')
-        expect(page.locator("#selected-price")).to_have_text(
-            f"KES {unit_price:,} each — KES {unit_price * 2:,} total"
-        )
-
-
 def test_prints_mockup_renders_and_enables_add_to_cart():
     """Regression guard: a strict CSP once silently broke the inline data-injection script,
     leaving PRINT_SIZES undefined and the add-to-cart button permanently disabled with no
@@ -247,17 +212,6 @@ def test_prints_mockup_size_fixed_at_a2_regardless_of_selected_size():
         assert page.locator("#wall-print").evaluate("el => el.style.width") == width_before
         assert page.locator("#wall-print").evaluate("el => el.style.height") == height_before
         assert page.locator("#selected-price").inner_text() != price_before
-
-
-def test_apparel_mockup_renders_and_enables_add_to_cart():
-    with browser_page() as page:
-        page.goto("/apparel")
-        # Same fix as the Prints mockup test (issue #38): aspect ratio now comes from
-        # manifest.json, not a live image load, so this wait is just headroom for page
-        # load/JS execution, not a network dependency (see #30/#36 for the history here).
-        page.wait_for_selector("#add-to-cart-apparel:not([disabled])", timeout=MOCKUP_ENABLE_TIMEOUT_MS)
-        assert page.locator("#selected-price").inner_text() != "—"
-        assert page.locator("#shirt-design").get_attribute("href")
 
 
 def test_checkout_modal_opens_and_is_clickable():
@@ -328,19 +282,15 @@ TESTS = [
     test_no_page_links_to_hidden_apparel,
     test_health_endpoint,
     test_prints_page_lists_catalogue_and_sizes,
-    test_apparel_page_lists_catalogue_and_colours,
     test_catalogue_sidebar_jumps_to_category_section,
-    test_coasters_page_is_a_placeholder,
     test_prints_mockup_renders_and_enables_add_to_cart,
     test_prints_mockup_size_fixed_at_a2_regardless_of_selected_size,
-    test_apparel_mockup_renders_and_enables_add_to_cart,
     test_checkout_modal_opens_and_is_clickable,
     test_cart_add_and_checkout_flow,
     test_checkout_rejects_missing_or_malformed_mpesa_code,
     test_checkout_rejects_empty_cart,
     test_prints_quantity_adds_one_merged_line_and_cart_steppers_adjust_it,
     test_prints_price_line_updates_with_quantity,
-    test_apparel_price_line_updates_with_quantity,
 ]
 
 if __name__ == "__main__":

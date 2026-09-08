@@ -130,18 +130,6 @@ def test_print_item_rejects_unknown_photo():
         appmod.build_print_item({"photo_id": "not-a-real-id", "size": "A4"})
 
 
-def test_apparel_price_matches_age_group():
-    adult = appmod.build_apparel_item({"photo_id": PHOTO_ID, "age_group": "adult", "shirt_colour": "Black"})
-    child = appmod.build_apparel_item({"photo_id": PHOTO_ID, "age_group": "child", "shirt_colour": "Black"})
-    assert adult["price"] == appmod.APPAREL_PRICES["adult"]
-    assert child["price"] == appmod.APPAREL_PRICES["child"]
-
-
-def test_apparel_item_falls_back_to_a_known_colour():
-    item = appmod.build_apparel_item({"photo_id": PHOTO_ID, "age_group": "adult", "shirt_colour": "Not A Real Colour"})
-    assert item["shirt_colour"] in appmod.SHIRT_COLOURS
-
-
 def test_cart_total_sums_item_prices():
     cart = [
         appmod.build_print_item({"photo_id": PHOTO_ID, "size": "A4"}),
@@ -188,14 +176,6 @@ def test_item_key_matches_same_print_selection_not_different_sizes():
     a3 = appmod.build_print_item({"photo_id": PHOTO_ID, "size": "A3"})
     assert appmod._item_key(a4_one) == appmod._item_key(a4_two)
     assert appmod._item_key(a4_one) != appmod._item_key(a3)
-
-
-def test_item_key_matches_same_apparel_selection_not_different_colours():
-    black = appmod.build_apparel_item({"photo_id": PHOTO_ID, "age_group": "adult", "shirt_colour": "Black"})
-    black_again = appmod.build_apparel_item({"photo_id": PHOTO_ID, "age_group": "adult", "shirt_colour": "Black"})
-    white = appmod.build_apparel_item({"photo_id": PHOTO_ID, "age_group": "adult", "shirt_colour": "White"})
-    assert appmod._item_key(black) == appmod._item_key(black_again)
-    assert appmod._item_key(black) != appmod._item_key(white)
 
 
 def test_order_email_includes_total_and_payment_instructions():

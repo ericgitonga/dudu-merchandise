@@ -6,6 +6,19 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.11.5] - 2026-09-08
+
+### Removed
+
+- Apparel/Coasters functional test coverage (page display, mockup rendering, pricing/colour
+  logic) — both sections stay hidden from nav (issues #18, #14) and aren't ready to go live, so
+  CI no longer gates on features nobody can reach yet. Nav-hiding guards
+  (`test_index_loads_with_nav_links`, `test_no_page_links_to_hidden_apparel`) and any test only
+  incidentally using an apparel item (e.g. mixed-cart total/count tests) are unaffected (closes
+  #88; restore tracked in #89)
+
+tag: `v0.11.5`
+
 ## [0.11.4] - 2026-09-08
 
 ### Fixed
