@@ -6,6 +6,18 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.11.0] - 2026-09-08
+
+### Added
+
+- Catalogue picker on Prints/Apparel now groups photos by category behind a sidebar with
+  jump links (`group_catalogue_by_category()` in `app.py`, `static/js/catalogue-sidebar.js`) —
+  clicking a category scrolls the grid to that section and highlights it, tracking manual
+  scrolling the same way; chosen over a tabs/dropdown filter via an interactive mockup
+  (closes #74)
+
+tag: `v0.11.0`
+
 ## [0.10.0] - 2026-09-08
 
 ### Added
