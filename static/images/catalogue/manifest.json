@@ -1791,6 +1791,670 @@
       "width": 1400,
       "height": 933,
       "category": "Other"
+    },
+    {
+      "id": "a-010",
+      "thumb": "/static/images/catalogue/thumbs/a-010.jpg",
+      "full": "/static/images/catalogue/full/a-010.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Ants"
+    },
+    {
+      "id": "a-011",
+      "thumb": "/static/images/catalogue/thumbs/a-011.jpg",
+      "full": "/static/images/catalogue/full/a-011.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Ants"
+    },
+    {
+      "id": "a-012",
+      "thumb": "/static/images/catalogue/thumbs/a-012.jpg",
+      "full": "/static/images/catalogue/full/a-012.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Ants"
+    },
+    {
+      "id": "a-013",
+      "thumb": "/static/images/catalogue/thumbs/a-013.jpg",
+      "full": "/static/images/catalogue/full/a-013.jpg",
+      "width": 1400,
+      "height": 934,
+      "category": "Ants"
+    },
+    {
+      "id": "a-014",
+      "thumb": "/static/images/catalogue/thumbs/a-014.jpg",
+      "full": "/static/images/catalogue/full/a-014.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Ants"
+    },
+    {
+      "id": "a-015",
+      "thumb": "/static/images/catalogue/thumbs/a-015.jpg",
+      "full": "/static/images/catalogue/full/a-015.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Ants"
+    },
+    {
+      "id": "a-016",
+      "thumb": "/static/images/catalogue/thumbs/a-016.jpg",
+      "full": "/static/images/catalogue/full/a-016.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Ants"
+    },
+    {
+      "id": "a-017",
+      "thumb": "/static/images/catalogue/thumbs/a-017.jpg",
+      "full": "/static/images/catalogue/full/a-017.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Ants"
+    },
+    {
+      "id": "a-018",
+      "thumb": "/static/images/catalogue/thumbs/a-018.jpg",
+      "full": "/static/images/catalogue/full/a-018.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Ants"
+    },
+    {
+      "id": "a-019",
+      "thumb": "/static/images/catalogue/thumbs/a-019.jpg",
+      "full": "/static/images/catalogue/full/a-019.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Ants"
+    },
+    {
+      "id": "a-020",
+      "thumb": "/static/images/catalogue/thumbs/a-020.jpg",
+      "full": "/static/images/catalogue/full/a-020.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Ants"
+    },
+    {
+      "id": "a-021",
+      "thumb": "/static/images/catalogue/thumbs/a-021.jpg",
+      "full": "/static/images/catalogue/full/a-021.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Ants"
+    },
+    {
+      "id": "a-022",
+      "thumb": "/static/images/catalogue/thumbs/a-022.jpg",
+      "full": "/static/images/catalogue/full/a-022.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Ants"
+    },
+    {
+      "id": "a-023",
+      "thumb": "/static/images/catalogue/thumbs/a-023.jpg",
+      "full": "/static/images/catalogue/full/a-023.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Ants"
+    },
+    {
+      "id": "a-024",
+      "thumb": "/static/images/catalogue/thumbs/a-024.jpg",
+      "full": "/static/images/catalogue/full/a-024.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Ants"
+    },
+    {
+      "id": "be-017",
+      "thumb": "/static/images/catalogue/thumbs/be-017.jpg",
+      "full": "/static/images/catalogue/full/be-017.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Bees"
+    },
+    {
+      "id": "be-018",
+      "thumb": "/static/images/catalogue/thumbs/be-018.jpg",
+      "full": "/static/images/catalogue/full/be-018.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Bees"
+    },
+    {
+      "id": "be-019",
+      "thumb": "/static/images/catalogue/thumbs/be-019.jpg",
+      "full": "/static/images/catalogue/full/be-019.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Bees"
+    },
+    {
+      "id": "be-020",
+      "thumb": "/static/images/catalogue/thumbs/be-020.jpg",
+      "full": "/static/images/catalogue/full/be-020.jpg",
+      "width": 1400,
+      "height": 934,
+      "category": "Bees"
+    },
+    {
+      "id": "be-021",
+      "thumb": "/static/images/catalogue/thumbs/be-021.jpg",
+      "full": "/static/images/catalogue/full/be-021.jpg",
+      "width": 1300,
+      "height": 867,
+      "category": "Bees"
+    },
+    {
+      "id": "be-022",
+      "thumb": "/static/images/catalogue/thumbs/be-022.jpg",
+      "full": "/static/images/catalogue/full/be-022.jpg",
+      "width": 1300,
+      "height": 867,
+      "category": "Bees"
+    },
+    {
+      "id": "be-023",
+      "thumb": "/static/images/catalogue/thumbs/be-023.jpg",
+      "full": "/static/images/catalogue/full/be-023.jpg",
+      "width": 1300,
+      "height": 867,
+      "category": "Bees"
+    },
+    {
+      "id": "be-024",
+      "thumb": "/static/images/catalogue/thumbs/be-024.jpg",
+      "full": "/static/images/catalogue/full/be-024.jpg",
+      "width": 1300,
+      "height": 867,
+      "category": "Bees"
+    },
+    {
+      "id": "be-025",
+      "thumb": "/static/images/catalogue/thumbs/be-025.jpg",
+      "full": "/static/images/catalogue/full/be-025.jpg",
+      "width": 1300,
+      "height": 867,
+      "category": "Bees"
+    },
+    {
+      "id": "be-026",
+      "thumb": "/static/images/catalogue/thumbs/be-026.jpg",
+      "full": "/static/images/catalogue/full/be-026.jpg",
+      "width": 1300,
+      "height": 867,
+      "category": "Bees"
+    },
+    {
+      "id": "be-027",
+      "thumb": "/static/images/catalogue/thumbs/be-027.jpg",
+      "full": "/static/images/catalogue/full/be-027.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Bees"
+    },
+    {
+      "id": "be-028",
+      "thumb": "/static/images/catalogue/thumbs/be-028.jpg",
+      "full": "/static/images/catalogue/full/be-028.jpg",
+      "width": 1300,
+      "height": 867,
+      "category": "Bees"
+    },
+    {
+      "id": "be-029",
+      "thumb": "/static/images/catalogue/thumbs/be-029.jpg",
+      "full": "/static/images/catalogue/full/be-029.jpg",
+      "width": 1300,
+      "height": 867,
+      "category": "Bees"
+    },
+    {
+      "id": "be-030",
+      "thumb": "/static/images/catalogue/thumbs/be-030.jpg",
+      "full": "/static/images/catalogue/full/be-030.jpg",
+      "width": 1300,
+      "height": 867,
+      "category": "Bees"
+    },
+    {
+      "id": "be-031",
+      "thumb": "/static/images/catalogue/thumbs/be-031.jpg",
+      "full": "/static/images/catalogue/full/be-031.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Bees"
+    },
+    {
+      "id": "be-032",
+      "thumb": "/static/images/catalogue/thumbs/be-032.jpg",
+      "full": "/static/images/catalogue/full/be-032.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Bees"
+    },
+    {
+      "id": "be-033",
+      "thumb": "/static/images/catalogue/thumbs/be-033.jpg",
+      "full": "/static/images/catalogue/full/be-033.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Bees"
+    },
+    {
+      "id": "be-034",
+      "thumb": "/static/images/catalogue/thumbs/be-034.jpg",
+      "full": "/static/images/catalogue/full/be-034.jpg",
+      "width": 933,
+      "height": 1400,
+      "category": "Bees"
+    },
+    {
+      "id": "be-035",
+      "thumb": "/static/images/catalogue/thumbs/be-035.jpg",
+      "full": "/static/images/catalogue/full/be-035.jpg",
+      "width": 1400,
+      "height": 935,
+      "category": "Bees"
+    },
+    {
+      "id": "dr-008",
+      "thumb": "/static/images/catalogue/thumbs/dr-008.jpg",
+      "full": "/static/images/catalogue/full/dr-008.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Dragonflies"
+    },
+    {
+      "id": "dr-009",
+      "thumb": "/static/images/catalogue/thumbs/dr-009.jpg",
+      "full": "/static/images/catalogue/full/dr-009.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Dragonflies"
+    },
+    {
+      "id": "dr-010",
+      "thumb": "/static/images/catalogue/thumbs/dr-010.jpg",
+      "full": "/static/images/catalogue/full/dr-010.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Dragonflies"
+    },
+    {
+      "id": "dr-011",
+      "thumb": "/static/images/catalogue/thumbs/dr-011.jpg",
+      "full": "/static/images/catalogue/full/dr-011.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Dragonflies"
+    },
+    {
+      "id": "dr-012",
+      "thumb": "/static/images/catalogue/thumbs/dr-012.jpg",
+      "full": "/static/images/catalogue/full/dr-012.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Dragonflies"
+    },
+    {
+      "id": "dr-013",
+      "thumb": "/static/images/catalogue/thumbs/dr-013.jpg",
+      "full": "/static/images/catalogue/full/dr-013.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Dragonflies"
+    },
+    {
+      "id": "dr-014",
+      "thumb": "/static/images/catalogue/thumbs/dr-014.jpg",
+      "full": "/static/images/catalogue/full/dr-014.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Dragonflies"
+    },
+    {
+      "id": "dr-015",
+      "thumb": "/static/images/catalogue/thumbs/dr-015.jpg",
+      "full": "/static/images/catalogue/full/dr-015.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Dragonflies"
+    },
+    {
+      "id": "mo-017",
+      "thumb": "/static/images/catalogue/thumbs/mo-017.jpg",
+      "full": "/static/images/catalogue/full/mo-017.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Moths"
+    },
+    {
+      "id": "mo-018",
+      "thumb": "/static/images/catalogue/thumbs/mo-018.jpg",
+      "full": "/static/images/catalogue/full/mo-018.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Moths"
+    },
+    {
+      "id": "mo-019",
+      "thumb": "/static/images/catalogue/thumbs/mo-019.jpg",
+      "full": "/static/images/catalogue/full/mo-019.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Moths"
+    },
+    {
+      "id": "mo-020",
+      "thumb": "/static/images/catalogue/thumbs/mo-020.jpg",
+      "full": "/static/images/catalogue/full/mo-020.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Moths"
+    },
+    {
+      "id": "mo-021",
+      "thumb": "/static/images/catalogue/thumbs/mo-021.jpg",
+      "full": "/static/images/catalogue/full/mo-021.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Moths"
+    },
+    {
+      "id": "mo-022",
+      "thumb": "/static/images/catalogue/thumbs/mo-022.jpg",
+      "full": "/static/images/catalogue/full/mo-022.jpg",
+      "width": 933,
+      "height": 1400,
+      "category": "Moths"
+    },
+    {
+      "id": "mo-023",
+      "thumb": "/static/images/catalogue/thumbs/mo-023.jpg",
+      "full": "/static/images/catalogue/full/mo-023.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Moths"
+    },
+    {
+      "id": "mo-024",
+      "thumb": "/static/images/catalogue/thumbs/mo-024.jpg",
+      "full": "/static/images/catalogue/full/mo-024.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Moths"
+    },
+    {
+      "id": "mo-025",
+      "thumb": "/static/images/catalogue/thumbs/mo-025.jpg",
+      "full": "/static/images/catalogue/full/mo-025.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Moths"
+    },
+    {
+      "id": "mo-026",
+      "thumb": "/static/images/catalogue/thumbs/mo-026.jpg",
+      "full": "/static/images/catalogue/full/mo-026.jpg",
+      "width": 1400,
+      "height": 935,
+      "category": "Moths"
+    },
+    {
+      "id": "mo-027",
+      "thumb": "/static/images/catalogue/thumbs/mo-027.jpg",
+      "full": "/static/images/catalogue/full/mo-027.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Moths"
+    },
+    {
+      "id": "mo-028",
+      "thumb": "/static/images/catalogue/thumbs/mo-028.jpg",
+      "full": "/static/images/catalogue/full/mo-028.jpg",
+      "width": 1400,
+      "height": 935,
+      "category": "Moths"
+    },
+    {
+      "id": "mo-029",
+      "thumb": "/static/images/catalogue/thumbs/mo-029.jpg",
+      "full": "/static/images/catalogue/full/mo-029.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Moths"
+    },
+    {
+      "id": "mo-030",
+      "thumb": "/static/images/catalogue/thumbs/mo-030.jpg",
+      "full": "/static/images/catalogue/full/mo-030.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Moths"
+    },
+    {
+      "id": "mo-031",
+      "thumb": "/static/images/catalogue/thumbs/mo-031.jpg",
+      "full": "/static/images/catalogue/full/mo-031.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Moths"
+    },
+    {
+      "id": "mo-032",
+      "thumb": "/static/images/catalogue/thumbs/mo-032.jpg",
+      "full": "/static/images/catalogue/full/mo-032.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Moths"
+    },
+    {
+      "id": "mo-033",
+      "thumb": "/static/images/catalogue/thumbs/mo-033.jpg",
+      "full": "/static/images/catalogue/full/mo-033.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Moths"
+    },
+    {
+      "id": "mo-034",
+      "thumb": "/static/images/catalogue/thumbs/mo-034.jpg",
+      "full": "/static/images/catalogue/full/mo-034.jpg",
+      "width": 1400,
+      "height": 934,
+      "category": "Moths"
+    },
+    {
+      "id": "mo-035",
+      "thumb": "/static/images/catalogue/thumbs/mo-035.jpg",
+      "full": "/static/images/catalogue/full/mo-035.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Moths"
+    },
+    {
+      "id": "mo-036",
+      "thumb": "/static/images/catalogue/thumbs/mo-036.jpg",
+      "full": "/static/images/catalogue/full/mo-036.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Moths"
+    },
+    {
+      "id": "mo-037",
+      "thumb": "/static/images/catalogue/thumbs/mo-037.jpg",
+      "full": "/static/images/catalogue/full/mo-037.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Moths"
+    },
+    {
+      "id": "mo-038",
+      "thumb": "/static/images/catalogue/thumbs/mo-038.jpg",
+      "full": "/static/images/catalogue/full/mo-038.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Moths"
+    },
+    {
+      "id": "mo-039",
+      "thumb": "/static/images/catalogue/thumbs/mo-039.jpg",
+      "full": "/static/images/catalogue/full/mo-039.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Moths"
+    },
+    {
+      "id": "mo-040",
+      "thumb": "/static/images/catalogue/thumbs/mo-040.jpg",
+      "full": "/static/images/catalogue/full/mo-040.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Moths"
+    },
+    {
+      "id": "mo-041",
+      "thumb": "/static/images/catalogue/thumbs/mo-041.jpg",
+      "full": "/static/images/catalogue/full/mo-041.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Moths"
+    },
+    {
+      "id": "mo-042",
+      "thumb": "/static/images/catalogue/thumbs/mo-042.jpg",
+      "full": "/static/images/catalogue/full/mo-042.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Moths"
+    },
+    {
+      "id": "mo-043",
+      "thumb": "/static/images/catalogue/thumbs/mo-043.jpg",
+      "full": "/static/images/catalogue/full/mo-043.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Moths"
+    },
+    {
+      "id": "mo-044",
+      "thumb": "/static/images/catalogue/thumbs/mo-044.jpg",
+      "full": "/static/images/catalogue/full/mo-044.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Moths"
+    },
+    {
+      "id": "mo-045",
+      "thumb": "/static/images/catalogue/thumbs/mo-045.jpg",
+      "full": "/static/images/catalogue/full/mo-045.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Moths"
+    },
+    {
+      "id": "mo-046",
+      "thumb": "/static/images/catalogue/thumbs/mo-046.jpg",
+      "full": "/static/images/catalogue/full/mo-046.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Moths"
+    },
+    {
+      "id": "mo-047",
+      "thumb": "/static/images/catalogue/thumbs/mo-047.jpg",
+      "full": "/static/images/catalogue/full/mo-047.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Moths"
+    },
+    {
+      "id": "mo-048",
+      "thumb": "/static/images/catalogue/thumbs/mo-048.jpg",
+      "full": "/static/images/catalogue/full/mo-048.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Moths"
+    },
+    {
+      "id": "mo-049",
+      "thumb": "/static/images/catalogue/thumbs/mo-049.jpg",
+      "full": "/static/images/catalogue/full/mo-049.jpg",
+      "width": 1400,
+      "height": 935,
+      "category": "Moths"
+    },
+    {
+      "id": "n-004",
+      "thumb": "/static/images/catalogue/thumbs/n-004.jpg",
+      "full": "/static/images/catalogue/full/n-004.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Neuroptera"
+    },
+    {
+      "id": "n-005",
+      "thumb": "/static/images/catalogue/thumbs/n-005.jpg",
+      "full": "/static/images/catalogue/full/n-005.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Neuroptera"
+    },
+    {
+      "id": "n-006",
+      "thumb": "/static/images/catalogue/thumbs/n-006.jpg",
+      "full": "/static/images/catalogue/full/n-006.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Neuroptera"
+    },
+    {
+      "id": "n-007",
+      "thumb": "/static/images/catalogue/thumbs/n-007.jpg",
+      "full": "/static/images/catalogue/full/n-007.jpg",
+      "width": 935,
+      "height": 1400,
+      "category": "Neuroptera"
+    },
+    {
+      "id": "st-001",
+      "thumb": "/static/images/catalogue/thumbs/st-001.jpg",
+      "full": "/static/images/catalogue/full/st-001.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Stick Insects"
+    },
+    {
+      "id": "st-002",
+      "thumb": "/static/images/catalogue/thumbs/st-002.jpg",
+      "full": "/static/images/catalogue/full/st-002.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Stick Insects"
+    },
+    {
+      "id": "st-003",
+      "thumb": "/static/images/catalogue/thumbs/st-003.jpg",
+      "full": "/static/images/catalogue/full/st-003.jpg",
+      "width": 1400,
+      "height": 935,
+      "category": "Stick Insects"
+    },
+    {
+      "id": "st-004",
+      "thumb": "/static/images/catalogue/thumbs/st-004.jpg",
+      "full": "/static/images/catalogue/full/st-004.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Stick Insects"
     }
   ]
 }

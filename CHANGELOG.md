@@ -6,6 +6,20 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.13.0] - 2026-09-08
+
+### Added
+
+- 83 new catalogue photos onboarded across 6 categories: Ants (15), Bees (19), Dragonflies (8),
+  Moths (33), Neuroptera (4), and a **new `Stick Insects` category** (prefix `st`, 4 photos) —
+  every `<prefix>-NNN`-named photo found in `extras/` that wasn't yet in `manifest.json`
+  (closes #95)
+- `scripts/onboard_catalogue_photos.py` now auto-scans every category folder for pending
+  additions instead of requiring a hand-maintained list, so a whole batch across multiple
+  categories onboards in one run
+
+tag: `v0.13.0`
+
 ## [0.12.0] - 2026-09-08
 
 ### Added
