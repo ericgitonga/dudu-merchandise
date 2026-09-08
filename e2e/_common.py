@@ -25,6 +25,16 @@ from playwright.sync_api import sync_playwright
 
 BASE_URL = os.environ.get("BASE_URL", "http://127.0.0.1:5000").rstrip("/")
 
+# How long a test waits for a mockup script to enable its add-to-cart button after selecting a
+# photo (issue #77). This has nothing to do with image loading or network — enabling is a pure
+# synchronous DOM update reacting to catalogue-picker.js's "photo-selected" event — but a CI
+# runner under shared-tenant CPU contention can occasionally starve the page's own JS execution
+# long enough to blow past a short budget even so. 5000ms flaked 3 times across 2 unrelated PRs
+# in the same short window (including one PR that touched no JS/template code at all), always
+# clean on an immediate re-run — a generous fixed budget is simpler and cheaper than chasing
+# per-test timing.
+MOCKUP_ENABLE_TIMEOUT_MS = 15000
+
 _playwright = None
 _browser = None
 
