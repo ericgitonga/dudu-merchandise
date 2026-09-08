@@ -6,6 +6,17 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.11.3] - 2026-09-08
+
+### Fixed
+
+- Recategorized `be-007.jpg` (actually a fly, not a bee) and `f-059.jpg` (moved to Other) —
+  moved each to its correct category as the next unused number there (`f-065` then `ot-010`),
+  and closed the numbering gap left behind in Bees and Flies so both stay a contiguous 001..NNN
+  sequence (closes #84)
+
+tag: `v0.11.3`
+
 ## [0.11.2] - 2026-09-08
 
 ### Changed
