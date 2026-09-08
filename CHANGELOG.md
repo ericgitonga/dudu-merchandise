@@ -6,6 +6,14 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.9.0] - 2026-09-08
+
+### Added
+
+- 2 new catalogue photos, ids `377`-`378` (closes #68)
+
+tag: `v0.9.0`
+
 ## [0.8.5] - 2026-09-07
 
 ### Maintenance
