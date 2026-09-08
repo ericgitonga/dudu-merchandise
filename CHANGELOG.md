@@ -6,6 +6,16 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.9.1] - 2026-09-08
+
+### Changed
+
+- The 2-week lead time (`TURNAROUND_TEXT`) was previously only visible inside the checkout
+  modal — now also shown on the Prints page intro and directly on the cart page, so customers
+  see it while selecting items, not just at the point of payment (closes #70)
+
+tag: `v0.9.1`
+
 ## [0.9.0] - 2026-09-08
 
 ### Added
