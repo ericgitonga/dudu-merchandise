@@ -41,12 +41,12 @@
       "category": "Other"
     },
     {
-      "id": "bu-001",
-      "thumb": "/static/images/catalogue/thumbs/bu-001.jpg",
-      "full": "/static/images/catalogue/full/bu-001.jpg",
+      "id": "mo-016",
+      "thumb": "/static/images/catalogue/thumbs/mo-016.jpg",
+      "full": "/static/images/catalogue/full/mo-016.jpg",
       "width": 1400,
       "height": 896,
-      "category": "Butterflies"
+      "category": "Moths"
     },
     {
       "id": "mo-001",
@@ -185,9 +185,9 @@
       "category": "Flies"
     },
     {
-      "id": "bu-002",
-      "thumb": "/static/images/catalogue/thumbs/bu-002.jpg",
-      "full": "/static/images/catalogue/full/bu-002.jpg",
+      "id": "bu-001",
+      "thumb": "/static/images/catalogue/thumbs/bu-001.jpg",
+      "full": "/static/images/catalogue/full/bu-001.jpg",
       "width": 1400,
       "height": 934,
       "category": "Butterflies"
@@ -377,9 +377,9 @@
       "category": "Flies"
     },
     {
-      "id": "bu-003",
-      "thumb": "/static/images/catalogue/thumbs/bu-003.jpg",
-      "full": "/static/images/catalogue/full/bu-003.jpg",
+      "id": "bu-002",
+      "thumb": "/static/images/catalogue/thumbs/bu-002.jpg",
+      "full": "/static/images/catalogue/full/bu-002.jpg",
       "width": 1400,
       "height": 933,
       "category": "Butterflies"
@@ -529,9 +529,9 @@
       "category": "Wasps"
     },
     {
-      "id": "bu-004",
-      "thumb": "/static/images/catalogue/thumbs/bu-004.jpg",
-      "full": "/static/images/catalogue/full/bu-004.jpg",
+      "id": "bu-003",
+      "thumb": "/static/images/catalogue/thumbs/bu-003.jpg",
+      "full": "/static/images/catalogue/full/bu-003.jpg",
       "width": 1400,
       "height": 933,
       "category": "Butterflies"
@@ -617,9 +617,9 @@
       "category": "Flies"
     },
     {
-      "id": "bu-005",
-      "thumb": "/static/images/catalogue/thumbs/bu-005.jpg",
-      "full": "/static/images/catalogue/full/bu-005.jpg",
+      "id": "bu-004",
+      "thumb": "/static/images/catalogue/thumbs/bu-004.jpg",
+      "full": "/static/images/catalogue/full/bu-004.jpg",
       "width": 1400,
       "height": 933,
       "category": "Butterflies"
@@ -745,6 +745,14 @@
       "category": "True Bugs"
     },
     {
+      "id": "bu-005",
+      "thumb": "/static/images/catalogue/thumbs/bu-005.jpg",
+      "full": "/static/images/catalogue/full/bu-005.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Butterflies"
+    },
+    {
       "id": "bu-006",
       "thumb": "/static/images/catalogue/thumbs/bu-006.jpg",
       "full": "/static/images/catalogue/full/bu-006.jpg",
@@ -756,14 +764,6 @@
       "id": "bu-007",
       "thumb": "/static/images/catalogue/thumbs/bu-007.jpg",
       "full": "/static/images/catalogue/full/bu-007.jpg",
-      "width": 1400,
-      "height": 933,
-      "category": "Butterflies"
-    },
-    {
-      "id": "bu-008",
-      "thumb": "/static/images/catalogue/thumbs/bu-008.jpg",
-      "full": "/static/images/catalogue/full/bu-008.jpg",
       "width": 1400,
       "height": 933,
       "category": "Butterflies"
@@ -857,9 +857,9 @@
       "category": "Wasps"
     },
     {
-      "id": "bu-009",
-      "thumb": "/static/images/catalogue/thumbs/bu-009.jpg",
-      "full": "/static/images/catalogue/full/bu-009.jpg",
+      "id": "bu-008",
+      "thumb": "/static/images/catalogue/thumbs/bu-008.jpg",
+      "full": "/static/images/catalogue/full/bu-008.jpg",
       "width": 1400,
       "height": 933,
       "category": "Butterflies"
@@ -1073,9 +1073,9 @@
       "category": "Orthoptera"
     },
     {
-      "id": "bu-010",
-      "thumb": "/static/images/catalogue/thumbs/bu-010.jpg",
-      "full": "/static/images/catalogue/full/bu-010.jpg",
+      "id": "bu-009",
+      "thumb": "/static/images/catalogue/thumbs/bu-009.jpg",
+      "full": "/static/images/catalogue/full/bu-009.jpg",
       "width": 1400,
       "height": 933,
       "category": "Butterflies"
@@ -1153,9 +1153,9 @@
       "category": "Wasps"
     },
     {
-      "id": "bu-011",
-      "thumb": "/static/images/catalogue/thumbs/bu-011.jpg",
-      "full": "/static/images/catalogue/full/bu-011.jpg",
+      "id": "bu-010",
+      "thumb": "/static/images/catalogue/thumbs/bu-010.jpg",
+      "full": "/static/images/catalogue/full/bu-010.jpg",
       "width": 1400,
       "height": 933,
       "category": "Butterflies"
@@ -1465,9 +1465,9 @@
       "category": "Spiders"
     },
     {
-      "id": "bu-012",
-      "thumb": "/static/images/catalogue/thumbs/bu-012.jpg",
-      "full": "/static/images/catalogue/full/bu-012.jpg",
+      "id": "bu-011",
+      "thumb": "/static/images/catalogue/thumbs/bu-011.jpg",
+      "full": "/static/images/catalogue/full/bu-011.jpg",
       "width": 1400,
       "height": 933,
       "category": "Butterflies"
@@ -1537,9 +1537,9 @@
       "category": "Caterpillars"
     },
     {
-      "id": "bu-013",
-      "thumb": "/static/images/catalogue/thumbs/bu-013.jpg",
-      "full": "/static/images/catalogue/full/bu-013.jpg",
+      "id": "bu-012",
+      "thumb": "/static/images/catalogue/thumbs/bu-012.jpg",
+      "full": "/static/images/catalogue/full/bu-012.jpg",
       "width": 1400,
       "height": 933,
       "category": "Butterflies"

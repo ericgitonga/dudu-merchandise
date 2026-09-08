@@ -6,6 +6,16 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.11.4] - 2026-09-08
+
+### Fixed
+
+- Recategorized `bu-001.jpg` (actually a moth, not a butterfly) — moved to Moths as the next
+  unused number (`mo-016`), and closed the numbering gap left behind in Butterflies so it stays
+  a contiguous 001..NNN sequence (closes #86)
+
+tag: `v0.11.4`
+
 ## [0.11.3] - 2026-09-08
 
 ### Fixed
