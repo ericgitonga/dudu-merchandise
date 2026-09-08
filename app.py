@@ -419,6 +419,7 @@ def index():
 def prints():
     return render_template(
         "prints.html", catalogue=CATALOGUE, sizes=PRINT_SIZES, max_qty=MAX_ITEM_QTY,
+        turnaround=TURNAROUND_TEXT,
     )
 
 

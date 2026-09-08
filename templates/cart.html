@@ -6,6 +6,7 @@
 {% if not cart %}
 <p class="cart-empty">Your cart is empty. Shop <a href="{{ url_for('prints') }}">Prints</a>.</p>
 {% else %}
+<p class="lead-time-note">Lead time: {{ turnaround }}.</p>
 <ul class="cart-items">
   {% for item in cart %}
   {% set photo = catalogue_by_id.get(item.photo_id) %}

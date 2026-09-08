@@ -255,6 +255,7 @@ button.primary:hover:not(:disabled) { filter: brightness(1.05); }
 
 .cart-total { font-size: 1.3rem; font-weight: 700; margin: 1rem 0; }
 .cart-empty { color: var(--muted); padding: 2rem 0; }
+.lead-time-note { color: var(--muted); font-size: 0.9rem; }
 
 /* Checkout modal */
 .modal-overlay {
