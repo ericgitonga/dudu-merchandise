@@ -64,6 +64,32 @@ def test_apparel_page_lists_catalogue_and_colours():
         assert page.locator('input[name="age_group"]').count() == 2
 
 
+def test_catalogue_sidebar_jumps_to_category_section():
+    """Regression guard for issue #74: clicking a sidebar category button highlights it (and
+    only it) and points at a real, matching section heading in the grid. Picks the last category
+    from the live page rather than hardcoding a name, so it keeps working whatever categories the
+    manifest actually has (ONBOARDING's no-hardcoded-data rule). Doesn't assert on scroll
+    position/distance — the e2e fixture catalogue is deliberately tiny (issue #44) and its whole
+    grid can fit without any scrolling at all, unlike the real ~218-photo catalogue."""
+    with browser_page() as page:
+        page.goto("/prints")
+        buttons = page.locator(".cat-sidebar button[data-target]")
+        count = buttons.count()
+        assert count > 1, "need at least 2 categories to test jumping between them"
+
+        last_button = buttons.nth(count - 1)
+        category_name = last_button.get_attribute("data-category")
+        target_id = last_button.get_attribute("data-target")
+        heading = page.locator(f"#{target_id}")
+        assert heading.count() == 1
+        assert category_name in heading.inner_text()
+
+        last_button.click()
+        expect(last_button).to_have_class(re.compile(r"(^|\s)is-active(\s|$)"))
+        active = page.locator(".cat-sidebar button.is-active")
+        assert active.count() == 1, "only the clicked category should be active"
+
+
 def test_coasters_page_is_a_placeholder():
     with browser_page() as page:
         resp = page.goto("/coasters")
@@ -303,6 +329,7 @@ TESTS = [
     test_health_endpoint,
     test_prints_page_lists_catalogue_and_sizes,
     test_apparel_page_lists_catalogue_and_colours,
+    test_catalogue_sidebar_jumps_to_category_section,
     test_coasters_page_is_a_placeholder,
     test_prints_mockup_renders_and_enables_add_to_cart,
     test_prints_mockup_size_fixed_at_a2_regardless_of_selected_size,

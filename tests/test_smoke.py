@@ -46,6 +46,57 @@ def test_catalogue_validation_accepts_complete_entries():
     )
 
 
+def test_category_slug_is_lowercase_and_hyphenated():
+    assert appmod._category_slug("True Bugs") == "true-bugs"
+    assert appmod._category_slug("Flies") == "flies"
+
+
+def test_group_catalogue_by_category_sorts_largest_group_first():
+    images = [
+        {"id": "1", "category": "Wasps"},
+        {"id": "2", "category": "Flies"},
+        {"id": "3", "category": "Flies"},
+        {"id": "4", "category": "Flies"},
+        {"id": "5", "category": "Beetles"},
+        {"id": "6", "category": "Beetles"},
+    ]
+    groups = appmod.group_catalogue_by_category(images)
+    assert [g["category"] for g in groups] == ["Flies", "Beetles", "Wasps"]
+    assert [g["count"] for g in groups] == [3, 2, 1]
+
+
+def test_group_catalogue_by_category_breaks_ties_alphabetically():
+    images = [{"id": "1", "category": "Wasps"}, {"id": "2", "category": "Ants"}]
+    groups = appmod.group_catalogue_by_category(images)
+    assert [g["category"] for g in groups] == ["Ants", "Wasps"]
+
+
+def test_group_catalogue_by_category_preserves_manifest_order_within_a_group():
+    images = [
+        {"id": "3", "category": "Flies"},
+        {"id": "1", "category": "Flies"},
+        {"id": "2", "category": "Flies"},
+    ]
+    groups = appmod.group_catalogue_by_category(images)
+    assert [img["id"] for img in groups[0]["images"]] == ["3", "1", "2"]
+
+
+def test_group_catalogue_by_category_puts_other_last_regardless_of_count():
+    images = [
+        {"id": "1", "category": "Other"},
+        {"id": "2", "category": "Other"},
+        {"id": "3", "category": "Other"},
+        {"id": "4", "category": "Wasps"},
+    ]
+    groups = appmod.group_catalogue_by_category(images)
+    assert [g["category"] for g in groups] == ["Wasps", "Other"]
+
+
+def test_group_catalogue_by_category_slug_matches_category_slug():
+    groups = appmod.group_catalogue_by_category([{"id": "1", "category": "True Bugs"}])
+    assert groups[0]["slug"] == appmod._category_slug("True Bugs")
+
+
 def test_print_price_matches_catalogue():
     item = appmod.build_print_item({"photo_id": "001", "size": "a3"})
     assert item["price"] == appmod.PRINT_SIZES["A3"]["price"]

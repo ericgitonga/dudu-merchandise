@@ -104,6 +104,14 @@ already-populated entries are left alone, so it's safe to run any time. The Prin
 mockup scripts read aspect ratio from these fields with no runtime image load involved (issue
 #38); a photo without them will never enable its add-to-cart button.
 
+The catalogue picker itself (`.cat-sidebar` + `.catalogue-grid` in `prints.html`/`apparel.html`)
+groups photos by `category` via `group_catalogue_by_category()` in `app.py` — largest group
+first, sorted purely from the manifest so a new photo just needs the right `category` to show up
+in the right place, no template change needed. `static/js/catalogue-sidebar.js` handles clicking
+a sidebar entry (scrolls the grid to that section, no page reload) and highlighting whichever
+section is currently in view as the client scrolls manually — kept separate from
+`catalogue-picker.js`, which still owns actually selecting a photo.
+
 `extras/projects/dudu-merchandise/assets/catalogue/` (outside this repo) holds the verified
 full-resolution originals these were generated from, organised into one subfolder per
 `CATALOGUE_CATEGORIES` value (`Flies/`, `Spiders/`, `Beetles/`, etc.) — the source of truth for

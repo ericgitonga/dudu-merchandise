@@ -5,12 +5,22 @@
 <p>Pick a photo, a size, and a shirt colour — the preview shows your design on the chest.</p>
 
 <div class="shop-layout">
-  <div class="catalogue-grid" aria-label="Choose a photo">
-    {% for img in catalogue %}
-    <button type="button" class="catalogue-thumb" data-id="{{ img.id }}" data-thumb="{{ img.thumb }}" data-full="{{ img.full }}" data-width="{{ img.width }}" data-height="{{ img.height }}">
-      <img src="{{ img.thumb }}" alt="Catalogue photo {{ img.id }}" loading="lazy" />
-    </button>
-    {% endfor %}
+  <div class="sidebar-layout">
+    <nav class="cat-sidebar" aria-label="Jump to category">
+      {% for group in catalogue_by_category %}
+      <button type="button" data-target="cat-{{ group.slug }}" data-category="{{ group.category }}">{{ group.category }}<span class="n">{{ group.count }}</span></button>
+      {% endfor %}
+    </nav>
+    <div class="catalogue-grid" aria-label="Choose a photo">
+      {% for group in catalogue_by_category %}
+      <h3 class="grid-section-heading" id="cat-{{ group.slug }}">{{ group.category }} &middot; {{ group.count }}</h3>
+      {% for img in group.images %}
+      <button type="button" class="catalogue-thumb" data-id="{{ img.id }}" data-thumb="{{ img.thumb }}" data-full="{{ img.full }}" data-width="{{ img.width }}" data-height="{{ img.height }}">
+        <img src="{{ img.thumb }}" alt="Catalogue photo {{ img.id }}" loading="lazy" />
+      </button>
+      {% endfor %}
+      {% endfor %}
+    </div>
   </div>
 
   <div class="controls-panel">
@@ -68,5 +78,6 @@
 {% block scripts %}
 <script id="apparel-prices-data" type="application/json">{{ prices | tojson }}</script>
 <script src="{{ url_for('static', filename='js/catalogue-picker.js') }}"></script>
+<script src="{{ url_for('static', filename='js/catalogue-sidebar.js') }}"></script>
 <script src="{{ url_for('static', filename='js/apparel-mockup.js') }}"></script>
 {% endblock %}

@@ -104,9 +104,34 @@ def _load_catalogue():
     return images
 
 
+def _category_slug(category):
+    """URL/DOM-safe id for a category, e.g. "True Bugs" -> "true-bugs" — used to link a sidebar
+    button to the grid section it jumps to."""
+    return re.sub(r"[^a-z0-9]+", "-", category.lower()).strip("-")
+
+
+def group_catalogue_by_category(images):
+    """Groups catalogue images by category for the sidebar + jump-links nav (issue #74),
+    largest group first (ties broken alphabetically) so the most-stocked categories are always
+    at the top regardless of how the manifest itself is ordered — except "Other" (the catch-all
+    for anything that isn't a real taxonomic group), which always sorts last regardless of its
+    count. Preserves each group's original manifest order internally."""
+    by_category = {}
+    for img in images:
+        by_category.setdefault(img["category"], []).append(img)
+
+    groups = [
+        {"category": category, "slug": _category_slug(category), "count": len(imgs), "images": imgs}
+        for category, imgs in by_category.items()
+    ]
+    groups.sort(key=lambda g: (g["category"] == "Other", -g["count"], g["category"]))
+    return groups
+
+
 CATALOGUE = _load_catalogue()
 CATALOGUE_IDS = {img["id"] for img in CATALOGUE}
 CATALOGUE_BY_ID = {img["id"]: img for img in CATALOGUE}
+CATALOGUE_BY_CATEGORY = group_catalogue_by_category(CATALOGUE)
 
 
 # ── Pricing (KES) — the only place prices are defined; the client never gets to set one ──
@@ -434,15 +459,15 @@ def index():
 @app.route("/prints")
 def prints():
     return render_template(
-        "prints.html", catalogue=CATALOGUE, sizes=PRINT_SIZES, max_qty=MAX_ITEM_QTY,
-        turnaround=TURNAROUND_TEXT,
+        "prints.html", catalogue_by_category=CATALOGUE_BY_CATEGORY, sizes=PRINT_SIZES,
+        max_qty=MAX_ITEM_QTY, turnaround=TURNAROUND_TEXT,
     )
 
 
 @app.route("/apparel")
 def apparel():
     return render_template(
-        "apparel.html", catalogue=CATALOGUE, prices=APPAREL_PRICES,
+        "apparel.html", catalogue_by_category=CATALOGUE_BY_CATEGORY, prices=APPAREL_PRICES,
         shirt_colours=SHIRT_COLOURS, max_qty=MAX_ITEM_QTY,
     )
 
