@@ -10,12 +10,14 @@ behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
 ### Added
 
-- 306 new catalogue photos onboarded across 8 categories: Ants (15), Bees (19), Dragonflies (8),
-  Flies (184), Moths (33), Neuroptera (4), Spiders (39), and a **new `Stick Insects` category**
-  (prefix `st`, 4 photos) — every `<prefix>-NNN`-named photo found in `extras/` that wasn't yet
-  in `manifest.json`, including two batches (Flies, Spiders) initially missed because they
-  hadn't been renamed to that convention yet — Flies sat in an unflattened `x/` staging
-  subfolder, Spiders as loose files — both renamed then onboarded the same way (closes #95)
+- 433 new catalogue photos onboarded across every remaining category with a pending, not-yet-
+  curated pool: Ants (15), Bees (19), Beetles (15), Butterflies (22), Damselflies (11),
+  Dragonflies (8), Flies (184), Mantises (11), Moths (33), Neuroptera (4), Orthoptera (20),
+  Spiders (39), True Bugs (39), Wasps (9), and a **new `Stick Insects` category** (prefix `st`,
+  4 photos) — every photo found in `extras/`, renamed to the `<prefix>-NNN` convention (Flies
+  and Beetles/Butterflies/etc. sat as loose files or, for Flies, an unflattened `x/` staging
+  subfolder) and onboarded via `scripts/onboard_catalogue_photos.py`. Catalogue goes from 224 to
+  657 photos across 18 categories (closes #95)
 - `scripts/onboard_catalogue_photos.py` now auto-scans every category folder for pending
   additions instead of requiring a hand-maintained list, so a whole batch across multiple
   categories onboards in one run
