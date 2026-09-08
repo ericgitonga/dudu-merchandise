@@ -93,6 +93,14 @@
     updateOrderControls();
   });
 
+  // Select the first photo by default so the mockup preview isn't blank on load. Triggered
+  // synchronously here (catalogue-picker.js's click listener above is already attached, since
+  // that script runs earlier) rather than via a deferred setTimeout in catalogue-picker.js
+  // itself, which headless Chromium's background-tab timer throttling could intermittently
+  // delay or skip entirely (issue #90).
+  const firstThumb = grid.querySelector(".catalogue-thumb");
+  if (firstThumb) firstThumb.click();
+
   sizeInputs.forEach((input) => input.addEventListener("change", updateOrderControls));
   qtyInput.addEventListener("input", updateOrderControls);
   qtyInput.addEventListener("change", updateOrderControls);
