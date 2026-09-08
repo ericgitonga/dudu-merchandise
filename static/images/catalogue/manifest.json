@@ -33,12 +33,12 @@
       "category": "Beetles"
     },
     {
-      "id": "ot-001",
-      "thumb": "/static/images/catalogue/thumbs/ot-001.jpg",
-      "full": "/static/images/catalogue/full/ot-001.jpg",
+      "id": "sc-001",
+      "thumb": "/static/images/catalogue/thumbs/sc-001.jpg",
+      "full": "/static/images/catalogue/full/sc-001.jpg",
       "width": 1400,
       "height": 934,
-      "category": "Other"
+      "category": "Scorpions"
     },
     {
       "id": "mo-016",
@@ -1743,6 +1743,54 @@
       "width": 933,
       "height": 1400,
       "category": "Bees"
+    },
+    {
+      "id": "sc-002",
+      "thumb": "/static/images/catalogue/thumbs/sc-002.jpg",
+      "full": "/static/images/catalogue/full/sc-002.jpg",
+      "width": 1400,
+      "height": 935,
+      "category": "Scorpions"
+    },
+    {
+      "id": "sc-003",
+      "thumb": "/static/images/catalogue/thumbs/sc-003.jpg",
+      "full": "/static/images/catalogue/full/sc-003.jpg",
+      "width": 1400,
+      "height": 935,
+      "category": "Scorpions"
+    },
+    {
+      "id": "sc-004",
+      "thumb": "/static/images/catalogue/thumbs/sc-004.jpg",
+      "full": "/static/images/catalogue/full/sc-004.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Scorpions"
+    },
+    {
+      "id": "ot-001",
+      "thumb": "/static/images/catalogue/thumbs/ot-001.jpg",
+      "full": "/static/images/catalogue/full/ot-001.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Other"
+    },
+    {
+      "id": "ot-011",
+      "thumb": "/static/images/catalogue/thumbs/ot-011.jpg",
+      "full": "/static/images/catalogue/full/ot-011.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Other"
+    },
+    {
+      "id": "ot-012",
+      "thumb": "/static/images/catalogue/thumbs/ot-012.jpg",
+      "full": "/static/images/catalogue/full/ot-012.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Other"
     }
   ]
 }

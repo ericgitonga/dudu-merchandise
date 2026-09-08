@@ -6,6 +6,22 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.12.0] - 2026-09-08
+
+### Added
+
+- New `Scorpions` category (prefix `sc`) and 6 new catalogue photos: `sc-002`-`sc-004` and
+  `ot-001`/`ot-011`/`ot-012` — onboarded via a new `scripts/onboard_catalogue_photos.py`, which
+  resizes source photos into `thumbs/`+`full/` per the established convention (full capped at
+  1400px long side, thumb at 420px) and fills in the manifest entry directly (closes #92)
+
+### Fixed
+
+- `ot-001.jpg` was miscategorized as Other — it's a scorpion. Recategorized as `sc-001`, the
+  first Scorpions photo (closes #92)
+
+tag: `v0.12.0`
+
 ## [0.11.6] - 2026-09-08
 
 ### Fixed

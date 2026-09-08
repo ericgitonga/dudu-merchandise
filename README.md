@@ -99,17 +99,22 @@ number starting at `001` and restarting per category (issue #82). Prefix table:
 | Bees | `be` | | Neuroptera | `n` |
 | Beetles | `bt` | | Orthoptera | `or` |
 | Butterflies | `bu` | | Other | `ot` |
-| Caterpillars | `c` | | Spiders | `s` |
-| Damselflies | `da` | | True Bugs | `t` |
-| Dragonflies | `dr` | | Wasps | `w` |
-| Flies | `f` | | Mantises | `ma` |
+| Caterpillars | `c` | | Scorpions | `sc` |
+| Damselflies | `da` | | Spiders | `s` |
+| Dragonflies | `dr` | | True Bugs | `t` |
+| Flies | `f` | | Wasps | `w` |
+| Mantises | `ma` | | | |
 
-To add more: resize into both directories, named `<prefix>-NNN.jpg` where `NNN` is the next
-unused number for that category (e.g. the 5th True Bugs photo is `t-005.jpg`), then add an entry
-to `manifest.json` (`id`/`thumb`/`full`/`category` — `width`/`height` can be omitted). `category`
-must be one of `CATALOGUE_CATEGORIES` in `app.py` (the taxonomic groups the sidebar in
-`prints.html`/`apparel.html` navigates by, issue #72) — `_validate_catalogue` fails loudly at
-startup on a missing or unrecognised value. Then run
+To add more: resize source photos into both directories, named `<prefix>-NNN.jpg` where `NNN`
+is the next unused number for that category (e.g. the 5th True Bugs photo is `t-005.jpg`) —
+`scripts/onboard_catalogue_photos.py` automates this (`full` capped at 1400px on the long side,
+`thumb` at 420px, both left alone if the source is already smaller — never upscaled) and adds
+the manifest entry with `width`/`height` filled in directly, so no separate dimensions pass is
+needed for photos added this way. `category` must be one of `CATALOGUE_CATEGORIES` in `app.py`
+(the taxonomic groups the sidebar in `prints.html`/`apparel.html` navigates by, issue #72) —
+`_validate_catalogue` fails loudly at startup on a missing or unrecognised value. If adding a
+manifest entry by hand instead (`id`/`thumb`/`full`/`category`, `width`/`height` can be omitted),
+run
 
 ```bash
 conda run -n ds python scripts/add_catalogue_dimensions.py
