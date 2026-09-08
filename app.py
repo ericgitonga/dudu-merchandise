@@ -29,7 +29,7 @@ from flask_wtf.csrf import CSRFProtect, generate_csrf
 
 BASE_DIR = Path(__file__).parent
 # CATALOGUE_MANIFEST_PATH lets e2e point at a small fixture catalogue (issue #44) instead of the
-# real ~117-photo one, so the test suite isn't hammering the dev server with the full set on
+# real 218-photo one, so the test suite isn't hammering the dev server with the full set on
 # every page load — never set in production, where this always resolves to the real manifest.
 # A relative override is resolved against BASE_DIR, not the process's current working directory.
 _manifest_override = os.environ.get("CATALOGUE_MANIFEST_PATH")
@@ -69,6 +69,16 @@ limiter = Limiter(get_remote_address, app=app, default_limits=["200 per day", "5
 
 # ── Catalogue ────────────────────────────────────────────────────────────────
 
+# Taxonomic groupings for the catalogue sidebar (issue #72/#73) — every manifest entry must
+# carry one of these in its "category" field, or _validate_catalogue below fails loudly rather
+# than the sidebar silently dropping an uncategorised photo.
+CATALOGUE_CATEGORIES = {
+    "Flies", "Spiders", "Beetles", "Bees", "Moths", "Butterflies", "Ants",
+    "Damselflies", "Dragonflies", "Mantises", "Wasps", "True Bugs",
+    "Neuroptera", "Orthoptera", "Caterpillars", "Other",
+}
+
+
 def _validate_catalogue(images):
     """Every entry needs width/height (issue #38) — the Prints/Apparel mockup scripts read
     aspect ratio straight from these, with no runtime image load to fall back on, so a missing
@@ -78,6 +88,12 @@ def _validate_catalogue(images):
         raise RuntimeError(
             f"Catalogue entries missing width/height: {missing} — run "
             "scripts/add_catalogue_dimensions.py before starting the app."
+        )
+    uncategorised = [img["id"] for img in images if img.get("category") not in CATALOGUE_CATEGORIES]
+    if uncategorised:
+        raise RuntimeError(
+            f"Catalogue entries missing or with an unknown category: {uncategorised} — every "
+            f"entry needs a \"category\" from CATALOGUE_CATEGORIES."
         )
 
 
