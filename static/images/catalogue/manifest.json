@@ -1518,6 +1518,20 @@
       "full": "/static/images/catalogue/full/376.jpg",
       "width": 1400,
       "height": 933
+    },
+    {
+      "id": "377",
+      "thumb": "/static/images/catalogue/thumbs/377.jpg",
+      "full": "/static/images/catalogue/full/377.jpg",
+      "width": 1400,
+      "height": 933
+    },
+    {
+      "id": "378",
+      "thumb": "/static/images/catalogue/thumbs/378.jpg",
+      "full": "/static/images/catalogue/full/378.jpg",
+      "width": 933,
+      "height": 1400
     }
   ]
 }
