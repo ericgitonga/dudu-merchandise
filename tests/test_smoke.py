@@ -81,6 +81,17 @@ def test_group_catalogue_by_category_preserves_manifest_order_within_a_group():
     assert [img["id"] for img in groups[0]["images"]] == ["3", "1", "2"]
 
 
+def test_group_catalogue_by_category_puts_other_last_regardless_of_count():
+    images = [
+        {"id": "1", "category": "Other"},
+        {"id": "2", "category": "Other"},
+        {"id": "3", "category": "Other"},
+        {"id": "4", "category": "Wasps"},
+    ]
+    groups = appmod.group_catalogue_by_category(images)
+    assert [g["category"] for g in groups] == ["Wasps", "Other"]
+
+
 def test_group_catalogue_by_category_slug_matches_category_slug():
     groups = appmod.group_catalogue_by_category([{"id": "1", "category": "True Bugs"}])
     assert groups[0]["slug"] == appmod._category_slug("True Bugs")

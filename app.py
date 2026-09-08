@@ -113,8 +113,9 @@ def _category_slug(category):
 def group_catalogue_by_category(images):
     """Groups catalogue images by category for the sidebar + jump-links nav (issue #74),
     largest group first (ties broken alphabetically) so the most-stocked categories are always
-    at the top regardless of how the manifest itself is ordered. Preserves each group's original
-    manifest order internally."""
+    at the top regardless of how the manifest itself is ordered — except "Other" (the catch-all
+    for anything that isn't a real taxonomic group), which always sorts last regardless of its
+    count. Preserves each group's original manifest order internally."""
     by_category = {}
     for img in images:
         by_category.setdefault(img["category"], []).append(img)
@@ -123,7 +124,7 @@ def group_catalogue_by_category(images):
         {"category": category, "slug": _category_slug(category), "count": len(imgs), "images": imgs}
         for category, imgs in by_category.items()
     ]
-    groups.sort(key=lambda g: (-g["count"], g["category"]))
+    groups.sort(key=lambda g: (g["category"] == "Other", -g["count"], g["category"]))
     return groups
 
 
