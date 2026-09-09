@@ -31,13 +31,25 @@
   const submitBtn = document.getElementById("checkout-submit");
   const errorEl = document.getElementById("checkout-error");
   const successEl = document.getElementById("checkout-success");
+  const backToShopLink = successEl.querySelector("a");
 
   if (!openBtn) return; // empty cart — no checkout button rendered
+
+  // Set once the order actually submits — checkout_submit clears the server-side cart on
+  // success (app.py), but this page's own cart list/Checkout button were rendered before that
+  // and don't reflect it without a reload. Closing the modal after success (the X, or clicking
+  // the backdrop) needs to leave this stale page the same way "Back to shop" already does,
+  // rather than just hiding the modal and stranding the user on it.
+  let orderSubmitted = false;
 
   function openModal() {
     modal.hidden = false;
   }
   function closeModal() {
+    if (orderSubmitted) {
+      window.location.href = backToShopLink.href;
+      return;
+    }
     modal.hidden = true;
   }
 
@@ -69,6 +81,7 @@
       return;
     }
 
+    orderSubmitted = true;
     form.hidden = true;
     successEl.hidden = false;
     updateCartBadge(0);

@@ -6,6 +6,17 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.14.3] - 2026-09-09
+
+### Fixed
+
+- Cart: `checkout_submit` clears the server-side cart on a successful order, but the cart page's
+  own DOM (item list, "Checkout" button) was rendered before that and never reflected it without
+  a reload. Closing the checkout modal after a successful order — the X button, or clicking the
+  backdrop — used to just hide the modal, stranding the user on that now-stale page; only the
+  success panel's explicit "Back to shop" link actually navigated away. Both dismissal paths now
+  behave the same as that link once an order has actually submitted (closes #106)
+
 ## [0.14.2] - 2026-09-09
 
 ### Fixed

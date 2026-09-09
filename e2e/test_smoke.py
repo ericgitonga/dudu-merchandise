@@ -296,6 +296,39 @@ def test_checkout_modal_opens_and_is_clickable():
         assert page.locator("#checkout-modal").is_hidden()
 
 
+def test_checkout_modal_closing_after_success_navigates_to_shop():
+    """Regression guard: after a successful order, checkout_submit clears the server-side cart
+    (app.py) but this page's own cart list/Checkout button were rendered before that and don't
+    reflect it without a reload. Closing the modal post-success (the X, or the backdrop) used to
+    just hide the modal, stranding the user on this now-stale cart page — it only left the page
+    if they specifically clicked the "Back to shop" link in the success panel. Both dismissal
+    paths should behave the same as that link once an order has actually been submitted."""
+    with browser_page() as page:
+        page.goto("/prints")
+        token = _csrf_token(page)
+        page.request.post(
+            f"{BASE_URL}/cart/add",
+            headers={"X-CSRFToken": token},
+            form={"type": "print", "photo_id": "001", "size": "A4"},
+        )
+        page.goto("/cart")
+        shop_href = page.locator("#checkout-success a").get_attribute("href")
+
+        page.click("#open-checkout")
+        page.wait_for_selector("#checkout-modal:not([hidden])")
+        page.fill("#co-mpesa-code", "QGH7YYYYYY")
+        page.fill("#co-name", "Test Buyer")
+        page.fill("#co-contact", "test@example.com")
+        page.fill("#co-location", "Nairobi")
+        page.click("#checkout-submit")
+        page.wait_for_selector("#checkout-success:not([hidden])")
+
+        # Dismiss via the backdrop (clicking the overlay itself, not its content) rather than
+        # the explicit "Back to shop" link — that's the path that was stranding the user.
+        page.click("#checkout-modal", position={"x": 5, "y": 5})
+        page.wait_for_url(f"{BASE_URL}{shop_href}")
+
+
 def test_checkout_rejects_missing_or_malformed_mpesa_code():
     with browser_page() as page:
         page.goto("/prints")
@@ -351,6 +384,7 @@ TESTS = [
     test_prints_mockup_renders_and_enables_add_to_cart,
     test_prints_mockup_size_fixed_at_a2_regardless_of_selected_size,
     test_checkout_modal_opens_and_is_clickable,
+    test_checkout_modal_closing_after_success_navigates_to_shop,
     test_cart_add_and_checkout_flow,
     test_checkout_rejects_missing_or_malformed_mpesa_code,
     test_checkout_rejects_empty_cart,
