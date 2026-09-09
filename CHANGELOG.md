@@ -6,7 +6,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
-## [0.14.1] - 2026-09-09
+## [0.14.2] - 2026-09-09
 
 ### Fixed
 
@@ -20,6 +20,19 @@ behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
   420w"` with `sizes="(max-width: 800px) 84px, 90px"`, so the browser picks whichever is actually
   needed — cuts each thumbnail from ~8.5KB to ~2.8KB (measured), on both mobile and desktop
   (closes #102)
+
+## [0.14.1] - 2026-09-09
+
+### Fixed
+
+- Prints (desktop): `mobile-picker.js`'s category filter ran unconditionally on load, hiding
+  every catalogue thumbnail outside the mobile select's default category (whichever sorts
+  first) — including on desktop, where the sidebar+grid design (#74) expects every category
+  visible at once. Live in production: 409 of 657 thumbnails were hidden, so clicking a sidebar
+  category past the first showed a stack of bare section headings with no photos. Fixed by
+  gating the filter on the same `max-width: 800px` breakpoint it's meant for, and re-applying it
+  on that media query's own `change` event so a live window resize across the breakpoint stays
+  correct too, not just the initial load (closes #104)
 
 ## [0.14.0] - 2026-09-09
 

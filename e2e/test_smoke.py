@@ -128,6 +128,20 @@ def test_mobile_picker_photo_and_size_selection_drive_the_real_mockup():
         assert page.locator("#selected-price").inner_text() != price_before
 
 
+def test_desktop_catalogue_grid_shows_every_category_not_just_the_first():
+    """Regression guard for issue #104: applyFilter() in mobile-picker.js ran unconditionally on
+    load, hiding every catalogue-thumb outside the mobile select's default category (whichever
+    sorts first) — including on desktop, where the sidebar+grid design (#74) expects every
+    category's photos visible at once. Confirmed live in production: 409 of 657 thumbnails were
+    hidden. Uses the default (desktop) viewport, not MOBILE_VIEWPORT."""
+    with browser_page() as page:
+        page.goto("/prints")
+        assert page.locator(".cat-sidebar").is_visible()
+        total = page.locator(".catalogue-thumb").count()
+        visible = page.locator(".catalogue-thumb:visible").count()
+        assert visible == total, f"{total - visible} of {total} thumbnails hidden on desktop"
+
+
 def test_cart_add_and_checkout_flow():
     with browser_page() as page:
         page.goto("/prints")
@@ -333,6 +347,7 @@ TESTS = [
     test_catalogue_sidebar_jumps_to_category_section,
     test_mobile_picker_replaces_sidebar_and_filters_the_grid_by_category,
     test_mobile_picker_photo_and_size_selection_drive_the_real_mockup,
+    test_desktop_catalogue_grid_shows_every_category_not_just_the_first,
     test_prints_mockup_renders_and_enables_add_to_cart,
     test_prints_mockup_size_fixed_at_a2_regardless_of_selected_size,
     test_checkout_modal_opens_and_is_clickable,
