@@ -8,6 +8,10 @@ from playwright.sync_api import expect
 import _common
 from _common import BASE_URL, MOCKUP_ENABLE_TIMEOUT_MS, browser_page
 
+# Below style.css's 800px breakpoint, Prints (and later Apparel/Coasters, issue #97) swaps the
+# sidebar+grid picker for a dropdown + horizontal strip (issue #98).
+MOBILE_VIEWPORT = {"width": 390, "height": 844}
+
 
 def _csrf_token(page):
     match = re.search(r'name="csrf-token" content="([^"]+)"', page.content())
@@ -78,6 +82,50 @@ def test_catalogue_sidebar_jumps_to_category_section():
         expect(last_button).to_have_class(re.compile(r"(^|\s)is-active(\s|$)"))
         active = page.locator(".cat-sidebar button.is-active")
         assert active.count() == 1, "only the clicked category should be active"
+
+
+def test_mobile_picker_replaces_sidebar_and_filters_the_grid_by_category():
+    """Regression guard for issue #98: below the 800px breakpoint the sidebar+grid from #74 is
+    replaced by a category dropdown filtering the same catalogue-thumb elements the desktop
+    grid renders (not a second copy), reflowed into a horizontal strip. Picks the last category
+    from the live page rather than hardcoding a name (ONBOARDING's no-hardcoded-data rule)."""
+    with browser_page(viewport=MOBILE_VIEWPORT) as page:
+        page.goto("/prints")
+        assert page.locator(".cat-sidebar").is_hidden()
+        assert page.locator("#mobile-category-select").is_visible()
+
+        options = page.locator("#mobile-category-select option")
+        count = options.count()
+        assert count > 1, "need at least 2 categories to test switching"
+        last_slug = options.nth(count - 1).get_attribute("value")
+
+        thumbs_in_category = page.locator(f'.catalogue-thumb[data-category="{last_slug}"]')
+        thumbs_count = thumbs_in_category.count()
+        assert thumbs_count > 0
+
+        page.select_option("#mobile-category-select", last_slug)
+        assert thumbs_in_category.first.is_visible()
+        assert page.locator(".catalogue-thumb:visible").count() == thumbs_count
+
+
+def test_mobile_picker_photo_and_size_selection_drive_the_real_mockup():
+    """Regression guard for issue #98: the mobile strip's thumbnails are the same elements
+    catalogue-picker.js/prints-mockup.js already wire up (clicking one still renders the wall
+    mockup and enables Add to cart), and the mobile size <select> mirrors the real "size" radio
+    group rather than holding separate state."""
+    with browser_page(viewport=MOBILE_VIEWPORT) as page:
+        page.goto("/prints")
+        page.wait_for_selector("#add-to-cart-print:not([disabled])", timeout=MOCKUP_ENABLE_TIMEOUT_MS)
+
+        thumb = page.locator(".catalogue-thumb:visible").last
+        thumb_id = thumb.get_attribute("data-id")
+        thumb.click()
+        expect(page.locator("#wall-print")).to_have_attribute("src", re.compile(re.escape(thumb_id)))
+
+        price_before = page.locator("#selected-price").inner_text()
+        page.select_option("#mobile-size-select", "A0")
+        assert page.locator("input[name='size'][value='A0']").is_checked()
+        assert page.locator("#selected-price").inner_text() != price_before
 
 
 def test_cart_add_and_checkout_flow():
@@ -283,6 +331,8 @@ TESTS = [
     test_health_endpoint,
     test_prints_page_lists_catalogue_and_sizes,
     test_catalogue_sidebar_jumps_to_category_section,
+    test_mobile_picker_replaces_sidebar_and_filters_the_grid_by_category,
+    test_mobile_picker_photo_and_size_selection_drive_the_real_mockup,
     test_prints_mockup_renders_and_enables_add_to_cart,
     test_prints_mockup_size_fixed_at_a2_regardless_of_selected_size,
     test_checkout_modal_opens_and_is_clickable,

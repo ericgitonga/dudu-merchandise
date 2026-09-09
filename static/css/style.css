@@ -27,6 +27,10 @@ a { color: var(--accent); }
   border-bottom: 1px solid var(--border);
   flex-wrap: wrap;
   gap: 0.75rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bg);
 }
 
 .site-header .brand {
@@ -173,6 +177,57 @@ main { max-width: 1100px; margin: 0 auto; padding: 1.5rem; }
 }
 .grid-section-heading:first-child { border-top: none; padding-top: 0; margin-top: 0; }
 
+/* Mobile picker (issue #98): below 800px — where .shop-layout already stacks the picker above
+   the mockup (see below) — the sidebar's category list and the tall vertical grid put several
+   screens of scrolling between landing on the page and seeing the mockup. Swapped for a
+   dropdown + horizontal strip there instead, reusing the same catalogue-thumb elements the
+   desktop grid renders (filtered by `hidden`, not a second copy) so there's one source of
+   truth for the catalogue at every width. Desktop keeps the sidebar+grid #74 settled on. */
+.mobile-category-select { display: none; }
+
+@media (max-width: 800px) {
+  /* min-width: 0 overrides the automatic minimum size grid items get by default (their
+     content's min-content size) — without it, .catalogue-grid's nowrap strip below still
+     forces .sidebar-layout, and with it the whole .shop-layout column, out to fit every
+     un-scrolled thumbnail instead of the viewport. */
+  .sidebar-layout { display: block; min-width: 0; }
+  .cat-sidebar { display: none; }
+  .mobile-category-select {
+    display: block;
+    width: 100%;
+    font: inherit;
+    font-size: 0.9rem;
+    padding: 0.6rem 0.7rem;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    background: var(--card-bg);
+    color: var(--ink);
+    margin-bottom: 0.6rem;
+  }
+  .grid-section-heading { display: none; }
+  .catalogue-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-height: none;
+    scroll-snap-type: x proximity;
+    /* Grid/flex items default to min-width: auto, which resolves to their content's
+       min-content size — for a nowrap flex strip that's the sum of every unwrapped
+       thumbnail (248 * 84px here), and with nothing capping it that blows out
+       .sidebar-layout's and .shop-layout's grid tracks to match, taking the whole page
+       to that width instead of the viewport's. min-width: 0 lets overflow-x: auto
+       actually contain it. */
+    min-width: 0;
+  }
+  .catalogue-grid .catalogue-thumb {
+    flex: 0 0 auto;
+    width: 84px;
+    scroll-snap-align: start;
+  }
+  .catalogue-grid .catalogue-thumb img { width: 84px; height: 84px; }
+}
+
 .controls-panel {
   background: var(--card-bg);
   border: 1px solid var(--border);
@@ -192,6 +247,26 @@ main { max-width: 1100px; margin: 0 auto; padding: 1.5rem; }
   border-radius: 0.4rem;
   cursor: pointer;
   font-size: 0.9rem;
+}
+
+/* Mobile size picker (issue #98) — same "select drives the real radios" pattern as the
+   category dropdown above; scoped to .size-option-row specifically, not every .option-row,
+   since Apparel's own option rows (shirt size, colour) aren't part of this change. */
+.mobile-size-select { display: none; }
+@media (max-width: 800px) {
+  .mobile-size-select {
+    display: block;
+    width: 100%;
+    font: inherit;
+    font-size: 0.9rem;
+    padding: 0.6rem 0.7rem;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    background: var(--card-bg);
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+  }
+  .size-option-row { display: none; }
 }
 
 .shirt-swatch {

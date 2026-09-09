@@ -15,11 +15,16 @@ printed larger or smaller.</p>
       <button type="button" data-target="cat-{{ group.slug }}" data-category="{{ group.category }}">{{ group.category }}<span class="n">{{ group.count }}</span></button>
       {% endfor %}
     </nav>
+    <select class="mobile-category-select" id="mobile-category-select" aria-label="Choose a category">
+      {% for group in catalogue_by_category %}
+      <option value="{{ group.slug }}">{{ group.category }} ({{ group.count }})</option>
+      {% endfor %}
+    </select>
     <div class="catalogue-grid" aria-label="Choose a photo">
       {% for group in catalogue_by_category %}
       <h3 class="grid-section-heading" id="cat-{{ group.slug }}">{{ group.category }} &middot; {{ group.count }}</h3>
       {% for img in group.images %}
-      <button type="button" class="catalogue-thumb" data-id="{{ img.id }}" data-thumb="{{ img.thumb }}" data-full="{{ img.full }}" data-width="{{ img.width }}" data-height="{{ img.height }}">
+      <button type="button" class="catalogue-thumb" data-id="{{ img.id }}" data-thumb="{{ img.thumb }}" data-full="{{ img.full }}" data-width="{{ img.width }}" data-height="{{ img.height }}" data-category="{{ group.slug }}">
         <img src="{{ img.thumb }}" alt="Catalogue photo {{ img.id }}" loading="lazy" />
       </button>
       {% endfor %}
@@ -34,7 +39,12 @@ printed larger or smaller.</p>
 
     <fieldset class="option-group">
       <legend>Size</legend>
-      <div class="option-row">
+      <select class="mobile-size-select" id="mobile-size-select" aria-label="Choose a size">
+        {% for size, spec in sizes.items() %}
+        <option value="{{ size }}">{{ size }} — KES {{ "{:,}".format(spec.price) }}</option>
+        {% endfor %}
+      </select>
+      <div class="option-row size-option-row">
         {% for size, spec in sizes.items() %}
         <label>
           <input type="radio" name="size" value="{{ size }}" {% if loop.first %}checked{% endif %} />
@@ -65,5 +75,6 @@ printed larger or smaller.</p>
 <script id="print-sizes-data" type="application/json">{{ sizes | tojson }}</script>
 <script src="{{ url_for('static', filename='js/catalogue-picker.js') }}"></script>
 <script src="{{ url_for('static', filename='js/catalogue-sidebar.js') }}"></script>
+<script src="{{ url_for('static', filename='js/mobile-picker.js') }}"></script>
 <script src="{{ url_for('static', filename='js/prints-mockup.js') }}"></script>
 {% endblock %}

@@ -142,6 +142,13 @@ a sidebar entry (scrolls the grid to that section, no page reload) and highlight
 section is currently in view as the client scrolls manually — kept separate from
 `catalogue-picker.js`, which still owns actually selecting a photo.
 
+On Prints, below style.css's 800px breakpoint, the sidebar and grid are swapped for a category
+dropdown and a horizontal thumbnail strip (`static/js/mobile-picker.js`, issue #98) — the
+dropdown filters the same `.catalogue-thumb` elements the grid renders (toggling `hidden`, not a
+second copy of the catalogue) and the grid itself reflows into the strip via CSS. The size radios
+get the same treatment: a `<select>` that mirrors the checked radio rather than holding its own
+state. Desktop is unchanged; Apparel/Coasters get the same treatment once they ship (issue #97).
+
 `extras/projects/dudu-merchandise/assets/catalogue/` (outside this repo) holds the verified
 full-resolution originals these were generated from, organised into one subfolder per
 `CATALOGUE_CATEGORIES` value (`Flies/`, `Spiders/`, `Beetles/`, etc.) — the source of truth for

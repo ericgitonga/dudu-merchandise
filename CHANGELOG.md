@@ -6,6 +6,33 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.14.0] - 2026-09-09
+
+### Added
+
+- Prints: below the 800px breakpoint, the sidebar+grid photo picker from #74 is replaced by a
+  category dropdown + horizontal thumbnail strip, and the size radios are mirrored by a size
+  dropdown — so the wall mockup renders in the same screen as the picker instead of after two
+  internal scrollboxes' worth of sidebar and grid. Both new selects drive the same underlying
+  elements/state the desktop picker already uses (filtering the existing catalogue-thumb
+  elements, mirroring the real "size" radio group) rather than duplicating the catalogue or the
+  price logic. Desktop is unchanged. Validated with the user via an interactive mockup before
+  implementation (closes #98; tracked for Apparel/Coasters under #97, once those ship)
+- Site header is now sticky (`position: sticky; top: 0`) on every page, so the cart link stays
+  reachable without scrolling back up — most noticeable on Prints now that the mobile picker (above)
+  puts more content above the fold (#101)
+
+### Fixed
+
+- Prints: below 800px, the new horizontal thumbnail strip's flex items (nowrap, so they don't
+  shrink) were inflating `.sidebar-layout`'s automatic minimum size to fit every un-scrolled
+  thumbnail, which in turn blew `.shop-layout`'s grid column out to that same width — the whole
+  page rendered at roughly the catalogue's full unscrolled width (~20,000px+) instead of the
+  viewport's, so the wall mockup showed only a tiny, near-random slice of the room photo at
+  actual scale instead of the intended framed preview. Fixed by giving `.sidebar-layout`
+  (and `.catalogue-grid` itself) `min-width: 0` so `overflow-x: auto` can actually contain the
+  strip (#101)
+
 ## [0.13.0] - 2026-09-08
 
 ### Added

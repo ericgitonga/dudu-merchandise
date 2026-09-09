@@ -70,8 +70,15 @@ def shutdown():
 
 
 @contextmanager
-def browser_page():
-    context = _get_browser().new_context(base_url=BASE_URL)
+def browser_page(viewport=None):
+    """`viewport=None` (the default) leaves Playwright's own default viewport in place —
+    passing `viewport=None` straight through to `new_context()` would instead turn viewport
+    emulation off entirely, which is a different thing. Pass an explicit {"width", "height"}
+    to test a specific breakpoint, e.g. the sub-800px mobile picker (issue #98)."""
+    kwargs = {"base_url": BASE_URL}
+    if viewport is not None:
+        kwargs["viewport"] = viewport
+    context = _get_browser().new_context(**kwargs)
     try:
         yield context.new_page()
     finally:
