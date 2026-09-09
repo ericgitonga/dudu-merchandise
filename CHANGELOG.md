@@ -19,6 +19,17 @@ behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
   price logic. Desktop is unchanged. Validated with the user via an interactive mockup before
   implementation (closes #98; tracked for Apparel/Coasters under #97, once those ship)
 
+### Fixed
+
+- Prints: below 800px, the new horizontal thumbnail strip's flex items (nowrap, so they don't
+  shrink) were inflating `.sidebar-layout`'s automatic minimum size to fit every un-scrolled
+  thumbnail, which in turn blew `.shop-layout`'s grid column out to that same width — the whole
+  page rendered at roughly the catalogue's full unscrolled width (~20,000px+) instead of the
+  viewport's, so the wall mockup showed only a tiny, near-random slice of the room photo at
+  actual scale instead of the intended framed preview. Fixed by giving `.sidebar-layout`
+  (and `.catalogue-grid` itself) `min-width: 0` so `overflow-x: auto` can actually contain the
+  strip (#101)
+
 ## [0.13.0] - 2026-09-08
 
 ### Added
