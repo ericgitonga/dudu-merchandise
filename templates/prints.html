@@ -25,7 +25,7 @@ printed larger or smaller.</p>
       <h3 class="grid-section-heading" id="cat-{{ group.slug }}">{{ group.category }} &middot; {{ group.count }}</h3>
       {% for img in group.images %}
       <button type="button" class="catalogue-thumb" data-id="{{ img.id }}" data-thumb="{{ img.thumb }}" data-full="{{ img.full }}" data-width="{{ img.width }}" data-height="{{ img.height }}" data-category="{{ group.slug }}">
-        <img src="{{ img.thumb }}" alt="Catalogue photo {{ img.id }}" loading="lazy" />
+        <img src="{{ img.thumb }}" srcset="{{ img.thumb_sm }} 168w, {{ img.thumb }} 420w" sizes="(max-width: 800px) 84px, 90px" alt="Catalogue photo {{ img.id }}" loading="lazy" />
       </button>
       {% endfor %}
       {% endfor %}

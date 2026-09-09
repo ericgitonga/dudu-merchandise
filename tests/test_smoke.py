@@ -29,25 +29,40 @@ def test_resolve_secret_key_falls_back_locally_without_one():
 
 def test_catalogue_validation_rejects_entries_missing_dimensions():
     with pytest.raises(RuntimeError):
-        appmod._validate_catalogue([{"id": "999", "thumb": "x", "full": "y", "category": "Beetles"}])
+        appmod._validate_catalogue([{"id": "999", "thumb": "x", "thumb_sm": "z", "full": "y", "category": "Beetles"}])
     with pytest.raises(RuntimeError):
         appmod._validate_catalogue(
-            [{"id": "999", "thumb": "x", "full": "y", "width": 100, "category": "Beetles"}]
+            [{"id": "999", "thumb": "x", "thumb_sm": "z", "full": "y", "width": 100, "category": "Beetles"}]
+        )
+
+
+def test_catalogue_validation_rejects_entries_missing_thumb_sm():
+    with pytest.raises(RuntimeError):
+        appmod._validate_catalogue(
+            [{"id": "999", "thumb": "x", "full": "y", "width": 100, "height": 50, "category": "Beetles"}]
         )
 
 
 def test_catalogue_validation_rejects_entries_missing_or_unknown_category():
     with pytest.raises(RuntimeError):
-        appmod._validate_catalogue([{"id": "999", "thumb": "x", "full": "y", "width": 100, "height": 50}])
+        appmod._validate_catalogue(
+            [{"id": "999", "thumb": "x", "thumb_sm": "z", "full": "y", "width": 100, "height": 50}]
+        )
     with pytest.raises(RuntimeError):
         appmod._validate_catalogue(
-            [{"id": "999", "thumb": "x", "full": "y", "width": 100, "height": 50, "category": "Not A Real Category"}]
+            [{
+                "id": "999", "thumb": "x", "thumb_sm": "z", "full": "y",
+                "width": 100, "height": 50, "category": "Not A Real Category",
+            }]
         )
 
 
 def test_catalogue_validation_accepts_complete_entries():
     appmod._validate_catalogue(
-        [{"id": "999", "thumb": "x", "full": "y", "width": 100, "height": 50, "category": "Beetles"}]
+        [{
+            "id": "999", "thumb": "x", "thumb_sm": "z", "full": "y",
+            "width": 100, "height": 50, "category": "Beetles",
+        }]
     )
 
 

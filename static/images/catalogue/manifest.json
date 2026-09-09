@@ -6,7 +6,8 @@
       "full": "/static/images/catalogue/full/n-001.jpg",
       "width": 1400,
       "height": 938,
-      "category": "Neuroptera"
+      "category": "Neuroptera",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/n-001.jpg"
     },
     {
       "id": "s-001",
@@ -14,7 +15,8 @@
       "full": "/static/images/catalogue/full/s-001.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-001.jpg"
     },
     {
       "id": "or-001",
@@ -22,7 +24,8 @@
       "full": "/static/images/catalogue/full/or-001.jpg",
       "width": 1400,
       "height": 1032,
-      "category": "Orthoptera"
+      "category": "Orthoptera",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/or-001.jpg"
     },
     {
       "id": "bt-001",
@@ -30,7 +33,8 @@
       "full": "/static/images/catalogue/full/bt-001.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Beetles"
+      "category": "Beetles",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bt-001.jpg"
     },
     {
       "id": "sc-001",
@@ -38,7 +42,8 @@
       "full": "/static/images/catalogue/full/sc-001.jpg",
       "width": 1400,
       "height": 934,
-      "category": "Scorpions"
+      "category": "Scorpions",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/sc-001.jpg"
     },
     {
       "id": "mo-016",
@@ -46,7 +51,8 @@
       "full": "/static/images/catalogue/full/mo-016.jpg",
       "width": 1400,
       "height": 896,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-016.jpg"
     },
     {
       "id": "mo-001",
@@ -54,7 +60,8 @@
       "full": "/static/images/catalogue/full/mo-001.jpg",
       "width": 1400,
       "height": 929,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-001.jpg"
     },
     {
       "id": "f-001",
@@ -62,7 +69,8 @@
       "full": "/static/images/catalogue/full/f-001.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-001.jpg"
     },
     {
       "id": "s-002",
@@ -70,7 +78,8 @@
       "full": "/static/images/catalogue/full/s-002.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-002.jpg"
     },
     {
       "id": "f-002",
@@ -78,7 +87,8 @@
       "full": "/static/images/catalogue/full/f-002.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-002.jpg"
     },
     {
       "id": "s-003",
@@ -86,7 +96,8 @@
       "full": "/static/images/catalogue/full/s-003.jpg",
       "width": 1400,
       "height": 934,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-003.jpg"
     },
     {
       "id": "s-004",
@@ -94,7 +105,8 @@
       "full": "/static/images/catalogue/full/s-004.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-004.jpg"
     },
     {
       "id": "mo-002",
@@ -102,7 +114,8 @@
       "full": "/static/images/catalogue/full/mo-002.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-002.jpg"
     },
     {
       "id": "bt-002",
@@ -110,7 +123,8 @@
       "full": "/static/images/catalogue/full/bt-002.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Beetles"
+      "category": "Beetles",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bt-002.jpg"
     },
     {
       "id": "ot-002",
@@ -118,7 +132,8 @@
       "full": "/static/images/catalogue/full/ot-002.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Other"
+      "category": "Other",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/ot-002.jpg"
     },
     {
       "id": "f-003",
@@ -126,7 +141,8 @@
       "full": "/static/images/catalogue/full/f-003.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-003.jpg"
     },
     {
       "id": "dr-001",
@@ -134,7 +150,8 @@
       "full": "/static/images/catalogue/full/dr-001.jpg",
       "width": 1400,
       "height": 934,
-      "category": "Dragonflies"
+      "category": "Dragonflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/dr-001.jpg"
     },
     {
       "id": "da-001",
@@ -142,7 +159,8 @@
       "full": "/static/images/catalogue/full/da-001.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Damselflies"
+      "category": "Damselflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/da-001.jpg"
     },
     {
       "id": "da-002",
@@ -150,7 +168,8 @@
       "full": "/static/images/catalogue/full/da-002.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Damselflies"
+      "category": "Damselflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/da-002.jpg"
     },
     {
       "id": "ma-001",
@@ -158,7 +177,8 @@
       "full": "/static/images/catalogue/full/ma-001.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Mantises"
+      "category": "Mantises",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/ma-001.jpg"
     },
     {
       "id": "a-001",
@@ -166,7 +186,8 @@
       "full": "/static/images/catalogue/full/a-001.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Ants"
+      "category": "Ants",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/a-001.jpg"
     },
     {
       "id": "f-004",
@@ -174,7 +195,8 @@
       "full": "/static/images/catalogue/full/f-004.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-004.jpg"
     },
     {
       "id": "f-005",
@@ -182,7 +204,8 @@
       "full": "/static/images/catalogue/full/f-005.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-005.jpg"
     },
     {
       "id": "bu-001",
@@ -190,7 +213,8 @@
       "full": "/static/images/catalogue/full/bu-001.jpg",
       "width": 1400,
       "height": 934,
-      "category": "Butterflies"
+      "category": "Butterflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bu-001.jpg"
     },
     {
       "id": "bt-003",
@@ -198,7 +222,8 @@
       "full": "/static/images/catalogue/full/bt-003.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Beetles"
+      "category": "Beetles",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bt-003.jpg"
     },
     {
       "id": "f-006",
@@ -206,7 +231,8 @@
       "full": "/static/images/catalogue/full/f-006.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-006.jpg"
     },
     {
       "id": "be-001",
@@ -214,7 +240,8 @@
       "full": "/static/images/catalogue/full/be-001.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Bees"
+      "category": "Bees",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/be-001.jpg"
     },
     {
       "id": "f-007",
@@ -222,7 +249,8 @@
       "full": "/static/images/catalogue/full/f-007.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-007.jpg"
     },
     {
       "id": "f-008",
@@ -230,7 +258,8 @@
       "full": "/static/images/catalogue/full/f-008.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-008.jpg"
     },
     {
       "id": "be-002",
@@ -238,7 +267,8 @@
       "full": "/static/images/catalogue/full/be-002.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Bees"
+      "category": "Bees",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/be-002.jpg"
     },
     {
       "id": "be-003",
@@ -246,7 +276,8 @@
       "full": "/static/images/catalogue/full/be-003.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Bees"
+      "category": "Bees",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/be-003.jpg"
     },
     {
       "id": "be-004",
@@ -254,7 +285,8 @@
       "full": "/static/images/catalogue/full/be-004.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Bees"
+      "category": "Bees",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/be-004.jpg"
     },
     {
       "id": "dr-002",
@@ -262,7 +294,8 @@
       "full": "/static/images/catalogue/full/dr-002.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Dragonflies"
+      "category": "Dragonflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/dr-002.jpg"
     },
     {
       "id": "f-009",
@@ -270,7 +303,8 @@
       "full": "/static/images/catalogue/full/f-009.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-009.jpg"
     },
     {
       "id": "f-010",
@@ -278,7 +312,8 @@
       "full": "/static/images/catalogue/full/f-010.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-010.jpg"
     },
     {
       "id": "a-002",
@@ -286,7 +321,8 @@
       "full": "/static/images/catalogue/full/a-002.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Ants"
+      "category": "Ants",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/a-002.jpg"
     },
     {
       "id": "ma-002",
@@ -294,7 +330,8 @@
       "full": "/static/images/catalogue/full/ma-002.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Mantises"
+      "category": "Mantises",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/ma-002.jpg"
     },
     {
       "id": "da-003",
@@ -302,7 +339,8 @@
       "full": "/static/images/catalogue/full/da-003.jpg",
       "width": 1400,
       "height": 934,
-      "category": "Damselflies"
+      "category": "Damselflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/da-003.jpg"
     },
     {
       "id": "be-005",
@@ -310,7 +348,8 @@
       "full": "/static/images/catalogue/full/be-005.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Bees"
+      "category": "Bees",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/be-005.jpg"
     },
     {
       "id": "f-011",
@@ -318,7 +357,8 @@
       "full": "/static/images/catalogue/full/f-011.jpg",
       "width": 1200,
       "height": 800,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-011.jpg"
     },
     {
       "id": "f-012",
@@ -326,7 +366,8 @@
       "full": "/static/images/catalogue/full/f-012.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-012.jpg"
     },
     {
       "id": "dr-003",
@@ -334,7 +375,8 @@
       "full": "/static/images/catalogue/full/dr-003.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Dragonflies"
+      "category": "Dragonflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/dr-003.jpg"
     },
     {
       "id": "bt-004",
@@ -342,7 +384,8 @@
       "full": "/static/images/catalogue/full/bt-004.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Beetles"
+      "category": "Beetles",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bt-004.jpg"
     },
     {
       "id": "da-004",
@@ -350,7 +393,8 @@
       "full": "/static/images/catalogue/full/da-004.jpg",
       "width": 1400,
       "height": 934,
-      "category": "Damselflies"
+      "category": "Damselflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/da-004.jpg"
     },
     {
       "id": "f-013",
@@ -358,7 +402,8 @@
       "full": "/static/images/catalogue/full/f-013.jpg",
       "width": 1300,
       "height": 866,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-013.jpg"
     },
     {
       "id": "bt-005",
@@ -366,7 +411,8 @@
       "full": "/static/images/catalogue/full/bt-005.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Beetles"
+      "category": "Beetles",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bt-005.jpg"
     },
     {
       "id": "f-014",
@@ -374,7 +420,8 @@
       "full": "/static/images/catalogue/full/f-014.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-014.jpg"
     },
     {
       "id": "bu-002",
@@ -382,7 +429,8 @@
       "full": "/static/images/catalogue/full/bu-002.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Butterflies"
+      "category": "Butterflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bu-002.jpg"
     },
     {
       "id": "f-015",
@@ -390,7 +438,8 @@
       "full": "/static/images/catalogue/full/f-015.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-015.jpg"
     },
     {
       "id": "f-016",
@@ -398,7 +447,8 @@
       "full": "/static/images/catalogue/full/f-016.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-016.jpg"
     },
     {
       "id": "mo-003",
@@ -406,7 +456,8 @@
       "full": "/static/images/catalogue/full/mo-003.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-003.jpg"
     },
     {
       "id": "s-005",
@@ -414,7 +465,8 @@
       "full": "/static/images/catalogue/full/s-005.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-005.jpg"
     },
     {
       "id": "mo-004",
@@ -422,7 +474,8 @@
       "full": "/static/images/catalogue/full/mo-004.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-004.jpg"
     },
     {
       "id": "mo-005",
@@ -430,7 +483,8 @@
       "full": "/static/images/catalogue/full/mo-005.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-005.jpg"
     },
     {
       "id": "ot-003",
@@ -438,7 +492,8 @@
       "full": "/static/images/catalogue/full/ot-003.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Other"
+      "category": "Other",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/ot-003.jpg"
     },
     {
       "id": "be-006",
@@ -446,7 +501,8 @@
       "full": "/static/images/catalogue/full/be-006.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Bees"
+      "category": "Bees",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/be-006.jpg"
     },
     {
       "id": "f-064",
@@ -454,7 +510,8 @@
       "full": "/static/images/catalogue/full/f-064.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-064.jpg"
     },
     {
       "id": "dr-004",
@@ -462,7 +519,8 @@
       "full": "/static/images/catalogue/full/dr-004.jpg",
       "width": 1400,
       "height": 934,
-      "category": "Dragonflies"
+      "category": "Dragonflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/dr-004.jpg"
     },
     {
       "id": "f-017",
@@ -470,7 +528,8 @@
       "full": "/static/images/catalogue/full/f-017.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-017.jpg"
     },
     {
       "id": "s-006",
@@ -478,7 +537,8 @@
       "full": "/static/images/catalogue/full/s-006.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-006.jpg"
     },
     {
       "id": "n-002",
@@ -486,7 +546,8 @@
       "full": "/static/images/catalogue/full/n-002.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Neuroptera"
+      "category": "Neuroptera",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/n-002.jpg"
     },
     {
       "id": "bt-006",
@@ -494,7 +555,8 @@
       "full": "/static/images/catalogue/full/bt-006.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Beetles"
+      "category": "Beetles",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bt-006.jpg"
     },
     {
       "id": "f-018",
@@ -502,7 +564,8 @@
       "full": "/static/images/catalogue/full/f-018.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-018.jpg"
     },
     {
       "id": "bt-007",
@@ -510,7 +573,8 @@
       "full": "/static/images/catalogue/full/bt-007.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Beetles"
+      "category": "Beetles",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bt-007.jpg"
     },
     {
       "id": "f-019",
@@ -518,7 +582,8 @@
       "full": "/static/images/catalogue/full/f-019.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-019.jpg"
     },
     {
       "id": "w-001",
@@ -526,7 +591,8 @@
       "full": "/static/images/catalogue/full/w-001.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Wasps"
+      "category": "Wasps",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/w-001.jpg"
     },
     {
       "id": "bu-003",
@@ -534,7 +600,8 @@
       "full": "/static/images/catalogue/full/bu-003.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Butterflies"
+      "category": "Butterflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bu-003.jpg"
     },
     {
       "id": "s-007",
@@ -542,7 +609,8 @@
       "full": "/static/images/catalogue/full/s-007.jpg",
       "width": 1400,
       "height": 932,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-007.jpg"
     },
     {
       "id": "bt-008",
@@ -550,7 +618,8 @@
       "full": "/static/images/catalogue/full/bt-008.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Beetles"
+      "category": "Beetles",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bt-008.jpg"
     },
     {
       "id": "be-007",
@@ -558,7 +627,8 @@
       "full": "/static/images/catalogue/full/be-007.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Bees"
+      "category": "Bees",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/be-007.jpg"
     },
     {
       "id": "s-008",
@@ -566,7 +636,8 @@
       "full": "/static/images/catalogue/full/s-008.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-008.jpg"
     },
     {
       "id": "f-020",
@@ -574,7 +645,8 @@
       "full": "/static/images/catalogue/full/f-020.jpg",
       "width": 1300,
       "height": 866,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-020.jpg"
     },
     {
       "id": "f-021",
@@ -582,7 +654,8 @@
       "full": "/static/images/catalogue/full/f-021.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-021.jpg"
     },
     {
       "id": "f-022",
@@ -590,7 +663,8 @@
       "full": "/static/images/catalogue/full/f-022.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-022.jpg"
     },
     {
       "id": "s-009",
@@ -598,7 +672,8 @@
       "full": "/static/images/catalogue/full/s-009.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-009.jpg"
     },
     {
       "id": "bt-009",
@@ -606,7 +681,8 @@
       "full": "/static/images/catalogue/full/bt-009.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Beetles"
+      "category": "Beetles",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bt-009.jpg"
     },
     {
       "id": "f-023",
@@ -614,7 +690,8 @@
       "full": "/static/images/catalogue/full/f-023.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-023.jpg"
     },
     {
       "id": "bu-004",
@@ -622,7 +699,8 @@
       "full": "/static/images/catalogue/full/bu-004.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Butterflies"
+      "category": "Butterflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bu-004.jpg"
     },
     {
       "id": "f-024",
@@ -630,7 +708,8 @@
       "full": "/static/images/catalogue/full/f-024.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-024.jpg"
     },
     {
       "id": "s-010",
@@ -638,7 +717,8 @@
       "full": "/static/images/catalogue/full/s-010.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-010.jpg"
     },
     {
       "id": "ma-003",
@@ -646,7 +726,8 @@
       "full": "/static/images/catalogue/full/ma-003.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Mantises"
+      "category": "Mantises",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/ma-003.jpg"
     },
     {
       "id": "s-011",
@@ -654,7 +735,8 @@
       "full": "/static/images/catalogue/full/s-011.jpg",
       "width": 1400,
       "height": 934,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-011.jpg"
     },
     {
       "id": "dr-005",
@@ -662,7 +744,8 @@
       "full": "/static/images/catalogue/full/dr-005.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Dragonflies"
+      "category": "Dragonflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/dr-005.jpg"
     },
     {
       "id": "f-025",
@@ -670,7 +753,8 @@
       "full": "/static/images/catalogue/full/f-025.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-025.jpg"
     },
     {
       "id": "da-005",
@@ -678,7 +762,8 @@
       "full": "/static/images/catalogue/full/da-005.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Damselflies"
+      "category": "Damselflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/da-005.jpg"
     },
     {
       "id": "t-001",
@@ -686,7 +771,8 @@
       "full": "/static/images/catalogue/full/t-001.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-001.jpg"
     },
     {
       "id": "be-008",
@@ -694,7 +780,8 @@
       "full": "/static/images/catalogue/full/be-008.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Bees"
+      "category": "Bees",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/be-008.jpg"
     },
     {
       "id": "mo-006",
@@ -702,7 +789,8 @@
       "full": "/static/images/catalogue/full/mo-006.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-006.jpg"
     },
     {
       "id": "f-026",
@@ -710,7 +798,8 @@
       "full": "/static/images/catalogue/full/f-026.jpg",
       "width": 1400,
       "height": 903,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-026.jpg"
     },
     {
       "id": "w-002",
@@ -718,7 +807,8 @@
       "full": "/static/images/catalogue/full/w-002.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Wasps"
+      "category": "Wasps",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/w-002.jpg"
     },
     {
       "id": "da-006",
@@ -726,7 +816,8 @@
       "full": "/static/images/catalogue/full/da-006.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Damselflies"
+      "category": "Damselflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/da-006.jpg"
     },
     {
       "id": "t-002",
@@ -734,7 +825,8 @@
       "full": "/static/images/catalogue/full/t-002.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-002.jpg"
     },
     {
       "id": "t-003",
@@ -742,7 +834,8 @@
       "full": "/static/images/catalogue/full/t-003.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-003.jpg"
     },
     {
       "id": "bu-005",
@@ -750,7 +843,8 @@
       "full": "/static/images/catalogue/full/bu-005.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Butterflies"
+      "category": "Butterflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bu-005.jpg"
     },
     {
       "id": "bu-006",
@@ -758,7 +852,8 @@
       "full": "/static/images/catalogue/full/bu-006.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Butterflies"
+      "category": "Butterflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bu-006.jpg"
     },
     {
       "id": "bu-007",
@@ -766,7 +861,8 @@
       "full": "/static/images/catalogue/full/bu-007.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Butterflies"
+      "category": "Butterflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bu-007.jpg"
     },
     {
       "id": "ma-004",
@@ -774,7 +870,8 @@
       "full": "/static/images/catalogue/full/ma-004.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Mantises"
+      "category": "Mantises",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/ma-004.jpg"
     },
     {
       "id": "be-009",
@@ -782,7 +879,8 @@
       "full": "/static/images/catalogue/full/be-009.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Bees"
+      "category": "Bees",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/be-009.jpg"
     },
     {
       "id": "t-004",
@@ -790,7 +888,8 @@
       "full": "/static/images/catalogue/full/t-004.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-004.jpg"
     },
     {
       "id": "f-027",
@@ -798,7 +897,8 @@
       "full": "/static/images/catalogue/full/f-027.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-027.jpg"
     },
     {
       "id": "ma-005",
@@ -806,7 +906,8 @@
       "full": "/static/images/catalogue/full/ma-005.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Mantises"
+      "category": "Mantises",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/ma-005.jpg"
     },
     {
       "id": "da-007",
@@ -814,7 +915,8 @@
       "full": "/static/images/catalogue/full/da-007.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Damselflies"
+      "category": "Damselflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/da-007.jpg"
     },
     {
       "id": "dr-006",
@@ -822,7 +924,8 @@
       "full": "/static/images/catalogue/full/dr-006.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Dragonflies"
+      "category": "Dragonflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/dr-006.jpg"
     },
     {
       "id": "f-028",
@@ -830,7 +933,8 @@
       "full": "/static/images/catalogue/full/f-028.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-028.jpg"
     },
     {
       "id": "be-010",
@@ -838,7 +942,8 @@
       "full": "/static/images/catalogue/full/be-010.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Bees"
+      "category": "Bees",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/be-010.jpg"
     },
     {
       "id": "s-012",
@@ -846,7 +951,8 @@
       "full": "/static/images/catalogue/full/s-012.jpg",
       "width": 1400,
       "height": 934,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-012.jpg"
     },
     {
       "id": "w-003",
@@ -854,7 +960,8 @@
       "full": "/static/images/catalogue/full/w-003.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Wasps"
+      "category": "Wasps",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/w-003.jpg"
     },
     {
       "id": "bu-008",
@@ -862,7 +969,8 @@
       "full": "/static/images/catalogue/full/bu-008.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Butterflies"
+      "category": "Butterflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bu-008.jpg"
     },
     {
       "id": "mo-007",
@@ -870,7 +978,8 @@
       "full": "/static/images/catalogue/full/mo-007.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-007.jpg"
     },
     {
       "id": "da-008",
@@ -878,7 +987,8 @@
       "full": "/static/images/catalogue/full/da-008.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Damselflies"
+      "category": "Damselflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/da-008.jpg"
     },
     {
       "id": "be-011",
@@ -886,7 +996,8 @@
       "full": "/static/images/catalogue/full/be-011.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Bees"
+      "category": "Bees",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/be-011.jpg"
     },
     {
       "id": "f-029",
@@ -894,7 +1005,8 @@
       "full": "/static/images/catalogue/full/f-029.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-029.jpg"
     },
     {
       "id": "be-012",
@@ -902,7 +1014,8 @@
       "full": "/static/images/catalogue/full/be-012.jpg",
       "width": 1400,
       "height": 934,
-      "category": "Bees"
+      "category": "Bees",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/be-012.jpg"
     },
     {
       "id": "s-013",
@@ -910,7 +1023,8 @@
       "full": "/static/images/catalogue/full/s-013.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-013.jpg"
     },
     {
       "id": "f-030",
@@ -918,7 +1032,8 @@
       "full": "/static/images/catalogue/full/f-030.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-030.jpg"
     },
     {
       "id": "dr-007",
@@ -926,7 +1041,8 @@
       "full": "/static/images/catalogue/full/dr-007.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Dragonflies"
+      "category": "Dragonflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/dr-007.jpg"
     },
     {
       "id": "ma-006",
@@ -934,7 +1050,8 @@
       "full": "/static/images/catalogue/full/ma-006.jpg",
       "width": 1400,
       "height": 2100,
-      "category": "Mantises"
+      "category": "Mantises",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/ma-006.jpg"
     },
     {
       "id": "or-002",
@@ -942,7 +1059,8 @@
       "full": "/static/images/catalogue/full/or-002.jpg",
       "width": 1400,
       "height": 938,
-      "category": "Orthoptera"
+      "category": "Orthoptera",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/or-002.jpg"
     },
     {
       "id": "f-031",
@@ -950,7 +1068,8 @@
       "full": "/static/images/catalogue/full/f-031.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-031.jpg"
     },
     {
       "id": "s-014",
@@ -958,7 +1077,8 @@
       "full": "/static/images/catalogue/full/s-014.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-014.jpg"
     },
     {
       "id": "f-032",
@@ -966,7 +1086,8 @@
       "full": "/static/images/catalogue/full/f-032.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-032.jpg"
     },
     {
       "id": "f-033",
@@ -974,7 +1095,8 @@
       "full": "/static/images/catalogue/full/f-033.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-033.jpg"
     },
     {
       "id": "s-015",
@@ -982,7 +1104,8 @@
       "full": "/static/images/catalogue/full/s-015.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-015.jpg"
     },
     {
       "id": "s-016",
@@ -990,7 +1113,8 @@
       "full": "/static/images/catalogue/full/s-016.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-016.jpg"
     },
     {
       "id": "mo-008",
@@ -998,7 +1122,8 @@
       "full": "/static/images/catalogue/full/mo-008.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-008.jpg"
     },
     {
       "id": "f-034",
@@ -1006,7 +1131,8 @@
       "full": "/static/images/catalogue/full/f-034.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-034.jpg"
     },
     {
       "id": "f-035",
@@ -1014,7 +1140,8 @@
       "full": "/static/images/catalogue/full/f-035.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-035.jpg"
     },
     {
       "id": "f-036",
@@ -1022,7 +1149,8 @@
       "full": "/static/images/catalogue/full/f-036.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-036.jpg"
     },
     {
       "id": "f-037",
@@ -1030,7 +1158,8 @@
       "full": "/static/images/catalogue/full/f-037.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-037.jpg"
     },
     {
       "id": "f-038",
@@ -1038,7 +1167,8 @@
       "full": "/static/images/catalogue/full/f-038.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-038.jpg"
     },
     {
       "id": "f-039",
@@ -1046,7 +1176,8 @@
       "full": "/static/images/catalogue/full/f-039.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-039.jpg"
     },
     {
       "id": "mo-009",
@@ -1054,7 +1185,8 @@
       "full": "/static/images/catalogue/full/mo-009.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-009.jpg"
     },
     {
       "id": "f-040",
@@ -1062,7 +1194,8 @@
       "full": "/static/images/catalogue/full/f-040.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-040.jpg"
     },
     {
       "id": "or-003",
@@ -1070,7 +1203,8 @@
       "full": "/static/images/catalogue/full/or-003.jpg",
       "width": 1400,
       "height": 935,
-      "category": "Orthoptera"
+      "category": "Orthoptera",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/or-003.jpg"
     },
     {
       "id": "bu-009",
@@ -1078,7 +1212,8 @@
       "full": "/static/images/catalogue/full/bu-009.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Butterflies"
+      "category": "Butterflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bu-009.jpg"
     },
     {
       "id": "f-041",
@@ -1086,7 +1221,8 @@
       "full": "/static/images/catalogue/full/f-041.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-041.jpg"
     },
     {
       "id": "bt-010",
@@ -1094,7 +1230,8 @@
       "full": "/static/images/catalogue/full/bt-010.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Beetles"
+      "category": "Beetles",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bt-010.jpg"
     },
     {
       "id": "be-013",
@@ -1102,7 +1239,8 @@
       "full": "/static/images/catalogue/full/be-013.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Bees"
+      "category": "Bees",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/be-013.jpg"
     },
     {
       "id": "f-042",
@@ -1110,7 +1248,8 @@
       "full": "/static/images/catalogue/full/f-042.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-042.jpg"
     },
     {
       "id": "s-017",
@@ -1118,7 +1257,8 @@
       "full": "/static/images/catalogue/full/s-017.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-017.jpg"
     },
     {
       "id": "s-018",
@@ -1126,7 +1266,8 @@
       "full": "/static/images/catalogue/full/s-018.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-018.jpg"
     },
     {
       "id": "f-043",
@@ -1134,7 +1275,8 @@
       "full": "/static/images/catalogue/full/f-043.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-043.jpg"
     },
     {
       "id": "f-044",
@@ -1142,7 +1284,8 @@
       "full": "/static/images/catalogue/full/f-044.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-044.jpg"
     },
     {
       "id": "w-004",
@@ -1150,7 +1293,8 @@
       "full": "/static/images/catalogue/full/w-004.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Wasps"
+      "category": "Wasps",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/w-004.jpg"
     },
     {
       "id": "bu-010",
@@ -1158,7 +1302,8 @@
       "full": "/static/images/catalogue/full/bu-010.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Butterflies"
+      "category": "Butterflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bu-010.jpg"
     },
     {
       "id": "s-019",
@@ -1166,7 +1311,8 @@
       "full": "/static/images/catalogue/full/s-019.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-019.jpg"
     },
     {
       "id": "s-020",
@@ -1174,7 +1320,8 @@
       "full": "/static/images/catalogue/full/s-020.jpg",
       "width": 1400,
       "height": 935,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-020.jpg"
     },
     {
       "id": "s-021",
@@ -1182,7 +1329,8 @@
       "full": "/static/images/catalogue/full/s-021.jpg",
       "width": 1400,
       "height": 935,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-021.jpg"
     },
     {
       "id": "s-022",
@@ -1190,7 +1338,8 @@
       "full": "/static/images/catalogue/full/s-022.jpg",
       "width": 1400,
       "height": 935,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-022.jpg"
     },
     {
       "id": "bt-011",
@@ -1198,7 +1347,8 @@
       "full": "/static/images/catalogue/full/bt-011.jpg",
       "width": 1400,
       "height": 935,
-      "category": "Beetles"
+      "category": "Beetles",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bt-011.jpg"
     },
     {
       "id": "bt-012",
@@ -1206,7 +1356,8 @@
       "full": "/static/images/catalogue/full/bt-012.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Beetles"
+      "category": "Beetles",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bt-012.jpg"
     },
     {
       "id": "f-045",
@@ -1214,7 +1365,8 @@
       "full": "/static/images/catalogue/full/f-045.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-045.jpg"
     },
     {
       "id": "a-003",
@@ -1222,7 +1374,8 @@
       "full": "/static/images/catalogue/full/a-003.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Ants"
+      "category": "Ants",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/a-003.jpg"
     },
     {
       "id": "ot-004",
@@ -1230,7 +1383,8 @@
       "full": "/static/images/catalogue/full/ot-004.jpg",
       "width": 1400,
       "height": 935,
-      "category": "Other"
+      "category": "Other",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/ot-004.jpg"
     },
     {
       "id": "bt-013",
@@ -1238,7 +1392,8 @@
       "full": "/static/images/catalogue/full/bt-013.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Beetles"
+      "category": "Beetles",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bt-013.jpg"
     },
     {
       "id": "f-046",
@@ -1246,7 +1401,8 @@
       "full": "/static/images/catalogue/full/f-046.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-046.jpg"
     },
     {
       "id": "bt-014",
@@ -1254,7 +1410,8 @@
       "full": "/static/images/catalogue/full/bt-014.jpg",
       "width": 1400,
       "height": 1077,
-      "category": "Beetles"
+      "category": "Beetles",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bt-014.jpg"
     },
     {
       "id": "f-047",
@@ -1262,7 +1419,8 @@
       "full": "/static/images/catalogue/full/f-047.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-047.jpg"
     },
     {
       "id": "c-001",
@@ -1270,7 +1428,8 @@
       "full": "/static/images/catalogue/full/c-001.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Caterpillars"
+      "category": "Caterpillars",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/c-001.jpg"
     },
     {
       "id": "f-048",
@@ -1278,7 +1437,8 @@
       "full": "/static/images/catalogue/full/f-048.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-048.jpg"
     },
     {
       "id": "s-023",
@@ -1286,7 +1446,8 @@
       "full": "/static/images/catalogue/full/s-023.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-023.jpg"
     },
     {
       "id": "f-049",
@@ -1294,7 +1455,8 @@
       "full": "/static/images/catalogue/full/f-049.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-049.jpg"
     },
     {
       "id": "f-050",
@@ -1302,7 +1464,8 @@
       "full": "/static/images/catalogue/full/f-050.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-050.jpg"
     },
     {
       "id": "f-051",
@@ -1310,7 +1473,8 @@
       "full": "/static/images/catalogue/full/f-051.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-051.jpg"
     },
     {
       "id": "f-052",
@@ -1318,7 +1482,8 @@
       "full": "/static/images/catalogue/full/f-052.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-052.jpg"
     },
     {
       "id": "ot-005",
@@ -1326,7 +1491,8 @@
       "full": "/static/images/catalogue/full/ot-005.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Other"
+      "category": "Other",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/ot-005.jpg"
     },
     {
       "id": "mo-010",
@@ -1334,7 +1500,8 @@
       "full": "/static/images/catalogue/full/mo-010.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-010.jpg"
     },
     {
       "id": "s-024",
@@ -1342,7 +1509,8 @@
       "full": "/static/images/catalogue/full/s-024.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-024.jpg"
     },
     {
       "id": "s-025",
@@ -1350,7 +1518,8 @@
       "full": "/static/images/catalogue/full/s-025.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-025.jpg"
     },
     {
       "id": "a-004",
@@ -1358,7 +1527,8 @@
       "full": "/static/images/catalogue/full/a-004.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Ants"
+      "category": "Ants",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/a-004.jpg"
     },
     {
       "id": "bt-015",
@@ -1366,7 +1536,8 @@
       "full": "/static/images/catalogue/full/bt-015.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Beetles"
+      "category": "Beetles",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bt-015.jpg"
     },
     {
       "id": "mo-011",
@@ -1374,7 +1545,8 @@
       "full": "/static/images/catalogue/full/mo-011.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-011.jpg"
     },
     {
       "id": "ot-006",
@@ -1382,7 +1554,8 @@
       "full": "/static/images/catalogue/full/ot-006.jpg",
       "width": 1400,
       "height": 935,
-      "category": "Other"
+      "category": "Other",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/ot-006.jpg"
     },
     {
       "id": "a-005",
@@ -1390,7 +1563,8 @@
       "full": "/static/images/catalogue/full/a-005.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Ants"
+      "category": "Ants",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/a-005.jpg"
     },
     {
       "id": "bt-016",
@@ -1398,7 +1572,8 @@
       "full": "/static/images/catalogue/full/bt-016.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Beetles"
+      "category": "Beetles",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bt-016.jpg"
     },
     {
       "id": "bt-017",
@@ -1406,7 +1581,8 @@
       "full": "/static/images/catalogue/full/bt-017.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Beetles"
+      "category": "Beetles",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bt-017.jpg"
     },
     {
       "id": "mo-012",
@@ -1414,7 +1590,8 @@
       "full": "/static/images/catalogue/full/mo-012.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-012.jpg"
     },
     {
       "id": "s-026",
@@ -1422,7 +1599,8 @@
       "full": "/static/images/catalogue/full/s-026.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-026.jpg"
     },
     {
       "id": "s-027",
@@ -1430,7 +1608,8 @@
       "full": "/static/images/catalogue/full/s-027.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-027.jpg"
     },
     {
       "id": "mo-013",
@@ -1438,7 +1617,8 @@
       "full": "/static/images/catalogue/full/mo-013.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-013.jpg"
     },
     {
       "id": "f-053",
@@ -1446,7 +1626,8 @@
       "full": "/static/images/catalogue/full/f-053.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-053.jpg"
     },
     {
       "id": "s-028",
@@ -1454,7 +1635,8 @@
       "full": "/static/images/catalogue/full/s-028.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-028.jpg"
     },
     {
       "id": "s-029",
@@ -1462,7 +1644,8 @@
       "full": "/static/images/catalogue/full/s-029.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-029.jpg"
     },
     {
       "id": "bu-011",
@@ -1470,7 +1653,8 @@
       "full": "/static/images/catalogue/full/bu-011.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Butterflies"
+      "category": "Butterflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bu-011.jpg"
     },
     {
       "id": "a-006",
@@ -1478,7 +1662,8 @@
       "full": "/static/images/catalogue/full/a-006.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Ants"
+      "category": "Ants",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/a-006.jpg"
     },
     {
       "id": "f-054",
@@ -1486,7 +1671,8 @@
       "full": "/static/images/catalogue/full/f-054.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-054.jpg"
     },
     {
       "id": "ot-007",
@@ -1494,7 +1680,8 @@
       "full": "/static/images/catalogue/full/ot-007.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Other"
+      "category": "Other",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/ot-007.jpg"
     },
     {
       "id": "mo-014",
@@ -1502,7 +1689,8 @@
       "full": "/static/images/catalogue/full/mo-014.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-014.jpg"
     },
     {
       "id": "be-014",
@@ -1510,7 +1698,8 @@
       "full": "/static/images/catalogue/full/be-014.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Bees"
+      "category": "Bees",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/be-014.jpg"
     },
     {
       "id": "mo-015",
@@ -1518,7 +1707,8 @@
       "full": "/static/images/catalogue/full/mo-015.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-015.jpg"
     },
     {
       "id": "f-055",
@@ -1526,7 +1716,8 @@
       "full": "/static/images/catalogue/full/f-055.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-055.jpg"
     },
     {
       "id": "c-002",
@@ -1534,7 +1725,8 @@
       "full": "/static/images/catalogue/full/c-002.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Caterpillars"
+      "category": "Caterpillars",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/c-002.jpg"
     },
     {
       "id": "bu-012",
@@ -1542,7 +1734,8 @@
       "full": "/static/images/catalogue/full/bu-012.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Butterflies"
+      "category": "Butterflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bu-012.jpg"
     },
     {
       "id": "bt-018",
@@ -1550,7 +1743,8 @@
       "full": "/static/images/catalogue/full/bt-018.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Beetles"
+      "category": "Beetles",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bt-018.jpg"
     },
     {
       "id": "f-056",
@@ -1558,7 +1752,8 @@
       "full": "/static/images/catalogue/full/f-056.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-056.jpg"
     },
     {
       "id": "ot-008",
@@ -1566,7 +1761,8 @@
       "full": "/static/images/catalogue/full/ot-008.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Other"
+      "category": "Other",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/ot-008.jpg"
     },
     {
       "id": "bt-019",
@@ -1574,7 +1770,8 @@
       "full": "/static/images/catalogue/full/bt-019.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Beetles"
+      "category": "Beetles",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bt-019.jpg"
     },
     {
       "id": "f-057",
@@ -1582,7 +1779,8 @@
       "full": "/static/images/catalogue/full/f-057.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-057.jpg"
     },
     {
       "id": "s-030",
@@ -1590,7 +1788,8 @@
       "full": "/static/images/catalogue/full/s-030.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-030.jpg"
     },
     {
       "id": "n-003",
@@ -1598,7 +1797,8 @@
       "full": "/static/images/catalogue/full/n-003.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Neuroptera"
+      "category": "Neuroptera",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/n-003.jpg"
     },
     {
       "id": "a-007",
@@ -1606,7 +1806,8 @@
       "full": "/static/images/catalogue/full/a-007.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Ants"
+      "category": "Ants",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/a-007.jpg"
     },
     {
       "id": "f-058",
@@ -1614,7 +1815,8 @@
       "full": "/static/images/catalogue/full/f-058.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-058.jpg"
     },
     {
       "id": "a-008",
@@ -1622,7 +1824,8 @@
       "full": "/static/images/catalogue/full/a-008.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Ants"
+      "category": "Ants",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/a-008.jpg"
     },
     {
       "id": "ot-010",
@@ -1630,7 +1833,8 @@
       "full": "/static/images/catalogue/full/ot-010.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Other"
+      "category": "Other",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/ot-010.jpg"
     },
     {
       "id": "f-059",
@@ -1638,7 +1842,8 @@
       "full": "/static/images/catalogue/full/f-059.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-059.jpg"
     },
     {
       "id": "f-060",
@@ -1646,7 +1851,8 @@
       "full": "/static/images/catalogue/full/f-060.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-060.jpg"
     },
     {
       "id": "f-061",
@@ -1654,7 +1860,8 @@
       "full": "/static/images/catalogue/full/f-061.jpg",
       "width": 1300,
       "height": 866,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-061.jpg"
     },
     {
       "id": "w-005",
@@ -1662,7 +1869,8 @@
       "full": "/static/images/catalogue/full/w-005.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Wasps"
+      "category": "Wasps",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/w-005.jpg"
     },
     {
       "id": "ot-009",
@@ -1670,7 +1878,8 @@
       "full": "/static/images/catalogue/full/ot-009.jpg",
       "width": 1400,
       "height": 935,
-      "category": "Other"
+      "category": "Other",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/ot-009.jpg"
     },
     {
       "id": "s-031",
@@ -1678,7 +1887,8 @@
       "full": "/static/images/catalogue/full/s-031.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-031.jpg"
     },
     {
       "id": "s-032",
@@ -1686,7 +1896,8 @@
       "full": "/static/images/catalogue/full/s-032.jpg",
       "width": 1200,
       "height": 800,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-032.jpg"
     },
     {
       "id": "f-062",
@@ -1694,7 +1905,8 @@
       "full": "/static/images/catalogue/full/f-062.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-062.jpg"
     },
     {
       "id": "s-033",
@@ -1702,7 +1914,8 @@
       "full": "/static/images/catalogue/full/s-033.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-033.jpg"
     },
     {
       "id": "a-009",
@@ -1710,7 +1923,8 @@
       "full": "/static/images/catalogue/full/a-009.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Ants"
+      "category": "Ants",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/a-009.jpg"
     },
     {
       "id": "f-063",
@@ -1718,7 +1932,8 @@
       "full": "/static/images/catalogue/full/f-063.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-063.jpg"
     },
     {
       "id": "s-034",
@@ -1726,7 +1941,8 @@
       "full": "/static/images/catalogue/full/s-034.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-034.jpg"
     },
     {
       "id": "be-015",
@@ -1734,7 +1950,8 @@
       "full": "/static/images/catalogue/full/be-015.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Bees"
+      "category": "Bees",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/be-015.jpg"
     },
     {
       "id": "be-016",
@@ -1742,7 +1959,8 @@
       "full": "/static/images/catalogue/full/be-016.jpg",
       "width": 933,
       "height": 1400,
-      "category": "Bees"
+      "category": "Bees",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/be-016.jpg"
     },
     {
       "id": "sc-002",
@@ -1750,7 +1968,8 @@
       "full": "/static/images/catalogue/full/sc-002.jpg",
       "width": 1400,
       "height": 935,
-      "category": "Scorpions"
+      "category": "Scorpions",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/sc-002.jpg"
     },
     {
       "id": "sc-003",
@@ -1758,7 +1977,8 @@
       "full": "/static/images/catalogue/full/sc-003.jpg",
       "width": 1400,
       "height": 935,
-      "category": "Scorpions"
+      "category": "Scorpions",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/sc-003.jpg"
     },
     {
       "id": "sc-004",
@@ -1766,7 +1986,8 @@
       "full": "/static/images/catalogue/full/sc-004.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Scorpions"
+      "category": "Scorpions",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/sc-004.jpg"
     },
     {
       "id": "ot-001",
@@ -1774,7 +1995,8 @@
       "full": "/static/images/catalogue/full/ot-001.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Other"
+      "category": "Other",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/ot-001.jpg"
     },
     {
       "id": "ot-011",
@@ -1782,7 +2004,8 @@
       "full": "/static/images/catalogue/full/ot-011.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Other"
+      "category": "Other",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/ot-011.jpg"
     },
     {
       "id": "ot-012",
@@ -1790,7 +2013,8 @@
       "full": "/static/images/catalogue/full/ot-012.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Other"
+      "category": "Other",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/ot-012.jpg"
     },
     {
       "id": "a-010",
@@ -1798,7 +2022,8 @@
       "full": "/static/images/catalogue/full/a-010.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Ants"
+      "category": "Ants",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/a-010.jpg"
     },
     {
       "id": "a-011",
@@ -1806,7 +2031,8 @@
       "full": "/static/images/catalogue/full/a-011.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Ants"
+      "category": "Ants",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/a-011.jpg"
     },
     {
       "id": "a-012",
@@ -1814,7 +2040,8 @@
       "full": "/static/images/catalogue/full/a-012.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Ants"
+      "category": "Ants",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/a-012.jpg"
     },
     {
       "id": "a-013",
@@ -1822,7 +2049,8 @@
       "full": "/static/images/catalogue/full/a-013.jpg",
       "width": 1400,
       "height": 934,
-      "category": "Ants"
+      "category": "Ants",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/a-013.jpg"
     },
     {
       "id": "a-014",
@@ -1830,7 +2058,8 @@
       "full": "/static/images/catalogue/full/a-014.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Ants"
+      "category": "Ants",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/a-014.jpg"
     },
     {
       "id": "a-015",
@@ -1838,7 +2067,8 @@
       "full": "/static/images/catalogue/full/a-015.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Ants"
+      "category": "Ants",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/a-015.jpg"
     },
     {
       "id": "a-016",
@@ -1846,7 +2076,8 @@
       "full": "/static/images/catalogue/full/a-016.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Ants"
+      "category": "Ants",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/a-016.jpg"
     },
     {
       "id": "a-017",
@@ -1854,7 +2085,8 @@
       "full": "/static/images/catalogue/full/a-017.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Ants"
+      "category": "Ants",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/a-017.jpg"
     },
     {
       "id": "a-018",
@@ -1862,7 +2094,8 @@
       "full": "/static/images/catalogue/full/a-018.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Ants"
+      "category": "Ants",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/a-018.jpg"
     },
     {
       "id": "a-019",
@@ -1870,7 +2103,8 @@
       "full": "/static/images/catalogue/full/a-019.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Ants"
+      "category": "Ants",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/a-019.jpg"
     },
     {
       "id": "a-020",
@@ -1878,7 +2112,8 @@
       "full": "/static/images/catalogue/full/a-020.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Ants"
+      "category": "Ants",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/a-020.jpg"
     },
     {
       "id": "a-021",
@@ -1886,7 +2121,8 @@
       "full": "/static/images/catalogue/full/a-021.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Ants"
+      "category": "Ants",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/a-021.jpg"
     },
     {
       "id": "a-022",
@@ -1894,7 +2130,8 @@
       "full": "/static/images/catalogue/full/a-022.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Ants"
+      "category": "Ants",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/a-022.jpg"
     },
     {
       "id": "a-023",
@@ -1902,7 +2139,8 @@
       "full": "/static/images/catalogue/full/a-023.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Ants"
+      "category": "Ants",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/a-023.jpg"
     },
     {
       "id": "a-024",
@@ -1910,7 +2148,8 @@
       "full": "/static/images/catalogue/full/a-024.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Ants"
+      "category": "Ants",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/a-024.jpg"
     },
     {
       "id": "be-017",
@@ -1918,7 +2157,8 @@
       "full": "/static/images/catalogue/full/be-017.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Bees"
+      "category": "Bees",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/be-017.jpg"
     },
     {
       "id": "be-018",
@@ -1926,7 +2166,8 @@
       "full": "/static/images/catalogue/full/be-018.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Bees"
+      "category": "Bees",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/be-018.jpg"
     },
     {
       "id": "be-019",
@@ -1934,7 +2175,8 @@
       "full": "/static/images/catalogue/full/be-019.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Bees"
+      "category": "Bees",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/be-019.jpg"
     },
     {
       "id": "be-020",
@@ -1942,7 +2184,8 @@
       "full": "/static/images/catalogue/full/be-020.jpg",
       "width": 1400,
       "height": 934,
-      "category": "Bees"
+      "category": "Bees",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/be-020.jpg"
     },
     {
       "id": "be-021",
@@ -1950,7 +2193,8 @@
       "full": "/static/images/catalogue/full/be-021.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Bees"
+      "category": "Bees",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/be-021.jpg"
     },
     {
       "id": "be-022",
@@ -1958,7 +2202,8 @@
       "full": "/static/images/catalogue/full/be-022.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Bees"
+      "category": "Bees",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/be-022.jpg"
     },
     {
       "id": "be-023",
@@ -1966,7 +2211,8 @@
       "full": "/static/images/catalogue/full/be-023.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Bees"
+      "category": "Bees",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/be-023.jpg"
     },
     {
       "id": "be-024",
@@ -1974,7 +2220,8 @@
       "full": "/static/images/catalogue/full/be-024.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Bees"
+      "category": "Bees",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/be-024.jpg"
     },
     {
       "id": "be-025",
@@ -1982,7 +2229,8 @@
       "full": "/static/images/catalogue/full/be-025.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Bees"
+      "category": "Bees",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/be-025.jpg"
     },
     {
       "id": "be-026",
@@ -1990,7 +2238,8 @@
       "full": "/static/images/catalogue/full/be-026.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Bees"
+      "category": "Bees",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/be-026.jpg"
     },
     {
       "id": "be-027",
@@ -1998,7 +2247,8 @@
       "full": "/static/images/catalogue/full/be-027.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Bees"
+      "category": "Bees",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/be-027.jpg"
     },
     {
       "id": "be-028",
@@ -2006,7 +2256,8 @@
       "full": "/static/images/catalogue/full/be-028.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Bees"
+      "category": "Bees",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/be-028.jpg"
     },
     {
       "id": "be-029",
@@ -2014,7 +2265,8 @@
       "full": "/static/images/catalogue/full/be-029.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Bees"
+      "category": "Bees",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/be-029.jpg"
     },
     {
       "id": "be-030",
@@ -2022,7 +2274,8 @@
       "full": "/static/images/catalogue/full/be-030.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Bees"
+      "category": "Bees",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/be-030.jpg"
     },
     {
       "id": "be-031",
@@ -2030,7 +2283,8 @@
       "full": "/static/images/catalogue/full/be-031.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Bees"
+      "category": "Bees",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/be-031.jpg"
     },
     {
       "id": "be-032",
@@ -2038,7 +2292,8 @@
       "full": "/static/images/catalogue/full/be-032.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Bees"
+      "category": "Bees",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/be-032.jpg"
     },
     {
       "id": "be-033",
@@ -2046,7 +2301,8 @@
       "full": "/static/images/catalogue/full/be-033.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Bees"
+      "category": "Bees",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/be-033.jpg"
     },
     {
       "id": "be-034",
@@ -2054,7 +2310,8 @@
       "full": "/static/images/catalogue/full/be-034.jpg",
       "width": 933,
       "height": 1400,
-      "category": "Bees"
+      "category": "Bees",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/be-034.jpg"
     },
     {
       "id": "be-035",
@@ -2062,7 +2319,8 @@
       "full": "/static/images/catalogue/full/be-035.jpg",
       "width": 1400,
       "height": 935,
-      "category": "Bees"
+      "category": "Bees",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/be-035.jpg"
     },
     {
       "id": "dr-008",
@@ -2070,7 +2328,8 @@
       "full": "/static/images/catalogue/full/dr-008.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Dragonflies"
+      "category": "Dragonflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/dr-008.jpg"
     },
     {
       "id": "dr-009",
@@ -2078,7 +2337,8 @@
       "full": "/static/images/catalogue/full/dr-009.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Dragonflies"
+      "category": "Dragonflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/dr-009.jpg"
     },
     {
       "id": "dr-010",
@@ -2086,7 +2346,8 @@
       "full": "/static/images/catalogue/full/dr-010.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Dragonflies"
+      "category": "Dragonflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/dr-010.jpg"
     },
     {
       "id": "dr-011",
@@ -2094,7 +2355,8 @@
       "full": "/static/images/catalogue/full/dr-011.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Dragonflies"
+      "category": "Dragonflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/dr-011.jpg"
     },
     {
       "id": "dr-012",
@@ -2102,7 +2364,8 @@
       "full": "/static/images/catalogue/full/dr-012.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Dragonflies"
+      "category": "Dragonflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/dr-012.jpg"
     },
     {
       "id": "dr-013",
@@ -2110,7 +2373,8 @@
       "full": "/static/images/catalogue/full/dr-013.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Dragonflies"
+      "category": "Dragonflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/dr-013.jpg"
     },
     {
       "id": "dr-014",
@@ -2118,7 +2382,8 @@
       "full": "/static/images/catalogue/full/dr-014.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Dragonflies"
+      "category": "Dragonflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/dr-014.jpg"
     },
     {
       "id": "dr-015",
@@ -2126,7 +2391,8 @@
       "full": "/static/images/catalogue/full/dr-015.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Dragonflies"
+      "category": "Dragonflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/dr-015.jpg"
     },
     {
       "id": "mo-017",
@@ -2134,7 +2400,8 @@
       "full": "/static/images/catalogue/full/mo-017.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-017.jpg"
     },
     {
       "id": "mo-018",
@@ -2142,7 +2409,8 @@
       "full": "/static/images/catalogue/full/mo-018.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-018.jpg"
     },
     {
       "id": "mo-019",
@@ -2150,7 +2418,8 @@
       "full": "/static/images/catalogue/full/mo-019.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-019.jpg"
     },
     {
       "id": "mo-020",
@@ -2158,7 +2427,8 @@
       "full": "/static/images/catalogue/full/mo-020.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-020.jpg"
     },
     {
       "id": "mo-021",
@@ -2166,7 +2436,8 @@
       "full": "/static/images/catalogue/full/mo-021.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-021.jpg"
     },
     {
       "id": "mo-022",
@@ -2174,7 +2445,8 @@
       "full": "/static/images/catalogue/full/mo-022.jpg",
       "width": 933,
       "height": 1400,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-022.jpg"
     },
     {
       "id": "mo-023",
@@ -2182,7 +2454,8 @@
       "full": "/static/images/catalogue/full/mo-023.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-023.jpg"
     },
     {
       "id": "mo-024",
@@ -2190,7 +2463,8 @@
       "full": "/static/images/catalogue/full/mo-024.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-024.jpg"
     },
     {
       "id": "mo-025",
@@ -2198,7 +2472,8 @@
       "full": "/static/images/catalogue/full/mo-025.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-025.jpg"
     },
     {
       "id": "mo-026",
@@ -2206,7 +2481,8 @@
       "full": "/static/images/catalogue/full/mo-026.jpg",
       "width": 1400,
       "height": 935,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-026.jpg"
     },
     {
       "id": "mo-027",
@@ -2214,7 +2490,8 @@
       "full": "/static/images/catalogue/full/mo-027.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-027.jpg"
     },
     {
       "id": "mo-028",
@@ -2222,7 +2499,8 @@
       "full": "/static/images/catalogue/full/mo-028.jpg",
       "width": 1400,
       "height": 935,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-028.jpg"
     },
     {
       "id": "mo-029",
@@ -2230,7 +2508,8 @@
       "full": "/static/images/catalogue/full/mo-029.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-029.jpg"
     },
     {
       "id": "mo-030",
@@ -2238,7 +2517,8 @@
       "full": "/static/images/catalogue/full/mo-030.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-030.jpg"
     },
     {
       "id": "mo-031",
@@ -2246,7 +2526,8 @@
       "full": "/static/images/catalogue/full/mo-031.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-031.jpg"
     },
     {
       "id": "mo-032",
@@ -2254,7 +2535,8 @@
       "full": "/static/images/catalogue/full/mo-032.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-032.jpg"
     },
     {
       "id": "mo-033",
@@ -2262,7 +2544,8 @@
       "full": "/static/images/catalogue/full/mo-033.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-033.jpg"
     },
     {
       "id": "mo-034",
@@ -2270,7 +2553,8 @@
       "full": "/static/images/catalogue/full/mo-034.jpg",
       "width": 1400,
       "height": 934,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-034.jpg"
     },
     {
       "id": "mo-035",
@@ -2278,7 +2562,8 @@
       "full": "/static/images/catalogue/full/mo-035.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-035.jpg"
     },
     {
       "id": "mo-036",
@@ -2286,7 +2571,8 @@
       "full": "/static/images/catalogue/full/mo-036.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-036.jpg"
     },
     {
       "id": "mo-037",
@@ -2294,7 +2580,8 @@
       "full": "/static/images/catalogue/full/mo-037.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-037.jpg"
     },
     {
       "id": "mo-038",
@@ -2302,7 +2589,8 @@
       "full": "/static/images/catalogue/full/mo-038.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-038.jpg"
     },
     {
       "id": "mo-039",
@@ -2310,7 +2598,8 @@
       "full": "/static/images/catalogue/full/mo-039.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-039.jpg"
     },
     {
       "id": "mo-040",
@@ -2318,7 +2607,8 @@
       "full": "/static/images/catalogue/full/mo-040.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-040.jpg"
     },
     {
       "id": "mo-041",
@@ -2326,7 +2616,8 @@
       "full": "/static/images/catalogue/full/mo-041.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-041.jpg"
     },
     {
       "id": "mo-042",
@@ -2334,7 +2625,8 @@
       "full": "/static/images/catalogue/full/mo-042.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-042.jpg"
     },
     {
       "id": "mo-043",
@@ -2342,7 +2634,8 @@
       "full": "/static/images/catalogue/full/mo-043.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-043.jpg"
     },
     {
       "id": "mo-044",
@@ -2350,7 +2643,8 @@
       "full": "/static/images/catalogue/full/mo-044.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-044.jpg"
     },
     {
       "id": "mo-045",
@@ -2358,7 +2652,8 @@
       "full": "/static/images/catalogue/full/mo-045.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-045.jpg"
     },
     {
       "id": "mo-046",
@@ -2366,7 +2661,8 @@
       "full": "/static/images/catalogue/full/mo-046.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-046.jpg"
     },
     {
       "id": "mo-047",
@@ -2374,7 +2670,8 @@
       "full": "/static/images/catalogue/full/mo-047.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-047.jpg"
     },
     {
       "id": "mo-048",
@@ -2382,7 +2679,8 @@
       "full": "/static/images/catalogue/full/mo-048.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-048.jpg"
     },
     {
       "id": "mo-049",
@@ -2390,7 +2688,8 @@
       "full": "/static/images/catalogue/full/mo-049.jpg",
       "width": 1400,
       "height": 935,
-      "category": "Moths"
+      "category": "Moths",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/mo-049.jpg"
     },
     {
       "id": "n-004",
@@ -2398,7 +2697,8 @@
       "full": "/static/images/catalogue/full/n-004.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Neuroptera"
+      "category": "Neuroptera",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/n-004.jpg"
     },
     {
       "id": "n-005",
@@ -2406,7 +2706,8 @@
       "full": "/static/images/catalogue/full/n-005.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Neuroptera"
+      "category": "Neuroptera",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/n-005.jpg"
     },
     {
       "id": "n-006",
@@ -2414,7 +2715,8 @@
       "full": "/static/images/catalogue/full/n-006.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Neuroptera"
+      "category": "Neuroptera",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/n-006.jpg"
     },
     {
       "id": "n-007",
@@ -2422,7 +2724,8 @@
       "full": "/static/images/catalogue/full/n-007.jpg",
       "width": 935,
       "height": 1400,
-      "category": "Neuroptera"
+      "category": "Neuroptera",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/n-007.jpg"
     },
     {
       "id": "st-001",
@@ -2430,7 +2733,8 @@
       "full": "/static/images/catalogue/full/st-001.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Stick Insects"
+      "category": "Stick Insects",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/st-001.jpg"
     },
     {
       "id": "st-002",
@@ -2438,7 +2742,8 @@
       "full": "/static/images/catalogue/full/st-002.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Stick Insects"
+      "category": "Stick Insects",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/st-002.jpg"
     },
     {
       "id": "st-003",
@@ -2446,7 +2751,8 @@
       "full": "/static/images/catalogue/full/st-003.jpg",
       "width": 1400,
       "height": 935,
-      "category": "Stick Insects"
+      "category": "Stick Insects",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/st-003.jpg"
     },
     {
       "id": "st-004",
@@ -2454,7 +2760,8 @@
       "full": "/static/images/catalogue/full/st-004.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Stick Insects"
+      "category": "Stick Insects",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/st-004.jpg"
     },
     {
       "id": "f-065",
@@ -2462,7 +2769,8 @@
       "full": "/static/images/catalogue/full/f-065.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-065.jpg"
     },
     {
       "id": "f-066",
@@ -2470,7 +2778,8 @@
       "full": "/static/images/catalogue/full/f-066.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-066.jpg"
     },
     {
       "id": "f-067",
@@ -2478,7 +2787,8 @@
       "full": "/static/images/catalogue/full/f-067.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-067.jpg"
     },
     {
       "id": "f-068",
@@ -2486,7 +2796,8 @@
       "full": "/static/images/catalogue/full/f-068.jpg",
       "width": 1300,
       "height": 866,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-068.jpg"
     },
     {
       "id": "f-069",
@@ -2494,7 +2805,8 @@
       "full": "/static/images/catalogue/full/f-069.jpg",
       "width": 1200,
       "height": 800,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-069.jpg"
     },
     {
       "id": "f-070",
@@ -2502,7 +2814,8 @@
       "full": "/static/images/catalogue/full/f-070.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-070.jpg"
     },
     {
       "id": "f-071",
@@ -2510,7 +2823,8 @@
       "full": "/static/images/catalogue/full/f-071.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-071.jpg"
     },
     {
       "id": "f-072",
@@ -2518,7 +2832,8 @@
       "full": "/static/images/catalogue/full/f-072.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-072.jpg"
     },
     {
       "id": "f-073",
@@ -2526,7 +2841,8 @@
       "full": "/static/images/catalogue/full/f-073.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-073.jpg"
     },
     {
       "id": "f-074",
@@ -2534,7 +2850,8 @@
       "full": "/static/images/catalogue/full/f-074.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-074.jpg"
     },
     {
       "id": "f-075",
@@ -2542,7 +2859,8 @@
       "full": "/static/images/catalogue/full/f-075.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-075.jpg"
     },
     {
       "id": "f-076",
@@ -2550,7 +2868,8 @@
       "full": "/static/images/catalogue/full/f-076.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-076.jpg"
     },
     {
       "id": "f-077",
@@ -2558,7 +2877,8 @@
       "full": "/static/images/catalogue/full/f-077.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-077.jpg"
     },
     {
       "id": "f-078",
@@ -2566,7 +2886,8 @@
       "full": "/static/images/catalogue/full/f-078.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-078.jpg"
     },
     {
       "id": "f-079",
@@ -2574,7 +2895,8 @@
       "full": "/static/images/catalogue/full/f-079.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-079.jpg"
     },
     {
       "id": "f-080",
@@ -2582,7 +2904,8 @@
       "full": "/static/images/catalogue/full/f-080.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-080.jpg"
     },
     {
       "id": "f-081",
@@ -2590,7 +2913,8 @@
       "full": "/static/images/catalogue/full/f-081.jpg",
       "width": 1400,
       "height": 935,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-081.jpg"
     },
     {
       "id": "f-082",
@@ -2598,7 +2922,8 @@
       "full": "/static/images/catalogue/full/f-082.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-082.jpg"
     },
     {
       "id": "f-083",
@@ -2606,7 +2931,8 @@
       "full": "/static/images/catalogue/full/f-083.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-083.jpg"
     },
     {
       "id": "f-084",
@@ -2614,7 +2940,8 @@
       "full": "/static/images/catalogue/full/f-084.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-084.jpg"
     },
     {
       "id": "f-085",
@@ -2622,7 +2949,8 @@
       "full": "/static/images/catalogue/full/f-085.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-085.jpg"
     },
     {
       "id": "f-086",
@@ -2630,7 +2958,8 @@
       "full": "/static/images/catalogue/full/f-086.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-086.jpg"
     },
     {
       "id": "f-087",
@@ -2638,7 +2967,8 @@
       "full": "/static/images/catalogue/full/f-087.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-087.jpg"
     },
     {
       "id": "f-088",
@@ -2646,7 +2976,8 @@
       "full": "/static/images/catalogue/full/f-088.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-088.jpg"
     },
     {
       "id": "f-089",
@@ -2654,7 +2985,8 @@
       "full": "/static/images/catalogue/full/f-089.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-089.jpg"
     },
     {
       "id": "f-090",
@@ -2662,7 +2994,8 @@
       "full": "/static/images/catalogue/full/f-090.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-090.jpg"
     },
     {
       "id": "f-091",
@@ -2670,7 +3003,8 @@
       "full": "/static/images/catalogue/full/f-091.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-091.jpg"
     },
     {
       "id": "f-092",
@@ -2678,7 +3012,8 @@
       "full": "/static/images/catalogue/full/f-092.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-092.jpg"
     },
     {
       "id": "f-093",
@@ -2686,7 +3021,8 @@
       "full": "/static/images/catalogue/full/f-093.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-093.jpg"
     },
     {
       "id": "f-094",
@@ -2694,7 +3030,8 @@
       "full": "/static/images/catalogue/full/f-094.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-094.jpg"
     },
     {
       "id": "f-095",
@@ -2702,7 +3039,8 @@
       "full": "/static/images/catalogue/full/f-095.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-095.jpg"
     },
     {
       "id": "f-096",
@@ -2710,7 +3048,8 @@
       "full": "/static/images/catalogue/full/f-096.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-096.jpg"
     },
     {
       "id": "f-097",
@@ -2718,7 +3057,8 @@
       "full": "/static/images/catalogue/full/f-097.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-097.jpg"
     },
     {
       "id": "f-098",
@@ -2726,7 +3066,8 @@
       "full": "/static/images/catalogue/full/f-098.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-098.jpg"
     },
     {
       "id": "f-099",
@@ -2734,7 +3075,8 @@
       "full": "/static/images/catalogue/full/f-099.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-099.jpg"
     },
     {
       "id": "f-100",
@@ -2742,7 +3084,8 @@
       "full": "/static/images/catalogue/full/f-100.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-100.jpg"
     },
     {
       "id": "f-101",
@@ -2750,7 +3093,8 @@
       "full": "/static/images/catalogue/full/f-101.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-101.jpg"
     },
     {
       "id": "f-102",
@@ -2758,7 +3102,8 @@
       "full": "/static/images/catalogue/full/f-102.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-102.jpg"
     },
     {
       "id": "f-103",
@@ -2766,7 +3111,8 @@
       "full": "/static/images/catalogue/full/f-103.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-103.jpg"
     },
     {
       "id": "f-104",
@@ -2774,7 +3120,8 @@
       "full": "/static/images/catalogue/full/f-104.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-104.jpg"
     },
     {
       "id": "f-105",
@@ -2782,7 +3129,8 @@
       "full": "/static/images/catalogue/full/f-105.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-105.jpg"
     },
     {
       "id": "f-106",
@@ -2790,7 +3138,8 @@
       "full": "/static/images/catalogue/full/f-106.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-106.jpg"
     },
     {
       "id": "f-107",
@@ -2798,7 +3147,8 @@
       "full": "/static/images/catalogue/full/f-107.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-107.jpg"
     },
     {
       "id": "f-108",
@@ -2806,7 +3156,8 @@
       "full": "/static/images/catalogue/full/f-108.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-108.jpg"
     },
     {
       "id": "f-109",
@@ -2814,7 +3165,8 @@
       "full": "/static/images/catalogue/full/f-109.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-109.jpg"
     },
     {
       "id": "f-110",
@@ -2822,7 +3174,8 @@
       "full": "/static/images/catalogue/full/f-110.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-110.jpg"
     },
     {
       "id": "f-111",
@@ -2830,7 +3183,8 @@
       "full": "/static/images/catalogue/full/f-111.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-111.jpg"
     },
     {
       "id": "f-112",
@@ -2838,7 +3192,8 @@
       "full": "/static/images/catalogue/full/f-112.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-112.jpg"
     },
     {
       "id": "f-113",
@@ -2846,7 +3201,8 @@
       "full": "/static/images/catalogue/full/f-113.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-113.jpg"
     },
     {
       "id": "f-114",
@@ -2854,7 +3210,8 @@
       "full": "/static/images/catalogue/full/f-114.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-114.jpg"
     },
     {
       "id": "f-115",
@@ -2862,7 +3219,8 @@
       "full": "/static/images/catalogue/full/f-115.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-115.jpg"
     },
     {
       "id": "f-116",
@@ -2870,7 +3228,8 @@
       "full": "/static/images/catalogue/full/f-116.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-116.jpg"
     },
     {
       "id": "f-117",
@@ -2878,7 +3237,8 @@
       "full": "/static/images/catalogue/full/f-117.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-117.jpg"
     },
     {
       "id": "f-118",
@@ -2886,7 +3246,8 @@
       "full": "/static/images/catalogue/full/f-118.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-118.jpg"
     },
     {
       "id": "f-119",
@@ -2894,7 +3255,8 @@
       "full": "/static/images/catalogue/full/f-119.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-119.jpg"
     },
     {
       "id": "f-120",
@@ -2902,7 +3264,8 @@
       "full": "/static/images/catalogue/full/f-120.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-120.jpg"
     },
     {
       "id": "f-121",
@@ -2910,7 +3273,8 @@
       "full": "/static/images/catalogue/full/f-121.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-121.jpg"
     },
     {
       "id": "f-122",
@@ -2918,7 +3282,8 @@
       "full": "/static/images/catalogue/full/f-122.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-122.jpg"
     },
     {
       "id": "f-123",
@@ -2926,7 +3291,8 @@
       "full": "/static/images/catalogue/full/f-123.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-123.jpg"
     },
     {
       "id": "f-124",
@@ -2934,7 +3300,8 @@
       "full": "/static/images/catalogue/full/f-124.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-124.jpg"
     },
     {
       "id": "f-125",
@@ -2942,7 +3309,8 @@
       "full": "/static/images/catalogue/full/f-125.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-125.jpg"
     },
     {
       "id": "f-126",
@@ -2950,7 +3318,8 @@
       "full": "/static/images/catalogue/full/f-126.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-126.jpg"
     },
     {
       "id": "f-127",
@@ -2958,7 +3327,8 @@
       "full": "/static/images/catalogue/full/f-127.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-127.jpg"
     },
     {
       "id": "f-128",
@@ -2966,7 +3336,8 @@
       "full": "/static/images/catalogue/full/f-128.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-128.jpg"
     },
     {
       "id": "f-129",
@@ -2974,7 +3345,8 @@
       "full": "/static/images/catalogue/full/f-129.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-129.jpg"
     },
     {
       "id": "f-130",
@@ -2982,7 +3354,8 @@
       "full": "/static/images/catalogue/full/f-130.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-130.jpg"
     },
     {
       "id": "f-131",
@@ -2990,7 +3363,8 @@
       "full": "/static/images/catalogue/full/f-131.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-131.jpg"
     },
     {
       "id": "f-132",
@@ -2998,7 +3372,8 @@
       "full": "/static/images/catalogue/full/f-132.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-132.jpg"
     },
     {
       "id": "f-133",
@@ -3006,7 +3381,8 @@
       "full": "/static/images/catalogue/full/f-133.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-133.jpg"
     },
     {
       "id": "f-134",
@@ -3014,7 +3390,8 @@
       "full": "/static/images/catalogue/full/f-134.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-134.jpg"
     },
     {
       "id": "f-135",
@@ -3022,7 +3399,8 @@
       "full": "/static/images/catalogue/full/f-135.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-135.jpg"
     },
     {
       "id": "f-136",
@@ -3030,7 +3408,8 @@
       "full": "/static/images/catalogue/full/f-136.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-136.jpg"
     },
     {
       "id": "f-137",
@@ -3038,7 +3417,8 @@
       "full": "/static/images/catalogue/full/f-137.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-137.jpg"
     },
     {
       "id": "f-138",
@@ -3046,7 +3426,8 @@
       "full": "/static/images/catalogue/full/f-138.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-138.jpg"
     },
     {
       "id": "f-139",
@@ -3054,7 +3435,8 @@
       "full": "/static/images/catalogue/full/f-139.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-139.jpg"
     },
     {
       "id": "f-140",
@@ -3062,7 +3444,8 @@
       "full": "/static/images/catalogue/full/f-140.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-140.jpg"
     },
     {
       "id": "f-141",
@@ -3070,7 +3453,8 @@
       "full": "/static/images/catalogue/full/f-141.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-141.jpg"
     },
     {
       "id": "f-142",
@@ -3078,7 +3462,8 @@
       "full": "/static/images/catalogue/full/f-142.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-142.jpg"
     },
     {
       "id": "f-143",
@@ -3086,7 +3471,8 @@
       "full": "/static/images/catalogue/full/f-143.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-143.jpg"
     },
     {
       "id": "f-144",
@@ -3094,7 +3480,8 @@
       "full": "/static/images/catalogue/full/f-144.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-144.jpg"
     },
     {
       "id": "f-145",
@@ -3102,7 +3489,8 @@
       "full": "/static/images/catalogue/full/f-145.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-145.jpg"
     },
     {
       "id": "f-146",
@@ -3110,7 +3498,8 @@
       "full": "/static/images/catalogue/full/f-146.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-146.jpg"
     },
     {
       "id": "f-147",
@@ -3118,7 +3507,8 @@
       "full": "/static/images/catalogue/full/f-147.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-147.jpg"
     },
     {
       "id": "f-148",
@@ -3126,7 +3516,8 @@
       "full": "/static/images/catalogue/full/f-148.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-148.jpg"
     },
     {
       "id": "f-149",
@@ -3134,7 +3525,8 @@
       "full": "/static/images/catalogue/full/f-149.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-149.jpg"
     },
     {
       "id": "f-150",
@@ -3142,7 +3534,8 @@
       "full": "/static/images/catalogue/full/f-150.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-150.jpg"
     },
     {
       "id": "f-151",
@@ -3150,7 +3543,8 @@
       "full": "/static/images/catalogue/full/f-151.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-151.jpg"
     },
     {
       "id": "f-152",
@@ -3158,7 +3552,8 @@
       "full": "/static/images/catalogue/full/f-152.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-152.jpg"
     },
     {
       "id": "f-153",
@@ -3166,7 +3561,8 @@
       "full": "/static/images/catalogue/full/f-153.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-153.jpg"
     },
     {
       "id": "f-154",
@@ -3174,7 +3570,8 @@
       "full": "/static/images/catalogue/full/f-154.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-154.jpg"
     },
     {
       "id": "f-155",
@@ -3182,7 +3579,8 @@
       "full": "/static/images/catalogue/full/f-155.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-155.jpg"
     },
     {
       "id": "f-156",
@@ -3190,7 +3588,8 @@
       "full": "/static/images/catalogue/full/f-156.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-156.jpg"
     },
     {
       "id": "f-157",
@@ -3198,7 +3597,8 @@
       "full": "/static/images/catalogue/full/f-157.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-157.jpg"
     },
     {
       "id": "f-158",
@@ -3206,7 +3606,8 @@
       "full": "/static/images/catalogue/full/f-158.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-158.jpg"
     },
     {
       "id": "f-159",
@@ -3214,7 +3615,8 @@
       "full": "/static/images/catalogue/full/f-159.jpg",
       "width": 933,
       "height": 1400,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-159.jpg"
     },
     {
       "id": "f-160",
@@ -3222,7 +3624,8 @@
       "full": "/static/images/catalogue/full/f-160.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-160.jpg"
     },
     {
       "id": "f-161",
@@ -3230,7 +3633,8 @@
       "full": "/static/images/catalogue/full/f-161.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-161.jpg"
     },
     {
       "id": "f-162",
@@ -3238,7 +3642,8 @@
       "full": "/static/images/catalogue/full/f-162.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-162.jpg"
     },
     {
       "id": "f-163",
@@ -3246,7 +3651,8 @@
       "full": "/static/images/catalogue/full/f-163.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-163.jpg"
     },
     {
       "id": "f-164",
@@ -3254,7 +3660,8 @@
       "full": "/static/images/catalogue/full/f-164.jpg",
       "width": 933,
       "height": 1400,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-164.jpg"
     },
     {
       "id": "f-165",
@@ -3262,7 +3669,8 @@
       "full": "/static/images/catalogue/full/f-165.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-165.jpg"
     },
     {
       "id": "f-166",
@@ -3270,7 +3678,8 @@
       "full": "/static/images/catalogue/full/f-166.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-166.jpg"
     },
     {
       "id": "f-167",
@@ -3278,7 +3687,8 @@
       "full": "/static/images/catalogue/full/f-167.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-167.jpg"
     },
     {
       "id": "f-168",
@@ -3286,7 +3696,8 @@
       "full": "/static/images/catalogue/full/f-168.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-168.jpg"
     },
     {
       "id": "f-169",
@@ -3294,7 +3705,8 @@
       "full": "/static/images/catalogue/full/f-169.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-169.jpg"
     },
     {
       "id": "f-170",
@@ -3302,7 +3714,8 @@
       "full": "/static/images/catalogue/full/f-170.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-170.jpg"
     },
     {
       "id": "f-171",
@@ -3310,7 +3723,8 @@
       "full": "/static/images/catalogue/full/f-171.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-171.jpg"
     },
     {
       "id": "f-172",
@@ -3318,7 +3732,8 @@
       "full": "/static/images/catalogue/full/f-172.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-172.jpg"
     },
     {
       "id": "f-173",
@@ -3326,7 +3741,8 @@
       "full": "/static/images/catalogue/full/f-173.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-173.jpg"
     },
     {
       "id": "f-174",
@@ -3334,7 +3750,8 @@
       "full": "/static/images/catalogue/full/f-174.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-174.jpg"
     },
     {
       "id": "f-175",
@@ -3342,7 +3759,8 @@
       "full": "/static/images/catalogue/full/f-175.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-175.jpg"
     },
     {
       "id": "f-176",
@@ -3350,7 +3768,8 @@
       "full": "/static/images/catalogue/full/f-176.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-176.jpg"
     },
     {
       "id": "f-177",
@@ -3358,7 +3777,8 @@
       "full": "/static/images/catalogue/full/f-177.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-177.jpg"
     },
     {
       "id": "f-178",
@@ -3366,7 +3786,8 @@
       "full": "/static/images/catalogue/full/f-178.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-178.jpg"
     },
     {
       "id": "f-179",
@@ -3374,7 +3795,8 @@
       "full": "/static/images/catalogue/full/f-179.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-179.jpg"
     },
     {
       "id": "f-180",
@@ -3382,7 +3804,8 @@
       "full": "/static/images/catalogue/full/f-180.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-180.jpg"
     },
     {
       "id": "f-181",
@@ -3390,7 +3813,8 @@
       "full": "/static/images/catalogue/full/f-181.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-181.jpg"
     },
     {
       "id": "f-182",
@@ -3398,7 +3822,8 @@
       "full": "/static/images/catalogue/full/f-182.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-182.jpg"
     },
     {
       "id": "f-183",
@@ -3406,7 +3831,8 @@
       "full": "/static/images/catalogue/full/f-183.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-183.jpg"
     },
     {
       "id": "f-184",
@@ -3414,7 +3840,8 @@
       "full": "/static/images/catalogue/full/f-184.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-184.jpg"
     },
     {
       "id": "f-185",
@@ -3422,7 +3849,8 @@
       "full": "/static/images/catalogue/full/f-185.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-185.jpg"
     },
     {
       "id": "f-186",
@@ -3430,7 +3858,8 @@
       "full": "/static/images/catalogue/full/f-186.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-186.jpg"
     },
     {
       "id": "f-187",
@@ -3438,7 +3867,8 @@
       "full": "/static/images/catalogue/full/f-187.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-187.jpg"
     },
     {
       "id": "f-188",
@@ -3446,7 +3876,8 @@
       "full": "/static/images/catalogue/full/f-188.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-188.jpg"
     },
     {
       "id": "f-189",
@@ -3454,7 +3885,8 @@
       "full": "/static/images/catalogue/full/f-189.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-189.jpg"
     },
     {
       "id": "f-190",
@@ -3462,7 +3894,8 @@
       "full": "/static/images/catalogue/full/f-190.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-190.jpg"
     },
     {
       "id": "f-191",
@@ -3470,7 +3903,8 @@
       "full": "/static/images/catalogue/full/f-191.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-191.jpg"
     },
     {
       "id": "f-192",
@@ -3478,7 +3912,8 @@
       "full": "/static/images/catalogue/full/f-192.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-192.jpg"
     },
     {
       "id": "f-193",
@@ -3486,7 +3921,8 @@
       "full": "/static/images/catalogue/full/f-193.jpg",
       "width": 1080,
       "height": 1080,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-193.jpg"
     },
     {
       "id": "f-194",
@@ -3494,7 +3930,8 @@
       "full": "/static/images/catalogue/full/f-194.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-194.jpg"
     },
     {
       "id": "f-195",
@@ -3502,7 +3939,8 @@
       "full": "/static/images/catalogue/full/f-195.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-195.jpg"
     },
     {
       "id": "f-196",
@@ -3510,7 +3948,8 @@
       "full": "/static/images/catalogue/full/f-196.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-196.jpg"
     },
     {
       "id": "f-197",
@@ -3518,7 +3957,8 @@
       "full": "/static/images/catalogue/full/f-197.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-197.jpg"
     },
     {
       "id": "f-198",
@@ -3526,7 +3966,8 @@
       "full": "/static/images/catalogue/full/f-198.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-198.jpg"
     },
     {
       "id": "f-199",
@@ -3534,7 +3975,8 @@
       "full": "/static/images/catalogue/full/f-199.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-199.jpg"
     },
     {
       "id": "f-200",
@@ -3542,7 +3984,8 @@
       "full": "/static/images/catalogue/full/f-200.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-200.jpg"
     },
     {
       "id": "f-201",
@@ -3550,7 +3993,8 @@
       "full": "/static/images/catalogue/full/f-201.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-201.jpg"
     },
     {
       "id": "f-202",
@@ -3558,7 +4002,8 @@
       "full": "/static/images/catalogue/full/f-202.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-202.jpg"
     },
     {
       "id": "f-203",
@@ -3566,7 +4011,8 @@
       "full": "/static/images/catalogue/full/f-203.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-203.jpg"
     },
     {
       "id": "f-204",
@@ -3574,7 +4020,8 @@
       "full": "/static/images/catalogue/full/f-204.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-204.jpg"
     },
     {
       "id": "f-205",
@@ -3582,7 +4029,8 @@
       "full": "/static/images/catalogue/full/f-205.jpg",
       "width": 1300,
       "height": 866,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-205.jpg"
     },
     {
       "id": "f-206",
@@ -3590,7 +4038,8 @@
       "full": "/static/images/catalogue/full/f-206.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-206.jpg"
     },
     {
       "id": "f-207",
@@ -3598,7 +4047,8 @@
       "full": "/static/images/catalogue/full/f-207.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-207.jpg"
     },
     {
       "id": "f-208",
@@ -3606,7 +4056,8 @@
       "full": "/static/images/catalogue/full/f-208.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-208.jpg"
     },
     {
       "id": "f-209",
@@ -3614,7 +4065,8 @@
       "full": "/static/images/catalogue/full/f-209.jpg",
       "width": 867,
       "height": 1300,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-209.jpg"
     },
     {
       "id": "f-210",
@@ -3622,7 +4074,8 @@
       "full": "/static/images/catalogue/full/f-210.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-210.jpg"
     },
     {
       "id": "f-211",
@@ -3630,7 +4083,8 @@
       "full": "/static/images/catalogue/full/f-211.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-211.jpg"
     },
     {
       "id": "f-212",
@@ -3638,7 +4092,8 @@
       "full": "/static/images/catalogue/full/f-212.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-212.jpg"
     },
     {
       "id": "f-213",
@@ -3646,7 +4101,8 @@
       "full": "/static/images/catalogue/full/f-213.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-213.jpg"
     },
     {
       "id": "f-214",
@@ -3654,7 +4110,8 @@
       "full": "/static/images/catalogue/full/f-214.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-214.jpg"
     },
     {
       "id": "f-215",
@@ -3662,7 +4119,8 @@
       "full": "/static/images/catalogue/full/f-215.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-215.jpg"
     },
     {
       "id": "f-216",
@@ -3670,7 +4128,8 @@
       "full": "/static/images/catalogue/full/f-216.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-216.jpg"
     },
     {
       "id": "f-217",
@@ -3678,7 +4137,8 @@
       "full": "/static/images/catalogue/full/f-217.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-217.jpg"
     },
     {
       "id": "f-218",
@@ -3686,7 +4146,8 @@
       "full": "/static/images/catalogue/full/f-218.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-218.jpg"
     },
     {
       "id": "f-219",
@@ -3694,7 +4155,8 @@
       "full": "/static/images/catalogue/full/f-219.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-219.jpg"
     },
     {
       "id": "f-220",
@@ -3702,7 +4164,8 @@
       "full": "/static/images/catalogue/full/f-220.jpg",
       "width": 1300,
       "height": 868,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-220.jpg"
     },
     {
       "id": "f-221",
@@ -3710,7 +4173,8 @@
       "full": "/static/images/catalogue/full/f-221.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-221.jpg"
     },
     {
       "id": "f-222",
@@ -3718,7 +4182,8 @@
       "full": "/static/images/catalogue/full/f-222.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-222.jpg"
     },
     {
       "id": "f-223",
@@ -3726,7 +4191,8 @@
       "full": "/static/images/catalogue/full/f-223.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-223.jpg"
     },
     {
       "id": "f-224",
@@ -3734,7 +4200,8 @@
       "full": "/static/images/catalogue/full/f-224.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-224.jpg"
     },
     {
       "id": "f-225",
@@ -3742,7 +4209,8 @@
       "full": "/static/images/catalogue/full/f-225.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-225.jpg"
     },
     {
       "id": "f-226",
@@ -3750,7 +4218,8 @@
       "full": "/static/images/catalogue/full/f-226.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-226.jpg"
     },
     {
       "id": "f-227",
@@ -3758,7 +4227,8 @@
       "full": "/static/images/catalogue/full/f-227.jpg",
       "width": 1300,
       "height": 866,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-227.jpg"
     },
     {
       "id": "f-228",
@@ -3766,7 +4236,8 @@
       "full": "/static/images/catalogue/full/f-228.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-228.jpg"
     },
     {
       "id": "f-229",
@@ -3774,7 +4245,8 @@
       "full": "/static/images/catalogue/full/f-229.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-229.jpg"
     },
     {
       "id": "f-230",
@@ -3782,7 +4254,8 @@
       "full": "/static/images/catalogue/full/f-230.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-230.jpg"
     },
     {
       "id": "f-231",
@@ -3790,7 +4263,8 @@
       "full": "/static/images/catalogue/full/f-231.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-231.jpg"
     },
     {
       "id": "f-232",
@@ -3798,7 +4272,8 @@
       "full": "/static/images/catalogue/full/f-232.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-232.jpg"
     },
     {
       "id": "f-233",
@@ -3806,7 +4281,8 @@
       "full": "/static/images/catalogue/full/f-233.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-233.jpg"
     },
     {
       "id": "f-234",
@@ -3814,7 +4290,8 @@
       "full": "/static/images/catalogue/full/f-234.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-234.jpg"
     },
     {
       "id": "f-235",
@@ -3822,7 +4299,8 @@
       "full": "/static/images/catalogue/full/f-235.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-235.jpg"
     },
     {
       "id": "f-236",
@@ -3830,7 +4308,8 @@
       "full": "/static/images/catalogue/full/f-236.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-236.jpg"
     },
     {
       "id": "f-237",
@@ -3838,7 +4317,8 @@
       "full": "/static/images/catalogue/full/f-237.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-237.jpg"
     },
     {
       "id": "f-238",
@@ -3846,7 +4326,8 @@
       "full": "/static/images/catalogue/full/f-238.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-238.jpg"
     },
     {
       "id": "f-239",
@@ -3854,7 +4335,8 @@
       "full": "/static/images/catalogue/full/f-239.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-239.jpg"
     },
     {
       "id": "f-240",
@@ -3862,7 +4344,8 @@
       "full": "/static/images/catalogue/full/f-240.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-240.jpg"
     },
     {
       "id": "f-241",
@@ -3870,7 +4353,8 @@
       "full": "/static/images/catalogue/full/f-241.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-241.jpg"
     },
     {
       "id": "f-242",
@@ -3878,7 +4362,8 @@
       "full": "/static/images/catalogue/full/f-242.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-242.jpg"
     },
     {
       "id": "f-243",
@@ -3886,7 +4371,8 @@
       "full": "/static/images/catalogue/full/f-243.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-243.jpg"
     },
     {
       "id": "f-244",
@@ -3894,7 +4380,8 @@
       "full": "/static/images/catalogue/full/f-244.jpg",
       "width": 1400,
       "height": 904,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-244.jpg"
     },
     {
       "id": "f-245",
@@ -3902,7 +4389,8 @@
       "full": "/static/images/catalogue/full/f-245.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-245.jpg"
     },
     {
       "id": "f-246",
@@ -3910,7 +4398,8 @@
       "full": "/static/images/catalogue/full/f-246.jpg",
       "width": 1300,
       "height": 867,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-246.jpg"
     },
     {
       "id": "f-247",
@@ -3918,7 +4407,8 @@
       "full": "/static/images/catalogue/full/f-247.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-247.jpg"
     },
     {
       "id": "f-248",
@@ -3926,7 +4416,8 @@
       "full": "/static/images/catalogue/full/f-248.jpg",
       "width": 537,
       "height": 650,
-      "category": "Flies"
+      "category": "Flies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/f-248.jpg"
     },
     {
       "id": "s-035",
@@ -3934,7 +4425,8 @@
       "full": "/static/images/catalogue/full/s-035.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-035.jpg"
     },
     {
       "id": "s-036",
@@ -3942,7 +4434,8 @@
       "full": "/static/images/catalogue/full/s-036.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-036.jpg"
     },
     {
       "id": "s-037",
@@ -3950,7 +4443,8 @@
       "full": "/static/images/catalogue/full/s-037.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-037.jpg"
     },
     {
       "id": "s-038",
@@ -3958,7 +4452,8 @@
       "full": "/static/images/catalogue/full/s-038.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-038.jpg"
     },
     {
       "id": "s-039",
@@ -3966,7 +4461,8 @@
       "full": "/static/images/catalogue/full/s-039.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-039.jpg"
     },
     {
       "id": "s-040",
@@ -3974,7 +4470,8 @@
       "full": "/static/images/catalogue/full/s-040.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-040.jpg"
     },
     {
       "id": "s-041",
@@ -3982,7 +4479,8 @@
       "full": "/static/images/catalogue/full/s-041.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-041.jpg"
     },
     {
       "id": "s-042",
@@ -3990,7 +4488,8 @@
       "full": "/static/images/catalogue/full/s-042.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-042.jpg"
     },
     {
       "id": "s-043",
@@ -3998,7 +4497,8 @@
       "full": "/static/images/catalogue/full/s-043.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-043.jpg"
     },
     {
       "id": "s-044",
@@ -4006,7 +4506,8 @@
       "full": "/static/images/catalogue/full/s-044.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-044.jpg"
     },
     {
       "id": "s-045",
@@ -4014,7 +4515,8 @@
       "full": "/static/images/catalogue/full/s-045.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-045.jpg"
     },
     {
       "id": "s-046",
@@ -4022,7 +4524,8 @@
       "full": "/static/images/catalogue/full/s-046.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-046.jpg"
     },
     {
       "id": "s-047",
@@ -4030,7 +4533,8 @@
       "full": "/static/images/catalogue/full/s-047.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-047.jpg"
     },
     {
       "id": "s-048",
@@ -4038,7 +4542,8 @@
       "full": "/static/images/catalogue/full/s-048.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-048.jpg"
     },
     {
       "id": "s-049",
@@ -4046,7 +4551,8 @@
       "full": "/static/images/catalogue/full/s-049.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-049.jpg"
     },
     {
       "id": "s-050",
@@ -4054,7 +4560,8 @@
       "full": "/static/images/catalogue/full/s-050.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-050.jpg"
     },
     {
       "id": "s-051",
@@ -4062,7 +4569,8 @@
       "full": "/static/images/catalogue/full/s-051.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-051.jpg"
     },
     {
       "id": "s-052",
@@ -4070,7 +4578,8 @@
       "full": "/static/images/catalogue/full/s-052.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-052.jpg"
     },
     {
       "id": "s-053",
@@ -4078,7 +4587,8 @@
       "full": "/static/images/catalogue/full/s-053.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-053.jpg"
     },
     {
       "id": "s-054",
@@ -4086,7 +4596,8 @@
       "full": "/static/images/catalogue/full/s-054.jpg",
       "width": 1400,
       "height": 935,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-054.jpg"
     },
     {
       "id": "s-055",
@@ -4094,7 +4605,8 @@
       "full": "/static/images/catalogue/full/s-055.jpg",
       "width": 1400,
       "height": 926,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-055.jpg"
     },
     {
       "id": "s-056",
@@ -4102,7 +4614,8 @@
       "full": "/static/images/catalogue/full/s-056.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-056.jpg"
     },
     {
       "id": "s-057",
@@ -4110,7 +4623,8 @@
       "full": "/static/images/catalogue/full/s-057.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-057.jpg"
     },
     {
       "id": "s-058",
@@ -4118,7 +4632,8 @@
       "full": "/static/images/catalogue/full/s-058.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-058.jpg"
     },
     {
       "id": "s-059",
@@ -4126,7 +4641,8 @@
       "full": "/static/images/catalogue/full/s-059.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-059.jpg"
     },
     {
       "id": "s-060",
@@ -4134,7 +4650,8 @@
       "full": "/static/images/catalogue/full/s-060.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-060.jpg"
     },
     {
       "id": "s-061",
@@ -4142,7 +4659,8 @@
       "full": "/static/images/catalogue/full/s-061.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-061.jpg"
     },
     {
       "id": "s-062",
@@ -4150,7 +4668,8 @@
       "full": "/static/images/catalogue/full/s-062.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-062.jpg"
     },
     {
       "id": "s-063",
@@ -4158,7 +4677,8 @@
       "full": "/static/images/catalogue/full/s-063.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-063.jpg"
     },
     {
       "id": "s-064",
@@ -4166,7 +4686,8 @@
       "full": "/static/images/catalogue/full/s-064.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-064.jpg"
     },
     {
       "id": "s-065",
@@ -4174,7 +4695,8 @@
       "full": "/static/images/catalogue/full/s-065.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-065.jpg"
     },
     {
       "id": "s-066",
@@ -4182,7 +4704,8 @@
       "full": "/static/images/catalogue/full/s-066.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-066.jpg"
     },
     {
       "id": "s-067",
@@ -4190,7 +4713,8 @@
       "full": "/static/images/catalogue/full/s-067.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-067.jpg"
     },
     {
       "id": "s-068",
@@ -4198,7 +4722,8 @@
       "full": "/static/images/catalogue/full/s-068.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-068.jpg"
     },
     {
       "id": "s-069",
@@ -4206,7 +4731,8 @@
       "full": "/static/images/catalogue/full/s-069.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-069.jpg"
     },
     {
       "id": "s-070",
@@ -4214,7 +4740,8 @@
       "full": "/static/images/catalogue/full/s-070.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-070.jpg"
     },
     {
       "id": "s-071",
@@ -4222,7 +4749,8 @@
       "full": "/static/images/catalogue/full/s-071.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-071.jpg"
     },
     {
       "id": "s-072",
@@ -4230,7 +4758,8 @@
       "full": "/static/images/catalogue/full/s-072.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-072.jpg"
     },
     {
       "id": "s-073",
@@ -4238,7 +4767,8 @@
       "full": "/static/images/catalogue/full/s-073.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Spiders"
+      "category": "Spiders",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/s-073.jpg"
     },
     {
       "id": "bt-020",
@@ -4246,7 +4776,8 @@
       "full": "/static/images/catalogue/full/bt-020.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Beetles"
+      "category": "Beetles",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bt-020.jpg"
     },
     {
       "id": "bt-021",
@@ -4254,7 +4785,8 @@
       "full": "/static/images/catalogue/full/bt-021.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Beetles"
+      "category": "Beetles",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bt-021.jpg"
     },
     {
       "id": "bt-022",
@@ -4262,7 +4794,8 @@
       "full": "/static/images/catalogue/full/bt-022.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Beetles"
+      "category": "Beetles",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bt-022.jpg"
     },
     {
       "id": "bt-023",
@@ -4270,7 +4803,8 @@
       "full": "/static/images/catalogue/full/bt-023.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Beetles"
+      "category": "Beetles",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bt-023.jpg"
     },
     {
       "id": "bt-024",
@@ -4278,7 +4812,8 @@
       "full": "/static/images/catalogue/full/bt-024.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Beetles"
+      "category": "Beetles",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bt-024.jpg"
     },
     {
       "id": "bt-025",
@@ -4286,7 +4821,8 @@
       "full": "/static/images/catalogue/full/bt-025.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Beetles"
+      "category": "Beetles",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bt-025.jpg"
     },
     {
       "id": "bt-026",
@@ -4294,7 +4830,8 @@
       "full": "/static/images/catalogue/full/bt-026.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Beetles"
+      "category": "Beetles",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bt-026.jpg"
     },
     {
       "id": "bt-027",
@@ -4302,7 +4839,8 @@
       "full": "/static/images/catalogue/full/bt-027.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Beetles"
+      "category": "Beetles",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bt-027.jpg"
     },
     {
       "id": "bt-028",
@@ -4310,7 +4848,8 @@
       "full": "/static/images/catalogue/full/bt-028.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Beetles"
+      "category": "Beetles",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bt-028.jpg"
     },
     {
       "id": "bt-029",
@@ -4318,7 +4857,8 @@
       "full": "/static/images/catalogue/full/bt-029.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Beetles"
+      "category": "Beetles",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bt-029.jpg"
     },
     {
       "id": "bt-030",
@@ -4326,7 +4866,8 @@
       "full": "/static/images/catalogue/full/bt-030.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Beetles"
+      "category": "Beetles",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bt-030.jpg"
     },
     {
       "id": "bt-031",
@@ -4334,7 +4875,8 @@
       "full": "/static/images/catalogue/full/bt-031.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Beetles"
+      "category": "Beetles",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bt-031.jpg"
     },
     {
       "id": "bt-032",
@@ -4342,7 +4884,8 @@
       "full": "/static/images/catalogue/full/bt-032.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Beetles"
+      "category": "Beetles",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bt-032.jpg"
     },
     {
       "id": "bt-033",
@@ -4350,7 +4893,8 @@
       "full": "/static/images/catalogue/full/bt-033.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Beetles"
+      "category": "Beetles",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bt-033.jpg"
     },
     {
       "id": "bt-034",
@@ -4358,7 +4902,8 @@
       "full": "/static/images/catalogue/full/bt-034.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Beetles"
+      "category": "Beetles",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bt-034.jpg"
     },
     {
       "id": "bu-013",
@@ -4366,7 +4911,8 @@
       "full": "/static/images/catalogue/full/bu-013.jpg",
       "width": 1400,
       "height": 1050,
-      "category": "Butterflies"
+      "category": "Butterflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bu-013.jpg"
     },
     {
       "id": "bu-014",
@@ -4374,7 +4920,8 @@
       "full": "/static/images/catalogue/full/bu-014.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Butterflies"
+      "category": "Butterflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bu-014.jpg"
     },
     {
       "id": "bu-015",
@@ -4382,7 +4929,8 @@
       "full": "/static/images/catalogue/full/bu-015.jpg",
       "width": 1400,
       "height": 934,
-      "category": "Butterflies"
+      "category": "Butterflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bu-015.jpg"
     },
     {
       "id": "bu-016",
@@ -4390,7 +4938,8 @@
       "full": "/static/images/catalogue/full/bu-016.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Butterflies"
+      "category": "Butterflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bu-016.jpg"
     },
     {
       "id": "bu-017",
@@ -4398,7 +4947,8 @@
       "full": "/static/images/catalogue/full/bu-017.jpg",
       "width": 1400,
       "height": 935,
-      "category": "Butterflies"
+      "category": "Butterflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bu-017.jpg"
     },
     {
       "id": "bu-018",
@@ -4406,7 +4956,8 @@
       "full": "/static/images/catalogue/full/bu-018.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Butterflies"
+      "category": "Butterflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bu-018.jpg"
     },
     {
       "id": "bu-019",
@@ -4414,7 +4965,8 @@
       "full": "/static/images/catalogue/full/bu-019.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Butterflies"
+      "category": "Butterflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bu-019.jpg"
     },
     {
       "id": "bu-020",
@@ -4422,7 +4974,8 @@
       "full": "/static/images/catalogue/full/bu-020.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Butterflies"
+      "category": "Butterflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bu-020.jpg"
     },
     {
       "id": "bu-021",
@@ -4430,7 +4983,8 @@
       "full": "/static/images/catalogue/full/bu-021.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Butterflies"
+      "category": "Butterflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bu-021.jpg"
     },
     {
       "id": "bu-022",
@@ -4438,7 +4992,8 @@
       "full": "/static/images/catalogue/full/bu-022.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Butterflies"
+      "category": "Butterflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bu-022.jpg"
     },
     {
       "id": "bu-023",
@@ -4446,7 +5001,8 @@
       "full": "/static/images/catalogue/full/bu-023.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Butterflies"
+      "category": "Butterflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bu-023.jpg"
     },
     {
       "id": "bu-024",
@@ -4454,7 +5010,8 @@
       "full": "/static/images/catalogue/full/bu-024.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Butterflies"
+      "category": "Butterflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bu-024.jpg"
     },
     {
       "id": "bu-025",
@@ -4462,7 +5019,8 @@
       "full": "/static/images/catalogue/full/bu-025.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Butterflies"
+      "category": "Butterflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bu-025.jpg"
     },
     {
       "id": "bu-026",
@@ -4470,7 +5028,8 @@
       "full": "/static/images/catalogue/full/bu-026.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Butterflies"
+      "category": "Butterflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bu-026.jpg"
     },
     {
       "id": "bu-027",
@@ -4478,7 +5037,8 @@
       "full": "/static/images/catalogue/full/bu-027.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Butterflies"
+      "category": "Butterflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bu-027.jpg"
     },
     {
       "id": "bu-028",
@@ -4486,7 +5046,8 @@
       "full": "/static/images/catalogue/full/bu-028.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Butterflies"
+      "category": "Butterflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bu-028.jpg"
     },
     {
       "id": "bu-029",
@@ -4494,7 +5055,8 @@
       "full": "/static/images/catalogue/full/bu-029.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Butterflies"
+      "category": "Butterflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bu-029.jpg"
     },
     {
       "id": "bu-030",
@@ -4502,7 +5064,8 @@
       "full": "/static/images/catalogue/full/bu-030.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Butterflies"
+      "category": "Butterflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bu-030.jpg"
     },
     {
       "id": "bu-031",
@@ -4510,7 +5073,8 @@
       "full": "/static/images/catalogue/full/bu-031.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Butterflies"
+      "category": "Butterflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bu-031.jpg"
     },
     {
       "id": "bu-032",
@@ -4518,7 +5082,8 @@
       "full": "/static/images/catalogue/full/bu-032.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Butterflies"
+      "category": "Butterflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bu-032.jpg"
     },
     {
       "id": "bu-033",
@@ -4526,7 +5091,8 @@
       "full": "/static/images/catalogue/full/bu-033.jpg",
       "width": 933,
       "height": 1400,
-      "category": "Butterflies"
+      "category": "Butterflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bu-033.jpg"
     },
     {
       "id": "bu-034",
@@ -4534,7 +5100,8 @@
       "full": "/static/images/catalogue/full/bu-034.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Butterflies"
+      "category": "Butterflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/bu-034.jpg"
     },
     {
       "id": "da-009",
@@ -4542,7 +5109,8 @@
       "full": "/static/images/catalogue/full/da-009.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Damselflies"
+      "category": "Damselflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/da-009.jpg"
     },
     {
       "id": "da-010",
@@ -4550,7 +5118,8 @@
       "full": "/static/images/catalogue/full/da-010.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Damselflies"
+      "category": "Damselflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/da-010.jpg"
     },
     {
       "id": "da-011",
@@ -4558,7 +5127,8 @@
       "full": "/static/images/catalogue/full/da-011.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Damselflies"
+      "category": "Damselflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/da-011.jpg"
     },
     {
       "id": "da-012",
@@ -4566,7 +5136,8 @@
       "full": "/static/images/catalogue/full/da-012.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Damselflies"
+      "category": "Damselflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/da-012.jpg"
     },
     {
       "id": "da-013",
@@ -4574,7 +5145,8 @@
       "full": "/static/images/catalogue/full/da-013.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Damselflies"
+      "category": "Damselflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/da-013.jpg"
     },
     {
       "id": "da-014",
@@ -4582,7 +5154,8 @@
       "full": "/static/images/catalogue/full/da-014.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Damselflies"
+      "category": "Damselflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/da-014.jpg"
     },
     {
       "id": "da-015",
@@ -4590,7 +5163,8 @@
       "full": "/static/images/catalogue/full/da-015.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Damselflies"
+      "category": "Damselflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/da-015.jpg"
     },
     {
       "id": "da-016",
@@ -4598,7 +5172,8 @@
       "full": "/static/images/catalogue/full/da-016.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Damselflies"
+      "category": "Damselflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/da-016.jpg"
     },
     {
       "id": "da-017",
@@ -4606,7 +5181,8 @@
       "full": "/static/images/catalogue/full/da-017.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Damselflies"
+      "category": "Damselflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/da-017.jpg"
     },
     {
       "id": "da-018",
@@ -4614,7 +5190,8 @@
       "full": "/static/images/catalogue/full/da-018.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Damselflies"
+      "category": "Damselflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/da-018.jpg"
     },
     {
       "id": "da-019",
@@ -4622,7 +5199,8 @@
       "full": "/static/images/catalogue/full/da-019.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Damselflies"
+      "category": "Damselflies",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/da-019.jpg"
     },
     {
       "id": "ma-007",
@@ -4630,7 +5208,8 @@
       "full": "/static/images/catalogue/full/ma-007.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Mantises"
+      "category": "Mantises",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/ma-007.jpg"
     },
     {
       "id": "ma-008",
@@ -4638,7 +5217,8 @@
       "full": "/static/images/catalogue/full/ma-008.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Mantises"
+      "category": "Mantises",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/ma-008.jpg"
     },
     {
       "id": "ma-009",
@@ -4646,7 +5226,8 @@
       "full": "/static/images/catalogue/full/ma-009.jpg",
       "width": 1400,
       "height": 935,
-      "category": "Mantises"
+      "category": "Mantises",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/ma-009.jpg"
     },
     {
       "id": "ma-010",
@@ -4654,7 +5235,8 @@
       "full": "/static/images/catalogue/full/ma-010.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Mantises"
+      "category": "Mantises",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/ma-010.jpg"
     },
     {
       "id": "ma-011",
@@ -4662,7 +5244,8 @@
       "full": "/static/images/catalogue/full/ma-011.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Mantises"
+      "category": "Mantises",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/ma-011.jpg"
     },
     {
       "id": "ma-012",
@@ -4670,7 +5253,8 @@
       "full": "/static/images/catalogue/full/ma-012.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Mantises"
+      "category": "Mantises",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/ma-012.jpg"
     },
     {
       "id": "ma-013",
@@ -4678,7 +5262,8 @@
       "full": "/static/images/catalogue/full/ma-013.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Mantises"
+      "category": "Mantises",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/ma-013.jpg"
     },
     {
       "id": "ma-014",
@@ -4686,7 +5271,8 @@
       "full": "/static/images/catalogue/full/ma-014.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Mantises"
+      "category": "Mantises",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/ma-014.jpg"
     },
     {
       "id": "ma-015",
@@ -4694,7 +5280,8 @@
       "full": "/static/images/catalogue/full/ma-015.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Mantises"
+      "category": "Mantises",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/ma-015.jpg"
     },
     {
       "id": "ma-016",
@@ -4702,7 +5289,8 @@
       "full": "/static/images/catalogue/full/ma-016.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Mantises"
+      "category": "Mantises",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/ma-016.jpg"
     },
     {
       "id": "ma-017",
@@ -4710,7 +5298,8 @@
       "full": "/static/images/catalogue/full/ma-017.jpg",
       "width": 1400,
       "height": 935,
-      "category": "Mantises"
+      "category": "Mantises",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/ma-017.jpg"
     },
     {
       "id": "or-004",
@@ -4718,7 +5307,8 @@
       "full": "/static/images/catalogue/full/or-004.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Orthoptera"
+      "category": "Orthoptera",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/or-004.jpg"
     },
     {
       "id": "or-005",
@@ -4726,7 +5316,8 @@
       "full": "/static/images/catalogue/full/or-005.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Orthoptera"
+      "category": "Orthoptera",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/or-005.jpg"
     },
     {
       "id": "or-006",
@@ -4734,7 +5325,8 @@
       "full": "/static/images/catalogue/full/or-006.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Orthoptera"
+      "category": "Orthoptera",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/or-006.jpg"
     },
     {
       "id": "or-007",
@@ -4742,7 +5334,8 @@
       "full": "/static/images/catalogue/full/or-007.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Orthoptera"
+      "category": "Orthoptera",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/or-007.jpg"
     },
     {
       "id": "or-008",
@@ -4750,7 +5343,8 @@
       "full": "/static/images/catalogue/full/or-008.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Orthoptera"
+      "category": "Orthoptera",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/or-008.jpg"
     },
     {
       "id": "or-009",
@@ -4758,7 +5352,8 @@
       "full": "/static/images/catalogue/full/or-009.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Orthoptera"
+      "category": "Orthoptera",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/or-009.jpg"
     },
     {
       "id": "or-010",
@@ -4766,7 +5361,8 @@
       "full": "/static/images/catalogue/full/or-010.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Orthoptera"
+      "category": "Orthoptera",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/or-010.jpg"
     },
     {
       "id": "or-011",
@@ -4774,7 +5370,8 @@
       "full": "/static/images/catalogue/full/or-011.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Orthoptera"
+      "category": "Orthoptera",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/or-011.jpg"
     },
     {
       "id": "or-012",
@@ -4782,7 +5379,8 @@
       "full": "/static/images/catalogue/full/or-012.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Orthoptera"
+      "category": "Orthoptera",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/or-012.jpg"
     },
     {
       "id": "or-013",
@@ -4790,7 +5388,8 @@
       "full": "/static/images/catalogue/full/or-013.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Orthoptera"
+      "category": "Orthoptera",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/or-013.jpg"
     },
     {
       "id": "or-014",
@@ -4798,7 +5397,8 @@
       "full": "/static/images/catalogue/full/or-014.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Orthoptera"
+      "category": "Orthoptera",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/or-014.jpg"
     },
     {
       "id": "or-015",
@@ -4806,7 +5406,8 @@
       "full": "/static/images/catalogue/full/or-015.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Orthoptera"
+      "category": "Orthoptera",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/or-015.jpg"
     },
     {
       "id": "or-016",
@@ -4814,7 +5415,8 @@
       "full": "/static/images/catalogue/full/or-016.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Orthoptera"
+      "category": "Orthoptera",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/or-016.jpg"
     },
     {
       "id": "or-017",
@@ -4822,7 +5424,8 @@
       "full": "/static/images/catalogue/full/or-017.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Orthoptera"
+      "category": "Orthoptera",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/or-017.jpg"
     },
     {
       "id": "or-018",
@@ -4830,7 +5433,8 @@
       "full": "/static/images/catalogue/full/or-018.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Orthoptera"
+      "category": "Orthoptera",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/or-018.jpg"
     },
     {
       "id": "or-019",
@@ -4838,7 +5442,8 @@
       "full": "/static/images/catalogue/full/or-019.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Orthoptera"
+      "category": "Orthoptera",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/or-019.jpg"
     },
     {
       "id": "or-020",
@@ -4846,7 +5451,8 @@
       "full": "/static/images/catalogue/full/or-020.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Orthoptera"
+      "category": "Orthoptera",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/or-020.jpg"
     },
     {
       "id": "or-021",
@@ -4854,7 +5460,8 @@
       "full": "/static/images/catalogue/full/or-021.jpg",
       "width": 933,
       "height": 1400,
-      "category": "Orthoptera"
+      "category": "Orthoptera",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/or-021.jpg"
     },
     {
       "id": "or-022",
@@ -4862,7 +5469,8 @@
       "full": "/static/images/catalogue/full/or-022.jpg",
       "width": 933,
       "height": 1400,
-      "category": "Orthoptera"
+      "category": "Orthoptera",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/or-022.jpg"
     },
     {
       "id": "or-023",
@@ -4870,7 +5478,8 @@
       "full": "/static/images/catalogue/full/or-023.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Orthoptera"
+      "category": "Orthoptera",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/or-023.jpg"
     },
     {
       "id": "t-005",
@@ -4878,7 +5487,8 @@
       "full": "/static/images/catalogue/full/t-005.jpg",
       "width": 933,
       "height": 1400,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-005.jpg"
     },
     {
       "id": "t-006",
@@ -4886,7 +5496,8 @@
       "full": "/static/images/catalogue/full/t-006.jpg",
       "width": 1400,
       "height": 935,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-006.jpg"
     },
     {
       "id": "t-007",
@@ -4894,7 +5505,8 @@
       "full": "/static/images/catalogue/full/t-007.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-007.jpg"
     },
     {
       "id": "t-008",
@@ -4902,7 +5514,8 @@
       "full": "/static/images/catalogue/full/t-008.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-008.jpg"
     },
     {
       "id": "t-009",
@@ -4910,7 +5523,8 @@
       "full": "/static/images/catalogue/full/t-009.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-009.jpg"
     },
     {
       "id": "t-010",
@@ -4918,7 +5532,8 @@
       "full": "/static/images/catalogue/full/t-010.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-010.jpg"
     },
     {
       "id": "t-011",
@@ -4926,7 +5541,8 @@
       "full": "/static/images/catalogue/full/t-011.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-011.jpg"
     },
     {
       "id": "t-012",
@@ -4934,7 +5550,8 @@
       "full": "/static/images/catalogue/full/t-012.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-012.jpg"
     },
     {
       "id": "t-013",
@@ -4942,7 +5559,8 @@
       "full": "/static/images/catalogue/full/t-013.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-013.jpg"
     },
     {
       "id": "t-014",
@@ -4950,7 +5568,8 @@
       "full": "/static/images/catalogue/full/t-014.jpg",
       "width": 933,
       "height": 1400,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-014.jpg"
     },
     {
       "id": "t-015",
@@ -4958,7 +5577,8 @@
       "full": "/static/images/catalogue/full/t-015.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-015.jpg"
     },
     {
       "id": "t-016",
@@ -4966,7 +5586,8 @@
       "full": "/static/images/catalogue/full/t-016.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-016.jpg"
     },
     {
       "id": "t-017",
@@ -4974,7 +5595,8 @@
       "full": "/static/images/catalogue/full/t-017.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-017.jpg"
     },
     {
       "id": "t-018",
@@ -4982,7 +5604,8 @@
       "full": "/static/images/catalogue/full/t-018.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-018.jpg"
     },
     {
       "id": "t-019",
@@ -4990,7 +5613,8 @@
       "full": "/static/images/catalogue/full/t-019.jpg",
       "width": 1400,
       "height": 934,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-019.jpg"
     },
     {
       "id": "t-020",
@@ -4998,7 +5622,8 @@
       "full": "/static/images/catalogue/full/t-020.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-020.jpg"
     },
     {
       "id": "t-021",
@@ -5006,7 +5631,8 @@
       "full": "/static/images/catalogue/full/t-021.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-021.jpg"
     },
     {
       "id": "t-022",
@@ -5014,7 +5640,8 @@
       "full": "/static/images/catalogue/full/t-022.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-022.jpg"
     },
     {
       "id": "t-023",
@@ -5022,7 +5649,8 @@
       "full": "/static/images/catalogue/full/t-023.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-023.jpg"
     },
     {
       "id": "t-024",
@@ -5030,7 +5658,8 @@
       "full": "/static/images/catalogue/full/t-024.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-024.jpg"
     },
     {
       "id": "t-025",
@@ -5038,7 +5667,8 @@
       "full": "/static/images/catalogue/full/t-025.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-025.jpg"
     },
     {
       "id": "t-026",
@@ -5046,7 +5676,8 @@
       "full": "/static/images/catalogue/full/t-026.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-026.jpg"
     },
     {
       "id": "t-027",
@@ -5054,7 +5685,8 @@
       "full": "/static/images/catalogue/full/t-027.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-027.jpg"
     },
     {
       "id": "t-028",
@@ -5062,7 +5694,8 @@
       "full": "/static/images/catalogue/full/t-028.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-028.jpg"
     },
     {
       "id": "t-029",
@@ -5070,7 +5703,8 @@
       "full": "/static/images/catalogue/full/t-029.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-029.jpg"
     },
     {
       "id": "t-030",
@@ -5078,7 +5712,8 @@
       "full": "/static/images/catalogue/full/t-030.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-030.jpg"
     },
     {
       "id": "t-031",
@@ -5086,7 +5721,8 @@
       "full": "/static/images/catalogue/full/t-031.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-031.jpg"
     },
     {
       "id": "t-032",
@@ -5094,7 +5730,8 @@
       "full": "/static/images/catalogue/full/t-032.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-032.jpg"
     },
     {
       "id": "t-033",
@@ -5102,7 +5739,8 @@
       "full": "/static/images/catalogue/full/t-033.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-033.jpg"
     },
     {
       "id": "t-034",
@@ -5110,7 +5748,8 @@
       "full": "/static/images/catalogue/full/t-034.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-034.jpg"
     },
     {
       "id": "t-035",
@@ -5118,7 +5757,8 @@
       "full": "/static/images/catalogue/full/t-035.jpg",
       "width": 1400,
       "height": 935,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-035.jpg"
     },
     {
       "id": "t-036",
@@ -5126,7 +5766,8 @@
       "full": "/static/images/catalogue/full/t-036.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-036.jpg"
     },
     {
       "id": "t-037",
@@ -5134,7 +5775,8 @@
       "full": "/static/images/catalogue/full/t-037.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-037.jpg"
     },
     {
       "id": "t-038",
@@ -5142,7 +5784,8 @@
       "full": "/static/images/catalogue/full/t-038.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-038.jpg"
     },
     {
       "id": "t-039",
@@ -5150,7 +5793,8 @@
       "full": "/static/images/catalogue/full/t-039.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-039.jpg"
     },
     {
       "id": "t-040",
@@ -5158,7 +5802,8 @@
       "full": "/static/images/catalogue/full/t-040.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-040.jpg"
     },
     {
       "id": "t-041",
@@ -5166,7 +5811,8 @@
       "full": "/static/images/catalogue/full/t-041.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-041.jpg"
     },
     {
       "id": "t-042",
@@ -5174,7 +5820,8 @@
       "full": "/static/images/catalogue/full/t-042.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-042.jpg"
     },
     {
       "id": "t-043",
@@ -5182,7 +5829,8 @@
       "full": "/static/images/catalogue/full/t-043.jpg",
       "width": 1400,
       "height": 933,
-      "category": "True Bugs"
+      "category": "True Bugs",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/t-043.jpg"
     },
     {
       "id": "w-006",
@@ -5190,7 +5838,8 @@
       "full": "/static/images/catalogue/full/w-006.jpg",
       "width": 1295,
       "height": 1400,
-      "category": "Wasps"
+      "category": "Wasps",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/w-006.jpg"
     },
     {
       "id": "w-007",
@@ -5198,7 +5847,8 @@
       "full": "/static/images/catalogue/full/w-007.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Wasps"
+      "category": "Wasps",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/w-007.jpg"
     },
     {
       "id": "w-008",
@@ -5206,7 +5856,8 @@
       "full": "/static/images/catalogue/full/w-008.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Wasps"
+      "category": "Wasps",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/w-008.jpg"
     },
     {
       "id": "w-009",
@@ -5214,7 +5865,8 @@
       "full": "/static/images/catalogue/full/w-009.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Wasps"
+      "category": "Wasps",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/w-009.jpg"
     },
     {
       "id": "w-010",
@@ -5222,7 +5874,8 @@
       "full": "/static/images/catalogue/full/w-010.jpg",
       "width": 1400,
       "height": 935,
-      "category": "Wasps"
+      "category": "Wasps",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/w-010.jpg"
     },
     {
       "id": "w-011",
@@ -5230,7 +5883,8 @@
       "full": "/static/images/catalogue/full/w-011.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Wasps"
+      "category": "Wasps",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/w-011.jpg"
     },
     {
       "id": "w-012",
@@ -5238,7 +5892,8 @@
       "full": "/static/images/catalogue/full/w-012.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Wasps"
+      "category": "Wasps",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/w-012.jpg"
     },
     {
       "id": "w-013",
@@ -5246,7 +5901,8 @@
       "full": "/static/images/catalogue/full/w-013.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Wasps"
+      "category": "Wasps",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/w-013.jpg"
     },
     {
       "id": "w-014",
@@ -5254,7 +5910,8 @@
       "full": "/static/images/catalogue/full/w-014.jpg",
       "width": 1400,
       "height": 933,
-      "category": "Wasps"
+      "category": "Wasps",
+      "thumb_sm": "/static/images/catalogue/thumbs-sm/w-014.jpg"
     }
   ]
 }
