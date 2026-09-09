@@ -18,6 +18,9 @@ behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
   elements, mirroring the real "size" radio group) rather than duplicating the catalogue or the
   price logic. Desktop is unchanged. Validated with the user via an interactive mockup before
   implementation (closes #98; tracked for Apparel/Coasters under #97, once those ship)
+- Site header is now sticky (`position: sticky; top: 0`) on every page, so the cart link stays
+  reachable without scrolling back up — most noticeable on Prints now that the mobile picker (above)
+  puts more content above the fold (#101)
 
 ### Fixed
 
