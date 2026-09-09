@@ -87,11 +87,12 @@ it isn't infrastructure checkout should depend on being up.
 
 ## Catalogue images
 
-`static/images/catalogue/` (`thumbs/` for the picker grid, `full/` for the live mockup preview,
-plus `manifest.json` listing every available photo id) is the *only* source of photos clients
-can pick from — there is no upload flow. Every photo's id (and matching filename in both
-`thumbs/` and `full/`) follows `<prefix>-NNN` — a short per-category prefix, then a 3-digit
-number starting at `001` and restarting per category (issue #82). Prefix table:
+`static/images/catalogue/` (`thumbs/` for the desktop picker grid, `thumbs-sm/` for the mobile
+horizontal strip — issue #102 — `full/` for the live mockup preview, plus `manifest.json` listing
+every available photo id) is the *only* source of photos clients can pick from — there is no
+upload flow. Every photo's id (and matching filename in `thumbs/`, `thumbs-sm/`, and `full/`)
+follows `<prefix>-NNN` — a short per-category prefix, then a 3-digit number starting at `001` and
+restarting per category (issue #82). Prefix table:
 
 | Category | Prefix | | Category | Prefix |
 |---|---|---|---|---|
@@ -115,15 +116,19 @@ conda run -n ds python scripts/onboard_catalogue_photos.py
 ```
 
 which scans every category folder there for any `<prefix>-NNN`-named photo not yet in
-`manifest.json` and onboards all of them at once: resizes into `thumbs/`+`full/` (`full` capped
-at 1400px on the long side, `thumb` at 420px, both left alone if the source is already smaller —
-never upscaled) and adds the manifest entry with `width`/`height` filled in directly, so no
-separate dimensions pass is needed for photos added this way. A new category needs its prefix
-added to the script's `PREFIX_TO_CATEGORY` first, and to `CATALOGUE_CATEGORIES` in `app.py` (the
-taxonomic groups the sidebar in `prints.html`/`apparel.html` navigates by, issue #72) —
-`_validate_catalogue` fails loudly at startup on a missing or unrecognised category. If adding a
-manifest entry by hand instead (`id`/`thumb`/`full`/`category`, `width`/`height` can be omitted),
-run
+`manifest.json` and onboards all of them at once: resizes into `thumbs/`+`thumbs-sm/`+`full/`
+(`full` capped at 1400px on the long side, `thumb` at 420px, `thumb_sm` at 168px — 2x the mobile
+picker's 84px CSS box, so the desktop grid's `<img srcset>` lets the browser pick whichever is
+actually needed rather than always fetching the 420px one — all three left alone if the source is
+already smaller than their cap, never upscaled) and adds the manifest entry with `width`/`height`
+filled in directly, so no separate dimensions pass is needed for photos added this way. A new
+category needs its prefix added to the script's `PREFIX_TO_CATEGORY` first, and to
+`CATALOGUE_CATEGORIES` in `app.py` (the taxonomic groups the sidebar in
+`prints.html`/`apparel.html` navigates by, issue #72) — `_validate_catalogue` fails loudly at
+startup on a missing/unrecognised category or a missing `thumb_sm` (run
+`scripts/generate_thumb_sm.py` to backfill it for any entry added before issue #102, or added by
+hand without it). If adding a manifest entry by hand instead
+(`id`/`thumb`/`thumb_sm`/`full`/`category`, `width`/`height` can be omitted), run
 
 ```bash
 conda run -n ds python scripts/add_catalogue_dimensions.py
@@ -145,7 +150,10 @@ section is currently in view as the client scrolls manually — kept separate fr
 On Prints, below style.css's 800px breakpoint, the sidebar and grid are swapped for a category
 dropdown and a horizontal thumbnail strip (`static/js/mobile-picker.js`, issue #98) — the
 dropdown filters the same `.catalogue-thumb` elements the grid renders (toggling `hidden`, not a
-second copy of the catalogue) and the grid itself reflows into the strip via CSS. The size radios
+second copy of the catalogue) and the grid itself reflows into the strip via CSS. Each thumbnail
+`<img>` carries a `srcset`/`sizes` pair (`thumb_sm` 168w / `thumb` 420w — issue #102) so the
+strip fetches the smaller variant instead of the desktop grid's 420px one, which was 5x more
+data than an 84px CSS box needs. The size radios
 get the same treatment: a `<select>` that mirrors the checked radio rather than holding its own
 state. Desktop is unchanged; Apparel/Coasters get the same treatment once they ship (issue #97).
 

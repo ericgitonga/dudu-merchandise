@@ -6,6 +6,21 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.14.2] - 2026-09-09
+
+### Fixed
+
+- Prints/Apparel: catalogue thumbnails were a single 420px-long-side size (`thumbs/`) used at
+  every width, including the mobile picker's 84px CSS box (#101) — roughly 5x more image data
+  than needed there, noticeably slow on a real mobile connection. Added a `thumb_sm` manifest
+  field (168px long side, 2x the 84px box for retina) generated alongside `thumb`/`full` by
+  `scripts/onboard_catalogue_photos.py`, backfilled for all existing entries via the new
+  `scripts/generate_thumb_sm.py`, and required by `_validate_catalogue` (same fail-fast pattern
+  as `width`/`height`). Each thumbnail's `<img>` now carries `srcset="{thumb_sm} 168w, {thumb}
+  420w"` with `sizes="(max-width: 800px) 84px, 90px"`, so the browser picks whichever is actually
+  needed — cuts each thumbnail from ~8.5KB to ~2.8KB (measured), on both mobile and desktop
+  (closes #102)
+
 ## [0.14.1] - 2026-09-09
 
 ### Fixed

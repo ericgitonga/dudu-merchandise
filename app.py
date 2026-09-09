@@ -89,6 +89,12 @@ def _validate_catalogue(images):
             f"Catalogue entries missing width/height: {missing} — run "
             "scripts/add_catalogue_dimensions.py before starting the app."
         )
+    missing_thumb_sm = [img["id"] for img in images if not img.get("thumb_sm")]
+    if missing_thumb_sm:
+        raise RuntimeError(
+            f"Catalogue entries missing thumb_sm: {missing_thumb_sm} — run "
+            "scripts/generate_thumb_sm.py before starting the app."
+        )
     uncategorised = [img["id"] for img in images if img.get("category") not in CATALOGUE_CATEGORIES]
     if uncategorised:
         raise RuntimeError(

@@ -1,10 +1,12 @@
 """Scans extras/projects/dudu-merchandise/assets/catalogue/ (outside this repo — the source-of-
 truth original photos, organised into one subfolder per CATALOGUE_CATEGORIES value) for any
 photo already named `<prefix>-NNN` that isn't in manifest.json yet, and onboards all of them:
-resizes into static/images/catalogue/{thumbs,full}/ following the established convention (`full`
-capped at 1400px on the long side, left alone if already smaller — never upscaled; `thumb`
-capped at 420px, exactly 30% of `full`'s target) and appends the manifest entry directly, width/
-height included, so no separate add_catalogue_dimensions.py pass is needed for these entries.
+resizes into static/images/catalogue/{thumbs,thumbs-sm,full}/ following the established
+convention (`full` capped at 1400px on the long side, left alone if already smaller — never
+upscaled; `thumb` capped at 420px, exactly 30% of `full`'s target; `thumb_sm` capped at 168px —
+2x the mobile picker's 84px CSS box, issue #102 — for the mobile strip via `srcset`) and appends
+the manifest entry directly, width/height included, so no separate add_catalogue_dimensions.py
+pass is needed for these entries.
 
 Only picks up photos already renamed to the `<prefix>-NNN` scheme — a category folder's other,
 not-yet-curated pool photos (arbitrary filenames, or ids already covering a gap) are left alone.
@@ -29,6 +31,7 @@ EXTRAS_DIR = Path("/home/gitonga/Develop/projects/extras/projects/dudu-merchandi
 
 FULL_LONG_SIDE = 1400
 THUMB_LONG_SIDE = 420
+THUMB_SM_LONG_SIDE = 168
 
 PREFIX_TO_CATEGORY = {
     "a": "Ants", "be": "Bees", "bt": "Beetles", "bu": "Butterflies", "c": "Caterpillars",
@@ -85,9 +88,16 @@ def main():
         thumb_im = _resized(full_im, THUMB_LONG_SIDE)
         thumb_im.save(CATALOGUE_DIR / "thumbs" / f"{new_id}.jpg", "JPEG", quality=85, optimize=True)
 
+        thumb_sm_im = _resized(full_im, THUMB_SM_LONG_SIDE)
+        (CATALOGUE_DIR / "thumbs-sm" / f"{new_id}.jpg").parent.mkdir(parents=True, exist_ok=True)
+        thumb_sm_im.save(
+            CATALOGUE_DIR / "thumbs-sm" / f"{new_id}.jpg", "JPEG", quality=85, optimize=True
+        )
+
         images.append({
             "id": new_id,
             "thumb": f"/static/images/catalogue/thumbs/{new_id}.jpg",
+            "thumb_sm": f"/static/images/catalogue/thumbs-sm/{new_id}.jpg",
             "full": f"/static/images/catalogue/full/{new_id}.jpg",
             "width": full_im.width,
             "height": full_im.height,
