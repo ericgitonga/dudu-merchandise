@@ -6,6 +6,19 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.15.0] - 2026-09-10
+
+### Changed
+
+- Adopted the shared ericgitonga.com family brand kit: warm paper-cream ground, dark ink, one
+  verdigris accent, and a Newsreader/Archivo Narrow/IBM Plex Mono type pairing, replacing the
+  previous warm-cream/burnt-orange palette and system-font stack (closes #108). Prices, cart
+  quantities, and the cart badge now use the mono face, matching the numeric treatment used
+  elsewhere in the family; hero and category-card headings use the italic serif. Added the
+  shared favicon set (`static/favicon/`), matching eric-gitonga-links and dudus-app.
+
+tag: `v0.15.0`
+
 ## [0.14.3] - 2026-09-09
 
 ### Fixed
