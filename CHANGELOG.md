@@ -6,6 +6,17 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.16.0] - 2026-09-10
+
+### Added
+
+- Standardized breadcrumb back-link at the top of every page: `← ERIC GITONGA / DUDUS / SHOP`,
+  matching the same IBM Plex Mono/uppercase treatment used across eric-gitonga-links and
+  dudus-app. `ERIC GITONGA` links to the hub, `DUDUS` to dudus-app — this site had no link back
+  to the rest of the family before (closes #110).
+
+tag: `v0.16.0`
+
 ## [0.15.0] - 2026-09-10
 
 ### Changed

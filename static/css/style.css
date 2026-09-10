@@ -33,6 +33,23 @@ body {
 
 a { color: var(--accent); }
 
+.breadcrumb-bar {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 0.9rem 1.8rem;
+  border-bottom: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.breadcrumb-bar a { color: var(--ink); transition: color 0.15s ease; }
+.breadcrumb-bar a:hover, .breadcrumb-bar a:focus-visible { color: var(--accent); }
+.breadcrumb-bar .crumb-sep { color: var(--muted); font-weight: 400; }
+
 .site-header {
   display: flex;
   justify-content: space-between;
