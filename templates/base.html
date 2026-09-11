@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
   </head>
   <body>
+    <div class="site-nav-sticky">
     <div class="breadcrumb-bar">
       <a href="https://ericgitonga.com">← ERIC GITONGA</a>
       <span class="crumb-sep" aria-hidden="true">/</span>
@@ -36,6 +37,7 @@
         </a>
       </nav>
     </header>
+    </div>
 
     <main>
       {% block content %}{% endblock %}

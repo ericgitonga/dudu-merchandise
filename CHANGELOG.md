@@ -6,6 +6,17 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.16.2] - 2026-09-11
+
+### Changed
+
+- The breadcrumb bar and site header are now wrapped in a single sticky container
+  (`.site-nav-sticky`) so both stay pinned to the top on scroll together, matching
+  eric-gitonga-links and dudus-app — previously only `.site-header` was sticky, so the
+  breadcrumb (with the family back-link) scrolled away (closes #114).
+
+tag: `v0.16.2`
+
 ## [0.16.1] - 2026-09-11
 
 ### Changed
