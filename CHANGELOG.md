@@ -6,6 +6,17 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.16.1] - 2026-09-11
+
+### Changed
+
+- The breadcrumb's DUDUS segment now points at `ericgitonga.com/dudus` (the real Dudus
+  ecosystem landing page, eric-gitonga-links#11) instead of `dudus.ericgitonga.com` (dudus-app)
+  directly — this site and dudus-app are siblings both linked from `/dudus`, not parent/child
+  (closes #112).
+
+tag: `v0.16.1`
+
 ## [0.16.0] - 2026-09-10
 
 ### Added
