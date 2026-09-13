@@ -6,6 +6,14 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.16.3] - 2026-09-13
+
+### Changed
+
+- Simplified the breadcrumb bar to match eric-gitonga-links' navbar unification (#40 there):
+  dropped the arrow and the middle `DUDUS` segment, leaving a minimal two-element bar —
+  `ERIC GITONGA` (left, links home) and `SHOP` (right, plain text) (closes #116).
+
 ## [0.16.2] - 2026-09-11
 
 ### Changed

@@ -43,7 +43,7 @@ a { color: var(--accent); }
 .breadcrumb-bar {
   display: flex;
   align-items: baseline;
-  gap: 0.5rem;
+  justify-content: space-between;
   padding: 0.9rem 1.8rem;
   border-bottom: 1px solid var(--border);
   font-family: var(--font-mono);
@@ -55,7 +55,6 @@ a { color: var(--accent); }
 }
 .breadcrumb-bar a { color: var(--ink); transition: color 0.15s ease; }
 .breadcrumb-bar a:hover, .breadcrumb-bar a:focus-visible { color: var(--accent); }
-.breadcrumb-bar .crumb-sep { color: var(--muted); font-weight: 400; }
 
 .site-header {
   display: flex;
