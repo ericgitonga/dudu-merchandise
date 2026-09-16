@@ -1,11 +1,34 @@
 # dudu-merchandise
 
-Merchandise storefront for Eric Gitonga Mbaya's insect macro photography — Prints today, Apparel
-and Coasters coming later. Clients pick a photo from a fixed catalogue (no upload flow), see a
-live preview — a living-room wall mockup for Prints — and add it to a cart. Checkout is a modal
-on the cart page: it shows the M-Pesa payment details, requires the client to enter the M-Pesa
-confirmation code from their payment (self-reported, not verified against M-Pesa), and on
-submission emails the order to the site owner via [Resend](https://resend.com).
+Eric Gitonga Mbaya's print shop — independent of any single ericgitonga.com section (issue
+#119), reachable at `shop.ericgitonga.com` via a top-level "Shop" link. One app/cart/checkout
+shared across multiple photography collections: **Dudu Prints** (insect macro photography,
+organised by taxonomic category) and **Daguerreotypes Prints** (organised by real photo album —
+Beauty In The Ordinary, Racecourse). Apparel and Coasters are Dudu-only for now. Clients pick a
+photo from a fixed catalogue (no upload flow), see a live preview — a living-room wall mockup for
+Prints — and add it to a cart. Checkout is a modal on the cart page: it shows the M-Pesa payment
+details, requires the client to enter the M-Pesa confirmation code from their payment
+(self-reported, not verified against M-Pesa), and on submission emails the order to the site
+owner via [Resend](https://resend.com).
+
+## Collections
+
+A "collection" (`COLLECTIONS` in `app.py`) is just a named subset of `CATALOGUE_CATEGORIES` — the
+cart/checkout code is keyed entirely on `photo_id`, never on collection, so adding one is a
+catalogue+routing change only, no changes to pricing, cart, or checkout logic:
+
+- **Dudu Prints** (`/prints`) — `DUDU_CATEGORIES`, the insect taxonomic groups (see "Catalogue
+  images" below).
+- **Daguerreotypes Prints** (`/daguerreotypes/prints`) — `DAGUERREOTYPES_CATEGORIES`, real photo
+  albums. Onboarded as a one-time hand-curated snapshot from `media.ericgitonga.com` (the same
+  Angry Hosting origin the Daguerreotypes gallery on eric-gitonga-links reads) — **not**
+  auto-synced with that gallery going forward; adding a photo there doesn't add it here.
+- **Daubs Prints** — deliberately not built yet (issue #120): Daubs has no real gallery/content
+  to curate a catalogue from.
+
+Each route filters `CATALOGUE_BY_CATEGORY` down to its own collection's categories via
+`_catalogue_for_collection()` before rendering, so one collection's categories never leak into
+another's sidebar/grid.
 
 ## Local setup
 
@@ -105,6 +128,13 @@ restarting per category (issue #82). Prefix table:
 | Dragonflies | `dr` | | True Bugs | `t` |
 | Flies | `f` | | Wasps | `w` |
 | Mantises | `ma` | | Moths | `mo` |
+
+Daguerreotypes collection (real photo albums, not insect taxa — see "Collections" above):
+
+| Category | Prefix |
+|---|---|
+| Beauty In The Ordinary | `bi` |
+| Racecourse | `rc` |
 
 To add more: rename the source photo(s) in the matching category subfolder under
 `extras/projects/dudu-merchandise/assets/catalogue/` (outside this repo, see below) to

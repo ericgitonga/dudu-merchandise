@@ -24,7 +24,8 @@ def test_index_loads_with_nav_links():
         resp = page.goto("/")
         assert resp.status == 200
         nav = page.locator(".site-header nav")
-        assert nav.get_by_role("link", name="Prints", exact=True).is_visible()
+        assert nav.get_by_role("link", name="Dudu Prints", exact=True).is_visible()
+        assert nav.get_by_role("link", name="Daguerreotypes Prints", exact=True).is_visible()
         # Apparel is deliberately not linked yet (issue #18) — its route stays reachable
         # directly, but its functional tests are removed for now (issue #88, restore via #89).
         assert nav.get_by_role("link", name="Apparel", exact=True).count() == 0
@@ -56,6 +57,25 @@ def test_prints_page_lists_catalogue_and_sizes():
         assert resp.status == 200
         assert page.locator(".catalogue-thumb").count() > 0
         assert page.locator('input[name="size"]').count() == 5  # A4..A0
+
+
+def test_daguerreotypes_prints_page_is_separate_from_dudu_prints():
+    """Regression guard for issue #119: the two collections must never leak into each other's
+    catalogue — /prints shows only Dudu's own categories, /daguerreotypes/prints shows only its
+    own (real photo albums, not insect taxa)."""
+    with browser_page() as page:
+        resp = page.goto("/daguerreotypes/prints")
+        assert resp.status == 200
+        assert page.locator("h1").inner_text() == "Daguerreotypes Prints"
+        assert page.locator(".catalogue-thumb").count() > 0
+        categories = page.locator(".cat-sidebar button[data-category]").all_inner_texts()
+        assert any("Beauty In The Ordinary" in c for c in categories)
+        insect_names = ("Neuroptera", "Spiders", "Beetles", "Other")
+        assert not any(name in c for c in categories for name in insect_names)
+
+        page.goto("/prints")
+        dudu_categories = page.locator(".cat-sidebar button[data-category]").all_inner_texts()
+        assert not any("Beauty In The Ordinary" in c or "Racecourse" in c for c in dudu_categories)
 
 
 def test_catalogue_sidebar_jumps_to_category_section():
@@ -377,6 +397,7 @@ TESTS = [
     test_no_page_links_to_hidden_apparel,
     test_health_endpoint,
     test_prints_page_lists_catalogue_and_sizes,
+    test_daguerreotypes_prints_page_is_separate_from_dudu_prints,
     test_catalogue_sidebar_jumps_to_category_section,
     test_mobile_picker_replaces_sidebar_and_filters_the_grid_by_category,
     test_mobile_picker_photo_and_size_selection_drive_the_real_mockup,

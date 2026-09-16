@@ -6,6 +6,27 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.17.0] - 2026-09-16
+
+### Added
+
+- **Daguerreotypes Prints** (`/daguerreotypes/prints`) — a new photography collection alongside
+  Dudu Prints, organised by real photo album (Beauty In The Ordinary, Racecourse) instead of
+  insect taxonomic category. 185 photos onboarded as a one-time hand-curated snapshot from
+  `media.ericgitonga.com` (closes #119).
+- `COLLECTIONS` registry in `app.py` — a collection is just a named subset of
+  `CATALOGUE_CATEGORIES`; cart/checkout logic (keyed on `photo_id`, never on collection) is
+  unchanged. `/prints` and `/apparel` now filter to Dudu's own categories via
+  `_catalogue_for_collection()`, so neither collection's categories leak into the other's
+  sidebar/grid.
+- Homepage and nav now list both collections; brand/copy updated from "Dudu Merchandise" to a
+  multi-collection "Print Shop" framing.
+
+### Deferred
+
+- Daubs Prints — tracked in #120, blocked on Daubs having a real gallery/content to curate a
+  catalogue from.
+
 ## [0.16.3] - 2026-09-13
 
 ### Changed

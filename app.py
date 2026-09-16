@@ -1,9 +1,13 @@
 """
-Flask app for the Dudu Merchandise storefront.
+Flask app for Eric Gitonga's print shop — independent of any single ericgitonga.com section
+(issue #119), reachable via a top-level "Shop" link. Multiple photography collections share this
+one app/cart/checkout: Dudu Prints (insect macro photography, organised by taxonomic category)
+and Daguerreotypes Prints (organised by real photo album). Apparel is Dudu-only for now. See
+COLLECTIONS below for how a collection maps onto a subset of CATALOGUE_CATEGORIES.
 
-Two live sections — Prints and Apparel — built from a fixed, curated catalogue of insect
-macro photographs (no upload flow; clients pick from what's on file). Coasters is scaffolded
-as a nav entry + placeholder page only, not built out yet.
+Two live sections per collection — Prints and (Dudu-only) Apparel — built from a fixed, curated
+catalogue of photographs (no upload flow; clients pick from what's on file). Coasters is
+scaffolded as a nav entry + placeholder page only, not built out yet.
 
 A client picks a photo and a size/variant on the Prints or Apparel page, sees a live preview
 (a living-room wall mockup for Prints, a t-shirt mockup for Apparel — the latter folding in
@@ -72,11 +76,33 @@ limiter = Limiter(get_remote_address, app=app, default_limits=["200 per day", "5
 # Taxonomic groupings for the catalogue sidebar (issue #72/#73) — every manifest entry must
 # carry one of these in its "category" field, or _validate_catalogue below fails loudly rather
 # than the sidebar silently dropping an uncategorised photo.
-CATALOGUE_CATEGORIES = {
+DUDU_CATEGORIES = {
     "Flies", "Spiders", "Beetles", "Bees", "Moths", "Butterflies", "Ants",
     "Damselflies", "Dragonflies", "Mantises", "Wasps", "True Bugs",
     "Neuroptera", "Orthoptera", "Caterpillars", "Scorpions", "Stick Insects", "Other",
 }
+
+# Daguerreotypes collection — categories here are real photo albums (issue #119), a separate
+# hand-curated snapshot from Angry Hosting, not auto-synced with the gallery going forward.
+DAGUERREOTYPES_CATEGORIES = {"Beauty In The Ordinary", "Racecourse"}
+
+CATALOGUE_CATEGORIES = DUDU_CATEGORIES | DAGUERREOTYPES_CATEGORIES
+
+# One print shop, multiple photography collections (issue #119) — each collection is just a
+# named subset of CATALOGUE_CATEGORIES, so cart/checkout code (keyed on photo_id, never on
+# collection) doesn't need to change at all. Daubs Prints is deliberately not here yet — Daubs
+# has no real gallery/content to curate a catalogue from (issue #120).
+COLLECTIONS = {
+    "dudu": {"title": "Dudu Prints", "categories": DUDU_CATEGORIES},
+    "daguerreotypes": {"title": "Daguerreotypes Prints", "categories": DAGUERREOTYPES_CATEGORIES},
+}
+
+
+def _catalogue_for_collection(slug):
+    """Filters the pre-grouped CATALOGUE_BY_CATEGORY down to one collection's own categories,
+    preserving CATALOGUE_BY_CATEGORY's existing sort order rather than re-sorting."""
+    categories = COLLECTIONS[slug]["categories"]
+    return [group for group in CATALOGUE_BY_CATEGORY if group["category"] in categories]
 
 
 def _validate_catalogue(images):
@@ -465,16 +491,27 @@ def index():
 @app.route("/prints")
 def prints():
     return render_template(
-        "prints.html", catalogue_by_category=CATALOGUE_BY_CATEGORY, sizes=PRINT_SIZES,
+        "prints.html", catalogue_by_category=_catalogue_for_collection("dudu"),
+        page_heading=COLLECTIONS["dudu"]["title"], sizes=PRINT_SIZES,
+        max_qty=MAX_ITEM_QTY, turnaround=TURNAROUND_TEXT,
+    )
+
+
+@app.route("/daguerreotypes/prints")
+def daguerreotypes_prints():
+    return render_template(
+        "prints.html", catalogue_by_category=_catalogue_for_collection("daguerreotypes"),
+        page_heading=COLLECTIONS["daguerreotypes"]["title"], sizes=PRINT_SIZES,
         max_qty=MAX_ITEM_QTY, turnaround=TURNAROUND_TEXT,
     )
 
 
 @app.route("/apparel")
 def apparel():
+    # Dudu-only for now — no Daguerreotypes apparel catalogue exists (issue #119).
     return render_template(
-        "apparel.html", catalogue_by_category=CATALOGUE_BY_CATEGORY, prices=APPAREL_PRICES,
-        shirt_colours=SHIRT_COLOURS, max_qty=MAX_ITEM_QTY,
+        "apparel.html", catalogue_by_category=_catalogue_for_collection("dudu"),
+        prices=APPAREL_PRICES, shirt_colours=SHIRT_COLOURS, max_qty=MAX_ITEM_QTY,
     )
 
 
