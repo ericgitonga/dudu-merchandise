@@ -105,6 +105,23 @@ def _catalogue_for_collection(slug):
     return [group for group in CATALOGUE_BY_CATEGORY if group["category"] in categories]
 
 
+# Reverse of COLLECTIONS' categories, built once — every catalogue photo's category maps to
+# exactly one collection slug (COLLECTIONS' category sets are disjoint by construction).
+CATEGORY_TO_COLLECTION = {
+    category: slug for slug, cfg in COLLECTIONS.items() for category in cfg["categories"]
+}
+
+
+def _collection_for_photo(photo_id):
+    """None if photo_id no longer resolves to a real catalogue entry (e.g. removed from the
+    manifest after being added to someone's cart) — callers must treat that as "can't price this
+    item", not crash checkout for every other item in the cart."""
+    photo = CATALOGUE_BY_ID.get(photo_id)
+    if photo is None:
+        return None
+    return CATEGORY_TO_COLLECTION.get(photo["category"])
+
+
 def _validate_catalogue(images):
     """Every entry needs width/height (issue #38) — the Prints/Apparel mockup scripts read
     aspect ratio straight from these, with no runtime image load to fall back on, so a missing
@@ -170,12 +187,49 @@ CATALOGUE_BY_CATEGORY = group_catalogue_by_category(CATALOGUE)
 
 PRINT_SIZES = {
     # w_mm/h_mm are ISO 216 A-series short/long edge, used to size the wall-mockup frame.
+    # These are Dudu Prints' prices — the base/reference price for every size. Every other
+    # collection prices at a discount off these same sizes (NON_DUDU_PRINT_DISCOUNT below), never
+    # its own independent table, so there's still exactly one place a size's base price is set.
     "A4": {"price": 15_000, "w_mm": 210, "h_mm": 297},
     "A3": {"price": 25_000, "w_mm": 297, "h_mm": 420},
     "A2": {"price": 40_000, "w_mm": 420, "h_mm": 594},
     "A1": {"price": 70_000, "w_mm": 594, "h_mm": 841},
     "A0": {"price": 100_000, "w_mm": 841, "h_mm": 1189},
 }
+
+# All prints outside Dudu Prints (Daguerreotypes Prints today, any future non-Dudu collection by
+# default) are priced 30% below Dudu's own sizes — Eric's explicit pricing decision, not a cost
+# difference in production. Every PRINT_SIZES value happens to be a round number that divides
+# evenly at this discount (e.g. A4 15,000 -> 10,500), so there's no fractional-KES rounding case
+# to handle; if a future size ever doesn't divide evenly, round to the nearest 50 KES.
+NON_DUDU_PRINT_DISCOUNT = 0.30
+
+
+def _print_price(photo_id, size):
+    """The price (KES) for one print of `size`, adjusted for the photo's own collection, or None
+    if photo_id no longer resolves to a real catalogue entry. This is the single place print
+    price is computed — build_print_item (add to cart) and _current_price (checkout
+    revalidation) both go through this, so the discount can never be bypassed by a
+    stale/tampered session value."""
+    collection = _collection_for_photo(photo_id)
+    if collection is None:
+        return None
+    base = PRINT_SIZES[size]["price"]
+    if collection == "dudu":
+        return base
+    return round(base * (1 - NON_DUDU_PRINT_DISCOUNT))
+
+
+def _print_sizes_for_collection(slug):
+    """PRINT_SIZES with each size's price adjusted for this collection, for display on that
+    collection's own Prints page — so the price shown before adding to cart already matches what
+    _print_price will actually charge."""
+    if slug == "dudu":
+        return PRINT_SIZES
+    return {
+        size: {**spec, "price": round(spec["price"] * (1 - NON_DUDU_PRINT_DISCOUNT))}
+        for size, spec in PRINT_SIZES.items()
+    }
 
 APPAREL_PRICES = {
     "adult": 3_000,
@@ -242,7 +296,7 @@ def build_print_item(form):
         "type": "print",
         "photo_id": photo_id,
         "size": size,
-        "price": PRINT_SIZES[size]["price"],
+        "price": _print_price(photo_id, size),
         "qty": _parse_qty(form),
     }
 
@@ -277,7 +331,9 @@ def _current_price(item):
     longer resolves to one (issue #50) — never trust the price (or the size/age_group it's
     keyed on) stored in the session cookie."""
     if item["type"] == "print":
-        return PRINT_SIZES.get(item.get("size"), {}).get("price")
+        if item.get("size") not in PRINT_SIZES:
+            return None
+        return _print_price(item["photo_id"], item["size"])
     return APPAREL_PRICES.get(item.get("age_group"))
 
 
@@ -492,7 +548,7 @@ def index():
 def prints():
     return render_template(
         "prints.html", catalogue_by_category=_catalogue_for_collection("dudu"),
-        page_heading=COLLECTIONS["dudu"]["title"], sizes=PRINT_SIZES,
+        page_heading=COLLECTIONS["dudu"]["title"], sizes=_print_sizes_for_collection("dudu"),
         max_qty=MAX_ITEM_QTY, turnaround=TURNAROUND_TEXT,
     )
 
@@ -501,7 +557,8 @@ def prints():
 def daguerreotypes_prints():
     return render_template(
         "prints.html", catalogue_by_category=_catalogue_for_collection("daguerreotypes"),
-        page_heading=COLLECTIONS["daguerreotypes"]["title"], sizes=PRINT_SIZES,
+        page_heading=COLLECTIONS["daguerreotypes"]["title"],
+        sizes=_print_sizes_for_collection("daguerreotypes"),
         max_qty=MAX_ITEM_QTY, turnaround=TURNAROUND_TEXT,
     )
 

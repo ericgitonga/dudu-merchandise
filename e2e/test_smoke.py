@@ -78,6 +78,38 @@ def test_daguerreotypes_prints_page_is_separate_from_dudu_prints():
         assert not any("Beauty In The Ordinary" in c or "Racecourse" in c for c in dudu_categories)
 
 
+def test_non_dudu_prints_are_discounted_30_percent():
+    """Regression guard: every collection other than Dudu Prints prices 30% below Dudu's own
+    sizes (Eric's explicit pricing decision), and the discount can't be bypassed by editing the
+    cart client-side — checkout revalidates every price server-side keyed on the photo's own
+    collection, not whatever was sent."""
+    with browser_page() as page:
+        page.goto("/daguerreotypes/prints")
+        # The A4 radio label on Daguerreotypes Prints must show the discounted price, not Dudu's.
+        assert "10,500" in page.content()
+        assert "15,000" not in page.content()
+
+        token = _csrf_token(page)
+        add_dudu = page.request.post(
+            f"{BASE_URL}/cart/add",
+            headers={"X-CSRFToken": token},
+            form={"type": "print", "photo_id": "001", "size": "A4"},
+        )
+        assert add_dudu.status == 200
+        add_dag = page.request.post(
+            f"{BASE_URL}/cart/add",
+            headers={"X-CSRFToken": token},
+            form={"type": "print", "photo_id": "e2e-bito-1", "size": "A4"},
+        )
+        assert add_dag.status == 200
+
+        page.goto("/cart")
+        content = page.content()
+        assert "15,000" in content  # Dudu Prints, full price
+        assert "10,500" in content  # Daguerreotypes Prints, 30% off
+        assert "25,500" in content  # cart total: 15,000 + 10,500
+
+
 def test_catalogue_sidebar_jumps_to_category_section():
     """Regression guard for issue #74: clicking a sidebar category button highlights it (and
     only it) and points at a real, matching section heading in the grid. Picks the last category
@@ -398,6 +430,7 @@ TESTS = [
     test_health_endpoint,
     test_prints_page_lists_catalogue_and_sizes,
     test_daguerreotypes_prints_page_is_separate_from_dudu_prints,
+    test_non_dudu_prints_are_discounted_30_percent,
     test_catalogue_sidebar_jumps_to_category_section,
     test_mobile_picker_replaces_sidebar_and_filters_the_grid_by_category,
     test_mobile_picker_photo_and_size_selection_drive_the_real_mockup,
