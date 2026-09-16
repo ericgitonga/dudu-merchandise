@@ -1,8 +1,8 @@
 {% extends "base.html" %}
-{% block title %}Dudu Merchandise{% endblock %}
+{% block title %}Print Shop — Eric Gitonga{% endblock %}
 {% block content %}
 <section class="hero">
-  <h1>Bring Kenya's tiniest wildlife to life on your wall.</h1>
+  <h1>Bring Eric's photography to life on your wall.</h1>
   <p>
     Every photo is dye-sublimated straight into a sleek aluminium panel — colour that pops,
     built to last, ready to hang. Treat your own space, or gift one that stops people mid-stride.
@@ -11,9 +11,14 @@
 
 <section class="item-picker" aria-label="Choose what to shop">
   <a class="item-card" href="{{ url_for('prints') }}">
-    <h2>Prints</h2>
-    <p>A4 to A0, sublimation-printed onto a lightweight aluminium panel — no frame, no glass,
-    no fading. See it sized against your own room before you order.</p>
+    <h2>Dudu Prints</h2>
+    <p>Kenya's tiniest wildlife, A4 to A0, sublimation-printed onto a lightweight aluminium
+    panel — no frame, no glass, no fading. See it sized against your own room before you order.</p>
+  </a>
+  <a class="item-card" href="{{ url_for('daguerreotypes_prints') }}">
+    <h2>Daguerreotypes Prints</h2>
+    <p>Landscapes, portraits, and documentary moments — the same aluminium-panel print, same
+    room preview, from the Beauty In The Ordinary and Racecourse albums.</p>
   </a>
   <!-- Apparel route stays wired up (issue #18); not shown here yet. -->
   <!-- Coasters route stays wired up (issue #14); not shown here yet. -->

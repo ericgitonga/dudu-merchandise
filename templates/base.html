@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="csrf-token" content="{{ csrf_token() }}" />
-    <title>{% block title %}Dudu Merchandise{% endblock %}</title>
+    <title>{% block title %}Print Shop — Eric Gitonga{% endblock %}</title>
     <link rel="icon" href="{{ url_for('static', filename='favicon/favicon.ico') }}" sizes="any" />
     <link rel="icon" href="{{ url_for('static', filename='favicon/favicon-32x32.png') }}" type="image/png" sizes="32x32" />
     <link rel="icon" href="{{ url_for('static', filename='favicon/favicon-16x16.png') }}" type="image/png" sizes="16x16" />
@@ -24,9 +24,10 @@
       <span aria-current="page">SHOP</span>
     </div>
     <header class="site-header">
-      <a class="brand" href="{{ url_for('index') }}">Dudu Merchandise</a>
+      <a class="brand" href="{{ url_for('index') }}">Print Shop</a>
       <nav>
-        <a href="{{ url_for('prints') }}">Prints</a>
+        <a href="{{ url_for('prints') }}">Dudu Prints</a>
+        <a href="{{ url_for('daguerreotypes_prints') }}">Daguerreotypes Prints</a>
         <!-- Apparel route stays wired up (issue #18); not linked from the nav yet. -->
         <!-- Coasters route stays wired up (issue #14); not linked from the nav yet. -->
         <a class="cart-link" href="{{ url_for('cart_page') }}">
@@ -41,7 +42,7 @@
     </main>
 
     <footer class="site-footer">
-      <p>Photography &amp; merchandise by Eric Gitonga Mbaya — Dudus of Kenya.</p>
+      <p>Photography &amp; prints by Eric Gitonga Mbaya.</p>
     </footer>
 
     <script src="{{ url_for('static', filename='js/cart-common.js') }}"></script>

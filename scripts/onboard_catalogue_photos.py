@@ -38,6 +38,10 @@ PREFIX_TO_CATEGORY = {
     "da": "Damselflies", "dr": "Dragonflies", "f": "Flies", "ma": "Mantises", "mo": "Moths",
     "n": "Neuroptera", "or": "Orthoptera", "ot": "Other", "s": "Spiders", "sc": "Scorpions",
     "st": "Stick Insects", "t": "True Bugs", "w": "Wasps",
+    # Daguerreotypes collection — categories here are real photo albums, not insect taxa
+    # (issue #119). Sourced from Angry Hosting (the same originals the Daguerreotypes gallery on
+    # eric-gitonga-links reads), hand-curated as a one-time snapshot rather than kept in sync.
+    "bi": "Beauty In The Ordinary", "rc": "Racecourse",
 }
 
 ID_PATTERN = re.compile(r"^([a-z]{1,2})-(\d{3})$")

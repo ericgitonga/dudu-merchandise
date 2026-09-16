@@ -44,6 +44,24 @@
       "height": 934,
       "category": "Other",
       "thumb_sm": "/static/images/catalogue-e2e/thumbs-sm/008.jpg"
+    },
+    {
+      "id": "e2e-bito-1",
+      "thumb": "/static/images/catalogue-e2e/thumbs/007.jpg",
+      "full": "/static/images/catalogue-e2e/full/007.jpg",
+      "width": 1400,
+      "height": 933,
+      "category": "Beauty In The Ordinary",
+      "thumb_sm": "/static/images/catalogue-e2e/thumbs-sm/007.jpg"
+    },
+    {
+      "id": "e2e-racecourse-1",
+      "thumb": "/static/images/catalogue-e2e/thumbs/008.jpg",
+      "full": "/static/images/catalogue-e2e/full/008.jpg",
+      "width": 1400,
+      "height": 934,
+      "category": "Racecourse",
+      "thumb_sm": "/static/images/catalogue-e2e/thumbs-sm/008.jpg"
     }
   ]
 }
