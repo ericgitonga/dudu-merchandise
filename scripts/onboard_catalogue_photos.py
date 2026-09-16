@@ -41,7 +41,7 @@ PREFIX_TO_CATEGORY = {
     # Daguerreotypes collection — categories here are real photo albums, not insect taxa
     # (issue #119). Sourced from Angry Hosting (the same originals the Daguerreotypes gallery on
     # eric-gitonga-links reads), hand-curated as a one-time snapshot rather than kept in sync.
-    "bi": "Beauty In The Ordinary", "rc": "Racecourse",
+    "bi": "Beauty In The Ordinary", "rc": "Racecourse", "fl": "Florals",
 }
 
 ID_PATTERN = re.compile(r"^([a-z]{1,2})-(\d{3})$")
