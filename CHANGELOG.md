@@ -6,6 +6,16 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.18.0] - 2026-09-16
+
+### Changed
+
+- Every print collection except Dudu Prints now prices 30% below Dudu's own `PRINT_SIZES`
+  (`NON_DUDU_PRINT_DISCOUNT`) — applies today to Daguerreotypes Prints, and to any future
+  non-Dudu collection automatically. `_print_price(photo_id, size)` is the single function that
+  computes an actual charge, used by both add-to-cart and checkout revalidation, so the discount
+  can't be bypassed by a tampered session value. Dudu Prints pricing is unchanged (closes #122).
+
 ## [0.17.0] - 2026-09-16
 
 ### Added

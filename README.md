@@ -14,8 +14,8 @@ owner via [Resend](https://resend.com).
 ## Collections
 
 A "collection" (`COLLECTIONS` in `app.py`) is just a named subset of `CATALOGUE_CATEGORIES` — the
-cart/checkout code is keyed entirely on `photo_id`, never on collection, so adding one is a
-catalogue+routing change only, no changes to pricing, cart, or checkout logic:
+cart/checkout code is keyed entirely on `photo_id`, never on collection, so adding one is mostly
+a catalogue+routing change (see "Pricing" below for the one place collection *does* matter):
 
 - **Dudu Prints** (`/prints`) — `DUDU_CATEGORIES`, the insect taxonomic groups (see "Catalogue
   images" below).
@@ -29,6 +29,20 @@ catalogue+routing change only, no changes to pricing, cart, or checkout logic:
 Each route filters `CATALOGUE_BY_CATEGORY` down to its own collection's categories via
 `_catalogue_for_collection()` before rendering, so one collection's categories never leak into
 another's sidebar/grid.
+
+## Pricing
+
+`PRINT_SIZES` in `app.py` is Dudu Prints' own pricing — the base/reference table for every size.
+Every other collection prices 30% below these same sizes (`NON_DUDU_PRINT_DISCOUNT`) — Eric's
+explicit pricing decision, not a production cost difference — so there's still exactly one place
+a size's base price is set, never a second independent table per collection. `_print_price(
+photo_id, size)` is the single function that computes an actual charge (looks up the photo's own
+collection via `CATEGORY_TO_COLLECTION`, applies the discount unless it's Dudu); both
+`build_print_item` (add to cart) and `_current_price` (checkout revalidation) go through it, so
+the discount can't be bypassed by a tampered session value. `_print_sizes_for_collection(slug)`
+produces the same adjusted numbers for display on that collection's own Prints page — no separate
+client-side pricing logic exists; `static/js/prints-mockup.js`'s live total reads the exact same
+server-rendered `sizes` dict via the page's `#print-sizes-data` JSON blob.
 
 ## Local setup
 
