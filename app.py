@@ -84,7 +84,7 @@ DUDU_CATEGORIES = {
 
 # Daguerreotypes collection — categories here are real photo albums (issue #119), a separate
 # hand-curated snapshot from Angry Hosting, not auto-synced with the gallery going forward.
-DAGUERREOTYPES_CATEGORIES = {"Beauty In The Ordinary", "Racecourse"}
+DAGUERREOTYPES_CATEGORIES = {"Beauty In The Ordinary", "Racecourse", "Florals"}
 
 CATALOGUE_CATEGORIES = DUDU_CATEGORIES | DAGUERREOTYPES_CATEGORIES
 

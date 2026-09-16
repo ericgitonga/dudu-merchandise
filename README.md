@@ -149,6 +149,7 @@ Daguerreotypes collection (real photo albums, not insect taxa — see "Collectio
 |---|---|
 | Beauty In The Ordinary | `bi` |
 | Racecourse | `rc` |
+| Florals | `fl` |
 
 To add more: rename the source photo(s) in the matching category subfolder under
 `extras/projects/dudu-merchandise/assets/catalogue/` (outside this repo, see below) to

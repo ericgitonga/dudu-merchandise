@@ -6,6 +6,16 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.19.0] - 2026-09-16
+
+### Added
+
+- **Florals** — a third album under Daguerreotypes Prints (147 photos), alongside Beauty In The
+  Ordinary and Racecourse. Same hand-curated-snapshot pattern as the other two, pulled from
+  Angry Hosting via the live gallery manifest once it was newly added there. Prices at the same
+  30% Daguerreotypes discount automatically, since collection membership (not the specific
+  category) drives pricing (closes #124).
+
 ## [0.18.0] - 2026-09-16
 
 ### Changed
