@@ -6,6 +6,23 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.20.0] - 2026-10-29
+
+### Added
+
+- **Bookmark** (`50 × 200 mm`) option on both Prints collections (`/prints` at **KES 1,500** and
+  `/daguerreotypes/prints` at **KES 1,050** via the 30% non-Dudu discount). Selecting Bookmark
+  swaps `#room-scene` from the living-room wall frame (`A4`–`A0`) to the Classic Books bookmark
+  mockup (`static/images/mockup/bookmark.jpg` + `bookmark-mask.png`) and loads the photo's
+  pre-warped 3D bookmark strip (`static/images/catalogue/bookmarks/<id>.jpg`) with the subject
+  positioned below the U-clip cutout and smooth bokeh extended across the top cap (closes #132).
+- `scripts/generate_bookmarks.py` (and automatic bookmark generation in
+  `scripts/onboard_catalogue_photos.py`) to build both the flat `1499 × 375` print strip under
+  `extras/projects/dudu-merchandise/assets/bookmarks/` and the `251 × 941` perspective-warped
+  mockup overlay for all 989 catalogue photos and E2E fixtures.
+
+tag: `v0.20.0`
+
 ## [0.19.0] - 2026-09-16
 
 ### Added
