@@ -56,7 +56,9 @@ def test_prints_page_lists_catalogue_and_sizes():
         resp = page.goto("/prints")
         assert resp.status == 200
         assert page.locator(".catalogue-thumb").count() > 0
-        assert page.locator('input[name="size"]').count() == 5  # A4..A0
+        sizes = json.loads(page.locator("#print-sizes-data").inner_text())
+        assert "Bookmark" in sizes
+        assert page.locator('input[name="size"]').count() == len(sizes)
 
 
 def test_daguerreotypes_prints_page_is_separate_from_dudu_prints():
@@ -328,6 +330,35 @@ def test_prints_mockup_size_fixed_at_a2_regardless_of_selected_size():
         assert page.locator("#selected-price").inner_text() != price_before
 
 
+def test_prints_bookmark_option_swaps_mockup_scene_and_prices_correctly():
+    """Issue #132: selecting Bookmark on /prints or /daguerreotypes/prints swaps #room-scene from
+    the framed living-room wall preview to the Classic Books bookmark mockup (loading the photo's
+    pre-warped bookmark strip inside #bookmark-slot), and updates the price to KES 1,500 on Dudu
+    Prints or KES 1,050 (30% off) on Daguerreotypes Prints."""
+    with browser_page() as page:
+        page.goto("/prints")
+        page.wait_for_selector("#add-to-cart-print:not([disabled])", timeout=MOCKUP_ENABLE_TIMEOUT_MS)
+        assert page.locator("#wall-print").is_visible()
+        assert page.locator("#bookmark-slot").is_hidden()
+
+        page.click("input[name='size'][value='Bookmark']")
+        expect(page.locator("#room-scene")).to_have_class(re.compile(r"(^|\s)is-bookmark(\s|$)"))
+        assert page.locator("#wall-print").is_hidden()
+        assert page.locator("#bookmark-slot").is_visible()
+        expect(page.locator("#bookmark-img")).to_have_attribute("src", re.compile(r"/bookmarks/"))
+        expect(page.locator("#selected-price")).to_have_text("KES 1,500")
+
+        page.click("input[name='size'][value='A4']")
+        assert page.locator("#wall-print").is_visible()
+        assert page.locator("#bookmark-slot").is_hidden()
+
+        page.goto("/daguerreotypes/prints")
+        page.wait_for_selector("#add-to-cart-print:not([disabled])", timeout=MOCKUP_ENABLE_TIMEOUT_MS)
+        page.click("input[name='size'][value='Bookmark']")
+        expect(page.locator("#bookmark-img")).to_have_attribute("src", re.compile(r"/bookmarks/"))
+        expect(page.locator("#selected-price")).to_have_text("KES 1,050")
+
+
 def test_checkout_modal_opens_and_is_clickable():
     """Regression guard: `.modal-overlay { display: flex }` once overrode the browser's
     default `[hidden]` styling, so the modal stayed interactive (and blocked clicks on
@@ -437,6 +468,7 @@ TESTS = [
     test_desktop_catalogue_grid_shows_every_category_not_just_the_first,
     test_prints_mockup_renders_and_enables_add_to_cart,
     test_prints_mockup_size_fixed_at_a2_regardless_of_selected_size,
+    test_prints_bookmark_option_swaps_mockup_scene_and_prices_correctly,
     test_checkout_modal_opens_and_is_clickable,
     test_checkout_modal_closing_after_success_navigates_to_shop,
     test_cart_add_and_checkout_flow,

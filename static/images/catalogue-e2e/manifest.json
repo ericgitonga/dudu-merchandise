@@ -7,7 +7,8 @@
       "width": 1400,
       "height": 938,
       "category": "Neuroptera",
-      "thumb_sm": "/static/images/catalogue-e2e/thumbs-sm/001.jpg"
+      "thumb_sm": "/static/images/catalogue-e2e/thumbs-sm/001.jpg",
+      "bookmark": "/static/images/catalogue-e2e/bookmarks/001.jpg"
     },
     {
       "id": "004",
@@ -16,7 +17,8 @@
       "width": 1400,
       "height": 933,
       "category": "Spiders",
-      "thumb_sm": "/static/images/catalogue-e2e/thumbs-sm/004.jpg"
+      "thumb_sm": "/static/images/catalogue-e2e/thumbs-sm/004.jpg",
+      "bookmark": "/static/images/catalogue-e2e/bookmarks/004.jpg"
     },
     {
       "id": "005",
@@ -25,7 +27,8 @@
       "width": 1400,
       "height": 1032,
       "category": "Orthoptera",
-      "thumb_sm": "/static/images/catalogue-e2e/thumbs-sm/005.jpg"
+      "thumb_sm": "/static/images/catalogue-e2e/thumbs-sm/005.jpg",
+      "bookmark": "/static/images/catalogue-e2e/bookmarks/005.jpg"
     },
     {
       "id": "007",
@@ -34,7 +37,8 @@
       "width": 1400,
       "height": 933,
       "category": "Beetles",
-      "thumb_sm": "/static/images/catalogue-e2e/thumbs-sm/007.jpg"
+      "thumb_sm": "/static/images/catalogue-e2e/thumbs-sm/007.jpg",
+      "bookmark": "/static/images/catalogue-e2e/bookmarks/007.jpg"
     },
     {
       "id": "008",
@@ -43,7 +47,8 @@
       "width": 1400,
       "height": 934,
       "category": "Other",
-      "thumb_sm": "/static/images/catalogue-e2e/thumbs-sm/008.jpg"
+      "thumb_sm": "/static/images/catalogue-e2e/thumbs-sm/008.jpg",
+      "bookmark": "/static/images/catalogue-e2e/bookmarks/008.jpg"
     },
     {
       "id": "e2e-bito-1",
@@ -52,7 +57,8 @@
       "width": 1400,
       "height": 933,
       "category": "Beauty In The Ordinary",
-      "thumb_sm": "/static/images/catalogue-e2e/thumbs-sm/007.jpg"
+      "thumb_sm": "/static/images/catalogue-e2e/thumbs-sm/007.jpg",
+      "bookmark": "/static/images/catalogue-e2e/bookmarks/007.jpg"
     },
     {
       "id": "e2e-racecourse-1",
@@ -61,7 +67,8 @@
       "width": 1400,
       "height": 934,
       "category": "Racecourse",
-      "thumb_sm": "/static/images/catalogue-e2e/thumbs-sm/008.jpg"
+      "thumb_sm": "/static/images/catalogue-e2e/thumbs-sm/008.jpg",
+      "bookmark": "/static/images/catalogue-e2e/bookmarks/008.jpg"
     }
   ]
 }

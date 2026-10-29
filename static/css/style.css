@@ -376,6 +376,45 @@ button.primary:hover:not(:disabled) { filter: brightness(1.05); }
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
+.wall-print[hidden],
+.bookmark-slot[hidden] {
+  display: none;
+}
+
+/* Classic Books & White Bookmark mockup (issue #132): bookmark.jpg is 1086 x 1448 (3:4 portrait),
+   and the bookmark itself occupies x=600..851 (251px), y=320..1261 (941px). Each catalogue photo's
+   pre-warped bookmark strip (static/images/catalogue/bookmarks/<id>.jpg) fills .bookmark-slot,
+   masked by bookmark-mask.png (including the U-clip cutout) and multiplied onto the paper shading. */
+.room-scene.is-bookmark {
+  aspect-ratio: 1086 / 1448;
+  max-height: 460px;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bookmark-slot {
+  position: absolute;
+  left: 55.2486%;
+  top: 22.0994%;
+  width: 23.1123%;
+  height: 64.9862%;
+  -webkit-mask-image: url("/static/images/mockup/bookmark-mask.png");
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-image: url("/static/images/mockup/bookmark-mask.png");
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  mix-blend-mode: multiply;
+}
+
+.bookmark-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: fill;
+}
+
 /* Apparel shirt mockup */
 .shirt-scene {
   background: #e4e4e4;
