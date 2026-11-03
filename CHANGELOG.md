@@ -14,12 +14,13 @@ behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
   `/daguerreotypes/prints` at **KES 1,050** via the 30% non-Dudu discount). Selecting Bookmark
   swaps `#room-scene` from the living-room wall frame (`A4`–`A0`) to the Classic Books bookmark
   mockup (`static/images/mockup/bookmark.jpg` + `bookmark-mask.png`) and loads the photo's
-  pre-warped 3D bookmark strip (`static/images/catalogue/bookmarks/<id>.jpg`) with the subject
-  positioned below the U-clip cutout and smooth bokeh extended across the top cap (closes #132).
+  pre-warped 3D bookmark strip (`static/images/catalogue/bookmarks/<id>.jpg`) with the full
+  unblurred photograph spanning the entire bookmark stencil (closes #132).
 - `scripts/generate_bookmarks.py` (and automatic bookmark generation in
-  `scripts/onboard_catalogue_photos.py`) to build both the flat `1499 × 375` print strip under
-  `extras/projects/dudu-merchandise/assets/bookmarks/` and the `251 × 941` perspective-warped
-  mockup overlay for all 989 catalogue photos and E2E fixtures.
+  `scripts/onboard_catalogue_photos.py`) to build both the `5998 × 1500` px @ 600 DPI Stencil-2
+  print design under `extras/projects/dudu-merchandise/assets/bookmarks/` (using a full-image
+  object-locked saliency remap with zero synthetic left-side blur) and the `251 × 941`
+  perspective-warped mockup overlay for all 989 catalogue photos and E2E fixtures.
 
 tag: `v0.20.0`
 
