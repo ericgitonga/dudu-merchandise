@@ -427,7 +427,8 @@ def generate_bookmark_for_photo(src_path: Path, out_warped_path: Path, out_flat_
     warped = warp_strip_to_bookmark_slot(horiz_1x, SLOT_W, SLOT_H)
     out_warped_path = Path(out_warped_path)
     out_warped_path.parent.mkdir(parents=True, exist_ok=True)
-    cv2.imwrite(str(out_warped_path), warped, [int(cv2.IMWRITE_JPEG_QUALITY), 86])
+    pil_warped = Image.fromarray(cv2.cvtColor(warped, cv2.COLOR_BGR2RGB))
+    pil_warped.save(str(out_warped_path), format="JPEG", quality=80, optimize=True, progressive=True)
 
 
 def _worker_task(task):
