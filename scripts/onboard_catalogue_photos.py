@@ -2,8 +2,8 @@
 truth original photos, organised into one subfolder per CATALOGUE_CATEGORIES value) for any
 photo already named `<prefix>-NNN` that isn't in manifest.json yet, and onboards all of them:
 resizes into static/images/catalogue/{thumbs,thumbs-sm,full}/ following the established
-convention (`full` capped at 1400px on the long side, left alone if already smaller — never
-upscaled; `thumb` capped at 420px, exactly 30% of `full`'s target; `thumb_sm` capped at 168px —
+convention (`full` capped at 1000px on the long side, left alone if already smaller — never
+upscaled; `thumb` capped at 420px; `thumb_sm` capped at 168px —
 2x the mobile picker's 84px CSS box, issue #102 — for the mobile strip via `srcset`) and appends
 the manifest entry directly, width/height included, so no separate add_catalogue_dimensions.py
 pass is needed for these entries.
@@ -31,7 +31,7 @@ CATALOGUE_DIR = BASE_DIR / "static" / "images" / "catalogue"
 MANIFEST = CATALOGUE_DIR / "manifest.json"
 EXTRAS_DIR = Path("/home/gitonga/Develop/projects/extras/projects/dudu-merchandise/assets/catalogue")
 
-FULL_LONG_SIDE = 1400
+FULL_LONG_SIDE = 1000
 THUMB_LONG_SIDE = 420
 THUMB_SM_LONG_SIDE = 168
 
@@ -89,10 +89,22 @@ def main():
 
         full_im = _resized(src_im, FULL_LONG_SIDE)
         (CATALOGUE_DIR / "full" / f"{new_id}.jpg").parent.mkdir(parents=True, exist_ok=True)
-        full_im.save(CATALOGUE_DIR / "full" / f"{new_id}.jpg", "JPEG", quality=85, optimize=True)
+        full_im.save(
+            CATALOGUE_DIR / "full" / f"{new_id}.jpg",
+            "JPEG",
+            quality=80,
+            optimize=True,
+            progressive=True,
+        )
 
         thumb_im = _resized(full_im, THUMB_LONG_SIDE)
-        thumb_im.save(CATALOGUE_DIR / "thumbs" / f"{new_id}.jpg", "JPEG", quality=85, optimize=True)
+        thumb_im.save(
+            CATALOGUE_DIR / "thumbs" / f"{new_id}.jpg",
+            "JPEG",
+            quality=80,
+            optimize=True,
+            progressive=True,
+        )
 
         thumb_sm_im = _resized(full_im, THUMB_SM_LONG_SIDE)
         (CATALOGUE_DIR / "thumbs-sm" / f"{new_id}.jpg").parent.mkdir(parents=True, exist_ok=True)
@@ -102,7 +114,7 @@ def main():
 
         flat_bm = EXTRAS_BOOKMARKS_DIR / f"{new_id}.jpg" if EXTRAS_BOOKMARKS_DIR.parent.exists() else None
         generate_bookmark_for_photo(
-            CATALOGUE_DIR / "full" / f"{new_id}.jpg",
+            source,
             CATALOGUE_DIR / "bookmarks" / f"{new_id}.jpg",
             flat_bm,
         )

@@ -164,7 +164,7 @@ conda run -n ds python scripts/onboard_catalogue_photos.py
 
 which scans every category folder there for any `<prefix>-NNN`-named photo not yet in
 `manifest.json` and onboards all of them at once: resizes into `thumbs/`+`thumbs-sm/`+`full/`
-(`full` capped at 1400px on the long side, `thumb` at 420px, `thumb_sm` at 168px — 2x the mobile
+(`full` capped at 1000px on the long side, `thumb` at 420px, `thumb_sm` at 168px — 2x the mobile
 picker's 84px CSS box, so the desktop grid's `<img srcset>` lets the browser pick whichever is
 actually needed rather than always fetching the 420px one — all three left alone if the source is
 already smaller than their cap, never upscaled), generates the 3D-warped `bookmarks/<id>.jpg`

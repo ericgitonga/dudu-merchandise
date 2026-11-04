@@ -6,6 +6,19 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.20.1] - 2026-11-04
+
+### Fixed
+
+- Reduced catalogue image bundle size by ~99 MB (`239 MB` → `140 MB` across `static/`) so the
+  deployed Vercel Python serverless function stays comfortably under Vercel's `225 MB` maximum
+  function size limit: capped `static/images/catalogue/full/*.jpg` at `1000px` on the long side
+  (`quality=80, optimize=True, progressive=True`, updating `width`/`height` in `manifest.json`)
+  and re-encoded `bookmarks/*.jpg` and `thumbs/*.jpg` at `quality=80, optimize=True,
+  progressive=True` (closes #136).
+
+tag: `v0.20.1`
+
 ## [0.20.0] - 2026-10-29
 
 ### Added
