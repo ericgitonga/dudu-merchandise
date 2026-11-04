@@ -138,6 +138,12 @@ def _validate_catalogue(images):
             f"Catalogue entries missing thumb_sm: {missing_thumb_sm} — run "
             "scripts/generate_thumb_sm.py before starting the app."
         )
+    missing_bookmark = [img["id"] for img in images if not img.get("bookmark")]
+    if missing_bookmark:
+        raise RuntimeError(
+            f"Catalogue entries missing bookmark: {missing_bookmark} — run "
+            "scripts/generate_bookmarks.py before starting the app."
+        )
     uncategorised = [img["id"] for img in images if img.get("category") not in CATALOGUE_CATEGORIES]
     if uncategorised:
         raise RuntimeError(
@@ -186,7 +192,8 @@ CATALOGUE_BY_CATEGORY = group_catalogue_by_category(CATALOGUE)
 # ── Pricing (KES) — the only place prices are defined; the client never gets to set one ──
 
 PRINT_SIZES = {
-    # w_mm/h_mm are ISO 216 A-series short/long edge, used to size the wall-mockup frame.
+    # w_mm/h_mm are ISO 216 A-series short/long edge, used to size the wall-mockup frame (Bookmark
+    # swaps #room-scene to the Classic Books bookmark mockup instead of the wall frame, issue #132).
     # These are Dudu Prints' prices — the base/reference price for every size. Every other
     # collection prices at a discount off these same sizes (NON_DUDU_PRINT_DISCOUNT below), never
     # its own independent table, so there's still exactly one place a size's base price is set.
@@ -195,7 +202,10 @@ PRINT_SIZES = {
     "A2": {"price": 40_000, "w_mm": 420, "h_mm": 594},
     "A1": {"price": 70_000, "w_mm": 594, "h_mm": 841},
     "A0": {"price": 100_000, "w_mm": 841, "h_mm": 1189},
+    "Bookmark": {"price": 1_500, "w_mm": 50, "h_mm": 200},
 }
+
+PRINT_SIZE_BY_UPPER = {k.upper(): k for k in PRINT_SIZES}
 
 # All prints outside Dudu Prints (Daguerreotypes Prints today, any future non-Dudu collection by
 # default) are priced 30% below Dudu's own sizes — Eric's explicit pricing decision, not a cost
@@ -289,9 +299,10 @@ def _parse_qty(form):
 
 def build_print_item(form):
     photo_id = _require_photo(form)
-    size = (form.get("size") or "").strip().upper()
-    if size not in PRINT_SIZES:
-        raise CartItemError(f"Unknown print size '{size}'.")
+    raw_size = (form.get("size") or "").strip()
+    size = PRINT_SIZE_BY_UPPER.get(raw_size.upper())
+    if size is None:
+        raise CartItemError(f"Unknown print size '{raw_size}'.")
     return {
         "type": "print",
         "photo_id": photo_id,

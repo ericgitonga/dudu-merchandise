@@ -29,29 +29,43 @@ def test_resolve_secret_key_falls_back_locally_without_one():
 
 def test_catalogue_validation_rejects_entries_missing_dimensions():
     with pytest.raises(RuntimeError):
-        appmod._validate_catalogue([{"id": "999", "thumb": "x", "thumb_sm": "z", "full": "y", "category": "Beetles"}])
+        appmod._validate_catalogue(
+            [{"id": "999", "thumb": "x", "thumb_sm": "z", "full": "y", "bookmark": "b", "category": "Beetles"}]
+        )
     with pytest.raises(RuntimeError):
         appmod._validate_catalogue(
-            [{"id": "999", "thumb": "x", "thumb_sm": "z", "full": "y", "width": 100, "category": "Beetles"}]
+            [
+                {
+                    "id": "999", "thumb": "x", "thumb_sm": "z", "full": "y", "bookmark": "b",
+                    "width": 100, "category": "Beetles",
+                }
+            ]
         )
 
 
 def test_catalogue_validation_rejects_entries_missing_thumb_sm():
     with pytest.raises(RuntimeError):
         appmod._validate_catalogue(
-            [{"id": "999", "thumb": "x", "full": "y", "width": 100, "height": 50, "category": "Beetles"}]
+            [{"id": "999", "thumb": "x", "full": "y", "bookmark": "b", "width": 100, "height": 50, "category": "Beetles"}]
+        )
+
+
+def test_catalogue_validation_rejects_entries_missing_bookmark():
+    with pytest.raises(RuntimeError):
+        appmod._validate_catalogue(
+            [{"id": "999", "thumb": "x", "thumb_sm": "z", "full": "y", "width": 100, "height": 50, "category": "Beetles"}]
         )
 
 
 def test_catalogue_validation_rejects_entries_missing_or_unknown_category():
     with pytest.raises(RuntimeError):
         appmod._validate_catalogue(
-            [{"id": "999", "thumb": "x", "thumb_sm": "z", "full": "y", "width": 100, "height": 50}]
+            [{"id": "999", "thumb": "x", "thumb_sm": "z", "full": "y", "bookmark": "b", "width": 100, "height": 50}]
         )
     with pytest.raises(RuntimeError):
         appmod._validate_catalogue(
             [{
-                "id": "999", "thumb": "x", "thumb_sm": "z", "full": "y",
+                "id": "999", "thumb": "x", "thumb_sm": "z", "full": "y", "bookmark": "b",
                 "width": 100, "height": 50, "category": "Not A Real Category",
             }]
         )
@@ -60,7 +74,7 @@ def test_catalogue_validation_rejects_entries_missing_or_unknown_category():
 def test_catalogue_validation_accepts_complete_entries():
     appmod._validate_catalogue(
         [{
-            "id": "999", "thumb": "x", "thumb_sm": "z", "full": "y",
+            "id": "999", "thumb": "x", "thumb_sm": "z", "full": "y", "bookmark": "b",
             "width": 100, "height": 50, "category": "Beetles",
         }]
     )
@@ -122,6 +136,10 @@ def test_print_price_matches_catalogue():
     assert item["price"] == appmod.PRINT_SIZES["A3"]["price"]
     assert item["size"] == "A3"
     assert item["qty"] == 1
+
+    bm = appmod.build_print_item({"photo_id": PHOTO_ID, "size": "bookmark"})
+    assert bm["size"] == "Bookmark"
+    assert bm["price"] == appmod._print_price(PHOTO_ID, "Bookmark")
 
 
 def test_print_item_qty_is_parsed_and_clamped():

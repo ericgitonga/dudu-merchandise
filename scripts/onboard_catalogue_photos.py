@@ -24,6 +24,8 @@ from pathlib import Path
 
 from PIL import Image
 
+from generate_bookmarks import EXTRAS_BOOKMARKS_DIR, generate_bookmark_for_photo
+
 BASE_DIR = Path(__file__).parent.parent
 CATALOGUE_DIR = BASE_DIR / "static" / "images" / "catalogue"
 MANIFEST = CATALOGUE_DIR / "manifest.json"
@@ -98,11 +100,19 @@ def main():
             CATALOGUE_DIR / "thumbs-sm" / f"{new_id}.jpg", "JPEG", quality=85, optimize=True
         )
 
+        flat_bm = EXTRAS_BOOKMARKS_DIR / f"{new_id}.jpg" if EXTRAS_BOOKMARKS_DIR.parent.exists() else None
+        generate_bookmark_for_photo(
+            CATALOGUE_DIR / "full" / f"{new_id}.jpg",
+            CATALOGUE_DIR / "bookmarks" / f"{new_id}.jpg",
+            flat_bm,
+        )
+
         images.append({
             "id": new_id,
             "thumb": f"/static/images/catalogue/thumbs/{new_id}.jpg",
             "thumb_sm": f"/static/images/catalogue/thumbs-sm/{new_id}.jpg",
             "full": f"/static/images/catalogue/full/{new_id}.jpg",
+            "bookmark": f"/static/images/catalogue/bookmarks/{new_id}.jpg",
             "width": full_im.width,
             "height": full_im.height,
             "category": category,

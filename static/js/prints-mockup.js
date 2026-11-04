@@ -14,7 +14,10 @@
    width/height are set to the target box. */
 
 (function () {
+  const roomScene = document.getElementById("room-scene");
   const printImg = document.getElementById("wall-print");
+  const bookmarkSlot = document.getElementById("bookmark-slot");
+  const bookmarkImg = document.getElementById("bookmark-img");
   const grid = document.querySelector(".catalogue-grid");
   const sizeInputs = document.querySelectorAll('input[name="size"]');
   const priceEl = document.getElementById("selected-price");
@@ -38,7 +41,7 @@
 
   const SIZES_MM = JSON.parse(document.getElementById("print-sizes-data").textContent);
 
-  let selected = { id: null, full: null, aspect: 1 };
+  let selected = { id: null, full: null, bookmark: null, aspect: 1 };
 
   function currentSize() {
     const checked = document.querySelector('input[name="size"]:checked');
@@ -47,6 +50,21 @@
 
   function renderMockup() {
     if (!selected.full) return;
+
+    const isBookmark = currentSize() === "Bookmark";
+    if (isBookmark) {
+      roomScene.classList.add("is-bookmark");
+      roomScene.style.backgroundImage = `url('${roomScene.dataset.bookmarkBg}')`;
+      printImg.hidden = true;
+      bookmarkSlot.hidden = false;
+      bookmarkImg.src = selected.bookmark || selected.full;
+      return;
+    }
+
+    roomScene.classList.remove("is-bookmark");
+    roomScene.style.backgroundImage = `url('${roomScene.dataset.roomBg}')`;
+    bookmarkSlot.hidden = true;
+    printImg.hidden = false;
 
     const spec = SIZES_MM[MOCKUP_SIZE];
     const shortCm = spec.w_mm / 10;
@@ -87,8 +105,8 @@
   // width/height come from manifest.json (issue #38) — no image load to wait on, so the button
   // enables the instant a photo is picked, including the auto-selected first photo on page load.
   grid.addEventListener("photo-selected", (event) => {
-    const { id, full, width, height } = event.detail;
-    selected = { id, full, aspect: width / height };
+    const { id, full, bookmark, width, height } = event.detail;
+    selected = { id, full, bookmark, aspect: width / height };
     renderMockup();
     updateOrderControls();
   });
@@ -101,7 +119,12 @@
   const firstThumb = grid.querySelector(".catalogue-thumb");
   if (firstThumb) firstThumb.click();
 
-  sizeInputs.forEach((input) => input.addEventListener("change", updateOrderControls));
+  sizeInputs.forEach((input) =>
+    input.addEventListener("change", () => {
+      renderMockup();
+      updateOrderControls();
+    })
+  );
   qtyInput.addEventListener("input", updateOrderControls);
   qtyInput.addEventListener("change", updateOrderControls);
 

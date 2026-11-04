@@ -29,6 +29,7 @@ document.querySelectorAll(".catalogue-grid").forEach((grid) => {
           id: button.dataset.id,
           thumb: button.dataset.thumb,
           full: button.dataset.full,
+          bookmark: button.dataset.bookmark,
           width: Number(button.dataset.width),
           height: Number(button.dataset.height),
         },
