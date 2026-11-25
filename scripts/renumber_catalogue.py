@@ -37,6 +37,7 @@ PREFIXES = {
     "Spiders": "s",
     "True Bugs": "t",
     "Wasps": "w",
+    "Ngong Road Forest Sanctuary": "dw",
 }
 
 NEW_ID_RE = re.compile(r"^[a-z]{1,2}-\d{3}$")

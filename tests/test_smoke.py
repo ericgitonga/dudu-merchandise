@@ -50,11 +50,10 @@ def test_catalogue_validation_rejects_entries_missing_thumb_sm():
         )
 
 
-def test_catalogue_validation_rejects_entries_missing_bookmark():
-    with pytest.raises(RuntimeError):
-        appmod._validate_catalogue(
-            [{"id": "999", "thumb": "x", "thumb_sm": "z", "full": "y", "width": 100, "height": 50, "category": "Beetles"}]
-        )
+def test_catalogue_validation_accepts_entries_without_bookmark():
+    appmod._validate_catalogue(
+        [{"id": "999", "thumb": "x", "thumb_sm": "z", "full": "y", "width": 100, "height": 50, "category": "Beetles"}]
+    )
 
 
 def test_catalogue_validation_rejects_entries_missing_or_unknown_category():
@@ -137,9 +136,11 @@ def test_print_price_matches_catalogue():
     assert item["size"] == "A3"
     assert item["qty"] == 1
 
-    bm = appmod.build_print_item({"photo_id": PHOTO_ID, "size": "bookmark"})
+    # Pick a photo that has a bookmark
+    bm_photo_id = next(img["id"] for img in appmod.CATALOGUE if img.get("bookmark"))
+    bm = appmod.build_print_item({"photo_id": bm_photo_id, "size": "bookmark"})
     assert bm["size"] == "Bookmark"
-    assert bm["price"] == appmod._print_price(PHOTO_ID, "Bookmark")
+    assert bm["price"] == appmod._print_price(bm_photo_id, "Bookmark")
 
 
 def test_print_item_qty_is_parsed_and_clamped():
@@ -262,3 +263,18 @@ def test_mpesa_code_blob_pathname_is_derived_from_the_code():
 def test_check_and_record_mpesa_code_skips_without_blob_token(monkeypatch):
     monkeypatch.delenv("BLOB_READ_WRITE_TOKEN", raising=False)
     assert appmod.check_and_record_mpesa_code("QGH7XXXXXX") is False
+
+def test_print_item_rejects_bookmark_for_photos_without_bookmark(monkeypatch):
+    # '007' has bookmark in e2e fixture, let's test a mock photo without bookmark
+    fake_cat = [{"id": "no-bm", "thumb": "x", "thumb_sm": "z", "full": "y", "width": 100, "height": 50, "category": "Beetles"}]
+    monkeypatch.setattr(appmod, "CATALOGUE_IDS", {"no-bm"})
+    monkeypatch.setattr(appmod, "CATALOGUE_BY_ID", {"no-bm": fake_cat[0]})
+    with pytest.raises(appmod.CartItemError, match="Bookmarks are only available"):
+        appmod.build_print_item({"photo_id": "no-bm", "size": "bookmark"})
+
+
+def test_bookmarks_route_returns_200():
+    client = appmod.app.test_client()
+    resp = client.get("/bookmarks")
+    assert resp.status_code == 200
+    assert b"Bookmarks" in resp.data

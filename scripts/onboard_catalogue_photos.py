@@ -39,7 +39,7 @@ PREFIX_TO_CATEGORY = {
     "a": "Ants", "be": "Bees", "bt": "Beetles", "bu": "Butterflies", "c": "Caterpillars",
     "da": "Damselflies", "dr": "Dragonflies", "f": "Flies", "ma": "Mantises", "mo": "Moths",
     "n": "Neuroptera", "or": "Orthoptera", "ot": "Other", "s": "Spiders", "sc": "Scorpions",
-    "st": "Stick Insects", "t": "True Bugs", "w": "Wasps",
+    "st": "Stick Insects", "t": "True Bugs", "w": "Wasps", "dw": "Ngong Road Forest Sanctuary",
     # Daguerreotypes collection — categories here are real photo albums, not insect taxa
     # (issue #119). Sourced from Angry Hosting (the same originals the Daguerreotypes gallery on
     # eric-gitonga-links reads), hand-curated as a one-time snapshot rather than kept in sync.

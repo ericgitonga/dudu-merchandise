@@ -6,6 +6,28 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 adheres to [Semantic Versioning](https://semver.org) (pre-1.0: MINOR = new features/user-facing
 behaviour, PATCH = fixes/docs/housekeeping — see `SKILL.md`).
 
+## [0.21.0] - 2026-11-25
+
+### Added
+
+- **Dedicated Bookmarks page** (`/bookmarks`) reachable via the top navigation and home page (closes #143).
+
+- **Beetles catalogue expansion**: onboarded 7 additional beetles (`bt-035` through `bt-041`)
+  from `Dudus/Photographs/Beetles/` with accompanying bespoke bookmark mockups from
+  `Bookmarks/Beetles/`.
+- **Ngong Road Forest Sanctuary** (`dw`) category onboarded to the catalogue (14 photos,
+  `dw-001` through `dw-014`) from `Dudu Walks/2611 Ngong Road Forest Sanctuary/Sel/LoRes` with
+  accompanying bespoke bookmark mockups from `Bookmarks/WNGFS`.
+
+### Changed
+
+- Removed automated synthetic bookmarks across the general Prints catalogue so bookmarks are
+  only offered for photographs with verified, manually-crafted bookmark designs.
+- Removed the Bookmark size pill from `/prints` and `/daguerreotypes/prints` in favor of the
+  dedicated `/bookmarks` browsing experience.
+
+tag: `v0.21.0`
+
 ## [0.20.1] - 2026-11-04
 
 ### Fixed
