@@ -143,6 +143,7 @@ restarting per category (issue #82). Prefix table:
 | Damselflies | `da` | | Stick Insects | `st` |
 | Dragonflies | `dr` | | True Bugs | `t` |
 | Flies | `f` | | Wasps | `w` |
+| Ngong Road Forest Sanctuary | `dw` |
 | Mantises | `ma` | | Moths | `mo` |
 
 Daguerreotypes collection (real photo albums, not insect taxa — see "Collections" above):

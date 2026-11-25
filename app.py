@@ -80,6 +80,7 @@ DUDU_CATEGORIES = {
     "Flies", "Spiders", "Beetles", "Bees", "Moths", "Butterflies", "Ants",
     "Damselflies", "Dragonflies", "Mantises", "Wasps", "True Bugs",
     "Neuroptera", "Orthoptera", "Caterpillars", "Scorpions", "Stick Insects", "Other",
+    "Ngong Road Forest Sanctuary",
 }
 
 # Daguerreotypes collection — categories here are real photo albums (issue #119), a separate
@@ -137,12 +138,6 @@ def _validate_catalogue(images):
         raise RuntimeError(
             f"Catalogue entries missing thumb_sm: {missing_thumb_sm} — run "
             "scripts/generate_thumb_sm.py before starting the app."
-        )
-    missing_bookmark = [img["id"] for img in images if not img.get("bookmark")]
-    if missing_bookmark:
-        raise RuntimeError(
-            f"Catalogue entries missing bookmark: {missing_bookmark} — run "
-            "scripts/generate_bookmarks.py before starting the app."
         )
     uncategorised = [img["id"] for img in images if img.get("category") not in CATALOGUE_CATEGORIES]
     if uncategorised:
@@ -232,13 +227,14 @@ def _print_price(photo_id, size):
 
 def _print_sizes_for_collection(slug):
     """PRINT_SIZES with each size's price adjusted for this collection, for display on that
-    collection's own Prints page — so the price shown before adding to cart already matches what
-    _print_price will actually charge."""
+    collection's own Prints page. Bookmarks are displayed on their own dedicated page (/bookmarks)
+    until all photographs have bespoke bookmark designs."""
+    sizes = {k: v for k, v in PRINT_SIZES.items() if k != "Bookmark"}
     if slug == "dudu":
-        return PRINT_SIZES
+        return sizes
     return {
         size: {**spec, "price": round(spec["price"] * (1 - NON_DUDU_PRINT_DISCOUNT))}
-        for size, spec in PRINT_SIZES.items()
+        for size, spec in sizes.items()
     }
 
 APPAREL_PRICES = {
@@ -303,6 +299,8 @@ def build_print_item(form):
     size = PRINT_SIZE_BY_UPPER.get(raw_size.upper())
     if size is None:
         raise CartItemError(f"Unknown print size '{raw_size}'.")
+    if size == "Bookmark" and not CATALOGUE_BY_ID[photo_id].get("bookmark"):
+        raise CartItemError("Bookmarks are only available for select photographs.")
     return {
         "type": "print",
         "photo_id": photo_id,
@@ -343,6 +341,8 @@ def _current_price(item):
     keyed on) stored in the session cookie."""
     if item["type"] == "print":
         if item.get("size") not in PRINT_SIZES:
+            return None
+        if item.get("size") == "Bookmark" and not CATALOGUE_BY_ID.get(item["photo_id"], {}).get("bookmark"):
             return None
         return _print_price(item["photo_id"], item["size"])
     return APPAREL_PRICES.get(item.get("age_group"))
@@ -571,6 +571,20 @@ def daguerreotypes_prints():
         page_heading=COLLECTIONS["daguerreotypes"]["title"],
         sizes=_print_sizes_for_collection("daguerreotypes"),
         max_qty=MAX_ITEM_QTY, turnaround=TURNAROUND_TEXT,
+    )
+
+
+@app.route("/bookmarks")
+def bookmarks():
+    """Dedicated Bookmarks page showcasing photographs with bespoke bookmark designs."""
+    bookmark_images = [img for img in CATALOGUE if img.get("bookmark")]
+    return render_template(
+        "bookmarks.html",
+        page_heading="Bookmarks",
+        catalogue_by_category=group_catalogue_by_category(bookmark_images),
+        bookmark_price=PRINT_SIZES["Bookmark"]["price"],
+        max_qty=MAX_ITEM_QTY,
+        turnaround="3–5 business days in Nairobi",
     )
 
 

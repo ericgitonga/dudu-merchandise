@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}{{ page_heading }} — Eric Gitonga{% endblock %}
+{% block content %}
+<h1>{{ page_heading }}</h1>
+<p>Curated 4:1 bookmark designs showcasing Kenyan insect and wildlife macro photography, printed on
+heavyweight archival cardstock (50 × 200 mm) with a smooth rounded cap and edges. Pick a design
+to preview in the Classic Books mockup.</p>
+<p class="lead-time-note">Lead time: {{ turnaround }}.</p>
+
+<div class="shop-layout">
+  <div class="sidebar-layout">
+    <nav class="cat-sidebar" aria-label="Jump to category">
+      {% for group in catalogue_by_category %}
+      <button type="button" data-target="cat-{{ group.slug }}" data-category="{{ group.category }}">{{ group.category }}<span class="n">{{ group.count }}</span></button>
+      {% endfor %}
+    </nav>
+    <select class="mobile-category-select" id="mobile-category-select" aria-label="Choose a category">
+      {% for group in catalogue_by_category %}
+      <option value="{{ group.slug }}">{{ group.category }} ({{ group.count }})</option>
+      {% endfor %}
+    </select>
+    <div class="catalogue-grid" aria-label="Choose a bookmark">
+      {% for group in catalogue_by_category %}
+      <h3 class="grid-section-heading" id="cat-{{ group.slug }}">{{ group.category }} &middot; {{ group.count }}</h3>
+      {% for img in group.images %}
+      <button type="button" class="catalogue-thumb" data-id="{{ img.id }}" data-thumb="{{ img.thumb }}" data-full="{{ img.full }}" data-bookmark="{{ img.bookmark }}" data-width="{{ img.width }}" data-height="{{ img.height }}" data-category="{{ group.slug }}">
+        <img src="{{ img.thumb }}" srcset="{{ img.thumb_sm }} 168w, {{ img.thumb }} 420w" sizes="(max-width: 800px) 84px, 90px" alt="Bookmark {{ img.id }}" loading="lazy" />
+      </button>
+      {% endfor %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="controls-panel">
+    <div class="room-scene is-bookmark" id="room-scene" style="background-image: url('{{ url_for('static', filename='images/mockup/bookmark.jpg') }}')">
+      <div class="bookmark-slot" id="bookmark-slot">
+        <img class="bookmark-img" id="bookmark-img" src="" alt="Selected bookmark mockup" />
+      </div>
+    </div>
+
+    <fieldset class="option-group">
+      <legend>Format</legend>
+      <div class="option-row">
+        <label>
+          <input type="radio" name="format" value="Bookmark" checked disabled />
+          Bookmark (50 &times; 200 mm) &mdash; KES {{ "{:,}".format(bookmark_price) }}
+        </label>
+      </div>
+    </fieldset>
+
+    <fieldset class="option-group">
+      <legend>Quantity</legend>
+      <div class="qty-stepper">
+        <button type="button" class="qty-btn" data-step="-1" aria-label="Decrease quantity">&minus;</button>
+        <input type="number" class="qty-input" id="selected-qty" value="1" min="1" max="{{ max_qty }}" inputmode="numeric" />
+        <button type="button" class="qty-btn" data-step="1" aria-label="Increase quantity">+</button>
+      </div>
+    </fieldset>
+
+    <p class="price-line" id="selected-price">KES {{ "{:,}".format(bookmark_price) }}</p>
+
+    <button type="button" class="primary" id="add-to-cart-bookmark" disabled>Add to cart</button>
+    <p class="add-status" id="add-to-cart-status"></p>
+  </div>
+</div>
+
+{% endblock %}
+{% block scripts %}
+<script id="bookmark-price-data" type="application/json">{{ bookmark_price }}</script>
+<script src="{{ url_for('static', filename='js/catalogue-picker.js') }}"></script>
+<script src="{{ url_for('static', filename='js/catalogue-sidebar.js') }}"></script>
+<script src="{{ url_for('static', filename='js/mobile-picker.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bookmarks-mockup.js') }}"></script>
+{% endblock %}
