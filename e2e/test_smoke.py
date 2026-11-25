@@ -57,7 +57,8 @@ def test_prints_page_lists_catalogue_and_sizes():
         assert resp.status == 200
         assert page.locator(".catalogue-thumb").count() > 0
         sizes = json.loads(page.locator("#print-sizes-data").inner_text())
-        assert "Bookmark" in sizes
+        assert "A4" in sizes
+        assert "Bookmark" not in sizes
         assert page.locator('input[name="size"]').count() == len(sizes)
 
 
